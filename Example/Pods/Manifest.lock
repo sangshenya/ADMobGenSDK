@@ -1,15 +1,30 @@
 PODS:
-  - ADMobGenSDK (0.1.0)
+  - ADMobGenAdapter (0.4.7):
+    - ADMobGenFoundation
+  - ADMobGenFoundation (0.3.1)
+  - ADMobGenNetwork (0.3.0)
+  - ADMobGenSDK (0.1.0):
+    - ADMobGenAdapter
+    - ADMobGenNetwork
 
 DEPENDENCIES:
   - ADMobGenSDK (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ADMobGenAdapter
+    - ADMobGenFoundation
+    - ADMobGenNetwork
 
 EXTERNAL SOURCES:
   ADMobGenSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ADMobGenSDK: 7b6020087e275b0553eb3941aef5b17628b968b3
+  ADMobGenAdapter: 225e21f2bc2279412dd7d03dba407ecf56692a4e
+  ADMobGenFoundation: 0ded0c9d090c19b756323093006b59a3031f0641
+  ADMobGenNetwork: d24cef79ffc805751ec9e7de074895ec0534c937
+  ADMobGenSDK: b8ff107d0d1e0ee60e4986aa9ad3725e0ff12e6f
 
 PODFILE CHECKSUM: 10c7cd498f5eab84a3481897b1e7de72b13bd5f4
 

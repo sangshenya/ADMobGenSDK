@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ADMobGenSDK'
-  s.version          = '0.1.0'
+  s.version          = '0.5.0'
   s.summary          = 'A short description of ADMobGenSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,12 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'ADMobGenSDK/Classes/**/*'
+    s.xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
+
+    s.vendored_frameworks = 'ADMobGenSDK/Classes/ADMobGenSDK.framework'
+    
+    s.dependency 'ADMobGenAdapter'
+    s.dependency 'ADMobGenNetwork'
   
   # s.resource_bundles = {
   #   'ADMobGenSDK' => ['ADMobGenSDK/Assets/*.png']

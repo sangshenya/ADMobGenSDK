@@ -61,10 +61,10 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		822E6AA782D49C9743BBCE09 /* ADMobGenSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ADMobGenSDK.podspec; path = ../ADMobGenSDK.podspec; sourceTree = "<group>"; };
+		822E6AA782D49C9743BBCE09 /* ADMobGenSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ADMobGenSDK.podspec; path = ../ADMobGenSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A1A7698A33DFD48C9E74A692 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		C85A8E1E444DB647438B9771 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A1A7698A33DFD48C9E74A692 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C85A8E1E444DB647438B9771 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D35D1C410FAFED0905750CF0 /* Pods-ADMobGenSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADMobGenSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADMobGenSDK_Tests/Pods-ADMobGenSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E97B0784D58FB16987241439 /* Pods-ADMobGenSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADMobGenSDK_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */

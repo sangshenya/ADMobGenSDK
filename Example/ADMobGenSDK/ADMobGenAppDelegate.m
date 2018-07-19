@@ -7,6 +7,7 @@
 //
 
 #import "ADMobGenAppDelegate.h"
+#import <ADMobGenSDK/ADMobGenBannerView.h>
 
 @implementation ADMobGenAppDelegate
 

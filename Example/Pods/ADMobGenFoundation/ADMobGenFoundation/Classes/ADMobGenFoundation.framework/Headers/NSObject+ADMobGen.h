@@ -12,6 +12,8 @@
 
 - (NSDictionary *)admg_toDic;
 
+- (id)admg_PerformSelector:(SEL)action withObject:(id)object, ...NS_REQUIRES_NIL_TERMINATION;
+
 @end
 
 

@@ -20,7 +20,8 @@
 
 /**
  是否打开调试模式, 默认 NO
-
+ 需要在 'initWithAppId' 之前调用
+ 
  @param debugMode 调试模式
  */
 + (void)setDebugMode:(id)debugMode;

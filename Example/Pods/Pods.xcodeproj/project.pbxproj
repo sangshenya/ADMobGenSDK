@@ -30,6 +30,7 @@
 		0821B49BB3D5A2F51599AD64D76567A7 /* Pods-ADMobGenSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ADMobGenSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		0C1ABB91F2EEBEBE913B3EF93A14E465 /* Pods-ADMobGenSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ADMobGenSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		0DA4003203B2B3384955181FE56B9FBE /* Pods-ADMobGenSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ADMobGenSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
+		0EE1F32AA34A2222B722ACE6B2167643 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		1DE28B9E43F36E3CE18E1732C9914E6F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2530417D0D72F066A1D2A2AB7CED04D7 /* Pods-ADMobGenSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ADMobGenSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		26A2BF94DC4323FC1B803C023B9AA486 /* Pods-ADMobGenSDK_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ADMobGenSDK_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -37,11 +38,11 @@
 		39CB6275C9D52856AAD057EBEFC3CD4D /* Pods-ADMobGenSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ADMobGenSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3D8816FB47E2B78858FE427727BE6352 /* Pods-ADMobGenSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ADMobGenSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4C57A7008B28F4B384B4CFC83D93D23E /* Pods-ADMobGenSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ADMobGenSDK_Tests-dummy.m"; sourceTree = "<group>"; };
-		5257929C0DD34215247927A21FD38302 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		75E8C4B7C6B7525EEFB7EA963F0C23B7 /* Pods-ADMobGenSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ADMobGenSDK_Example.modulemap"; sourceTree = "<group>"; };
 		81BF0E9887D91B943BA5EBD1ADF2395A /* Pods-ADMobGenSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ADMobGenSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8AA134E291AF412675BEFE517DAA15D6 /* Pods-ADMobGenSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ADMobGenSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8BD836FE7A37249973E1DED1F4733C6D /* ADMobGenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenSDK.framework; path = "ADMobGenSDK/Classes/ADMObGenSDK-Release/ADMobGenSDK.framework"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98CFA1D8DDF52116BBD9DD065AD23B89 /* Pods-ADMobGenSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ADMobGenSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B22F6CFE1A8BD77432BAAAA7FE0BAF3 /* ADMobGenFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenFoundation.framework; path = ADMobGenFoundation/Classes/ADMobGenFoundation.framework; sourceTree = "<group>"; };
@@ -49,13 +50,13 @@
 		A6DE26B05CECC314D71BBAD8BC6FD6D7 /* Pods-ADMobGenSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ADMobGenSDK_Tests.modulemap"; sourceTree = "<group>"; };
 		A75614B05D271B5462BC37BFA07D9ACF /* Pods_ADMobGenSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ADMobGenSDK_Example.framework; path = "Pods-ADMobGenSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78AA0F52D434BEA43795C3696998CF7 /* ADMobGenAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenAdapter.framework; path = ADMobGenAdapter/Classes/ADMobGenAdapter.framework; sourceTree = "<group>"; };
-		A8F63336DFFF11451382F3F56B9FB30C /* ADMobGenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenSDK.framework; path = ADMobGenSDK/Classes/ADMobGenSDK.framework; sourceTree = "<group>"; };
 		AD4E5BBC647113C3D6E901995DBB38CC /* Pods-ADMobGenSDK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ADMobGenSDK_Example-resources.sh"; sourceTree = "<group>"; };
 		B97AD5731C071BEE88B5A01272AE0EA1 /* Pods-ADMobGenSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ADMobGenSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		CB422F4A34FB91C92F9CC41D64B81A97 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		CBD9E5E111CA6EDAC8FECDC93BC279FB /* Pods-ADMobGenSDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ADMobGenSDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		D5F2AE594BCEF3B7ACB3E315B9A03661 /* ADMobGenSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ADMobGenSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D5E26A572B66A2C6907A533BFDA0A9FB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		DED6D8624BD6E0B3AF272E461262EBC8 /* Pods_ADMobGenSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ADMobGenSDK_Tests.framework; path = "Pods-ADMobGenSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3B089124EDCF133981A846F072969FE /* ADMobGenSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ADMobGenSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FB61E819553856BC039A5D1C88739182 /* ADMobGenSDK-Debug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "ADMobGenSDK-Debug.framework"; path = "ADMobGenSDK/Classes/ADMObGenSDK-Debug/ADMobGenSDK-Debug.framework"; sourceTree = "<group>"; };
 		FFD0A0D9817FE775E9EC470C4EF4D0BD /* ADMobGenNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenNetwork.framework; path = ADMobGenNetwork/Classes/ADMobGenNetwork.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,10 +124,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4B8E7A989C6AE9C64E4811B155CDBAF7 /* Frameworks */ = {
+		48E59EDD0F6BCB3577873E4FEF520FBB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A8F63336DFFF11451382F3F56B9FB30C /* ADMobGenSDK.framework */,
+				FB61E819553856BC039A5D1C88739182 /* ADMobGenSDK-Debug.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57C93981805B2A6DADF6648BB320BEC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BD836FE7A37249973E1DED1F4733C6D /* ADMobGenSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,11 +156,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6E18B531B41117ABD8DD6B7A207090B2 /* ADMObGenSDK-Debug */ = {
+			isa = PBXGroup;
+			children = (
+				48E59EDD0F6BCB3577873E4FEF520FBB /* Frameworks */,
+			);
+			name = "ADMObGenSDK-Debug";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				F8631ADE30F17BD847A4693B211C0A4C /* Development Pods */,
+				F97319C5583611410C70D0CB4664235E /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				FB4FD89FC99A9CE03DA4D7EC6C7238F8 /* Pods */,
 				3D723C18DB13DF6E56114C988C1E7394 /* Products */,
@@ -159,14 +176,22 @@
 			);
 			sourceTree = "<group>";
 		};
-		83AB849097AD49D07059DC111ADE118A /* ADMobGenSDK */ = {
+		930639C3888007EEA058CD2A11EF8B5E /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				4B8E7A989C6AE9C64E4811B155CDBAF7 /* Frameworks */,
-				A604084D4ED49004DFE8A7C0164089E2 /* Pod */,
+				E3B089124EDCF133981A846F072969FE /* ADMobGenSDK.podspec */,
+				0EE1F32AA34A2222B722ACE6B2167643 /* LICENSE */,
+				D5E26A572B66A2C6907A533BFDA0A9FB /* README.md */,
 			);
-			name = ADMobGenSDK;
-			path = ../..;
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		9650E2200C754BED4AAB1BDA673FECDE /* ADMObGenSDK-Release */ = {
+			isa = PBXGroup;
+			children = (
+				57C93981805B2A6DADF6648BB320BEC7 /* Frameworks */,
+			);
+			name = "ADMObGenSDK-Release";
 			sourceTree = "<group>";
 		};
 		A089B6AF1CDD98D155C94AB35DE129FF /* ADMobGenNetwork */ = {
@@ -176,16 +201,6 @@
 			);
 			name = ADMobGenNetwork;
 			path = ADMobGenNetwork;
-			sourceTree = "<group>";
-		};
-		A604084D4ED49004DFE8A7C0164089E2 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				D5F2AE594BCEF3B7ACB3E315B9A03661 /* ADMobGenSDK.podspec */,
-				CB422F4A34FB91C92F9CC41D64B81A97 /* LICENSE */,
-				5257929C0DD34215247927A21FD38302 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		B4C7E81C230499EDFC5C27F0EF3FF55D /* Pods-ADMobGenSDK_Tests */ = {
@@ -231,10 +246,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F8631ADE30F17BD847A4693B211C0A4C /* Development Pods */ = {
+		F97319C5583611410C70D0CB4664235E /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				83AB849097AD49D07059DC111ADE118A /* ADMobGenSDK */,
+				FCBCAE602F323409125CCABB46834C5A /* ADMobGenSDK */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -256,6 +271,17 @@
 				A089B6AF1CDD98D155C94AB35DE129FF /* ADMobGenNetwork */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FCBCAE602F323409125CCABB46834C5A /* ADMobGenSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6E18B531B41117ABD8DD6B7A207090B2 /* ADMObGenSDK-Debug */,
+				9650E2200C754BED4AAB1BDA673FECDE /* ADMObGenSDK-Release */,
+				930639C3888007EEA058CD2A11EF8B5E /* Pod */,
+			);
+			name = ADMobGenSDK;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

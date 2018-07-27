@@ -3,11 +3,15 @@ PODS:
     - ADMobGenFoundation
   - ADMobGenFoundation (0.3.4)
   - ADMobGenNetwork (0.3.0)
-  - ADMobGenSDK (0.6.1):
+  - ADMobGenSDK (0.6.2):
     - ADMobGenAdapter
     - ADMobGenNetwork
-    - ADMobGenSDK/ADMObGenSDK-Release (= 0.6.1)
-  - ADMobGenSDK/ADMObGenSDK-Release (0.6.1):
+    - ADMobGenSDK/ADMObGenSDK-Debug (= 0.6.2)
+    - ADMobGenSDK/ADMObGenSDK-Release (= 0.6.2)
+  - ADMobGenSDK/ADMObGenSDK-Debug (0.6.2):
+    - ADMobGenAdapter
+    - ADMobGenNetwork
+  - ADMobGenSDK/ADMObGenSDK-Release (0.6.2):
     - ADMobGenAdapter
     - ADMobGenNetwork
 
@@ -28,7 +32,7 @@ SPEC CHECKSUMS:
   ADMobGenAdapter: d26c6024cb50c16e4c97847ea0b4cb65b8cc508e
   ADMobGenFoundation: b5b325b87f3dc06b7a4c7f0d995959577a6d48aa
   ADMobGenNetwork: d24cef79ffc805751ec9e7de074895ec0534c937
-  ADMobGenSDK: ed57da6122a5e81cd7acd43b5c22a70cc84b5ed8
+  ADMobGenSDK: 1dbbb34279722fe7d008c6d319ef31ff625e2f2f
 
 PODFILE CHECKSUM: 10c7cd498f5eab84a3481897b1e7de72b13bd5f4
 

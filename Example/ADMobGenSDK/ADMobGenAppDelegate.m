@@ -7,7 +7,12 @@
 //
 
 #import "ADMobGenAppDelegate.h"
+
+#if __has_include(<ADMobGenSDK/ADMobGenBannerView.h>)
 #import <ADMobGenSDK/ADMobGenBannerView.h>
+#else
+#import <ADMobGenSDK-Debug/ADMobGenBannerView.h>
+#endif
 
 @implementation ADMobGenAppDelegate
 

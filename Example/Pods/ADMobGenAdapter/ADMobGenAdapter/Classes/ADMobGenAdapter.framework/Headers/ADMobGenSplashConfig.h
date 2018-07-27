@@ -17,6 +17,7 @@
 @property (nonatomic, readonly, copy) NSString *appId;
 @property (nonatomic, readonly, copy) NSString *posId;
 @property (nonatomic, readonly, assign) BOOL displayType;
+@property (nonatomic, readonly, weak) UIViewController *viewController;
 @property (nonatomic, readonly, weak) id<ADMobGenSplashAdCallBack> callback;
 
 + (instancetype)configWithContentView:(UIView *)contentView
@@ -25,6 +26,7 @@
                                 appId:(NSString *)appId
                                 posId:(NSString *)posId
                           displayType:(BOOL)displayType
+                       viewController:(UIViewController *)viewController
                              callBack:(id<ADMobGenSplashAdCallBack>)callBack;
 
 @end

@@ -13,9 +13,13 @@
 
 @interface ADMobGenNativeExpressAdView ()
 
-@property (nonatomic, readonly, strong) ADMobGenNativeAdData *adData;
-@property (nonatomic, readonly, strong) ADMobGenNativeConfig *config;
-@property (nonatomic, weak) id<ADMobGenNativeExpressAdViewDelegate> delegate;
+#pragma mark - Get
+@property (nonatomic, readonly, strong) ADMobGenNativeAdData *adData; // 渲染资源
+@property (nonatomic, readonly, strong) ADMobGenNativeConfig *config; // 广告配置
+
+#pragma mark - Set
+@property (nonatomic, weak) id<ADMobGenNativeExpressAdViewDelegate> delegate; // 视图生命周期回调
+@property (nonatomic, assign) CGFloat impressRatio; // 展现比例, 范围0 ~ 1, 默认是0.5
 
 - (instancetype)initWithAdData:(ADMobGenNativeAdData *)adData config:(ADMobGenNativeConfig *)config;
 

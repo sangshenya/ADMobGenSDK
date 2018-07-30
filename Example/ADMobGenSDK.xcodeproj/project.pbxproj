@@ -304,12 +304,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example-frameworks.sh",
-				"${PODS_ROOT}/../../ADMobGenSDK/Classes/ADMObGenSDK-Debug/ADMobGenSDK-Debug.framework",
 				"${PODS_ROOT}/../../ADMobGenSDK/Classes/ADMObGenSDK-Release/ADMobGenSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADMobGenSDK-Debug.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADMobGenSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

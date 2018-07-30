@@ -1,6 +1,6 @@
 {
   "name": "ADMobGenSDK",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "summary": "A short description of ADMobGenSDK.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK.git",
-    "tag": "0.6.6"
+    "tag": "0.6.7"
   },
   "platforms": {
     "ios": "8.0"
@@ -33,10 +33,6 @@
     {
       "name": "ADMObGenSDK-Release",
       "vendored_frameworks": "ADMobGenSDK/Classes/ADMObGenSDK-Release/*.framework"
-    },
-    {
-      "name": "ADMObGenSDK-Debug",
-      "vendored_frameworks": "ADMobGenSDK/Classes/ADMObGenSDK-Debug/*.framework"
     }
   ]
 }

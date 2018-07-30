@@ -26,4 +26,9 @@
  */
 + (void)setDebugMode:(id)debugMode;
 
+/**
+ 打开GPS定位, 默认关闭
+ */
++ (void)setGpsOn;
+
 @end

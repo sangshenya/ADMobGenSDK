@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'ADMobGenSDK'
-    s.version          = '0.7.2'
+    s.version          = '0.7.3'
     s.summary          = 'A short description of ADMobGenSDK.'
     
     # This description is used to generate tags and improve search results.
@@ -30,18 +30,7 @@ Pod::Spec.new do |s|
     
     s.ios.deployment_target = '8.0'
     
-#    s.vendored_frameworks = 'ADMobGenSDK/Classes/ADMObGenSDK-Release/*.framework'
-
-    s.subspec 'ADMObGenSDK-Release' do |ss|
-        ss.vendored_frameworks = 'ADMobGenSDK/Classes/ADMObGenSDK-Release/*.framework'
-        ss.xcconfig = {'OTHER_LDFLAGS' => '-ObjC -Wl -undefined dynamic_lookup'}
-    end
-
-    s.subspec 'ADMObGenSDK-Debug' do |ss|
-        ss.vendored_frameworks = 'ADMobGenSDK/Classes/ADMObGenSDK-Debug/*.framework'
-        ss.xcconfig = {'OTHER_LDFLAGS' => '-ObjC -Wl -undefined dynamic_lookup'}
-    end
-
+    s.vendored_frameworks = 'ADMobGenSDK/Classes/*.framework'
     
     s.dependency 'ADMobGenAdapter'
     s.dependency 'ADMobGenNetwork'

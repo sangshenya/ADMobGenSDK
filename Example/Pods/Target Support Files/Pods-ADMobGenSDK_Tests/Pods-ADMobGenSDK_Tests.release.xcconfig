@@ -1,4 +1,4 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ADMobGenAdapter/ADMobGenAdapter/Classes" "${PODS_ROOT}/ADMobGenFoundation/ADMobGenFoundation/Classes" "${PODS_ROOT}/ADMobGenNetwork/ADMobGenNetwork/Classes" "${PODS_ROOT}/../../ADMobGenSDK/Classes/ADMObGenSDK-Release"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ADMobGenAdapter/ADMobGenAdapter/Classes" "${PODS_ROOT}/ADMobGenFoundation/ADMobGenFoundation/Classes" "${PODS_ROOT}/ADMobGenNetwork/ADMobGenNetwork/Classes" "${PODS_ROOT}/../../ADMobGenSDK/Classes"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 OTHER_LDFLAGS = $(inherited) -framework "CFNetwork" -framework "CoreTelephony" -framework "SystemConfiguration" -framework "UIKit"

@@ -1,0 +1,6 @@
+framework module ADMobGenSDK {
+  umbrella header "ADMobGenSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

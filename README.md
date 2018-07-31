@@ -20,6 +20,8 @@ it, simply add the following line to your Podfile:
 pod 'ADMobGenSDK'
 ```
 
+<br>
+
 ## 1.1 概述
 
 尊敬的开发者朋友，欢迎您使用艾狄墨博集合SDK平台。通过本文档，您可以在几分钟之内轻松完成广告的集成过程。

@@ -28,42 +28,45 @@ pod 'ADMobGenSDK'
 
 操作系统： iOS 8.0 及以上版本
 
+<br>
+<br>
 
 ## 2.1 采用cocoapods进行SDK的导入
 
 SDK为了支持插件化的广告平台，采用了cocoapods进行广告集成，只需要pod对应平台，就可以集成该平台广告，无须进行其他配置
 
-* 广告调用framework，必须导入 [Linker](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK)
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK) 广告调用framework，必须导入
 ```ruby
 pod 'ADMobGenSDK'
 ```
 
-* 广点通平台 [Linker](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGDT)
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGDT) 广点通平台
 ```ruby
 pod 'ADMobGenGDT'
 ```
 
-* 有道平台，`注意：` 该平台需要引入 `YDAdBrowserController.xib` 资源文件到主工程 [Linker](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenYD)
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenYD) 有道平台，`注意：` 该平台需要引入 `YDAdBrowserController.xib` 资源文件到主工程
 ```ruby
 pod 'ADMobGenYD'
 ```
 
-* 讯飞平台 [Linker](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenIFLY)
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenIFLY) 讯飞平台
 ```ruby
 pod 'ADMobGenIFLY'
 ```
 
-* 百度平台 [Linker](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDu)
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDu) 百度平台
 ```ruby
 pod 'ADMobGenBaiDu'
 ```
 
-* 艾狄墨博平台 [Linker](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAd)
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAd) 艾狄墨博平台
 ```ruby
 pod 'ADMobGenMCAd'
 ```
 
-
+<br>
+<br>
 
 ## 2.2 工程环境配置
 
@@ -86,8 +89,8 @@ NSLocationWhenInUseUsageDescription
 NSLocationAlwaysAndWhenInUseUsageDeion
 ```
 
-##
-##
+<br>
+<br>
 
 ## 3.1 集合SDK的初始化
 ```objective-c
@@ -103,8 +106,8 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 [ADMobGenSDKConfig setGpsOn];
 ```
 
-##
-##
+<br>
+<br>
 
 ## 3.2 开屏广告 - ADMobGenSplashAd
 ```objective-c
@@ -125,8 +128,8 @@ UIWindow *window = [UIApplication sharedApplication].delegate.window;
 [_splashAd loadAndShowInWindow:window withBottomView:view];
 ```
 
-##
-##
+<br>
+<br>
 
 ## 3.3 banner广告 - ADMobGenBannerView
 ```objective-c
@@ -150,8 +153,8 @@ _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - he
 [_bannerView loadWithError:nil];
 ```
 
-##
-##
+<br>
+<br>
 
 ## 3.4 信息流模板广告 - ADMobGenNativeExpressAd
 ```objective-c
@@ -168,19 +171,18 @@ if (!_expressAd) {
 // 拉取信息流模板广告
 [_expressAd load:4];
 ```
-##
+<br>
 
 * 信息流拉取成功后, 获得的 `ADMobGenNativeExpressAdView` 视图需要调用 `[adview render]` 方法, 否则无法进行广告的点击上报和展现上报
 * 可在 `admg_nativeExpressAdViewRenderSuccess:` 回调中进行列表数据源的刷新
 * `ADMobGenNativeExpressAd` 对象初始化传入的 size, 宽度会根据传入的size固定模板宽度, 高度会自适应, 调用方可以通过 `adview.contentSize` 获取当前信息流模板视图的详细尺寸
 
-##
+<br>
+<br>  
 
 ## Author
 
 liji@ecook.cn
-
-##
 
 ## License
 

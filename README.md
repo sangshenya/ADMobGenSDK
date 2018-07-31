@@ -68,13 +68,53 @@ pod 'ADMobGenMCAd'
 
 <br>
 
+## 2.2 手动导入SDK方式
+下载各SDK拖入到工程中
+* 必要SDK
+[ADMobGenSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK)
+[ADMobGenAdapter.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenAdapter)
+[ADMobGenFoundation.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenFoundation)
+[ADMobGenNetwork.framework](ttp://121.41.108.203/ADMobGenKit-Modules/ADMobGenNetwork)
+
+* 可选SDK
+[ADMobGenMCAd.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAd)
+[ADMobGenGDT.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGDT)
+[ADMobGenYD.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenYD)
+[ADMobGenIFLY.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenIFLY)
+[ADMobGenBaiDu.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDu)
+
+<br>
+
 ## 2.2 工程环境配置
 
-1. 打开项目的 app target，查看 Build Settings 中的 Linking-Other Linker Flags 选项，确保含有 -ObjC 一值， 若没有则添加。
+1.`如果采用cocoapods方式导入SDK, 可跳过该步骤`
+手动方式导入,添加如下依赖库:
+```objective-c
+AdSupport.framework 
+CoreLocation.framework 
+QuarzCore.framework 
+SystemConfiguration.framework
+CoreTelephony.framework
+libz.tbd 
+WebKit.framework (Optional)
+libxml2.tbd
+Security.framework 
+StoreKit.framework
+MessageUI.framework
+Libc++.dylib
+CoreGraphics.framework
+EventKit.framework
+EventKitUI.framework
+SafariServices.framework
+CoreMotion.framework
+MediaPlayer.framework
+```
 
-2. 在项目的 app target 中，查看 Build Settings 中的 Build options - Enable Bitcode 选项， 设置为NO。
+2. 打开项目的 app target，查看 Build Settings 中的 Linking-Other Linker Flags 选项，确保含有 -ObjC 一值， 若没有则添加。
 
-3. info.plist 添加支持 Http访问字段
+3. 在项目的 app target 中，查看 Build Settings 中的 Build options - Enable Bitcode 选项， 设置为NO。
+
+4. info.plist 添加支持 Http访问字段
 ```objective-c
 <key>NSAppTransportSecurity</key>
 <dict>

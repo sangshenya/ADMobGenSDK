@@ -1,0 +1,6 @@
+framework module ADMobGenGDT {
+  umbrella header "ADMobGenGDT-umbrella.h"
+
+  export *
+  module * { export * }
+}

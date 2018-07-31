@@ -1,0 +1,6 @@
+framework module ADMobGenYD {
+  umbrella header "ADMobGenYD-umbrella.h"
+
+  export *
+  module * { export * }
+}

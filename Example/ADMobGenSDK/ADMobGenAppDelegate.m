@@ -7,18 +7,21 @@
 //
 
 #import "ADMobGenAppDelegate.h"
-
-#if __has_include(<ADMobGenSDK/ADMobGenBannerView.h>)
-#import <ADMobGenSDK/ADMobGenBannerView.h>
-#else
-#import <ADMobGenSDK-Debug/ADMobGenBannerView.h>
-#endif
+#import <ADMobGenSDK/ADMobGenSDKConfig.h>
 
 @implementation ADMobGenAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    [ADMobGenSDKConfig initWithAppId:@"2642346" completionBlock:^(NSError *error) {
+        if (error) {
+            // SDK启动失败
+        }
+    }];
+    
+    [ADMobGenSDKConfig setGpsOn];
+    
     return YES;
 }
 

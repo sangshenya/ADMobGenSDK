@@ -29,7 +29,6 @@ pod 'ADMobGenSDK'
 操作系统： iOS 8.0 及以上版本
 
 <br>
-<br>
 
 ## 2.1 采用cocoapods进行SDK的导入
 
@@ -66,7 +65,6 @@ pod 'ADMobGenMCAd'
 ```
 
 <br>
-<br>
 
 ## 2.2 工程环境配置
 
@@ -90,7 +88,6 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 ```
 
 <br>
-<br>
 
 ## 3.1 集合SDK的初始化
 ```objective-c
@@ -106,7 +103,6 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 [ADMobGenSDKConfig setGpsOn];
 ```
 
-<br>
 <br>
 
 ## 3.2 开屏广告 - ADMobGenSplashAd
@@ -128,7 +124,6 @@ UIWindow *window = [UIApplication sharedApplication].delegate.window;
 [_splashAd loadAndShowInWindow:window withBottomView:view];
 ```
 
-<br>
 <br>
 
 ## 3.3 banner广告 - ADMobGenBannerView
@@ -154,7 +149,6 @@ _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - he
 ```
 
 <br>
-<br>
 
 ## 3.4 信息流模板广告 - ADMobGenNativeExpressAd
 ```objective-c
@@ -171,14 +165,12 @@ if (!_expressAd) {
 // 拉取信息流模板广告
 [_expressAd load:4];
 ```
-<br>
 
 * 信息流拉取成功后, 获得的 `ADMobGenNativeExpressAdView` 视图需要调用 `[adview render]` 方法, 否则无法进行广告的点击上报和展现上报
 * 可在 `admg_nativeExpressAdViewRenderSuccess:` 回调中进行列表数据源的刷新
 * `ADMobGenNativeExpressAd` 对象初始化传入的 size, 宽度会根据传入的size固定模板宽度, 高度会自适应, 调用方可以通过 `adview.contentSize` 获取当前信息流模板视图的详细尺寸
 
 <br>
-<br>  
 
 ## Author
 

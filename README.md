@@ -58,8 +58,12 @@ pod ‘ADMobGenMCAd’
 2. 在项目的 app target 中，查看 Build Settings 中的 Build options - Enable Bitcode 选项， 设置为NO。
 
 3. info.plist 添加支持 Http访问字段
-```ruby
-
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
+</dict>
 ```
 
 4. Info.plist 添加定位权限字段

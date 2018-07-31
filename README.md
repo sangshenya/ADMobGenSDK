@@ -46,7 +46,7 @@ pod 'ADMobGenSDK'
 pod 'ADMobGenGDT'
 ```
 
-* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenYD) 有道平台，`注意：` 该平台需要引入 `YDAdBrowserController.xib` 资源文件到主工程
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenYD) 有道平台，`注意：` 该平台需要手动引入 `YDAdBrowserController.xib` 资源文件到主工程
 ```ruby
 pod 'ADMobGenYD'
 ```
@@ -89,7 +89,7 @@ pod 'ADMobGenMCAd'
 
 [ADMobGenGDT.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGDT)
 
-[ADMobGenYD.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenYD)
+[ADMobGenYD.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenYD) 以及资源 [YDAdBrowserController.xib]()
 
 [ADMobGenIFLY.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenIFLY)
 

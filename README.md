@@ -32,23 +32,36 @@ pod 'ADMobGenSDK'
 
 SDK为了支持插件化的广告平台，采用了cocoapods进行广告集成，只需要pod对应平台，就可以集成该平台广告，无须进行其他配置
 
-// 广告调用framework，必须导入
+### 广告调用framework，必须导入
+```ruby
 pod ‘ADMobGenSDK’
+```
 
-// 广点通平台
+### 广点通平台
+```ruby
 pod ‘ADMobGenGDT’
+```
 
-// 有道平台，注意： 该平台需要引入 `YDAdBrowserController.xib` 资源文件到主工程
+### 有道平台，`注意：` 该平台需要引入 `YDAdBrowserController.xib` 资源文件到主工程
+```ruby
 pod ‘ADMobGenYD’
+```
 
-// 讯飞平台
+### 讯飞平台
+```ruby
 pod ‘ADMobGenIFLY’
+```
 
-// 百度平台
+### 百度平台
+```ruby
 pod ‘ADMobGenBaiDu’
+```
 
-// 艾狄墨博平台
+### 艾狄墨博平台
+```ruby
 pod ‘ADMobGenMCAd’
+```
+
 
 
 ## 2.2 工程环境配置
@@ -58,22 +71,22 @@ pod ‘ADMobGenMCAd’
 2. 在项目的 app target 中，查看 Build Settings 中的 Build options - Enable Bitcode 选项， 设置为NO。
 
 3. info.plist 添加支持 Http访问字段
-```
+```objective-c
 <key>NSAppTransportSecurity</key>
 <dict>
-<key>NSAllowsArbitraryLoads</key>
-<true/>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
 </dict>
 ```
 
 4. Info.plist 添加定位权限字段
-```
+```objective-c
 NSLocationWhenInUseUsageDescription
 NSLocationAlwaysAndWhenInUseUsageDeion
 ```
 
 ## 3.1 集合SDK的初始化
-```
+```objective-c
 [ADMobGenSDKConfig initWithAppId:@"appid" completionBlock:^(NSError *error) {
     if (error) {
         // SDK启动失败
@@ -82,12 +95,12 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 ```
 
 开启定位权限, 更加精准的投放广告
-```
+```objective-c
 [ADMobGenSDKConfig setGpsOn];
 ```
 
 ## 3.2 开屏广告 - ADMobGenSplashAd
-```
+```objective-c
 // 1 初始化
 _splashAd = [[ADMobGenSplashAd alloc] init];
 
@@ -106,10 +119,10 @@ UIWindow *window = [UIApplication sharedApplication].delegate.window;
 ```
 
 ## 3.3 banner广告 - ADMobGenBannerView
-```
+```objective-c
 if (_bannerView) {
-[_bannerView removeFromSuperview];
-_bannerView = nil;
+    [_bannerView removeFromSuperview];
+    _bannerView = nil;
 }
 
 // 1 初始化banner视图
@@ -128,15 +141,15 @@ _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - he
 ```
 
 ## 3.4 信息流模板广告 - ADMobGenNativeExpressAd
-```
+```objective-c
 if (!_expressAd) {
-// 1 信息流请求对象的初始化, 并声明为全局变量
-ADMobGenNativeExpressAd *expressAd = [[ADMobGenNativeExpressAd alloc] initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 100)];
-expressAd.delegate = self;
-// 2 设置信息流广告需要显示的控制器, 保证和信息流展示的控制器是同一个
-expressAd.controller = self;
+    // 1 信息流请求对象的初始化, 并声明为全局变量
+    ADMobGenNativeExpressAd *expressAd = [[ADMobGenNativeExpressAd alloc] initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 100)];
+    expressAd.delegate = self;
+    // 2 设置信息流广告需要显示的控制器, 保证和信息流展示的控制器是同一个
+    expressAd.controller = self;
 
-_expressAd = expressAd;
+    _expressAd = expressAd;
 }
 
 // 拉取信息流模板广告
@@ -146,10 +159,10 @@ _expressAd = expressAd;
 * 可在 `admg_nativeExpressAdViewRenderSuccess:` 回调中进行列表数据源的刷新
 * `ADMobGenNativeExpressAd` 对象初始化传入的 size, 宽度会根据传入的size固定模板宽度, 高度会自适应, 调用方可以通过 `adview.contentSize` 获取当前信息流模板视图的详细尺寸
 
-// Author
+## Author
 
 liji@ecook.cn
 
-// License
+## License
 
-ADMobGenSDK is available under the MIT license. See the LICENSE file for more info.
+ADMobGenSDK is available under the MIT license. See the [LICENSE](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK/blob/master/LICENSE) file for more info.

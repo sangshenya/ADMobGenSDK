@@ -104,7 +104,7 @@ pod 'ADMobGenMCAd'
 ```objective-c
 AdSupport.framework 
 CoreLocation.framework 
-QuarzCore.framework 
+QuartzCore.framework 
 SystemConfiguration.framework
 CoreTelephony.framework
 libz.tbd 
@@ -113,7 +113,7 @@ libxml2.tbd
 Security.framework 
 StoreKit.framework
 MessageUI.framework
-Libc++.dylib
+libc++.dylib
 CoreGraphics.framework
 EventKit.framework
 EventKitUI.framework

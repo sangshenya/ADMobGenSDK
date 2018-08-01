@@ -80,7 +80,7 @@ pod 'ADMobGenMCAd'
 
 [ADMobGenFoundation.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenFoundation)
 
-[ADMobGenNetwork.framework](ttp://121.41.108.203/ADMobGenKit-Modules/ADMobGenNetwork)
+[ADMobGenNetwork.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenNetwork)
 
 
 * 可选SDK(各广告平台)

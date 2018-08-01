@@ -144,6 +144,8 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 <br>
 
 ## 3.1 集合SDK的初始化
+
+`申请的appid和你的包名相对应`
 ```objective-c
 [ADMobGenSDKConfig initWithAppId:@"appid" completionBlock:^(NSError *error) {
     if (error) {

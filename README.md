@@ -97,7 +97,7 @@ pod 'ADMobGenMCAd'
 
 <br>
 
-## 2.2 工程环境配置
+## 3.1 工程环境配置
 
 1. `如果采用cocoapods方式导入SDK, 可跳过该步骤`
 手动方式导入,添加如下依赖库:
@@ -143,9 +143,9 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 
 <br>
 
-## 3.1 集合SDK的初始化
+## 4.1 集合SDK的初始化
 
-`申请的appid和你的包名相对应`
+`申请的appid和你的包名相对应，根据双方商务协调，去确定需要拉取的广告平台`
 ```objective-c
 [ADMobGenSDKConfig initWithAppId:@"appid" completionBlock:^(NSError *error) {
     if (error) {
@@ -161,7 +161,7 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 
 <br>
 
-## 3.2 开屏广告 - ADMobGenSplashAd
+## 4.2 开屏广告 - ADMobGenSplashAd
 ```objective-c
 // 1 初始化
 _splashAd = [[ADMobGenSplashAd alloc] init];
@@ -182,7 +182,7 @@ UIWindow *window = [UIApplication sharedApplication].delegate.window;
 
 <br>
 
-## 3.3 banner广告 - ADMobGenBannerView
+## 4.3 banner广告 - ADMobGenBannerView
 ```objective-c
 if (_bannerView) {
     [_bannerView removeFromSuperview];
@@ -206,7 +206,7 @@ _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - he
 
 <br>
 
-## 3.4 信息流模板广告 - ADMobGenNativeExpressAd
+## 4.4 信息流模板广告 - ADMobGenNativeExpressAd
 ```objective-c
 if (!_expressAd) {
     // 1 信息流请求对象的初始化, 并声明为全局变量

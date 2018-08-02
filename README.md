@@ -75,6 +75,7 @@ pod 'ADMobGenBaiDu'
 
 * 必要SDK
     * 广告调用所需framework
+    
     [ADMobGenSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK)
 
     [ADMobGenAdapter.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenAdapter)
@@ -84,21 +85,26 @@ pod 'ADMobGenBaiDu'
     [ADMobGenNetwork.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenNetwork)
     
     * 艾狄墨博平台
+    
     `同时导入`[ADMobGenMCAd.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAd) 和 [ADMobGenMCAdSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAdSDK)
     
     * 广点通平台
+    
     [ADMobGenGDT.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGDT)
 
 
 * 可选SDK(暂无需导入，需导入时会另行通知)
 
     * 有道平台
+    
     [ADMobGenYD.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenYD) 以及资源文件 [YDAdBrowserController.xib](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK/tree/master/Example/ADMobGenSDK)
     
     * 讯飞平台
+    
     [ADMobGenIFLY.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenIFLY)
     
     * 百度平台
+    
     `同时导入`[ADMobGenBaiDu.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDu),  [ADMobGenBaiDuSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDuSDK) 以及资源文件 [baidumobadsdk.bundle](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDuSDK/tree/master/ADMobGenBaiDuSDK/Assets)
 
 <br>

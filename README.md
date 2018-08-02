@@ -41,9 +41,14 @@ SDK为了支持插件化的广告平台，采用了cocoapods进行广告集成�
 pod 'ADMobGenSDK'
 ```
 
-* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGDT) 广点通平台
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGDT) 广点通平台，必须导入
 ```ruby
 pod 'ADMobGenGDT'
+```
+
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAd) 艾狄墨博平台，必须导入
+```ruby
+pod 'ADMobGenMCAd'
 ```
 
 * [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenYD) 有道平台，`注意：该平台需要手动引入` [YDAdBrowserController.xib](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK/tree/master/Example/ADMobGenSDK) `资源文件到主工程`
@@ -61,10 +66,6 @@ pod 'ADMobGenIFLY'
 pod 'ADMobGenBaiDu'
 ```
 
-* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAd) 艾狄墨博平台
-```ruby
-pod 'ADMobGenMCAd'
-```
 
 <br>
 

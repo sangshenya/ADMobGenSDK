@@ -557,7 +557,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.majiawangchutec.homedishcomplete;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.smallrecipeapp.beauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -601,7 +601,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.majiawangchutec.homedishcomplete;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.smallrecipeapp.beauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

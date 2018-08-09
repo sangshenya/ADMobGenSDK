@@ -18,6 +18,10 @@ PODS:
   - ADMobGenSDK (0.7.6):
     - ADMobGenAdapter
     - ADMobGenNetwork
+  - ADMobGenSDKWM (0.2.0):
+    - ADMobGenAdapter
+    - ADMobGenWMSDK
+  - ADMobGenWMSDK (0.1.8)
   - ADMobGenYD (0.5.2):
     - ADMobGenAdapter
 
@@ -27,6 +31,7 @@ DEPENDENCIES:
   - ADMobGenIFLY
   - ADMobGenMCAd
   - ADMobGenSDK (from `../`)
+  - ADMobGenSDKWM
   - ADMobGenYD
 
 SPEC REPOS:
@@ -40,6 +45,8 @@ SPEC REPOS:
     - ADMobGenMCAd
     - ADMobGenMCAdSDK
     - ADMobGenNetwork
+    - ADMobGenSDKWM
+    - ADMobGenWMSDK
     - ADMobGenYD
 
 EXTERNAL SOURCES:
@@ -57,8 +64,10 @@ SPEC CHECKSUMS:
   ADMobGenMCAdSDK: 9eb0a34c91004ffeb5e070dd809410061a42fc9d
   ADMobGenNetwork: d24cef79ffc805751ec9e7de074895ec0534c937
   ADMobGenSDK: 3c959e48d30555a4cb8c4bfaf4f6846880d70afe
+  ADMobGenSDKWM: 72fe91ce1d61fbf4cd11dde3e053782834ca2068
+  ADMobGenWMSDK: 253ba18127f00405170964cbd1dcadd0ba6ce5d9
   ADMobGenYD: 87ce80200370c7172b787f6029e2e0e29fafd5b4
 
-PODFILE CHECKSUM: 94eff85f486ee69691f7909c28ee243d4eb3dab3
+PODFILE CHECKSUM: 0ab5ed22dc4f109b310f1440f93db987be5c1766
 
 COCOAPODS: 1.5.3

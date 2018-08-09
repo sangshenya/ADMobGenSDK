@@ -14,13 +14,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [ADMobGenSDKConfig initWithAppId:@"2938412" completionBlock:^(NSError *error) {
+    [ADMobGenSDKConfig initWithAppId:@"2642346" completionBlock:^(NSError *error) {
         if (error) {
             // SDK启动失败
         }
     }];
     
     [ADMobGenSDKConfig setGpsOn];
+    
+    NSLog(@"+++%@", [NSBundle mainBundle]);
+    NSLog(@"+++=%@", [[NSBundle mainBundle] pathForResource:@"WMAdSDK" ofType:@"bundle"]);
     
     return YES;
 }

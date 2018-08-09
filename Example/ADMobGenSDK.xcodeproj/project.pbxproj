@@ -354,10 +354,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenBaiDuSDK/ADMobGenBaiDuSDK.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenSDKWM/WMAdSDK.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenWMSDK/WMAdSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ADMobGenBaiDuSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WMAdSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -557,7 +560,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.smallrecipeapp.beauty;
+				PRODUCT_BUNDLE_IDENTIFIER = com.majiawangchutec.homedishcomplete;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -601,7 +604,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.smallrecipeapp.beauty;
+				PRODUCT_BUNDLE_IDENTIFIER = com.majiawangchutec.homedishcomplete;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

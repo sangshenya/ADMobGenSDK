@@ -13,12 +13,14 @@ target 'ADMobGenSDK_Example' do
   
   pod 'ADMobGenGDT'
   
-  pod 'ADMobGenIFLY'
+  pod 'ADMobGenMTG'
+  
+#  pod 'ADMobGenIFLY'
 
-  pod 'ADMobGenYD'
-  
-  pod 'ADMobGenBaiDu'
-  
-  pod 'ADMobGenSDKWM'
-  
+#  pod 'ADMobGenYD'
+
+#  pod 'ADMobGenBaiDu'
+
+#  pod 'ADMobGenSDKWM'
+
 end

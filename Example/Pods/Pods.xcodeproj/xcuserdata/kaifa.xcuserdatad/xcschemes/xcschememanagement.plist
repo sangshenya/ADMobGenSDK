@@ -4,21 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ADMobGenBaiDuSDK-ADMobGenBaiDuSDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ADMobGenSDKWM-WMAdSDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ADMobGenWMSDK-WMAdSDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-ADMobGenSDK_Example.xcscheme</key>
 		<dict>
 			<key>isShown</key>

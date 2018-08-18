@@ -1,6 +1,0 @@
-framework module ADMobGenBaiDu {
-  umbrella header "ADMobGenBaiDu-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module ADMobGenIFLY {
-  umbrella header "ADMobGenIFLY-umbrella.h"
-
-  export *
-  module * { export * }
-}

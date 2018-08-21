@@ -66,6 +66,16 @@ pod 'ADMobGenIFLY'
 pod 'ADMobGenBaiDu'
 ```
 
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMTG) Mobvsita平台，暂无需导入（需导入会另行通知）
+```ruby
+pod 'ADMobGenMTG'
+```
+
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenAddamSDK) 哒萌平台，暂无需导入（需导入会另行通知）
+```ruby
+pod 'ADMobGenAddamSDK'
+```
+
 
 <br>
 
@@ -107,7 +117,14 @@ pod 'ADMobGenBaiDu'
     * 百度平台
     
         `同时导入`[ADMobGenBaiDu.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDu),  [ADMobGenBaiDuSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDuSDK) 以及资源文件 [baidumobadsdk.bundle](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDuSDK/tree/master/ADMobGenBaiDuSDK/Assets)
-
+        
+        * Mobvsita平台
+        
+       `同时导入` [ADMobGenMTGSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMTGSDK),  [ADMobGenMTG.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMTG) 
+       
+       * 哒萌平台
+       
+       [ADMobGenAddamSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenAddamSDK)
 <br>
 
 ## 3.1 工程环境配置
@@ -133,6 +150,14 @@ EventKitUI.framework
 SafariServices.framework
 CoreMotion.framework
 MediaPlayer.framework
+```
+以下为Mobvsita平台所需
+```
+UIKit.framework
+Foundation.framework
+AVFoundation.framework
+Accelerate.framework
+libsqlite3.dylib
 ```
 
 2. 打开项目的 app target，查看 Build Settings 中的 Linking-Other Linker Flags 选项，确保含有 -ObjC 一值， 若没有则添加。

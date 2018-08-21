@@ -19,7 +19,7 @@ target 'ADMobGenSDK_Example' do
 
 #  pod 'ADMobGenYD'
 
-#  pod 'ADMobGenBaiDu'
+  pod 'ADMobGenBaiDu'
 
 #  pod 'ADMobGenSDKWM'
 

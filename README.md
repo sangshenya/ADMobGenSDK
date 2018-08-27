@@ -76,6 +76,11 @@ pod 'ADMobGenMTG'
 pod 'ADMobGenAddamSDK'
 ```
 
+* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDKWM) 头条平台，暂无需导入（需导入会另行通知）
+```ruby
+pod 'ADMobGenSDKWM'
+```
+
 
 <br>
 
@@ -125,6 +130,11 @@ pod 'ADMobGenAddamSDK'
     * 哒萌平台
        
         [ADMobGenAddamSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenAddamSDK)
+        
+    * 头条平台
+        
+        `同时导入` [ADMobGenWMSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenWMSDK),  [ADMobGenSDKWM.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDKWM) 
+    
 <br>
 
 ## 3.1 工程环境配置

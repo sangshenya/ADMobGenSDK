@@ -1,0 +1,6 @@
+framework module ADMobGenMCAd {
+  umbrella header "ADMobGenMCAd-umbrella.h"
+
+  export *
+  module * { export * }
+}

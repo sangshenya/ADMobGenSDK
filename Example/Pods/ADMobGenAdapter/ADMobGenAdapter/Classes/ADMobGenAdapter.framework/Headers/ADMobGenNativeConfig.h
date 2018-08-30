@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
+    ADMobGenNativeAdTypeNormal = 0,//图文
+    ADMobGenNativeAdTypePic,//纯图片
+};
+
 @protocol ADMobGenNativeExpressAdCallBack;
 
 @interface ADMobGenNativeConfig : NSObject
@@ -44,12 +49,25 @@
 @property (nonatomic, readonly, weak) id<ADMobGenNativeExpressAdCallBack> callback;
 
 /**
+ 广告渲染类型
+ */
+@property (nonatomic, readonly, assign) ADMobGenNativeAdType nativeAdType;
+
+/**
  构造方法
  */
 + (instancetype)configWithAppId:(NSString *)appId
                           posId:(NSString *)posId
                      expectSize:(CGSize)expectSize
                     displayType:(BOOL)displayType
+                 viewController:(UIViewController *)viewController
+                       callback:(id<ADMobGenNativeExpressAdCallBack>)callback DEPRECATED_MSG_ATTRIBUTE("Donot has nativeAdType");
+
++ (instancetype)configWithAppId:(NSString *)appId
+                          posId:(NSString *)posId
+                     expectSize:(CGSize)expectSize
+                    displayType:(BOOL)displayType
+                   nativeAdType:(ADMobGenNativeAdType)nativeAdType
                  viewController:(UIViewController *)viewController
                        callback:(id<ADMobGenNativeExpressAdCallBack>)callback;
 

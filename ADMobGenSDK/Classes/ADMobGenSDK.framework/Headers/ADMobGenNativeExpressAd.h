@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <ADMobGenAdapter/ADMobGenNativeConfig.h>
 
 @class ADMobGenNativeExpressAdView;
 @protocol ADMobGenNativeExpressAdDelegate;
@@ -41,6 +42,13 @@
  @param count 拉取几条广告,建议区间 1~5, 超过可能无法拉取到
  */
 - (void)load:(int)count;
+
+/**
+ 设置原生广告类型
+ 
+ @param nativeAdType 广告渲染的样式
+ */
+- (void)setNativeAdType:(ADMobGenNativeAdType)nativeAdType;
 
 @end
 

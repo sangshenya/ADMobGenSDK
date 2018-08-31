@@ -23,6 +23,7 @@
 
 - (instancetype)initWithAdData:(ADMobGenNativeAdData *)adData config:(ADMobGenNativeConfig *)config NS_DESIGNATED_INITIALIZER;
 
+
 - (instancetype)new NS_UNAVAILABLE;
 
 - (instancetype)init NS_UNAVAILABLE;

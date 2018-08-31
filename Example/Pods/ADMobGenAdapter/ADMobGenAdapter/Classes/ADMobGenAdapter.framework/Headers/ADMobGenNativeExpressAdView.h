@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ADMobGenNativeConfig.h"
 
 @interface ADMobGenNativeExpressAdView : UIView
 
@@ -20,5 +21,10 @@
  * render成功后, 会根据具体的内容返回正确的尺寸
  */
 - (CGSize)contentSize;
+
+/**
+ * 信息流广告类型
+ */
+- (ADMobGenNativeAdType)getNativeAdType;
 
 @end

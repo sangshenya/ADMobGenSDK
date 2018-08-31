@@ -12,6 +12,7 @@
 
 @interface ADMobGenExpressViewController () <UITableViewDelegate, UITableViewDataSource, ADMobGenNativeExpressAdDelegate> {
     ADMobGenNativeExpressAd *_expressAd;
+    ADMobGenNativeExpressAd *_normalExpressAd;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -53,10 +54,24 @@
         expressAd.controller = self;
         
         _expressAd = expressAd;
+        //设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,不同的信息流样式使用不同的实例对象
+        [_expressAd setNativeAdType:ADMobGenNativeAdTypePic];//信息流样式纯图片
     }
-    
     // 拉取信息流模板广告
     [_expressAd load:4];
+    //默认图文信息流
+    [self loadNormalNativeAd];
+}
+
+#pragma mark - 默认图文信息流
+- (void)loadNormalNativeAd{
+    if (!_normalExpressAd) {
+        _normalExpressAd = [[ADMobGenNativeExpressAd alloc]initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 100)];
+        _normalExpressAd.delegate = self;
+        _normalExpressAd.controller = self;
+        [_normalExpressAd setNativeAdType:ADMobGenNativeAdTypeNormal];
+    }
+    [_normalExpressAd load:2];
 }
 
 #pragma mark -

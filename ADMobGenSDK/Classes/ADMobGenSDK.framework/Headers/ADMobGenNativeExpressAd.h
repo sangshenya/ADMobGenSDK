@@ -46,7 +46,7 @@
 /**
  设置原生广告类型
  
- @param nativeAdType 广告渲染的样式
+ @param nativeAdType 广告渲染的样式，默认为图文
  */
 - (void)setNativeAdType:(ADMobGenNativeAdType)nativeAdType;
 

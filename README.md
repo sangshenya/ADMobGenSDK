@@ -281,7 +281,7 @@ if (!_expressAd) {
 
 ## Author
 
-liji@ecook.cn
+liji@ecook.cn,sangshen@ecook.cn
 
 ## License
 

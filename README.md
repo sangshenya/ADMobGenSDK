@@ -262,6 +262,8 @@ if (!_expressAd) {
     expressAd.delegate = self;
     // 2 设置信息流广告需要显示的控制器, 保证和信息流展示的控制器是同一个
     expressAd.controller = self;
+    //设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,不同的信息流样式使用不同的实例对象
+    [_expressAd setNativeAdType:ADMobGenNativeAdTypePic];//信息流样式纯图片
 
     _expressAd = expressAd;
 }

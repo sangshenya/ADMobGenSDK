@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, ADMobGenLogLevel) {
+    ADMobGenLogLevelNone,
+    ADMobGenLogLevelError,
+    ADMobGenLogLevelDebug
+};
+
 @interface ADMobGenSDKConfig : NSObject
 
 /**
@@ -30,5 +36,11 @@
  打开GPS定位, 默认关闭
  */
 + (void)setGpsOn;
+
+/**
+ 配置开发模式
+ @param logLevel 默认 ADMobGenLogLevelNone
+ */
++ (void)setLogLevel:(ADMobGenLogLevel)logLevel;
 
 @end

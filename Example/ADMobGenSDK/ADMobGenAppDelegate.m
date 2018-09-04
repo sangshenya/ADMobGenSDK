@@ -19,6 +19,8 @@
             // SDK启动失败
         }
     }];
+    //默认为ADMobGenLogLevelNone
+    [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelError];
     
     [ADMobGenSDKConfig setGpsOn];
     

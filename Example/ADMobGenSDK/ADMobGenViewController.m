@@ -11,7 +11,7 @@
 #import <ADMobGenSDK/ADMobGenBannerView.h>
 #import "ADMobGenExpressViewController.h"
 
-@interface ADMobGenViewController () <ADMobGenBannerViewDelegate> {
+@interface ADMobGenViewController () <ADMobGenBannerViewDelegate,ADMobGenSplashAdDelegate> {
     ADMobGenSplashAd *_splashAd;
     ADMobGenBannerView *_bannerView;
 }
@@ -99,4 +99,27 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];;
     [self presentViewController:nav animated:YES completion:nil];
 }
+
+#pragma mark - ADMobGenSplashAdDelegate
+- (void)admg_splashAdSuccessToPresentScreen:(ADMobGenSplashAd *)splashAd{
+    NSLog(@"load splash success");
+}
+
+- (void)admg_splashAd:(ADMobGenSplashAd *)splash failToPresentScreen:(NSError *)error{
+    _splashAd = nil;
+    if (error) {
+        //NSLog(@"");ADMobGenLogLevelError自动打印错误信息，也可打印error查看
+    }
+}
+
+- (void)admg_splashAdClosed:(ADMobGenSplashAd *)splashAd{
+    _splashAd = nil;
+}
+
+#pragma mark - ADMobGenBannerViewDelegate
+- (void)admg_bannerViewDidReceived:(ADMobGenBannerView *)bannerView{
+    NSLog(<#NSString * _Nonnull format, ...#>)
+}
+
+
 @end

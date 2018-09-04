@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, ADMobGenLogLevel) {
-    ADMobGenLogLevelNone,
-    ADMobGenLogLevelError,
-    ADMobGenLogLevelDebug
+    ADMobGenLogLevelNone = 0,
+    ADMobGenLogLevelError = 1,
+    ADMobGenLogLevelDebug = 2
 };
 
 @interface ADMobGenSDKConfig : NSObject

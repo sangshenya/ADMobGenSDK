@@ -8,6 +8,7 @@
 
 #import "ADMobGenAppDelegate.h"
 #import <ADMobGenSDK/ADMobGenSDKConfig.h>
+#import "ADMobGenViewController.h"
 
 @implementation ADMobGenAppDelegate
 
@@ -23,6 +24,15 @@
     [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelError];
     
     [ADMobGenSDKConfig setGpsOn];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    ADMobGenViewController *vc = [[ADMobGenViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    self.window.rootViewController = nav;
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

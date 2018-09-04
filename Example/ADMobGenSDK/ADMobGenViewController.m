@@ -32,7 +32,7 @@
     
     UIButton *btn = [UIButton new];
     btn.backgroundColor = [UIColor redColor];
-    btn.frame = CGRectMake(0, 0, 100, 100);
+    btn.frame = CGRectMake(0, 64, 100, 100);
     [btn setTitle:@"开屏" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view addSubview:btn];
@@ -40,7 +40,7 @@
     
     UIButton *btn2 = [UIButton new];
     btn2.backgroundColor = [UIColor redColor];
-    btn2.frame = CGRectMake(0, 120, 100, 100);
+    btn2.frame = CGRectMake(0, 120+64, 100, 100);
     [btn2 setTitle:@"banner" forState:UIControlStateNormal];
     [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view addSubview:btn2];
@@ -48,7 +48,7 @@
     
     UIButton *btn3 = [UIButton new];
     btn3.backgroundColor = [UIColor redColor];
-    btn3.frame = CGRectMake(0, 240, 100, 100);
+    btn3.frame = CGRectMake(0, 240+64, 100, 100);
     [btn3 setTitle:@"原生模板" forState:UIControlStateNormal];
     [btn3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view  addSubview:btn3];
@@ -62,6 +62,8 @@
     
     // 2 设置默认启动图(一般设置启动图的平铺颜色为背景颜色，使得视觉效果更加平滑)
     _splashAd.backgroundColor = [UIColor yellowColor];
+    
+    _splashAd.delegate = self;
     
     // 3 设置底部logo视图, 高度不能超过屏幕的25%, 除iPhoneX以外建议: 开屏的广告图片默认640 / 960比例，如果是iPhoneX注意bottomViewHeight不能超过屏幕的25%
     CGFloat bottomViewHeight;
@@ -111,7 +113,7 @@
 
 #pragma mark - ADMobGenSplashAdDelegate
 - (void)admg_splashAdSuccessToPresentScreen:(ADMobGenSplashAd *)splashAd{
-    NSLog(@"load splash success");
+    
 }
 
 - (void)admg_splashAd:(ADMobGenSplashAd *)splash failToPresentScreen:(NSError *)error{

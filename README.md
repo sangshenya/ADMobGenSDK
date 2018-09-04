@@ -207,6 +207,12 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 [ADMobGenSDKConfig setGpsOn];
 ```
 
+用户日志输出等级
+```objective-c
+//默认为ADMobGenLogLevelNone
+[ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelError];
+```
+
 <br>
 
 ## 4.2 开屏广告 - ADMobGenSplashAd

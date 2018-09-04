@@ -214,11 +214,17 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 // 1 初始化
 _splashAd = [[ADMobGenSplashAd alloc] init];
 
-// 2 设置默认启动图
+// 2 设置默认启动图(一般设置启动图的平铺颜色为背景颜色，使得视觉效果更加平滑)
 _splashAd.backgroundColor = [UIColor yellowColor];
 
-// 3 设置底部logo视图, 高度不能超过屏幕的25%, 除iPhone X以外建议: 开屏的广告图片默认640 / 960比例，如果是iPhone X注意bottomViewHeight不能超过屏幕的25%
-CGFloat bottomViewHeight = [UIScreen mainScreen].bounds.size.height - [UIScreen mainScreen].bounds.size.width * (960 / 640.0);
+// 3 设置底部logo视图, 高度不能超过屏幕的25%, 除iPhoneX以外建议: 开屏的广告图片默认640 / 960比例，如果是iPhoneX注意bottomViewHeight不能超过屏幕的25%
+CGFloat bottomViewHeight;
+if (kIPhoneX) {
+    bottomViewHeight = [UIScreen mainScreen].bounds.size.height * 0.25;
+} else {
+    bottomViewHeight = [UIScreen mainScreen].bounds.size.height - [UIScreen mainScreen].bounds.size.width * (960 / 640.0);
+}
+
 UIView *view = [[UIView alloc] init];
 view.backgroundColor = [UIColor purpleColor];
 view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, bottomViewHeight);

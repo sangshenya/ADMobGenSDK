@@ -74,7 +74,7 @@
     [_normalExpressAd load:2];
 }
 
-#pragma mark -
+#pragma mark - UITableViewDelegate,UITableViewDateSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.items.count;
@@ -125,6 +125,7 @@
     [self.tempViewitems removeObject:nativeExpressAdView];
 }
 
+#pragma mark - lazy
 - (NSMutableArray<ADMobGenNativeExpressAdView *> *)tempViewitems {
     if (!_tempViewitems) {
         _tempViewitems = [[NSMutableArray alloc] init];

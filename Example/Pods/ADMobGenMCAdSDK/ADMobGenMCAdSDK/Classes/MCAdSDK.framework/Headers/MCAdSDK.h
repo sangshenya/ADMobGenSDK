@@ -30,7 +30,16 @@ NS_ASSUME_NONNULL_BEGIN
  @param appId the appid
  @param token the token
  */
-+ (void)initSdkWithAppId:(nonnull NSString *)appId token:(nonnull NSString *)token;
++ (void)initSdkWithAppId:(nonnull NSString *)appId token:(nonnull NSString *)token DEPRECATED_MSG_ATTRIBUTE("Donot has turn");
+
+/**
+ Initialize the sdk. This must be called before any other API for the SDK used.
+ 
+ @param appId the appid
+ @param token the token
+ @param turn request back or not
+ */
++ (void)initSdkWithAppId:(nonnull NSString *)appId token:(nonnull NSString *)token withTurn:(BOOL)turn;
 
 /**
  Get the SDK version

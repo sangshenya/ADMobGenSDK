@@ -54,6 +54,11 @@ typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
 @property (nonatomic, readonly, assign) ADMobGenNativeAdType nativeAdType;
 
 /**
+ 
+ */
+@property (nonatomic, readonly, assign) BOOL trunType;
+
+/**
  构造方法
  */
 + (instancetype)configWithAppId:(NSString *)appId
@@ -67,6 +72,15 @@ typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
                           posId:(NSString *)posId
                      expectSize:(CGSize)expectSize
                     displayType:(BOOL)displayType
+                   nativeAdType:(ADMobGenNativeAdType)nativeAdType
+                 viewController:(UIViewController *)viewController
+                       callback:(id<ADMobGenNativeExpressAdCallBack>)callback DEPRECATED_MSG_ATTRIBUTE("Donot has trunType");
+
++ (instancetype)configWithAppId:(NSString *)appId
+                          posId:(NSString *)posId
+                     expectSize:(CGSize)expectSize
+                    displayType:(BOOL)displayType
+                       trunType:(BOOL)trunType
                    nativeAdType:(ADMobGenNativeAdType)nativeAdType
                  viewController:(UIViewController *)viewController
                        callback:(id<ADMobGenNativeExpressAdCallBack>)callback;

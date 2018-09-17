@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [ADMobGenSDKConfig initWithAppId:@"2938412" completionBlock:^(NSError *error) {
+    [ADMobGenSDKConfig initWithAppId:@"2416600" completionBlock:^(NSError *error) {
         if (error) {
             // SDK启动失败
         }

@@ -119,6 +119,7 @@
     [self.tempViewitems removeObject:nativeExpressAdView];
     [self.items addObject:nativeExpressAdView];
     [self.tableView reloadData];
+    
 }
 
 - (void)admg_nativeExpressAdViewRenderFail:(ADMobGenNativeExpressAdView *)nativeExpressAdView {

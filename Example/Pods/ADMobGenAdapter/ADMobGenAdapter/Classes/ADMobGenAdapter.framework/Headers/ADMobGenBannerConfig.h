@@ -7,6 +7,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, ADMobGenBannerAdSize) {
+    ADMobGenBannerAdSizeNormal = 0,//640:100
+    ADMobGenBannerAdSize690_388 = 1,//690:388
+    ADMobGenBannerAdSize600_400 = 2,//600:400
+    ADMobGenBannerAdSize600_260 = 3,//600:260
+};
+
 @protocol ADMobGenBannerAdCallBack;
 
 @interface ADMobGenBannerConfig : NSObject
@@ -15,6 +22,7 @@
 @property (nonatomic, readonly, copy) NSString *posId;
 @property (nonatomic, readonly, assign) BOOL displayType;
 @property (nonatomic, readonly, assign) BOOL trunType;
+@property (nonatomic, readonly, assign) ADMobGenBannerAdSize bannerSize;
 @property (nonatomic, readonly, weak) UIViewController *viewController;
 @property (nonatomic, readonly, weak) id<ADMobGenBannerAdCallBack> callback;
 
@@ -28,6 +36,14 @@
                           posId:(NSString *)posId
                     displayType:(BOOL)displayType
                        trunType:(BOOL)trunType
+                 viewController:(UIViewController *)viewController
+                       callback:(id<ADMobGenBannerAdCallBack>)callback DEPRECATED_MSG_ATTRIBUTE("Donot has bannerSize");
+
++ (instancetype)configWithappId:(NSString *)appId
+                          posId:(NSString *)posId
+                    displayType:(BOOL)displayType
+                       trunType:(BOOL)trunType
+                     bannerSize:(ADMobGenBannerAdSize)bannerSize
                  viewController:(UIViewController *)viewController
                        callback:(id<ADMobGenBannerAdCallBack>)callback;
 

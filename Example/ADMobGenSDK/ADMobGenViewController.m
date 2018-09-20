@@ -91,7 +91,7 @@
     }
     
     // 1 初始化banner视图
-    _bannerView = [[ADMobGenBannerView alloc] init];
+    _bannerView = [[ADMobGenBannerView alloc] initWithFrame:<#(CGRect)#> withBannerSize:<#(id)#>];
     _bannerView.delegate = self;
     _bannerView.backgroundColor = [UIColor redColor];
     

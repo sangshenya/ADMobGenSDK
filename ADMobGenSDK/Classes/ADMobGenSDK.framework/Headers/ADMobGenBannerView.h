@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ADMobGenAdapter/ADMobGenBannerConfig.h>
 
 @protocol ADMobGenBannerViewDelegate;
 
@@ -17,14 +16,6 @@
  代理回调
  */
 @property (nonatomic, weak) id<ADMobGenBannerViewDelegate> delegate;
-
-- (id)new NS_UNAVAILABLE;
-- (id)init NS_UNAVAILABLE;
-/*
- 初始化bannerView
- @param size 期望的banner广告尺寸比例，默认为640:100
- */
-- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize NS_DESIGNATED_INITIALIZER;
 
 /**
  加载并显示广告

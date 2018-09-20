@@ -54,6 +54,9 @@
     [self.view  addSubview:btn3];
     [btn3 addTarget:self action:@selector(test3) forControlEvents:UIControlEventTouchUpInside];
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self test];
+    });
 }
 
 - (void)test {
@@ -91,7 +94,7 @@
     }
     
     // 1 初始化banner视图
-    _bannerView = [[ADMobGenBannerView alloc] initWithFrame:<#(CGRect)#> withBannerSize:<#(id)#>];
+    _bannerView = [[ADMobGenBannerView alloc] init];
     _bannerView.delegate = self;
     _bannerView.backgroundColor = [UIColor redColor];
     

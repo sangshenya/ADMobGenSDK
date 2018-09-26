@@ -11,8 +11,8 @@
 #import <ADMobGenSDK/ADMobGenBannerView.h>
 #import "ADMobGenExpressViewController.h"
 
-// 机型UI适配宏
-#define kIPhoneX (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && ([UIScreen mainScreen].bounds.size.width == 375.0 && [UIScreen mainScreen].bounds.size.height == 812.0))
+//// 机型UI适配宏
+//#define kIPhoneX (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && ([UIScreen mainScreen].bounds.size.width == 375.0 && [UIScreen mainScreen].bounds.size.height == 812.0))
 
 @interface ADMobGenViewController () <ADMobGenBannerViewDelegate,ADMobGenSplashAdDelegate> {
     ADMobGenSplashAd *_splashAd;
@@ -53,11 +53,8 @@
     [btn3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view  addSubview:btn3];
     [btn3 addTarget:self action:@selector(test3) forControlEvents:UIControlEventTouchUpInside];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self test];
-    });
 }
+
 
 - (void)test {
     // 1 初始化

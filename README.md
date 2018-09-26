@@ -218,27 +218,36 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 ## 4.2 开屏广告 - ADMobGenSplashAd
 ```objective-c
 // 1 初始化
-_splashAd = [[ADMobGenSplashAd alloc] init];
+_splashAd = [[ADMobGenSplashAd alloc]init];
+_splashAd.delegate = self;
 
 // 2 设置默认启动图(一般设置启动图的平铺颜色为背景颜色，使得视觉效果更加平滑)
-_splashAd.backgroundColor = [UIColor yellowColor];
-
-// 3 设置底部logo视图, 高度不能超过屏幕的25%, 除iPhoneX以外建议: 开屏的广告图片默认640 / 960比例，如果是iPhoneX注意bottomViewHeight不能超过屏幕的25%
-CGFloat bottomViewHeight;
-if (kIPhoneX) {
-    bottomViewHeight = [UIScreen mainScreen].bounds.size.height * 0.25;
-} else {
-    bottomViewHeight = [UIScreen mainScreen].bounds.size.height - [UIScreen mainScreen].bounds.size.width * (960 / 640.0);
+UIImage *splashImage = [UIImage imageNamed:@"1242×2208"];
+CGFloat bottomHeight = kScreenHeight - (kScreenWidth*960/640);
+if (iPhoneX) {
+    splashImage = [UIImage imageNamed:@"1125×2436"];
+    bottomHeight = 0.25 * kScreenHeight;
+} else if ([UIScreen mainScreen].bounds.size.height == 480) {
+    splashImage = [UIImage imageNamed:@"640×960"];
 }
+_splashAd.backgroundColor = [UIColor colorWithPatternImage:[self imageResize:splashImage andResizeTo:[UIScreen mainScreen].bounds.size]];
 
-UIView *view = [[UIView alloc] init];
-view.backgroundColor = [UIColor purpleColor];
-view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, bottomViewHeight);
-
+// 3 设置底部logo视图, bottomHeight高度不能超过屏幕的25%, 除iPhoneX以外建议: 开屏的广告图片默认640 / 960比例，如果是iPhoneX注意bottomViewHeight不能超过屏幕的25%
+UIView *bottomView = [[UIView alloc]init];
+bottomView.backgroundColor = [UIColor whiteColor];
+bottomView.frame = CGRectMake(0, 0, kScreenWidth, bottomHeight);
+UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bottom_icon.jpg"]];
+imageView.frame = CGRectMake((kScreenWidth-120)/2, (bottomHeight - 60)/2, 120, 60);
+[bottomView addSubview:imageView];
 // 4 展示
 UIWindow *window = [UIApplication sharedApplication].delegate.window;
-[_splashAd loadAndShowInWindow:window withBottomView:view];
+[_splashAd loadAndShowInWindow:window withBottomView:bottomView];
 ```
+* 推荐在 `AppDelegatez`的 `didFinishLaunchingWithOptions`方法的 `return YES`之前调用开屏。
+* 销毁开屏对象请在开屏加载失败和开屏关闭的回调中置空，切忌在点击回调中置空，可能会造成从落地页返回App的时候出现广告视图依旧存在的情况，因为开屏的生命周期是请求-展示-/落地页(点击)-/关闭。
+* 当使用控制器承载开屏广告时，有以下两个需要注意的事项：
+* 1、请勿在`viewWillAppear`中调用开屏广告，否则会出现开屏方法多次被调用。
+* 2、当前控制器需要导航栏控制器承载，否则会出现广告请求成功却不展示的情况。
 
 <br>
 
@@ -287,7 +296,7 @@ if (!_expressAd) {
 * 信息流拉取成功后, 获得的 `ADMobGenNativeExpressAdView` 视图需要调用 `[adview render]` 方法, 否则无法进行广告的点击上报和展现上报
 * 可在 `admg_nativeExpressAdViewRenderSuccess:` 回调中进行列表数据源的刷新
 * 如果同时使用到 `ADMobGenNativeAdTypeNormal` `ADMobGenNativeAdTypePic`两种信息流类型,是在同样的代理方法中返回`ADMobGenNativeExpressAdView`视图，可调用 `[nativeExpressAdView getNativeAdType]`来判断该视图是哪种类型
-* `ADMobGenNativeExpressAd` 对象初始化传入的 size, 宽度会根据传入的size固定模板宽度, 高度会自适应, 调用方可以通过 `adview.contentSize` 获取当前信息流模板视图的详细尺寸
+* `ADMobGenNativeExpressAd` 对象初始化传入的 size, 宽度会根据传入的size固定模板宽度, 高度会自适应, 调用方可以通过 `adview.contentSize` 获取当前信息流模板视图的详细尺寸，如不使用`adview.contentSize`会出现无法点击的问题。
 
 <br>
 

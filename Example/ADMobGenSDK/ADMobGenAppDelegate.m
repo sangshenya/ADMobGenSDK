@@ -16,11 +16,7 @@
 {
     //默认为ADMobGenLogLevelNone
 //    [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelDebug];
-//    id config = [ADMobGenSDKConfig performSelector:@selector(sharedConfig)];
-//    if (config) {
-//        [config performSelector:@selector(setDebugConfig:) withObject:@{@"k_logInfo":@(YES)}];
-//    }
-    [ADMobGenSDKConfig initWithAppId:@"2803319" completionBlock:^(NSError *error) {
+    [ADMobGenSDKConfig initWithAppId:@"2938412" completionBlock:^(NSError *error) {
         if (error) {
             // SDK启动失败
         }

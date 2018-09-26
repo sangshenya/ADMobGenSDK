@@ -21,6 +21,6 @@ target 'ADMobGenSDK_Example' do
 
 #  pod 'ADMobGenBaiDu'
 
-#  pod 'ADMobGenSDKWM'
+  pod 'ADMobGenSDKWM'
 
 end

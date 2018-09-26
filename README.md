@@ -243,7 +243,7 @@ imageView.frame = CGRectMake((kScreenWidth-120)/2, (bottomHeight - 60)/2, 120, 6
 UIWindow *window = [UIApplication sharedApplication].delegate.window;
 [_splashAd loadAndShowInWindow:window withBottomView:bottomView];
 ```
-* 推荐在 `AppDelegatez`的 `didFinishLaunchingWithOptions`方法的 `return YES`之前调用开屏。
+* 推荐在 `AppDelegate`的 `didFinishLaunchingWithOptions`方法的 `return YES`之前调用开屏。
 * 销毁开屏对象请在开屏加载失败和开屏关闭的回调中置空，切忌在点击回调中置空，可能会造成从落地页返回App的时候出现广告视图依旧存在的情况，因为开屏的生命周期是请求-展示-/落地页(点击)-/关闭。
 * 当使用控制器承载开屏广告时，有以下两个需要注意的事项：
 * 1、请勿在`viewWillAppear`中调用开屏广告，否则会出现开屏方法多次被调用。

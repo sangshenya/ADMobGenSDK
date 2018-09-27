@@ -21,6 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //默认为ADMobGenLogLevelNone
+    id obj = [ADMobGenSDKConfig performSelector:@selector(sharedConfig)];
+    [obj performSelector:@selector(setDebugConfig:) withObject:@{@"k_logInfo":@(YES)}];
 //    [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelDebug];
     [ADMobGenSDKConfig initWithAppId:@"2938412" completionBlock:^(NSError *error) {
         if (error) {
@@ -38,6 +40,8 @@
     self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
+    
+    [self loadSplash];
     
     return YES;
 }

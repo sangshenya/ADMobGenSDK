@@ -53,8 +53,6 @@
     [btn3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view  addSubview:btn3];
     [btn3 addTarget:self action:@selector(test3) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self test3];
 }
 
 

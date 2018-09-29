@@ -53,10 +53,13 @@
     [btn3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view  addSubview:btn3];
     [btn3 addTarget:self action:@selector(test3) forControlEvents:UIControlEventTouchUpInside];
+    
+//    [self test3];
 }
 
 
 - (void)test {
+    //注意：当你在控制器中加载开屏时，请勿在viewWillAppear中加载开屏，该方法会调用多次，使得展示多次开屏广告，在viewDidLoad中加载开屏广告的时候，如果该控制器没有用导航栏承载，会出现无法展示广告，却走了加载成功的回调方法
     // 1 初始化
     _splashAd = [[ADMobGenSplashAd alloc] init];
     
@@ -101,7 +104,7 @@
     _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - height, width, height);
     [self.view addSubview:_bannerView];
     
-    // 3 加载并显示广告 注意: 请确保banner视图显示在屏幕内的时候,调用load方法
+    // 3 加载并显示广告 注意: 请确保banner视图显示在屏幕内的时候,调用load方法（tip：在tableView中使用banner时，可以在willDisplay的代理方法中）
     [_bannerView loadWithError:nil];
 }
 

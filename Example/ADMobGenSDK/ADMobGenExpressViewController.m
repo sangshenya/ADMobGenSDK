@@ -47,7 +47,7 @@
 
 - (void)onRefreshClicked:(id)sender {
     if (!_expressAd) {
-        // 1 信息流请求对象的初始化, 并声明为全局变量
+        // 1 信息流请求对象的初始化, 并声明为全局变量，其中size为期望大小，渲染成功后真实大小可以在广告视图contentSize获取（tip：当你需要高度更高的信息流视图时，因为比例是固定的，可以增加期望大小size的宽度，达到增加视图高度）
         ADMobGenNativeExpressAd *expressAd = [[ADMobGenNativeExpressAd alloc] initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 100)];
         expressAd.delegate = self;
         // 2 设置信息流广告需要显示的控制器, 保证和信息流展示的控制器是同一个
@@ -98,14 +98,16 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     ADMobGenNativeExpressAdView *adView = [self.items objectAtIndex:indexPath.row];
+    //注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法
     return adView.contentSize.height;
 }
 
 #pragma mark - ADMobGenNativeExpressAdDelegate
 
 - (void)admg_nativeExpressAdSucessToLoad:(ADMobGenNativeExpressAd *)nativeExpressAd views:(NSArray<__kindof ADMobGenNativeExpressAdView *> *)views {
+    //临时存储ADMobGenNativeExpressAdView
     [self.tempViewitems addObjectsFromArray:views];
-    
+    //成功回调中，直接返回views中的视图ADMobGenNativeExpressAdView，使用ADMobGenNativeExpressAdView之前需要调用它的render方法进行渲染。
     for (int index = 0; index < views.count; index ++) {
         [views[index] render];
     }
@@ -116,13 +118,16 @@
 }
 
 - (void)admg_nativeExpressAdViewRenderSuccess:(ADMobGenNativeExpressAdView *)nativeExpressAdView {
+    //从临时数组中去除
     [self.tempViewitems removeObject:nativeExpressAdView];
+    //加入到数据源中，注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法
     [self.items addObject:nativeExpressAdView];
     [self.tableView reloadData];
     
 }
 
 - (void)admg_nativeExpressAdViewRenderFail:(ADMobGenNativeExpressAdView *)nativeExpressAdView {
+    //从临时数组中去除
     [self.tempViewitems removeObject:nativeExpressAdView];
 }
 

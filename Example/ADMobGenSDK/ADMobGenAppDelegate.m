@@ -37,7 +37,7 @@
     self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
-    //当你在rootViewController中有去跳转其他的控制器的话，可能会出现广告加载不出的情况（广点通广告无法加载）
+    //当你在rootViewController中有去模态弹出其他的控制器的话，可能会出现广告加载不出的情况（广点通广告无法加载）
     [self loadSplash];
     
     return YES;
@@ -63,13 +63,13 @@
         bottomViewHeight = [UIScreen mainScreen].bounds.size.height - [UIScreen mainScreen].bounds.size.width * (960 / 640.0);
     }
     
-    UIView *view = [[UIView alloc] init];
-    view.backgroundColor = [UIColor purpleColor];
-    view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, bottomViewHeight);
+    UIView *bottomView = [[UIView alloc] init];
+    bottomView.backgroundColor = [UIColor purpleColor];
+    bottomView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, bottomViewHeight);
     
     // 4 展示
     UIWindow *window = [UIApplication sharedApplication].delegate.window;
-    [_splashAd loadAndShowInWindow:window withBottomView:nil];
+    [_splashAd loadAndShowInWindow:window withBottomView:bottomView];
 }
 
 - (UIImage *)imageResize:(UIImage*)img andResizeTo:(CGSize)newSize

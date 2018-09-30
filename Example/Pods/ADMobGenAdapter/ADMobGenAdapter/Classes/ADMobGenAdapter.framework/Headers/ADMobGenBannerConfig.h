@@ -9,9 +9,10 @@
 
 typedef NS_ENUM(NSUInteger, ADMobGenBannerAdSize) {
     ADMobGenBannerAdSizeNormal = 0,//640:100
-    ADMobGenBannerAdSize690_388 = 1,//690:388
-    ADMobGenBannerAdSize600_400 = 2,//600:400
-    ADMobGenBannerAdSize600_260 = 3,//600:260
+    ADMobGenBannerAdSize600_150 = 1,//600:150
+    ADMobGenBannerAdSize690_388 = 2,//690:388
+    ADMobGenBannerAdSize600_400 = 3,//600:400
+    ADMobGenBannerAdSize600_260 = 4,//600:260
 };
 
 @protocol ADMobGenBannerAdCallBack;

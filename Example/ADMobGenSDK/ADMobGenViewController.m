@@ -93,12 +93,12 @@
     }
     
     // 1 初始化banner视图
-    _bannerView = [[ADMobGenBannerView alloc] init];
+    _bannerView = [[ADMobGenBannerView alloc] initWithFrame:CGRectZero withBannerSize:ADMobGenBannerAdSize600_150];
     _bannerView.delegate = self;
     _bannerView.backgroundColor = [UIColor redColor];
     
     // 2 添加到父视图上
-    CGFloat height = [UIScreen mainScreen].bounds.size.width * (5 / 32.0);
+    CGFloat height = [UIScreen mainScreen].bounds.size.width/4;
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - height, width, height);
     [self.view addSubview:_bannerView];

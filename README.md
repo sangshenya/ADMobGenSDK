@@ -86,7 +86,7 @@ pod 'ADMobGenAddamSDK'
 
 ## 2.2 手动导入SDK方式
 
-下载各SDK拖入到工程中，在Demo中的Pods/Pods目录下也有必须导入的framework
+下载各SDK拖入到工程中，在Demo中的Pods/Pods目录下也可以找到必须导入的framework
 
 * 必要SDK
     * 广告调用所需framework

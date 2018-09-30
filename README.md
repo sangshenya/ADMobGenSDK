@@ -245,6 +245,7 @@ bottomView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, bot
 UIWindow *window = [UIApplication sharedApplication].delegate.window;
 [_splashAd loadAndShowInWindow:window withBottomView:bottomView];
 
+// 5 代理回调
 #pragma mark - ADMobGenSplashAdDelegate
 - (void)admg_splashAdSuccessToPresentScreen:(ADMobGenSplashAd *)splashAd{
 
@@ -291,7 +292,7 @@ _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - he
 // 3 加载并显示广告 注意: 请确保banner视图显示在屏幕内的时候,调用load方法
 [_bannerView loadWithError:nil];
 
-
+// 4 代理回调
 #pragma mark - ADMobGenBannerViewDelegate
 - (void)admg_bannerViewDidReceived:(ADMobGenBannerView *)bannerView{
     NSLog(@"load banner success");
@@ -316,15 +317,16 @@ if (!_expressAd) {
     expressAd.delegate = self;
     // 2 设置信息流广告需要显示的控制器, 保证和信息流展示的控制器是同一个
     expressAd.controller = self;
-    //设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,不同的信息流样式使用不同的实例对象
+    // 3 设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,不同的信息流样式使用不同的实例对象
     [_expressAd setNativeAdType:ADMobGenNativeAdTypePic];//信息流样式纯图片
 
     _expressAd = expressAd;
 }
 
-// 拉取信息流模板广告
+// 4 拉取信息流模板广告
 [_expressAd load:4];
 
+// 5 代理回调
 #pragma mark - ADMobGenNativeExpressAdDelegate
 - (void)admg_nativeExpressAdSucessToLoad:(ADMobGenNativeExpressAd *)nativeExpressAd views:(NSArray<__kindof ADMobGenNativeExpressAdView *> *)views {
     //临时存储ADMobGenNativeExpressAdView

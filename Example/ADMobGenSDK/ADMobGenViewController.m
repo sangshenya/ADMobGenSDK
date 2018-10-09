@@ -10,6 +10,7 @@
 #import <ADMobGenSDK/ADMobGenSplashAd.h>
 #import <ADMobGenSDK/ADMobGenBannerView.h>
 #import "ADMobGenExpressViewController.h"
+#import <ADMobGenSDK/ADMobGenSDKConfig.h>
 
 //// 机型UI适配宏
 //#define kIPhoneX (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && ([UIScreen mainScreen].bounds.size.width == 375.0 && [UIScreen mainScreen].bounds.size.height == 812.0))
@@ -91,19 +92,18 @@
         [_bannerView removeFromSuperview];
         _bannerView = nil;
     }
-    
-    // 1 初始化banner视图
+    // 1 初始化banner视图，bannerSize为banner的宽高比，以视图的宽度为准，当需要使用除默认尺寸以外的请与我们的商务联系
     _bannerView = [[ADMobGenBannerView alloc] initWithFrame:CGRectZero withBannerSize:ADMobGenBannerAdSize600_150];
     _bannerView.delegate = self;
     _bannerView.backgroundColor = [UIColor redColor];
     
     // 2 添加到父视图上
-    CGFloat height = [UIScreen mainScreen].bounds.size.width/4;
+    CGFloat height = ([UIScreen mainScreen].bounds.size.width)/4;
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - height, width, height);
+    _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - height, width, height);
     [self.view addSubview:_bannerView];
     
-    // 3 加载并显示广告 注意: 请确保banner视图显示在屏幕内的时候,调用load方法（tip：在tableView中使用banner时，可以在willDisplay的代理方法中）
+    // 3 加载并显示广告 注意: 广点通banner广告请确保banner视图显示在屏幕内的时候,调用load方法（tip：在tableView中使用banner时，可以在willDisplay的代理方法中）
     [_bannerView loadWithError:nil];
 }
 

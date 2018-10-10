@@ -15,7 +15,8 @@ typedef NS_ENUM(NSInteger, WMPlayerPlayState) {
     WMPlayerStateBuffering = 1,  // 缓冲中
     WMPlayerStatePlaying   = 2,  // 播放中
     WMPlayerStateStopped   = 3,  // 停止播放
-    WMPlayerStatePause     = 4   // 暂停播放
+    WMPlayerStatePause     = 4,   // 暂停播放
+    WMPlayerStateDefalt    = 5    // 初始化状态
 };
 
 /**

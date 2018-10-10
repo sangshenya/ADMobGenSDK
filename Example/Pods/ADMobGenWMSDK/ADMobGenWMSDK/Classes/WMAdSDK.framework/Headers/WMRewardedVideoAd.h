@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WMRewardedVideoAd : NSObject
 @property (nonatomic, strong) WMRewardedVideoModel *rewardedVideoModel;
 @property (nonatomic, weak, nullable) id<WMRewardedVideoAdDelegate> delegate;
+
 /**
  物料有效 数据不为空且没有展示过为 YES, 重复展示不计费.
  */
@@ -83,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)rewardedVideoAdDidPlayFinish:(WMRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error;
 
 /**
- rewardedVideoAd publisher 终端返回 20000
+ 服务器校验后的结果,异步 rewardedVideoAd publisher 终端返回 20000
  
  @param rewardedVideoAd 当前激励视频对象
  @param verify 有效性验证结果

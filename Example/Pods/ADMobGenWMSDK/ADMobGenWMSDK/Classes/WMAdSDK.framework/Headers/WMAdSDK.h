@@ -20,8 +20,6 @@ FOUNDATION_EXPORT const unsigned char WMAdSDKVersionString[];
 #import <WMAdSDK/WMAdSDKError.h>
 #import <WMAdSDK/WMAdSDKManager.h>
 #import <WMAdSDK/WMAdSlot.h>
-#import <WMAdSDK/WMAppInfo.h>
-#import <WMAdSDK/WMDeepLink.h>
 #import <WMAdSDK/WMImage.h>
 #import <WMAdSDK/WMSize.h>
 #import <WMAdSDK/WMMaterialMeta.h>

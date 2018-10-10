@@ -21,13 +21,12 @@ typedef NS_ENUM(NSInteger, WMAdSlotAdType) {
 };
 
 typedef NS_ENUM(NSInteger, WMAdSlotPosition) {
-    WMAdSlotPositionFeed,
-    WMAdSlotPositionTop,
-    WMAdSlotPositionBottom,
-    WMAdSlotPositionMiddle,
-    WMAdSlotPositionFullscreen,
+    WMAdSlotPositionTop = 1, // 顶部
+    WMAdSlotPositionBottom = 2, // 底部
+    WMAdSlotPositionFeed = 3, // 信息流内
+    WMAdSlotPositionMiddle = 4, // 中部(插屏广告专用)
+    WMAdSlotPositionFullscreen = 5, // 全屏
 };
-
 
 @interface WMAdSlot : NSObject
 
@@ -41,7 +40,7 @@ typedef NS_ENUM(NSInteger, WMAdSlotPosition) {
 @property (nonatomic, assign) WMAdSlotPosition position;
 
 // 接受一组图片尺寸，数组请传入WMSize对象
-@property (nonatomic, strong) NSMutableArray *imgSizeArray;
+@property (nonatomic, strong) NSMutableArray<WMSize *> *imgSizeArray;
 
 // 图片尺寸 required
 @property (nonatomic, strong) WMSize *imgSize;

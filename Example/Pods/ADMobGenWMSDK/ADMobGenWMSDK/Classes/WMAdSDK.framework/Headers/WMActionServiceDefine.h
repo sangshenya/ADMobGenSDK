@@ -27,6 +27,8 @@ typedef void (^FailedCallback)(NSError *error,NSString *failMessage);
 @protocol WMActionWebModel <NSObject>
 // 创意的落地页URL
 @property (nonatomic, copy) NSString *targetURL;
+@property (nonatomic, copy) NSString *AdTitle;
+
 @end
 
 @protocol WMActionPhoneModel <NSObject>
@@ -36,7 +38,7 @@ typedef void (^FailedCallback)(NSError *error,NSString *failMessage);
 @end
 
 @protocol WMActionDeepLinkModel <NSObject>
-// 广告类型为电话时，电话号码必须
+
 @property (nonatomic, strong) WMDeepLink *deepLink;
 
 @end

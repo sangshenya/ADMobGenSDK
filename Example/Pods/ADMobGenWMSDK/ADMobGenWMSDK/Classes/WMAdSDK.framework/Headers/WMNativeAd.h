@@ -32,9 +32,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly, nullable) WMMaterialMeta *data;
 
 /**
- 广告位加载 展示 响应的回调
+ 广告位加载展示响应的代理回调，可以设置为遵循<WMNativeAdDelegate>的任何类型，不限于Viewcontroller
  */
 @property (nonatomic, weak, readwrite, nullable) id<WMNativeAdDelegate> delegate;
+
+/**
+ 广告位展示落地页ViewController的rootviewController，必传参数
+ */
+@property (nonatomic, weak, readwrite) UIViewController *rootViewController;
 
 /**
  创建一个Native广告的推荐构造函数
@@ -45,25 +50,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 广告类与view相关联绑定，注册具体事件，比如跳转页面、打电话、下载，行为由SDK控制，不建议使用，比如有可能注册电话事件但实际没有电话信息
 - (void)registerViewForInteraction:(UIView *)view
-               withInteractionType:(WMInteractionType)interactionType
-                          delegate:(id <WMNativeAdDelegate>)delegate;
+               withInteractionType:(WMInteractionType)interactionType;
 
 /**
  定义原生广告视图中可以点击的 视图区域，行为由SDK控制
  @param view 原生广告的视图，完整可点击区域
- @param delegate 广告详情页的根视图
  */
-- (void)registerViewForInteraction:(UIView *)view
-                          delegate:(id <WMNativeAdDelegate>)delegate;
+- (void)registerViewForInteraction:(UIView *)view;
 
 /**
  定义原生广告视图中可以点击的 视图区域， 减少误点概率，提升用户体验
  @param view 包含原生广告的视图
- @param delegate 广告详情页的根视图
  @param clickableViews 广告视图中可以被点击的响应对象
  */
 - (void)registerViewForInteraction:(UIView *)view
-                          delegate:(id <WMNativeAdDelegate>)delegate
                 withClickableViews:(NSArray<UIView *> *_Nullable)clickableViews;
 
 /// 广告类解除和view的绑定

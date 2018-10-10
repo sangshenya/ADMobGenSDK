@@ -120,6 +120,8 @@
 
 + (instancetype)playerWithPlayerItem:(WMPlayerItem *)item;
 
+- (void)replaceCurrentItemWithPlayerItem:(WMPlayerItem *)item;
+
 - (instancetype)initWithPlayerItem:(WMPlayerItem *)item NS_DESIGNATED_INITIALIZER;
 
 @end
@@ -142,6 +144,11 @@
 - (void)replay;
 
 /**
+ * 停止
+ */
+- (void)stop;
+
+/**
  * 跳到指定时间播放
  */
 - (void)seekToTime:(NSInteger)time completion:(void(^)(BOOL success))completion;
@@ -150,5 +157,11 @@
  * 全屏/竖屏 切换显示
  */
 - (void)changeOrientationScreen;
+
+
+/**
+ * 处于后台模式
+ */
+- (BOOL)isEnterBackground;
 
 @end

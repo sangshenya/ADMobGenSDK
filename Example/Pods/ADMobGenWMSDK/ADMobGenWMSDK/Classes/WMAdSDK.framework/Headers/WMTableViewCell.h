@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WMMaterialMeta.h"
+#import "WMVideoAdView.h"
 
 @protocol WMTableViewCellDelegate;
 
@@ -16,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WMTableViewCell : UITableViewCell
 
 @property (nonatomic, weak, nullable) id<WMTableViewCellDelegate> delegate;
+
+/// 广告位展示落地页ViewController的rootviewController，必传参数
+@property (nonatomic, weak) UIViewController *rootViewController;
 
 /**
  materialMeta 物料信息
@@ -38,22 +42,49 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) UIImageView *logoImageView;
 
-- (void)registerViewForInteraction:(UIView *)view
-                          delegate:(id<WMTableViewCellDelegate>)delegate;
+/**
+ WMPlayer View 需要主动添加到 View
+ */
+@property (nonatomic, strong, nullable) WMVideoAdView *videoAdView;
 
-- (void)registerViewForInteraction:(UIView *)view
-               withInteractionType:(WMInteractionType)interactionType
-                          delegate:(id<WMTableViewCellDelegate>)delegate;
+/**
+ 注册视图点击事件为默认接口返回点击事件,只能注册一个View
 
+ @param view 被注册的视图
+ */
+- (void)registerViewForInteraction:(UIView *)view;
+
+/**
+ 注册视图点击事件为自定义事件,只能注册一个View (不可与上个方法同时使用)
+
+ @param view 被注册的视图
+ @param interactionType 自定义的点击事件类型
+ */
 - (void)registerViewForInteraction:(UIView *)view
-                          delegate:(id<WMTableViewCellDelegate>)delegate
+               withInteractionType:(WMInteractionType)interactionType;
+
+/**
+ 注册多个视图点击事件为接口返回点击事件
+ */
+- (void)registerViewForInteraction:(UIView *)view
                 withClickableViews:(NSArray<UIView *> *_Nullable)clickableViews;
 
-- (void)registerViewForCustomInteraction:(UIView *)view
-                                delegate:(id<WMTableViewCellDelegate>)delegate;
 
-- (void)didSelectWithDelegate:(id<WMTableViewCellDelegate>)delegate;
+- (void)registerViewForCustomInteraction:(UIView *)view;
+
 - (void)dislikeAction:(id)sender;
+
+/**
+ 当下面代理方法回调时，必须调用didSelect方法通知SDK
+ - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+ */
+- (void)didSelect;
+
+/**
+ 当下面代理方法回调时，必须调用wmCellDidEndDisplay方法通知SDK
+ - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0);
+ */
+- (void)wmCellDidEndDisplay;
 @end
 
 

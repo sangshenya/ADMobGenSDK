@@ -12,6 +12,7 @@
 typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
     ADMobGenNativeAdTypeNormal = 0,//图文，默认为图文，目前仅支持图片尺寸为1280×720
     ADMobGenNativeAdTypePic,//纯图片
+    ADMobGenNativeAdTypeRightPic,//右图
 };
 
 @protocol ADMobGenNativeExpressAdCallBack;

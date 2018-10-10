@@ -10,6 +10,7 @@
 #import <ADMobGenSDK/ADMobGenSDKConfig.h>
 #import <ADMobGenSDK/ADMobGenSplashAd.h>
 #import "ADMobGenViewController.h"
+#import <WMAdSDK/WMAdSDK.h>
 
 @interface ADMobGenAppDelegate ()<ADMobGenSplashAdDelegate>{
     ADMobGenSplashAd *_splashAd;
@@ -26,6 +27,8 @@
             // SDK启动失败
         }
     }];
+    
+    NSLog(@"wmsdk:%@",WMAdSDKManager.SDKVersion);
     
     [ADMobGenSDKConfig setGpsOn];
     

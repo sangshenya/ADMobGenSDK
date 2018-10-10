@@ -11,14 +11,16 @@
 #import <ADMobGenSDK/ADMobGenBannerView.h>
 #import "ADMobGenExpressViewController.h"
 #import <ADMobGenSDK/ADMobGenSDKConfig.h>
+#import <WebKit/WebKit.h>
 
 //// 机型UI适配宏
 //#define kIPhoneX (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && ([UIScreen mainScreen].bounds.size.width == 375.0 && [UIScreen mainScreen].bounds.size.height == 812.0))
 
-@interface ADMobGenViewController () <ADMobGenBannerViewDelegate,ADMobGenSplashAdDelegate> {
+@interface ADMobGenViewController () <ADMobGenBannerViewDelegate,ADMobGenSplashAdDelegate,WKNavigationDelegate, WKScriptMessageHandler> {
     ADMobGenSplashAd *_splashAd;
     ADMobGenBannerView *_bannerView;
 }
+@property (nonatomic, strong) WKWebView *nativeAdWebView;
 
 @end
 
@@ -108,9 +110,9 @@
 }
 
 - (void)test3 {
-    ADMobGenExpressViewController *vc = [ADMobGenExpressViewController new];
+    ADMobGenExpressViewController *vc = [[ADMobGenExpressViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];;
-    [self presentViewController:nav animated:YES completion:nil];
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
 #pragma mark - ADMobGenSplashAdDelegate
@@ -141,6 +143,5 @@
         _bannerView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 0);
     }
 }
-
 
 @end

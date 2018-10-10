@@ -58,9 +58,9 @@
         [_expressAd setNativeAdType:ADMobGenNativeAdTypePic];//信息流样式纯图片
     }
     // 拉取信息流模板广告
-    [_expressAd load:4];
+    [_expressAd load:2];
     //默认图文信息流
-    [self loadNormalNativeAd];
+//    [self loadNormalNativeAd];
 }
 
 #pragma mark - 默认图文信息流
@@ -69,7 +69,7 @@
         _normalExpressAd = [[ADMobGenNativeExpressAd alloc]initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 100)];
         _normalExpressAd.delegate = self;
         _normalExpressAd.controller = self;
-        [_normalExpressAd setNativeAdType:ADMobGenNativeAdTypeNormal];
+        [_normalExpressAd setNativeAdType:ADMobGenNativeAdTypeRightPic];
     }
     [_normalExpressAd load:2];
 }

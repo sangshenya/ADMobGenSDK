@@ -24,12 +24,10 @@
  @param level 默认 WMAdSDKLogLevelNone
  */
 + (void)setLoglevel:(WMAdSDKLogLevel)level;
-
 + (void)setUserGender:(WMUserGender)userGender;
 + (void)setUserAge:(NSInteger)userAge;
 + (void)setUserKeywords:(NSString *)keywords;
 + (void)setUserExtData:(NSString *)data;
-
 + (void)setIsPaidApp:(BOOL)isPaidApp;
 
 + (NSString *)appID;

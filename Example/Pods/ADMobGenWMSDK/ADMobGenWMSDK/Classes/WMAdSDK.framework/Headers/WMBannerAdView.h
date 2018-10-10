@@ -43,11 +43,11 @@ NS_ASSUME_NONNULL_BEGIN
                           interval:(NSInteger)interval;
 
 - (instancetype)initWithSlotID:(NSString *)slotID
-                          size:(WMSize *)expectSize
+                          size:(WMSize *)adSize
             rootViewController:(UIViewController *)rootViewController;
 
 - (instancetype)initWithSlotID:(NSString *)slotID
-                          size:(WMSize *)expectSize
+                          size:(WMSize *)adSize
             rootViewController:(UIViewController *)rootViewController
                       interval:(NSInteger)interval;
 

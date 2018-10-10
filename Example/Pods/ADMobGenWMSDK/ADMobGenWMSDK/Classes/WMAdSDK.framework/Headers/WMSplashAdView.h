@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly, nonnull) NSString *slotID;
 
 /**
- 允许最大的加载超时时间, 默认0.5s, 单位s
+ 允许最大的加载超时时间, 默认2s, 单位s
  */
 @property (nonatomic, assign) NSTimeInterval tolerateTimeout;
 
@@ -33,6 +33,11 @@ NS_ASSUME_NONNULL_BEGIN
  开屏启动的 状态回调
  */
 @property (nonatomic, weak, nullable) id<WMSplashAdDelegate> delegate;
+
+/*
+ 广告位展示落地页ViewController的rootviewController，必传参数
+ */
+@property (nonatomic, weak) UIViewController *rootViewController;
 
 /**
  开屏数据是否已经加载完成

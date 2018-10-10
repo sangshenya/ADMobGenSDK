@@ -15,7 +15,7 @@ typedef NS_ENUM(NSInteger, WMErrorCode) {
     WMErrorCodeNetError         = -2, // 网络请求失败
     WMErrorCodeParseError       = -1, // 解析失败
     
-    WMErrorCodeParamEroor       = 10001,  // 参数错误
+    WMErrorCodeParamError       = 10001,  // 参数错误
     WMErrorCodeTimeout          = 10002,
 
     WMErrorCodeSuccess          = 20000,

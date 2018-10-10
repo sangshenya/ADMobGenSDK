@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "WMPlayer.h"
-#import "WMMaterialMeta.h"
+
+@class WMMaterialMeta;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -35,23 +36,38 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  设置是否静音
  */
-- (void)setMute:(Boolean)isMute;
+- (void)setMute:(BOOL)isMute;
 
 @end
 
 @protocol WMVideoAdViewDelegate;
 
+
 @interface WMVideoAdView : UIView<WMPlayerDelegate, WMVideoEngine>
 
 @property (nonatomic, weak, nullable) id<WMVideoAdViewDelegate> delegate;
+
+/// 广告位展示落地页ViewController的rootviewController，必传参数
+@property (nonatomic, weak, readwrite) UIViewController *rootViewController;
 
 /**
  materialMeta 物料信息
  */
 @property (nonatomic, strong, readwrite, nullable) WMMaterialMeta *materialMeta;
+
+/**
+ 是否是cellVideo
+ */
 @property (nonatomic, assign) BOOL isCellVideo;
 
 - (instancetype)initWithMaterial:(WMMaterialMeta *)materialMeta;
+
+/**
+ 续播到对应的time
+ 
+ @param time 续播时间
+ */
+- (void)playerSeekToTime:(CGFloat)time;
 
 @end
 
@@ -59,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 /**
- videoAdView 加载失败
+ videoAdView 播放失败
 
  @param videoAdView 当前展示的 videoAdView 视图
  @param error 错误原因

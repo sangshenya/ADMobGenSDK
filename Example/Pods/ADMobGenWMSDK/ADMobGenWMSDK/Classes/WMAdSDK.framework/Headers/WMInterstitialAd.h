@@ -18,9 +18,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id<WMInterstitialAdDelegate> delegate;
 @property (nonatomic, getter=isAdValid, readonly) BOOL adValid;
 
+/**
+ 初始化WMInterstitialAd
+
+ @param slotID 代码位ID
+ @param expectSize 自定义size,默认 600px * 400px
+ @return WMInterstitialAd
+ */
 - (instancetype)initWithSlotID:(NSString *)slotID size:(WMSize *)expectSize NS_DESIGNATED_INITIALIZER;
 - (void)loadAdData;
-- (BOOL)showAdFromRootViewController:(nullable UIViewController *)rootViewController;
+- (BOOL)showAdFromRootViewController:(UIViewController *)rootViewController;
 @end
 
 @protocol WMInterstitialAdDelegate <NSObject>

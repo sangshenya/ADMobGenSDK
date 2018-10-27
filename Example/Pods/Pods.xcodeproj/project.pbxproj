@@ -7,59 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03A626225C26C2C41EFDE537E36619B4 /* wm_nativeVideo_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B701787FB1C142A591426C6146E78A /* wm_nativeVideo_left@2x.png */; };
-		03F00C5B2ED5F060E27165065DDC061E /* wm_replay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F952B35CD0E814144BCED60E5DAC1B /* wm_replay@2x.png */; };
-		089B83FD97ADF3010C0FBDB2ECD414F9 /* wm_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F5922CFD1817E69DD9AE4CFD9BBD31 /* wm_logo@3x.png */; };
-		0C77A48F5FEE281543EC7DF1BFE6AA92 /* wm_shrinkScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A98424BBF239A18104156126F6BD4C /* wm_shrinkScreen@2x.png */; };
-		0EAB6F4A965E0D873409A8CA86717647 /* wm_back_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = AA5708F821B6DE3002E133D1CF30C8B9 /* wm_back_normal.png */; };
-		29362FE89726199835B4E170474D6979 /* wm_sliderDot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2057111A56B5DEFB02210E9537638E /* wm_sliderDot@3x.png */; };
-		3280771DBE42027CE603EFA5653E8495 /* wm_adStarEmpty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 783282676DA6DF7171A75E585A03959F /* wm_adStarEmpty@2x.png */; };
-		3712E4D5C7577D2C2577A2E16F4CA417 /* wm_voice@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086A421A70B84B1A3C40474BADF6F32F /* wm_voice@3x.png */; };
-		43C10542C3EF78E2BC0BD8D68DC4A71A /* wm_topShadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 729A6CC419FDDD17B95761568BBBABF0 /* wm_topShadow@3x.png */; };
+		03A626225C26C2C41EFDE537E36619B4 /* wm_nativeVideo_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF81B6B634C9F99087ED12EA12DE1220 /* wm_nativeVideo_left@2x.png */; };
+		03F00C5B2ED5F060E27165065DDC061E /* wm_replay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58E2A367979F9581364C09D89B492B1 /* wm_replay@2x.png */; };
+		089B83FD97ADF3010C0FBDB2ECD414F9 /* wm_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F070354D2F13391DD020AF6092B0B1D /* wm_logo@3x.png */; };
+		0C77A48F5FEE281543EC7DF1BFE6AA92 /* wm_shrinkScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 326B4F8CEA778159868F61B8DCA5F557 /* wm_shrinkScreen@2x.png */; };
+		0EAB6F4A965E0D873409A8CA86717647 /* wm_back_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 21750E272C062ACD6B03E981DD6801B6 /* wm_back_normal.png */; };
+		29362FE89726199835B4E170474D6979 /* wm_sliderDot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE42FA550B9369061239B65EB5816C3D /* wm_sliderDot@3x.png */; };
+		3280771DBE42027CE603EFA5653E8495 /* wm_adStarEmpty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9307F480B461ED0D9C483C3B9D21A76 /* wm_adStarEmpty@2x.png */; };
+		3712E4D5C7577D2C2577A2E16F4CA417 /* wm_voice@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F140952504806464E322ABEC42C98 /* wm_voice@3x.png */; };
+		43C10542C3EF78E2BC0BD8D68DC4A71A /* wm_topShadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BE27F9337D3093763A921E67D56C3D /* wm_topShadow@3x.png */; };
 		466A93F308D6D0E82DE0A6B7A7B1B9BA /* Pods-ADMobGenSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2530417D0D72F066A1D2A2AB7CED04D7 /* Pods-ADMobGenSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4921847C0829E456DFEFE86E2F5C0B77 /* wm_adStarEmpty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F7087B0310775717B2DBE75D82FE83 /* wm_adStarEmpty@3x.png */; };
-		58F9DF427A4A41319D38B9FBE460EB9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		595E95BD80A3C64EEA5C933CAE2B8268 /* wm_leftback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E970D6A137D6532937669343788CD60 /* wm_leftback@2x.png */; };
-		59FE05A6894B15BA7DBC3FF70B38CDBB /* wm_bottomPause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E72A38D43184B78AA363B650819A4F64 /* wm_bottomPause@2x.png */; };
-		620A184DD862598FD8272197E60BC286 /* wm_leftback@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA13FAF3D0C351D86C42265785F0751 /* wm_leftback@3x.png */; };
-		6412308E3F0FFD08533EC56BF63182FF /* wm_nativeVideo_left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D261BA027D34BE79F20B247D37E9ADAE /* wm_nativeVideo_left@3x.png */; };
-		704A1DD4072582BE3B6CA7C4C74F4975 /* wm_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BD85C0B8D6CD6CFA64FFC5F616F461B /* wm_logo@2x.png */; };
-		717F13D0BFD6E3559AB633166221F0F7 /* wm_voice_silent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F626C78F0ECC0F49F01854F910D8D7 /* wm_voice_silent@2x.png */; };
-		71BE6CE8B4AE0C1EC5B849F5B55B5E90 /* wm_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B99E2E2FD02EF46D12AF69DCF650BF2 /* wm_close@2x.png */; };
-		74DB72B1508864D673A40143DE5DB315 /* wm_shrinkScreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D5ADAD62CE503F0ED127E5109B7148 /* wm_shrinkScreen@3x.png */; };
-		7EA7BDCD399844DFE8EBE05AE67D0D2C /* wm_bottomPause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 855B15070E06F2EEF384E5CA8C345D75 /* wm_bottomPause@3x.png */; };
-		82824C15A7F5F3EE7172E3CD3FA450A0 /* wm_replay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 473B2B7CAE33168F3F1674742956133C /* wm_replay@3x.png */; };
-		8AB241608016AD7AE76A3248B4653C94 /* Pods-ADMobGenSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E4551E36531B33441EACC8657A98358 /* Pods-ADMobGenSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4921847C0829E456DFEFE86E2F5C0B77 /* wm_adStarEmpty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C137839AEC4361913F3239B58977816B /* wm_adStarEmpty@3x.png */; };
+		595E95BD80A3C64EEA5C933CAE2B8268 /* wm_leftback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7771453D8C6C97E0F7736D9FED61B853 /* wm_leftback@2x.png */; };
+		59FE05A6894B15BA7DBC3FF70B38CDBB /* wm_bottomPause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 859577B550907FFDB364EBF145D4B6DB /* wm_bottomPause@2x.png */; };
+		5E76D0305E163AA474EF0E12FB024635 /* pic_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4903E81B1DE5858E196EEEB1C3442EDD /* pic_logo@2x.png */; };
+		620A184DD862598FD8272197E60BC286 /* wm_leftback@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CB3197E4452510DC4B1DB3B217F460 /* wm_leftback@3x.png */; };
+		6412308E3F0FFD08533EC56BF63182FF /* wm_nativeVideo_left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09BD46FF1991CD140986189F68D2424 /* wm_nativeVideo_left@3x.png */; };
+		6FE2A2EAB3DDCAECC22FDC8BEEE440DB /* 40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C67C71882579458C97BBE2AE578D2FB /* 40x40.png */; };
+		704A1DD4072582BE3B6CA7C4C74F4975 /* wm_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF361DA29846A9F9F77D2DEBD2CF730 /* wm_logo@2x.png */; };
+		717F13D0BFD6E3559AB633166221F0F7 /* wm_voice_silent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06CAF9A1C54F448C3F5A1633EBE8005B /* wm_voice_silent@2x.png */; };
+		71BE6CE8B4AE0C1EC5B849F5B55B5E90 /* wm_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD10ADAEB410E9EDDFF82EDE9A9BD67 /* wm_close@2x.png */; };
+		74DB72B1508864D673A40143DE5DB315 /* wm_shrinkScreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF0E8F9BF8A3CC31C2EEBBCC9C8D3 /* wm_shrinkScreen@3x.png */; };
+		7EA7BDCD399844DFE8EBE05AE67D0D2C /* wm_bottomPause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F83C53D63ED0203A648283903E1CC47 /* wm_bottomPause@3x.png */; };
+		82824C15A7F5F3EE7172E3CD3FA450A0 /* wm_replay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B82F0197F6058B0090892E5534B566D /* wm_replay@3x.png */; };
 		8B29FA8E18BDB1D98CB48BE099493CE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		8D35F66F2AAF90694D2DE03C23F0C9DC /* wm_bottomPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C11113A7839E64DCCCA425C12B863B92 /* wm_bottomPlay@3x.png */; };
-		907628D3F0D1353E270943343C6E20AC /* wm_fullScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8070B86D0326BF74884F9C1E8B9C850 /* wm_fullScreen@2x.png */; };
+		8D35F66F2AAF90694D2DE03C23F0C9DC /* wm_bottomPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F76B3E695E6EFB8E68710C8DAFC221 /* wm_bottomPlay@3x.png */; };
+		8E32EC7095195ACA0AA51EC6B224493C /* Pods-ADMobGenSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E4551E36531B33441EACC8657A98358 /* Pods-ADMobGenSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		907628D3F0D1353E270943343C6E20AC /* wm_fullScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8500A35783193E583F45B761E84029F8 /* wm_fullScreen@2x.png */; };
 		92A55AF320F03B2B0E26ABF882DE389A /* Pods-ADMobGenSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57A7008B28F4B384B4CFC83D93D23E /* Pods-ADMobGenSDK_Tests-dummy.m */; };
-		94E7C3CA55012722E9802510385D348B /* wm_voice_silent@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 703A671974EC54D4A4301C0DF2063D99 /* wm_voice_silent@3x.png */; };
-		9A9366D48188297CA80B65B7FF6B6C2B /* wm_brightness@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A4DC607C8788FEA16BEDDD3D51A78A2 /* wm_brightness@3x.png */; };
-		9C05913C4E52E2F7AAC7FE19069141C8 /* wm_voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042D7974635904503D3EC1804A6A00A6 /* wm_voice@2x.png */; };
-		A0CBDBAA3D6F8C924F9EF0198D90D26F /* wm_fastBackward@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B552DD64B7BE782ADA78A8FAD0E28E /* wm_fastBackward@3x.png */; };
-		A3F845332243F1E544E0887C32CAF7E3 /* wm_fullScreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0F81DC42C7E1AF73DA46FA6E29FF4C3 /* wm_fullScreen@3x.png */; };
-		A96690C8201CAF255B4BC73859949F32 /* wm_sliderDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B1593A5383EBB56E9C52E9C7C912A4 /* wm_sliderDot@2x.png */; };
-		AADDDE742EE3D1252ADEA43CADDCD7B1 /* wm_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C223A79303D995B6C502455E863A6FBF /* wm_play@3x.png */; };
-		AB614A37D9F9470A42B78F751CB80D1A /* wm_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD8C2EFBC0F4779DC2A8B52CB1FC952 /* wm_play@2x.png */; };
-		B21472F3EFC33632DA3200306AEA47D3 /* wm_fastBackward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF98EEEB18AAA43899DC8DEA53DA82A3 /* wm_fastBackward@2x.png */; };
-		B8EDA6C4EE19641B2C0D973F3EF945DC /* wm_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8286416E2DF7D48577B182968558DE /* wm_close@3x.png */; };
-		BA9CD5A10B82C10D9B984224A9C01120 /* wm_bottomShadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DC07CCD93D348E36F8A3D33C123727 /* wm_bottomShadow@3x.png */; };
-		C05E54346B93A78A42B82730D3011799 /* wm_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C178475596956AF5D469BCC5F0709F /* wm_pause@2x.png */; };
-		C42BEE901B05619B23C738E5317A3C5B /* wm_adStar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4671DA1F5EECC1C2157975262E0201B8 /* wm_adStar@3x.png */; };
-		C4C421F4C8280CA00FE724BC2DD65A8F /* wm_fullClose@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF04349831B34F369B3DB4E976F09062 /* wm_fullClose@3x.png */; };
-		CB7888726E43D2DB19A63D0EA19AA70A /* wm_dislike@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF41B7656B977B823296EA583C8EE6CE /* wm_dislike@3x.png */; };
-		CC569F1591D7B020A111C34C201908CD /* wm_fastForward@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A59F8F9BDF92B4F9D1A1BE30690E9E3A /* wm_fastForward@3x.png */; };
-		D25993BA207E1ED21272837D5DE1FC81 /* wm_fastForward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E37333A23693BDF03DCADA234CE97E7D /* wm_fastForward@2x.png */; };
-		D9E6210FCCDECAE38839FAFB1FBCCED8 /* wm_adStar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E380845C4C62BF6703497354F9DAD318 /* wm_adStar@2x.png */; };
-		DB1508BD42B8DF42C2E1FC49A3DB680A /* wm_bottomShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC5E94C26D6B1052FCF1B6401AA2287A /* wm_bottomShadow@2x.png */; };
-		E2694543589D94804E14DAABB10E377D /* wm_bottomPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FBAE67C888E8B5550D8FD7C5279A934 /* wm_bottomPlay@2x.png */; };
-		E966A5EE826E9E4E07328BA58DDF0E31 /* wm_fullClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F353A0BE4E9D43A38A6A9F08D15CC84 /* wm_fullClose@2x.png */; };
-		EAAC2E9ED8112467764264A47163AB33 /* Pods-ADMobGenSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1ABB91F2EEBEBE913B3EF93A14E465 /* Pods-ADMobGenSDK_Example-dummy.m */; };
-		F0AE2C0258DF9CA6A4A17E1657D548BA /* wm_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2AA171C401969B11299AB160DDFE8A /* wm_pause@3x.png */; };
-		F79102D6EF55B76E561B80598D1598A8 /* wm_brightness@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6982FF3BECE652870306387DC80B4311 /* wm_brightness@2x.png */; };
-		F8DF7EBDEA89B48E0FE313099F7D4F99 /* wm_dislike@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 456054F47A082C3BD3158D0FFA6AED2C /* wm_dislike@2x.png */; };
-		F9039E73F44D549C0BA8F38DDD9BC7AA /* wm_topShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 396AB1D9437A535E525C766E6914846D /* wm_topShadow@2x.png */; };
+		94E7C3CA55012722E9802510385D348B /* wm_voice_silent@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55EE66C065689778B6E70BEC67DE922C /* wm_voice_silent@3x.png */; };
+		9A9366D48188297CA80B65B7FF6B6C2B /* wm_brightness@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5C6DEC9463AA7E1025F7F6C0AB81C /* wm_brightness@3x.png */; };
+		9C05913C4E52E2F7AAC7FE19069141C8 /* wm_voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A4F7B307AD69810690490D729D08AE7 /* wm_voice@2x.png */; };
+		A0CBDBAA3D6F8C924F9EF0198D90D26F /* wm_fastBackward@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCA1B68F767D031D85D1A37C64DCAFBC /* wm_fastBackward@3x.png */; };
+		A3F845332243F1E544E0887C32CAF7E3 /* wm_fullScreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93BDB0EAC44C47A0F89AE2ED13B6F0C5 /* wm_fullScreen@3x.png */; };
+		A74EB6B50863EB2DC3643CB08F797537 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		A96690C8201CAF255B4BC73859949F32 /* wm_sliderDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99198A78AD79B3DB864B6982CDE7871B /* wm_sliderDot@2x.png */; };
+		AADDDE742EE3D1252ADEA43CADDCD7B1 /* wm_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C96683062B03D44CC1D33F89418C2088 /* wm_play@3x.png */; };
+		AB614A37D9F9470A42B78F751CB80D1A /* wm_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E194F5733AEDEC4A6BB50848C6E87160 /* wm_play@2x.png */; };
+		B21472F3EFC33632DA3200306AEA47D3 /* wm_fastBackward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40DEF343C14490A751B9AFDCB19BC11D /* wm_fastBackward@2x.png */; };
+		B8EDA6C4EE19641B2C0D973F3EF945DC /* wm_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCECD2A692A3812B4A1FC0044DC1634 /* wm_close@3x.png */; };
+		BA9CD5A10B82C10D9B984224A9C01120 /* wm_bottomShadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C62E79570232248F1F53B229FA0CDE49 /* wm_bottomShadow@3x.png */; };
+		C05E54346B93A78A42B82730D3011799 /* wm_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F38CFC85A19AAB5B5373CD6982ECFBE /* wm_pause@2x.png */; };
+		C42BEE901B05619B23C738E5317A3C5B /* wm_adStar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A72F9021C0BB3FE3D97CD702BF4CD00 /* wm_adStar@3x.png */; };
+		C4C421F4C8280CA00FE724BC2DD65A8F /* wm_fullClose@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B920C76251F911D43CF985E63932253E /* wm_fullClose@3x.png */; };
+		C870B9C04176C6905D0A3B22446040A0 /* pic_logo@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E70CFD2EBF5178A2058DC15ED8DF8B8 /* pic_logo@1x.png */; };
+		CB7888726E43D2DB19A63D0EA19AA70A /* wm_dislike@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 460F96FB861D099BE7E5F652BBDCC3D9 /* wm_dislike@3x.png */; };
+		CC569F1591D7B020A111C34C201908CD /* wm_fastForward@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11071A9294F6967725EC7201D95F8039 /* wm_fastForward@3x.png */; };
+		D25993BA207E1ED21272837D5DE1FC81 /* wm_fastForward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91AB8F0DC2B5D0A9495E12249FD85FD3 /* wm_fastForward@2x.png */; };
+		D9E6210FCCDECAE38839FAFB1FBCCED8 /* wm_adStar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC758574B3FF1ED8502B7AF186F7B379 /* wm_adStar@2x.png */; };
+		DB1508BD42B8DF42C2E1FC49A3DB680A /* wm_bottomShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FBE653A5341EE86A1AA67A00459314 /* wm_bottomShadow@2x.png */; };
+		E2024235D5EAE6BF0AE8A5475F0FF894 /* Pods-ADMobGenSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1ABB91F2EEBEBE913B3EF93A14E465 /* Pods-ADMobGenSDK_Example-dummy.m */; };
+		E2694543589D94804E14DAABB10E377D /* wm_bottomPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BBB1AF218A298D4BA791131351E1F /* wm_bottomPlay@2x.png */; };
+		E966A5EE826E9E4E07328BA58DDF0E31 /* wm_fullClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A49EDFC494C4CCABA7F3C56A13C6FF /* wm_fullClose@2x.png */; };
+		F0AE2C0258DF9CA6A4A17E1657D548BA /* wm_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB955275E728A975EC395FB8397BF7B5 /* wm_pause@3x.png */; };
+		F79102D6EF55B76E561B80598D1598A8 /* wm_brightness@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F29C438F3D7E78E51A0A273671293D0 /* wm_brightness@2x.png */; };
+		F8DF7EBDEA89B48E0FE313099F7D4F99 /* wm_dislike@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34013E33245401C8F5CD9076BCC1284A /* wm_dislike@2x.png */; };
+		F9039E73F44D549C0BA8F38DDD9BC7AA /* wm_topShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E27D96385E8BB7063F7F702D9232553 /* wm_topShadow@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,107 +70,134 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1CDC6A2F9A92FF0751F5AE9C60FC9F81;
+			remoteGlobalIDString = 0DB82AFF819E47C9CFA40DBE3ECA826A;
 			remoteInfo = "Pods-ADMobGenSDK_Example";
 		};
-		08A22965978BEEAB47D98225D3E70F3E /* PBXContainerItemProxy */ = {
+		07B889CA2E9542149C484252E1782FC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A923127E3405766CD7055759A2197C3F;
 			remoteInfo = "ADMobGenSDKWM-WMAdSDK";
 		};
+		34066FD4A43AD3709551E8C3D3BE614D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 753F2507BA7666B4768009731992F0D3;
+			remoteInfo = "ADMobGenMCAd-MCAdBundles";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00D7ED6D99E7E7C457C68A8A89650003 /* ADMobGenGDT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenGDT.framework; path = ADMobGenGDT/Classes/ADMobGenGDT.framework; sourceTree = "<group>"; };
 		01B7BE28A6BEE32982ACCAC6A26AA902 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		042D7974635904503D3EC1804A6A00A6 /* wm_voice@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_voice@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_voice@2x.png"; sourceTree = "<group>"; };
-		04B701787FB1C142A591426C6146E78A /* wm_nativeVideo_left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_nativeVideo_left@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_nativeVideo_left@2x.png"; sourceTree = "<group>"; };
-		05A6F4C5897F757DDE907AE999DC4D71 /* ADMobGenWM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenWM.framework; path = ADMobGenSDKWM/Classes/ADMobGenWM.framework; sourceTree = "<group>"; };
+		06CAF9A1C54F448C3F5A1633EBE8005B /* wm_voice_silent@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_voice_silent@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_voice_silent@2x.png"; sourceTree = "<group>"; };
 		0821B49BB3D5A2F51599AD64D76567A7 /* Pods-ADMobGenSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ADMobGenSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		086A421A70B84B1A3C40474BADF6F32F /* wm_voice@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_voice@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_voice@3x.png"; sourceTree = "<group>"; };
+		0B82F0197F6058B0090892E5534B566D /* wm_replay@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_replay@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_replay@3x.png"; sourceTree = "<group>"; };
 		0C1ABB91F2EEBEBE913B3EF93A14E465 /* Pods-ADMobGenSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ADMobGenSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		0DA4003203B2B3384955181FE56B9FBE /* Pods-ADMobGenSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ADMobGenSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
-		0DE4BC681BDD18054E0D6ECBE9FD74EA /* ADMobGenAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenAdapter.framework; path = ADMobGenAdapter/Classes/ADMobGenAdapter.framework; sourceTree = "<group>"; };
-		11A98424BBF239A18104156126F6BD4C /* wm_shrinkScreen@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_shrinkScreen@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_shrinkScreen@2x.png"; sourceTree = "<group>"; };
-		19F626C78F0ECC0F49F01854F910D8D7 /* wm_voice_silent@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_voice_silent@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_voice_silent@2x.png"; sourceTree = "<group>"; };
-		1A4DC607C8788FEA16BEDDD3D51A78A2 /* wm_brightness@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_brightness@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_brightness@3x.png"; sourceTree = "<group>"; };
-		1BBACF846881216D0333FADA11624000 /* ADMobGenNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenNetwork.framework; path = ADMobGenNetwork/Classes/ADMobGenNetwork.framework; sourceTree = "<group>"; };
+		0E6EB18E7E0AF97A5B9F2A7635082702 /* ADMobGenWM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenWM.framework; path = ADMobGenSDKWM/Classes/ADMobGenWM.framework; sourceTree = "<group>"; };
+		0E70CFD2EBF5178A2058DC15ED8DF8B8 /* pic_logo@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "pic_logo@1x.png"; path = "ADMobGenMCAd/Assets/MCAdBundles.bundle/pic_logo@1x.png"; sourceTree = "<group>"; };
+		0F367028EBECD485D9EDF6F9355459F1 /* Pods_ADMobGenSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ADMobGenSDK_Tests.framework; path = "Pods-ADMobGenSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11071A9294F6967725EC7201D95F8039 /* wm_fastForward@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fastForward@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fastForward@3x.png"; sourceTree = "<group>"; };
+		1A0FF0E8F9BF8A3CC31C2EEBBCC9C8D3 /* wm_shrinkScreen@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_shrinkScreen@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_shrinkScreen@3x.png"; sourceTree = "<group>"; };
 		1DE28B9E43F36E3CE18E1732C9914E6F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E8286416E2DF7D48577B182968558DE /* wm_close@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_close@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_close@3x.png"; sourceTree = "<group>"; };
+		1E4984B2F8BBEA4A0708F38FC3162CCD /* WMAdSDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WMAdSDK.bundle; path = "ADMobGenSDKWM-WMAdSDK.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21750E272C062ACD6B03E981DD6801B6 /* wm_back_normal.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = wm_back_normal.png; path = ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_back_normal.png; sourceTree = "<group>"; };
 		2530417D0D72F066A1D2A2AB7CED04D7 /* Pods-ADMobGenSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ADMobGenSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		26A2BF94DC4323FC1B803C023B9AA486 /* Pods-ADMobGenSDK_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ADMobGenSDK_Tests-resources.sh"; sourceTree = "<group>"; };
+		2A4F7B307AD69810690490D729D08AE7 /* wm_voice@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_voice@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_voice@2x.png"; sourceTree = "<group>"; };
+		2E27D96385E8BB7063F7F702D9232553 /* wm_topShadow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_topShadow@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_topShadow@2x.png"; sourceTree = "<group>"; };
+		2F38CFC85A19AAB5B5373CD6982ECFBE /* wm_pause@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_pause@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_pause@2x.png"; sourceTree = "<group>"; };
+		326B4F8CEA778159868F61B8DCA5F557 /* wm_shrinkScreen@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_shrinkScreen@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_shrinkScreen@2x.png"; sourceTree = "<group>"; };
+		33F76B3E695E6EFB8E68710C8DAFC221 /* wm_bottomPlay@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomPlay@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomPlay@3x.png"; sourceTree = "<group>"; };
+		34013E33245401C8F5CD9076BCC1284A /* wm_dislike@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_dislike@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_dislike@2x.png"; sourceTree = "<group>"; };
+		35FBE653A5341EE86A1AA67A00459314 /* wm_bottomShadow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomShadow@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomShadow@2x.png"; sourceTree = "<group>"; };
 		3874D11D5AF7350AFD832406608665B9 /* Pods-ADMobGenSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ADMobGenSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		396AB1D9437A535E525C766E6914846D /* wm_topShadow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_topShadow@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_topShadow@2x.png"; sourceTree = "<group>"; };
 		39CB6275C9D52856AAD057EBEFC3CD4D /* Pods-ADMobGenSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ADMobGenSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3A72F9021C0BB3FE3D97CD702BF4CD00 /* wm_adStar@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_adStar@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_adStar@3x.png"; sourceTree = "<group>"; };
 		3D8816FB47E2B78858FE427727BE6352 /* Pods-ADMobGenSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ADMobGenSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		456054F47A082C3BD3158D0FFA6AED2C /* wm_dislike@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_dislike@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_dislike@2x.png"; sourceTree = "<group>"; };
-		4671DA1F5EECC1C2157975262E0201B8 /* wm_adStar@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_adStar@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_adStar@3x.png"; sourceTree = "<group>"; };
-		473B2B7CAE33168F3F1674742956133C /* wm_replay@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_replay@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_replay@3x.png"; sourceTree = "<group>"; };
-		483CA95A36CEB2876766F3F20AC097BC /* WMAdSDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WMAdSDK.bundle; path = "ADMobGenSDKWM-WMAdSDK.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		49DC07CCD93D348E36F8A3D33C123727 /* wm_bottomShadow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomShadow@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomShadow@3x.png"; sourceTree = "<group>"; };
-		4B99E2E2FD02EF46D12AF69DCF650BF2 /* wm_close@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_close@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_close@2x.png"; sourceTree = "<group>"; };
-		4BD85C0B8D6CD6CFA64FFC5F616F461B /* wm_logo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_logo@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_logo@2x.png"; sourceTree = "<group>"; };
-		4C2AA171C401969B11299AB160DDFE8A /* wm_pause@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_pause@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_pause@3x.png"; sourceTree = "<group>"; };
+		40DEF343C14490A751B9AFDCB19BC11D /* wm_fastBackward@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fastBackward@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fastBackward@2x.png"; sourceTree = "<group>"; };
+		4160CCB489D14E1CF2508ABB1A6FEBDB /* ADMobGenAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenAdapter.framework; path = ADMobGenAdapter/Classes/ADMobGenAdapter.framework; sourceTree = "<group>"; };
+		44F5C6DEC9463AA7E1025F7F6C0AB81C /* wm_brightness@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_brightness@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_brightness@3x.png"; sourceTree = "<group>"; };
+		460F96FB861D099BE7E5F652BBDCC3D9 /* wm_dislike@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_dislike@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_dislike@3x.png"; sourceTree = "<group>"; };
+		4903E81B1DE5858E196EEEB1C3442EDD /* pic_logo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "pic_logo@2x.png"; path = "ADMobGenMCAd/Assets/MCAdBundles.bundle/pic_logo@2x.png"; sourceTree = "<group>"; };
+		4B33021EABFF03895C53AC24266E947E /* ADMobGenFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenFoundation.framework; path = ADMobGenFoundation/Classes/ADMobGenFoundation.framework; sourceTree = "<group>"; };
 		4C57A7008B28F4B384B4CFC83D93D23E /* Pods-ADMobGenSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ADMobGenSDK_Tests-dummy.m"; sourceTree = "<group>"; };
-		4FBAE67C888E8B5550D8FD7C5279A934 /* wm_bottomPlay@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomPlay@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomPlay@2x.png"; sourceTree = "<group>"; };
-		5211A6413ABCE214E958D6236C3BC660 /* ResourceBundle-WMAdSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-WMAdSDK-Info.plist"; sourceTree = "<group>"; };
+		4F070354D2F13391DD020AF6092B0B1D /* wm_logo@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_logo@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_logo@3x.png"; sourceTree = "<group>"; };
 		5257929C0DD34215247927A21FD38302 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		55A49EDFC494C4CCABA7F3C56A13C6FF /* wm_fullClose@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fullClose@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fullClose@2x.png"; sourceTree = "<group>"; };
+		55EE66C065689778B6E70BEC67DE922C /* wm_voice_silent@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_voice_silent@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_voice_silent@3x.png"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5AE37C107D3D3E95970385D674494403 /* ADMobGenMCAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenMCAd.framework; path = ADMobGenMCAd/Classes/ADMobGenMCAd.framework; sourceTree = "<group>"; };
-		63D5ADAD62CE503F0ED127E5109B7148 /* wm_shrinkScreen@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_shrinkScreen@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_shrinkScreen@3x.png"; sourceTree = "<group>"; };
-		6982FF3BECE652870306387DC80B4311 /* wm_brightness@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_brightness@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_brightness@2x.png"; sourceTree = "<group>"; };
-		6E970D6A137D6532937669343788CD60 /* wm_leftback@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_leftback@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_leftback@2x.png"; sourceTree = "<group>"; };
-		703A671974EC54D4A4301C0DF2063D99 /* wm_voice_silent@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_voice_silent@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_voice_silent@3x.png"; sourceTree = "<group>"; };
-		729A6CC419FDDD17B95761568BBBABF0 /* wm_topShadow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_topShadow@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_topShadow@3x.png"; sourceTree = "<group>"; };
-		72F5922CFD1817E69DD9AE4CFD9BBD31 /* wm_logo@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_logo@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_logo@3x.png"; sourceTree = "<group>"; };
+		5B647BB0661F4E92309CC7451BEF95C3 /* ADMobGenNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenNetwork.framework; path = ADMobGenNetwork/Classes/ADMobGenNetwork.framework; sourceTree = "<group>"; };
+		5C67C71882579458C97BBE2AE578D2FB /* 40x40.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = 40x40.png; path = ADMobGenMCAd/Assets/MCAdBundles.bundle/40x40.png; sourceTree = "<group>"; };
+		66EE9291DF3683FAB3E488D293791D43 /* MCAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MCAdSDK.framework; path = ADMobGenMCAdSDK/Classes/MCAdSDK.framework; sourceTree = "<group>"; };
 		75E8C4B7C6B7525EEFB7EA963F0C23B7 /* Pods-ADMobGenSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ADMobGenSDK_Example.modulemap"; sourceTree = "<group>"; };
-		783282676DA6DF7171A75E585A03959F /* wm_adStarEmpty@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_adStarEmpty@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_adStarEmpty@2x.png"; sourceTree = "<group>"; };
-		7B1828E8D9A62765F65FED35B71CBB4F /* ADMobGenFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenFoundation.framework; path = ADMobGenFoundation/Classes/ADMobGenFoundation.framework; sourceTree = "<group>"; };
-		7F353A0BE4E9D43A38A6A9F08D15CC84 /* wm_fullClose@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fullClose@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fullClose@2x.png"; sourceTree = "<group>"; };
+		7771453D8C6C97E0F7736D9FED61B853 /* wm_leftback@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_leftback@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_leftback@2x.png"; sourceTree = "<group>"; };
+		7C9BBB1AF218A298D4BA791131351E1F /* wm_bottomPlay@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomPlay@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomPlay@2x.png"; sourceTree = "<group>"; };
+		7F29C438F3D7E78E51A0A273671293D0 /* wm_brightness@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_brightness@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_brightness@2x.png"; sourceTree = "<group>"; };
+		7FD10ADAEB410E9EDDFF82EDE9A9BD67 /* wm_close@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_close@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_close@2x.png"; sourceTree = "<group>"; };
 		81BF0E9887D91B943BA5EBD1ADF2395A /* Pods-ADMobGenSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ADMobGenSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		855B15070E06F2EEF384E5CA8C345D75 /* wm_bottomPause@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomPause@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomPause@3x.png"; sourceTree = "<group>"; };
-		88C178475596956AF5D469BCC5F0709F /* wm_pause@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_pause@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_pause@2x.png"; sourceTree = "<group>"; };
+		8500A35783193E583F45B761E84029F8 /* wm_fullScreen@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fullScreen@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fullScreen@2x.png"; sourceTree = "<group>"; };
+		859577B550907FFDB364EBF145D4B6DB /* wm_bottomPause@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomPause@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomPause@2x.png"; sourceTree = "<group>"; };
 		8AA134E291AF412675BEFE517DAA15D6 /* Pods-ADMobGenSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ADMobGenSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8F83C53D63ED0203A648283903E1CC47 /* wm_bottomPause@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomPause@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomPause@3x.png"; sourceTree = "<group>"; };
+		91AB8F0DC2B5D0A9495E12249FD85FD3 /* wm_fastForward@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fastForward@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fastForward@2x.png"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93BDB0EAC44C47A0F89AE2ED13B6F0C5 /* wm_fullScreen@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fullScreen@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fullScreen@3x.png"; sourceTree = "<group>"; };
+		94D39E400CD3B3B35E5CE91AC053799C /* WMAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WMAdSDK.framework; path = ADMobGenWMSDK/Classes/WMAdSDK.framework; sourceTree = "<group>"; };
 		98CFA1D8DDF52116BBD9DD065AD23B89 /* Pods-ADMobGenSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ADMobGenSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		99198A78AD79B3DB864B6982CDE7871B /* wm_sliderDot@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_sliderDot@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_sliderDot@2x.png"; sourceTree = "<group>"; };
+		9BBC325E0ADAC2CD795B28ECDAD2A12F /* Pods_ADMobGenSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ADMobGenSDK_Example.framework; path = "Pods-ADMobGenSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4551E36531B33441EACC8657A98358 /* Pods-ADMobGenSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ADMobGenSDK_Example-umbrella.h"; sourceTree = "<group>"; };
-		A06BD347E4B8D897C4CA3133BDB72B78 /* MCAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MCAdSDK.framework; path = ADMobGenMCAdSDK/Classes/MCAdSDK.framework; sourceTree = "<group>"; };
-		A59F8F9BDF92B4F9D1A1BE30690E9E3A /* wm_fastForward@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fastForward@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fastForward@3x.png"; sourceTree = "<group>"; };
+		9EEF999C210B199CF50B7A9E44C928DF /* MCAdBundles.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MCAdBundles.bundle; path = "ADMobGenMCAd-MCAdBundles.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6DE26B05CECC314D71BBAD8BC6FD6D7 /* Pods-ADMobGenSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ADMobGenSDK_Tests.modulemap"; sourceTree = "<group>"; };
 		A8F63336DFFF11451382F3F56B9FB30C /* ADMobGenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenSDK.framework; path = ADMobGenSDK/Classes/ADMobGenSDK.framework; sourceTree = "<group>"; };
-		AA5708F821B6DE3002E133D1CF30C8B9 /* wm_back_normal.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = wm_back_normal.png; path = ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_back_normal.png; sourceTree = "<group>"; };
-		ACD8C2EFBC0F4779DC2A8B52CB1FC952 /* wm_play@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_play@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_play@2x.png"; sourceTree = "<group>"; };
 		AD4E5BBC647113C3D6E901995DBB38CC /* Pods-ADMobGenSDK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ADMobGenSDK_Example-resources.sh"; sourceTree = "<group>"; };
-		AE6ED4472CB36D64CCB992642F5688F3 /* ADMobGenGDT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenGDT.framework; path = ADMobGenGDT/Classes/ADMobGenGDT.framework; sourceTree = "<group>"; };
-		B0F81DC42C7E1AF73DA46FA6E29FF4C3 /* wm_fullScreen@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fullScreen@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fullScreen@3x.png"; sourceTree = "<group>"; };
+		B40F140952504806464E322ABEC42C98 /* wm_voice@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_voice@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_voice@3x.png"; sourceTree = "<group>"; };
+		B7BE27F9337D3093763A921E67D56C3D /* wm_topShadow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_topShadow@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_topShadow@3x.png"; sourceTree = "<group>"; };
+		B920C76251F911D43CF985E63932253E /* wm_fullClose@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fullClose@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fullClose@3x.png"; sourceTree = "<group>"; };
+		B9307F480B461ED0D9C483C3B9D21A76 /* wm_adStarEmpty@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_adStarEmpty@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_adStarEmpty@2x.png"; sourceTree = "<group>"; };
 		B97AD5731C071BEE88B5A01272AE0EA1 /* Pods-ADMobGenSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ADMobGenSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B9F952B35CD0E814144BCED60E5DAC1B /* wm_replay@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_replay@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_replay@2x.png"; sourceTree = "<group>"; };
-		BF04349831B34F369B3DB4E976F09062 /* wm_fullClose@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fullClose@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fullClose@3x.png"; sourceTree = "<group>"; };
-		BF41B7656B977B823296EA583C8EE6CE /* wm_dislike@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_dislike@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_dislike@3x.png"; sourceTree = "<group>"; };
-		C11113A7839E64DCCCA425C12B863B92 /* wm_bottomPlay@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomPlay@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomPlay@3x.png"; sourceTree = "<group>"; };
-		C223A79303D995B6C502455E863A6FBF /* wm_play@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_play@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_play@3x.png"; sourceTree = "<group>"; };
-		C2B1593A5383EBB56E9C52E9C7C912A4 /* wm_sliderDot@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_sliderDot@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_sliderDot@2x.png"; sourceTree = "<group>"; };
-		C5811EC98E689F9927DBE4868ADCA662 /* WMAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WMAdSDK.framework; path = ADMobGenWMSDK/Classes/WMAdSDK.framework; sourceTree = "<group>"; };
+		BCE47522C29CB8EFD1842A40E514A613 /* ResourceBundle-WMAdSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-WMAdSDK-Info.plist"; sourceTree = "<group>"; };
+		BDF361DA29846A9F9F77D2DEBD2CF730 /* wm_logo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_logo@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_logo@2x.png"; sourceTree = "<group>"; };
+		C137839AEC4361913F3239B58977816B /* wm_adStarEmpty@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_adStarEmpty@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_adStarEmpty@3x.png"; sourceTree = "<group>"; };
+		C58E2A367979F9581364C09D89B492B1 /* wm_replay@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_replay@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_replay@2x.png"; sourceTree = "<group>"; };
+		C62E79570232248F1F53B229FA0CDE49 /* wm_bottomShadow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomShadow@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomShadow@3x.png"; sourceTree = "<group>"; };
+		C96683062B03D44CC1D33F89418C2088 /* wm_play@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_play@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_play@3x.png"; sourceTree = "<group>"; };
 		CB422F4A34FB91C92F9CC41D64B81A97 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		CB955275E728A975EC395FB8397BF7B5 /* wm_pause@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_pause@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_pause@3x.png"; sourceTree = "<group>"; };
 		CBD9E5E111CA6EDAC8FECDC93BC279FB /* Pods-ADMobGenSDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ADMobGenSDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		D0942CD0A34FB65520912D6D7409D288 /* Pods_ADMobGenSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ADMobGenSDK_Example.framework; path = "Pods-ADMobGenSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D261BA027D34BE79F20B247D37E9ADAE /* wm_nativeVideo_left@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_nativeVideo_left@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_nativeVideo_left@3x.png"; sourceTree = "<group>"; };
+		CCA1B68F767D031D85D1A37C64DCAFBC /* wm_fastBackward@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fastBackward@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fastBackward@3x.png"; sourceTree = "<group>"; };
+		CF0DFDEA7A15F88909F12F4C2D8ED1C2 /* ADMobGenMCAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADMobGenMCAd.framework; path = ADMobGenMCAd/Classes/ADMobGenMCAd.framework; sourceTree = "<group>"; };
 		D5F2AE594BCEF3B7ACB3E315B9A03661 /* ADMobGenSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ADMobGenSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D8B552DD64B7BE782ADA78A8FAD0E28E /* wm_fastBackward@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fastBackward@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fastBackward@3x.png"; sourceTree = "<group>"; };
-		DF98EEEB18AAA43899DC8DEA53DA82A3 /* wm_fastBackward@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fastBackward@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fastBackward@2x.png"; sourceTree = "<group>"; };
-		E0F7087B0310775717B2DBE75D82FE83 /* wm_adStarEmpty@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_adStarEmpty@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_adStarEmpty@3x.png"; sourceTree = "<group>"; };
-		E37333A23693BDF03DCADA234CE97E7D /* wm_fastForward@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fastForward@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fastForward@2x.png"; sourceTree = "<group>"; };
-		E380845C4C62BF6703497354F9DAD318 /* wm_adStar@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_adStar@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_adStar@2x.png"; sourceTree = "<group>"; };
-		E72A38D43184B78AA363B650819A4F64 /* wm_bottomPause@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomPause@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomPause@2x.png"; sourceTree = "<group>"; };
-		EBBE707B9A40ECEFA4CE6F8E660DCC22 /* Pods_ADMobGenSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ADMobGenSDK_Tests.framework; path = "Pods-ADMobGenSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC5E94C26D6B1052FCF1B6401AA2287A /* wm_bottomShadow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_bottomShadow@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_bottomShadow@2x.png"; sourceTree = "<group>"; };
-		F8070B86D0326BF74884F9C1E8B9C850 /* wm_fullScreen@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_fullScreen@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_fullScreen@2x.png"; sourceTree = "<group>"; };
-		FEA13FAF3D0C351D86C42265785F0751 /* wm_leftback@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_leftback@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_leftback@3x.png"; sourceTree = "<group>"; };
-		FF2057111A56B5DEFB02210E9537638E /* wm_sliderDot@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_sliderDot@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_sliderDot@3x.png"; sourceTree = "<group>"; };
+		DB72D20ED2C1FA68104F804B3DD9F052 /* ResourceBundle-MCAdBundles-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MCAdBundles-Info.plist"; sourceTree = "<group>"; };
+		DC758574B3FF1ED8502B7AF186F7B379 /* wm_adStar@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_adStar@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_adStar@2x.png"; sourceTree = "<group>"; };
+		E194F5733AEDEC4A6BB50848C6E87160 /* wm_play@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_play@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_play@2x.png"; sourceTree = "<group>"; };
+		EBCECD2A692A3812B4A1FC0044DC1634 /* wm_close@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_close@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_close@3x.png"; sourceTree = "<group>"; };
+		F09BD46FF1991CD140986189F68D2424 /* wm_nativeVideo_left@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_nativeVideo_left@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_nativeVideo_left@3x.png"; sourceTree = "<group>"; };
+		F5CB3197E4452510DC4B1DB3B217F460 /* wm_leftback@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_leftback@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_leftback@3x.png"; sourceTree = "<group>"; };
+		FE42FA550B9369061239B65EB5816C3D /* wm_sliderDot@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_sliderDot@3x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_sliderDot@3x.png"; sourceTree = "<group>"; };
+		FF81B6B634C9F99087ED12EA12DE1220 /* wm_nativeVideo_left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "wm_nativeVideo_left@2x.png"; path = "ADMobGenSDKWM/Assets/WMAdSDK.bundle/wm_nativeVideo_left@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		06963171AE715440AD716A4B8657A5C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74EB6B50863EB2DC3643CB08F797537 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B793169B3875A5AA52B909BCF9E6616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98267F38EF3626DCC3A63BBF2884A7BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,21 +213,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E49E153F1345C46FF28CE620C14091F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				58F9DF427A4A41319D38B9FBE460EB9F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10A3E9C45CFDB696115D2DA6C15DBCD0 /* Frameworks */ = {
+		079E3B444AAAC13C8184D723259D051D /* ADMobGenWMSDK */ = {
 			isa = PBXGroup;
 			children = (
-				5AE37C107D3D3E95970385D674494403 /* ADMobGenMCAd.framework */,
+				0BC98175546653ACBF19A0D998FF303E /* Frameworks */,
+			);
+			name = ADMobGenWMSDK;
+			path = ADMobGenWMSDK;
+			sourceTree = "<group>";
+		};
+		0BC98175546653ACBF19A0D998FF303E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94D39E400CD3B3B35E5CE91AC053799C /* WMAdSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -220,19 +251,67 @@
 			path = "Target Support Files/Pods-ADMobGenSDK_Example";
 			sourceTree = "<group>";
 		};
-		1F41CAEC3F6E547223FB5655D86604FA /* Pods */ = {
+		13CA5E200FDB2E2F649E17493EA5E435 /* ADMobGenAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				E1634D1B0A7666B2EB7AE2C3E03E20CD /* ADMobGenAdapter */,
-				EF743BC9665CC3F8C0365E8882830B02 /* ADMobGenFoundation */,
-				CB6F2E579AD491FD5D455BC9543B0ED6 /* ADMobGenGDT */,
-				912776FDEDAD7304BDBD86241AAA6D1C /* ADMobGenMCAd */,
-				31801224FC29EF37992053276345C09A /* ADMobGenMCAdSDK */,
-				2A6A66579AB23EEDC53A599A2359CC93 /* ADMobGenNetwork */,
-				771219DE85E0102E94C3CA26BF629812 /* ADMobGenSDKWM */,
-				7CF0B85B48D8F3CE792BA02228E7B7B7 /* ADMobGenWMSDK */,
+				F6F926A7A22CD789D175CC48C47A9868 /* Frameworks */,
 			);
-			name = Pods;
+			name = ADMobGenAdapter;
+			path = ADMobGenAdapter;
+			sourceTree = "<group>";
+		};
+		166D72500C8F606DE95338AA30EA9896 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC758574B3FF1ED8502B7AF186F7B379 /* wm_adStar@2x.png */,
+				3A72F9021C0BB3FE3D97CD702BF4CD00 /* wm_adStar@3x.png */,
+				B9307F480B461ED0D9C483C3B9D21A76 /* wm_adStarEmpty@2x.png */,
+				C137839AEC4361913F3239B58977816B /* wm_adStarEmpty@3x.png */,
+				21750E272C062ACD6B03E981DD6801B6 /* wm_back_normal.png */,
+				859577B550907FFDB364EBF145D4B6DB /* wm_bottomPause@2x.png */,
+				8F83C53D63ED0203A648283903E1CC47 /* wm_bottomPause@3x.png */,
+				7C9BBB1AF218A298D4BA791131351E1F /* wm_bottomPlay@2x.png */,
+				33F76B3E695E6EFB8E68710C8DAFC221 /* wm_bottomPlay@3x.png */,
+				35FBE653A5341EE86A1AA67A00459314 /* wm_bottomShadow@2x.png */,
+				C62E79570232248F1F53B229FA0CDE49 /* wm_bottomShadow@3x.png */,
+				7F29C438F3D7E78E51A0A273671293D0 /* wm_brightness@2x.png */,
+				44F5C6DEC9463AA7E1025F7F6C0AB81C /* wm_brightness@3x.png */,
+				7FD10ADAEB410E9EDDFF82EDE9A9BD67 /* wm_close@2x.png */,
+				EBCECD2A692A3812B4A1FC0044DC1634 /* wm_close@3x.png */,
+				34013E33245401C8F5CD9076BCC1284A /* wm_dislike@2x.png */,
+				460F96FB861D099BE7E5F652BBDCC3D9 /* wm_dislike@3x.png */,
+				40DEF343C14490A751B9AFDCB19BC11D /* wm_fastBackward@2x.png */,
+				CCA1B68F767D031D85D1A37C64DCAFBC /* wm_fastBackward@3x.png */,
+				91AB8F0DC2B5D0A9495E12249FD85FD3 /* wm_fastForward@2x.png */,
+				11071A9294F6967725EC7201D95F8039 /* wm_fastForward@3x.png */,
+				55A49EDFC494C4CCABA7F3C56A13C6FF /* wm_fullClose@2x.png */,
+				B920C76251F911D43CF985E63932253E /* wm_fullClose@3x.png */,
+				8500A35783193E583F45B761E84029F8 /* wm_fullScreen@2x.png */,
+				93BDB0EAC44C47A0F89AE2ED13B6F0C5 /* wm_fullScreen@3x.png */,
+				7771453D8C6C97E0F7736D9FED61B853 /* wm_leftback@2x.png */,
+				F5CB3197E4452510DC4B1DB3B217F460 /* wm_leftback@3x.png */,
+				BDF361DA29846A9F9F77D2DEBD2CF730 /* wm_logo@2x.png */,
+				4F070354D2F13391DD020AF6092B0B1D /* wm_logo@3x.png */,
+				FF81B6B634C9F99087ED12EA12DE1220 /* wm_nativeVideo_left@2x.png */,
+				F09BD46FF1991CD140986189F68D2424 /* wm_nativeVideo_left@3x.png */,
+				2F38CFC85A19AAB5B5373CD6982ECFBE /* wm_pause@2x.png */,
+				CB955275E728A975EC395FB8397BF7B5 /* wm_pause@3x.png */,
+				E194F5733AEDEC4A6BB50848C6E87160 /* wm_play@2x.png */,
+				C96683062B03D44CC1D33F89418C2088 /* wm_play@3x.png */,
+				C58E2A367979F9581364C09D89B492B1 /* wm_replay@2x.png */,
+				0B82F0197F6058B0090892E5534B566D /* wm_replay@3x.png */,
+				326B4F8CEA778159868F61B8DCA5F557 /* wm_shrinkScreen@2x.png */,
+				1A0FF0E8F9BF8A3CC31C2EEBBCC9C8D3 /* wm_shrinkScreen@3x.png */,
+				99198A78AD79B3DB864B6982CDE7871B /* wm_sliderDot@2x.png */,
+				FE42FA550B9369061239B65EB5816C3D /* wm_sliderDot@3x.png */,
+				2E27D96385E8BB7063F7F702D9232553 /* wm_topShadow@2x.png */,
+				B7BE27F9337D3093763A921E67D56C3D /* wm_topShadow@3x.png */,
+				2A4F7B307AD69810690490D729D08AE7 /* wm_voice@2x.png */,
+				B40F140952504806464E322ABEC42C98 /* wm_voice@3x.png */,
+				06CAF9A1C54F448C3F5A1633EBE8005B /* wm_voice_silent@2x.png */,
+				55EE66C065689778B6E70BEC67DE922C /* wm_voice_silent@3x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		2923187F771683C6D796F1CE91B20852 /* Targets Support Files */ = {
@@ -244,30 +323,15 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2A6A66579AB23EEDC53A599A2359CC93 /* ADMobGenNetwork */ = {
+		2E9F7541107135FAD18738D54F03775C /* ADMobGenMCAd */ = {
 			isa = PBXGroup;
 			children = (
-				EA2BE302854686935095C46C8D249052 /* Frameworks */,
+				63F0071FA5298C2803C5B59F6932E492 /* Frameworks */,
+				C0783757A7A671EA46E6E28310D9EFEC /* Resources */,
+				5DF9C58EF96F463D9A584FB476BC5CEE /* Support Files */,
 			);
-			name = ADMobGenNetwork;
-			path = ADMobGenNetwork;
-			sourceTree = "<group>";
-		};
-		31801224FC29EF37992053276345C09A /* ADMobGenMCAdSDK */ = {
-			isa = PBXGroup;
-			children = (
-				F1D5F318276FB44C5B8F7E213C74C105 /* Frameworks */,
-			);
-			name = ADMobGenMCAdSDK;
-			path = ADMobGenMCAdSDK;
-			sourceTree = "<group>";
-		};
-		4627B524C859836A00A067D6341B89D2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7B1828E8D9A62765F65FED35B71CBB4F /* ADMobGenFoundation.framework */,
-			);
-			name = Frameworks;
+			name = ADMobGenMCAd;
+			path = ADMobGenMCAd;
 			sourceTree = "<group>";
 		};
 		4B8E7A989C6AE9C64E4811B155CDBAF7 /* Frameworks */ = {
@@ -278,6 +342,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		54E888970DABE2DCE383930BD640300E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B647BB0661F4E92309CC7451BEF95C3 /* ADMobGenNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5AFF7DEA66BF2692DFDB7B433297A1FC /* ADMobGenFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				71C5C8DE4DFDD74686728869022D08F6 /* Frameworks */,
+			);
+			name = ADMobGenFoundation;
+			path = ADMobGenFoundation;
+			sourceTree = "<group>";
+		};
+		5DF9C58EF96F463D9A584FB476BC5CEE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB72D20ED2C1FA68104F804B3DD9F052 /* ResourceBundle-MCAdBundles-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ADMobGenMCAd";
+			sourceTree = "<group>";
+		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,43 +376,51 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		715ED6AD386C1DC16657B46CB090FDB5 /* Products */ = {
+		63F0071FA5298C2803C5B59F6932E492 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D0942CD0A34FB65520912D6D7409D288 /* Pods_ADMobGenSDK_Example.framework */,
-				EBBE707B9A40ECEFA4CE6F8E660DCC22 /* Pods_ADMobGenSDK_Tests.framework */,
-				483CA95A36CEB2876766F3F20AC097BC /* WMAdSDK.bundle */,
+				CF0DFDEA7A15F88909F12F4C2D8ED1C2 /* ADMobGenMCAd.framework */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		73282EAEBB3179609F0D90AB192A672B /* Support Files */ = {
+		64D320829ADF0354F63368309E35BC2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5211A6413ABCE214E958D6236C3BC660 /* ResourceBundle-WMAdSDK-Info.plist */,
+				00D7ED6D99E7E7C457C68A8A89650003 /* ADMobGenGDT.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/ADMobGenSDKWM";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		771219DE85E0102E94C3CA26BF629812 /* ADMobGenSDKWM */ = {
+		65947DAE856D528AD93747B31AF9D0F3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DA61880E06A00CB1F4434D7C0B473997 /* Frameworks */,
-				EF065CFFE33A597A5238E72FBEFF66C6 /* Resources */,
-				73282EAEBB3179609F0D90AB192A672B /* Support Files */,
+				13CA5E200FDB2E2F649E17493EA5E435 /* ADMobGenAdapter */,
+				5AFF7DEA66BF2692DFDB7B433297A1FC /* ADMobGenFoundation */,
+				8BFCD57A032C3C786FBB5CCA301A392F /* ADMobGenGDT */,
+				2E9F7541107135FAD18738D54F03775C /* ADMobGenMCAd */,
+				CEA9664EE2B63909F3CF587278D1B6AC /* ADMobGenMCAdSDK */,
+				BC2D1227E4377DF858DD2E15725D719A /* ADMobGenNetwork */,
+				E45072AF27CAE26316DC8007027ABD78 /* ADMobGenSDKWM */,
+				079E3B444AAAC13C8184D723259D051D /* ADMobGenWMSDK */,
 			);
-			name = ADMobGenSDKWM;
-			path = ADMobGenSDKWM;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		7CF0B85B48D8F3CE792BA02228E7B7B7 /* ADMobGenWMSDK */ = {
+		68DBB1588F29AAF39C581294E8610EED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				96AC54912CDCAE71E6F78C7975A2CCB2 /* Frameworks */,
+				0E6EB18E7E0AF97A5B9F2A7635082702 /* ADMobGenWM.framework */,
 			);
-			name = ADMobGenWMSDK;
-			path = ADMobGenWMSDK;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71C5C8DE4DFDD74686728869022D08F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B33021EABFF03895C53AC24266E947E /* ADMobGenFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -331,8 +429,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				F8631ADE30F17BD847A4693B211C0A4C /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				1F41CAEC3F6E547223FB5655D86604FA /* Pods */,
-				715ED6AD386C1DC16657B46CB090FDB5 /* Products */,
+				65947DAE856D528AD93747B31AF9D0F3 /* Pods */,
+				F14FC06230CEEE088F9647DB9A819693 /* Products */,
 				2923187F771683C6D796F1CE91B20852 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -347,21 +445,13 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		912776FDEDAD7304BDBD86241AAA6D1C /* ADMobGenMCAd */ = {
+		8BFCD57A032C3C786FBB5CCA301A392F /* ADMobGenGDT */ = {
 			isa = PBXGroup;
 			children = (
-				10A3E9C45CFDB696115D2DA6C15DBCD0 /* Frameworks */,
+				64D320829ADF0354F63368309E35BC2B /* Frameworks */,
 			);
-			name = ADMobGenMCAd;
-			path = ADMobGenMCAd;
-			sourceTree = "<group>";
-		};
-		96AC54912CDCAE71E6F78C7975A2CCB2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C5811EC98E689F9927DBE4868ADCA662 /* WMAdSDK.framework */,
-			);
-			name = Frameworks;
+			name = ADMobGenGDT;
+			path = ADMobGenGDT;
 			sourceTree = "<group>";
 		};
 		A604084D4ED49004DFE8A7C0164089E2 /* Pod */ = {
@@ -392,6 +482,15 @@
 			path = "Target Support Files/Pods-ADMobGenSDK_Tests";
 			sourceTree = "<group>";
 		};
+		BC2D1227E4377DF858DD2E15725D719A /* ADMobGenNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				54E888970DABE2DCE383930BD640300E /* Frameworks */,
+			);
+			name = ADMobGenNetwork;
+			path = ADMobGenNetwork;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,123 +499,68 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CB6F2E579AD491FD5D455BC9543B0ED6 /* ADMobGenGDT */ = {
+		C0783757A7A671EA46E6E28310D9EFEC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EE2599AB48845193358927DFF01BBCE9 /* Frameworks */,
-			);
-			name = ADMobGenGDT;
-			path = ADMobGenGDT;
-			sourceTree = "<group>";
-		};
-		DA61880E06A00CB1F4434D7C0B473997 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				05A6F4C5897F757DDE907AE999DC4D71 /* ADMobGenWM.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E1634D1B0A7666B2EB7AE2C3E03E20CD /* ADMobGenAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				E9119C1C2E6B1404A3E7B8A95CC2CB13 /* Frameworks */,
-			);
-			name = ADMobGenAdapter;
-			path = ADMobGenAdapter;
-			sourceTree = "<group>";
-		};
-		E9119C1C2E6B1404A3E7B8A95CC2CB13 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0DE4BC681BDD18054E0D6ECBE9FD74EA /* ADMobGenAdapter.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EA2BE302854686935095C46C8D249052 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1BBACF846881216D0333FADA11624000 /* ADMobGenNetwork.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EE2599AB48845193358927DFF01BBCE9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AE6ED4472CB36D64CCB992642F5688F3 /* ADMobGenGDT.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EF065CFFE33A597A5238E72FBEFF66C6 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E380845C4C62BF6703497354F9DAD318 /* wm_adStar@2x.png */,
-				4671DA1F5EECC1C2157975262E0201B8 /* wm_adStar@3x.png */,
-				783282676DA6DF7171A75E585A03959F /* wm_adStarEmpty@2x.png */,
-				E0F7087B0310775717B2DBE75D82FE83 /* wm_adStarEmpty@3x.png */,
-				AA5708F821B6DE3002E133D1CF30C8B9 /* wm_back_normal.png */,
-				E72A38D43184B78AA363B650819A4F64 /* wm_bottomPause@2x.png */,
-				855B15070E06F2EEF384E5CA8C345D75 /* wm_bottomPause@3x.png */,
-				4FBAE67C888E8B5550D8FD7C5279A934 /* wm_bottomPlay@2x.png */,
-				C11113A7839E64DCCCA425C12B863B92 /* wm_bottomPlay@3x.png */,
-				EC5E94C26D6B1052FCF1B6401AA2287A /* wm_bottomShadow@2x.png */,
-				49DC07CCD93D348E36F8A3D33C123727 /* wm_bottomShadow@3x.png */,
-				6982FF3BECE652870306387DC80B4311 /* wm_brightness@2x.png */,
-				1A4DC607C8788FEA16BEDDD3D51A78A2 /* wm_brightness@3x.png */,
-				4B99E2E2FD02EF46D12AF69DCF650BF2 /* wm_close@2x.png */,
-				1E8286416E2DF7D48577B182968558DE /* wm_close@3x.png */,
-				456054F47A082C3BD3158D0FFA6AED2C /* wm_dislike@2x.png */,
-				BF41B7656B977B823296EA583C8EE6CE /* wm_dislike@3x.png */,
-				DF98EEEB18AAA43899DC8DEA53DA82A3 /* wm_fastBackward@2x.png */,
-				D8B552DD64B7BE782ADA78A8FAD0E28E /* wm_fastBackward@3x.png */,
-				E37333A23693BDF03DCADA234CE97E7D /* wm_fastForward@2x.png */,
-				A59F8F9BDF92B4F9D1A1BE30690E9E3A /* wm_fastForward@3x.png */,
-				7F353A0BE4E9D43A38A6A9F08D15CC84 /* wm_fullClose@2x.png */,
-				BF04349831B34F369B3DB4E976F09062 /* wm_fullClose@3x.png */,
-				F8070B86D0326BF74884F9C1E8B9C850 /* wm_fullScreen@2x.png */,
-				B0F81DC42C7E1AF73DA46FA6E29FF4C3 /* wm_fullScreen@3x.png */,
-				6E970D6A137D6532937669343788CD60 /* wm_leftback@2x.png */,
-				FEA13FAF3D0C351D86C42265785F0751 /* wm_leftback@3x.png */,
-				4BD85C0B8D6CD6CFA64FFC5F616F461B /* wm_logo@2x.png */,
-				72F5922CFD1817E69DD9AE4CFD9BBD31 /* wm_logo@3x.png */,
-				04B701787FB1C142A591426C6146E78A /* wm_nativeVideo_left@2x.png */,
-				D261BA027D34BE79F20B247D37E9ADAE /* wm_nativeVideo_left@3x.png */,
-				88C178475596956AF5D469BCC5F0709F /* wm_pause@2x.png */,
-				4C2AA171C401969B11299AB160DDFE8A /* wm_pause@3x.png */,
-				ACD8C2EFBC0F4779DC2A8B52CB1FC952 /* wm_play@2x.png */,
-				C223A79303D995B6C502455E863A6FBF /* wm_play@3x.png */,
-				B9F952B35CD0E814144BCED60E5DAC1B /* wm_replay@2x.png */,
-				473B2B7CAE33168F3F1674742956133C /* wm_replay@3x.png */,
-				11A98424BBF239A18104156126F6BD4C /* wm_shrinkScreen@2x.png */,
-				63D5ADAD62CE503F0ED127E5109B7148 /* wm_shrinkScreen@3x.png */,
-				C2B1593A5383EBB56E9C52E9C7C912A4 /* wm_sliderDot@2x.png */,
-				FF2057111A56B5DEFB02210E9537638E /* wm_sliderDot@3x.png */,
-				396AB1D9437A535E525C766E6914846D /* wm_topShadow@2x.png */,
-				729A6CC419FDDD17B95761568BBBABF0 /* wm_topShadow@3x.png */,
-				042D7974635904503D3EC1804A6A00A6 /* wm_voice@2x.png */,
-				086A421A70B84B1A3C40474BADF6F32F /* wm_voice@3x.png */,
-				19F626C78F0ECC0F49F01854F910D8D7 /* wm_voice_silent@2x.png */,
-				703A671974EC54D4A4301C0DF2063D99 /* wm_voice_silent@3x.png */,
+				5C67C71882579458C97BBE2AE578D2FB /* 40x40.png */,
+				0E70CFD2EBF5178A2058DC15ED8DF8B8 /* pic_logo@1x.png */,
+				4903E81B1DE5858E196EEEB1C3442EDD /* pic_logo@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		EF743BC9665CC3F8C0365E8882830B02 /* ADMobGenFoundation */ = {
+		C4BC3F2106E9529A40A38FFB1FFE0CCF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4627B524C859836A00A067D6341B89D2 /* Frameworks */,
+				BCE47522C29CB8EFD1842A40E514A613 /* ResourceBundle-WMAdSDK-Info.plist */,
 			);
-			name = ADMobGenFoundation;
-			path = ADMobGenFoundation;
+			name = "Support Files";
+			path = "../Target Support Files/ADMobGenSDKWM";
 			sourceTree = "<group>";
 		};
-		F1D5F318276FB44C5B8F7E213C74C105 /* Frameworks */ = {
+		CEA9664EE2B63909F3CF587278D1B6AC /* ADMobGenMCAdSDK */ = {
 			isa = PBXGroup;
 			children = (
-				A06BD347E4B8D897C4CA3133BDB72B78 /* MCAdSDK.framework */,
+				F20CFD8C358B921A4CA976D51F1F47FD /* Frameworks */,
+			);
+			name = ADMobGenMCAdSDK;
+			path = ADMobGenMCAdSDK;
+			sourceTree = "<group>";
+		};
+		E45072AF27CAE26316DC8007027ABD78 /* ADMobGenSDKWM */ = {
+			isa = PBXGroup;
+			children = (
+				68DBB1588F29AAF39C581294E8610EED /* Frameworks */,
+				166D72500C8F606DE95338AA30EA9896 /* Resources */,
+				C4BC3F2106E9529A40A38FFB1FFE0CCF /* Support Files */,
+			);
+			name = ADMobGenSDKWM;
+			path = ADMobGenSDKWM;
+			sourceTree = "<group>";
+		};
+		F14FC06230CEEE088F9647DB9A819693 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EEF999C210B199CF50B7A9E44C928DF /* MCAdBundles.bundle */,
+				9BBC325E0ADAC2CD795B28ECDAD2A12F /* Pods_ADMobGenSDK_Example.framework */,
+				0F367028EBECD485D9EDF6F9355459F1 /* Pods_ADMobGenSDK_Tests.framework */,
+				1E4984B2F8BBEA4A0708F38FC3162CCD /* WMAdSDK.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F20CFD8C358B921A4CA976D51F1F47FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66EE9291DF3683FAB3E488D293791D43 /* MCAdSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6F926A7A22CD789D175CC48C47A9868 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4160CCB489D14E1CF2508ABB1A6FEBDB /* ADMobGenAdapter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -532,14 +576,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C465944DC25FB0594F461BF03457B06D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AB241608016AD7AE76A3248B4653C94 /* Pods-ADMobGenSDK_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EDCE9ED68B95DDE99D9222B78BE9E464 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -548,27 +584,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDCD350C4C88D8B1A815F6E315B5E5F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E32EC7095195ACA0AA51EC6B224493C /* Pods-ADMobGenSDK_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1CDC6A2F9A92FF0751F5AE9C60FC9F81 /* Pods-ADMobGenSDK_Example */ = {
+		0DB82AFF819E47C9CFA40DBE3ECA826A /* Pods-ADMobGenSDK_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 814FB18E9FABA883005C0D7353C866EA /* Build configuration list for PBXNativeTarget "Pods-ADMobGenSDK_Example" */;
+			buildConfigurationList = EBEE9973F45F9D9C629620DAB40CE7F3 /* Build configuration list for PBXNativeTarget "Pods-ADMobGenSDK_Example" */;
 			buildPhases = (
-				C465944DC25FB0594F461BF03457B06D /* Headers */,
-				95B90C044008FAAAF13B80CA53076A9B /* Sources */,
-				E49E153F1345C46FF28CE620C14091F1 /* Frameworks */,
-				053F6B7355FD3C282A76532D8F7F9D32 /* Resources */,
+				FDCD350C4C88D8B1A815F6E315B5E5F9 /* Headers */,
+				68AEF3B65C04E415E9380E30090679E0 /* Sources */,
+				06963171AE715440AD716A4B8657A5C3 /* Frameworks */,
+				96A3AD129C24F388EBC13F7CBDF3D215 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F1E6C0124034E4BFEC5A59F4D188424C /* PBXTargetDependency */,
+				11D092EE647388BC1871472E48E3EAB2 /* PBXTargetDependency */,
+				0812E19D022AFAE46853ABEFA0A7BD2B /* PBXTargetDependency */,
 			);
 			name = "Pods-ADMobGenSDK_Example";
 			productName = "Pods-ADMobGenSDK_Example";
-			productReference = D0942CD0A34FB65520912D6D7409D288 /* Pods_ADMobGenSDK_Example.framework */;
+			productReference = 9BBC325E0ADAC2CD795B28ECDAD2A12F /* Pods_ADMobGenSDK_Example.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		753F2507BA7666B4768009731992F0D3 /* ADMobGenMCAd-MCAdBundles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE551E4B6D6A9CCC86FDDBFB05C99DD2 /* Build configuration list for PBXNativeTarget "ADMobGenMCAd-MCAdBundles" */;
+			buildPhases = (
+				FC33533BA865A2B0FDAE02D69E019F5D /* Sources */,
+				2B793169B3875A5AA52B909BCF9E6616 /* Frameworks */,
+				61F34301F598037B5F6F283F4C7625C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ADMobGenMCAd-MCAdBundles";
+			productName = "ADMobGenMCAd-MCAdBundles";
+			productReference = 9EEF999C210B199CF50B7A9E44C928DF /* MCAdBundles.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		75C9DF23A38AEF56F934D5CEFF50B417 /* Pods-ADMobGenSDK_Tests */ = {
 			isa = PBXNativeTarget;
@@ -586,7 +648,7 @@
 			);
 			name = "Pods-ADMobGenSDK_Tests";
 			productName = "Pods-ADMobGenSDK_Tests";
-			productReference = EBBE707B9A40ECEFA4CE6F8E660DCC22 /* Pods_ADMobGenSDK_Tests.framework */;
+			productReference = 0F367028EBECD485D9EDF6F9355459F1 /* Pods_ADMobGenSDK_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A923127E3405766CD7055759A2197C3F /* ADMobGenSDKWM-WMAdSDK */ = {
@@ -603,7 +665,7 @@
 			);
 			name = "ADMobGenSDKWM-WMAdSDK";
 			productName = "ADMobGenSDKWM-WMAdSDK";
-			productReference = 483CA95A36CEB2876766F3F20AC097BC /* WMAdSDK.bundle */;
+			productReference = 1E4984B2F8BBEA4A0708F38FC3162CCD /* WMAdSDK.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -623,22 +685,26 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 715ED6AD386C1DC16657B46CB090FDB5 /* Products */;
+			productRefGroup = F14FC06230CEEE088F9647DB9A819693 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				753F2507BA7666B4768009731992F0D3 /* ADMobGenMCAd-MCAdBundles */,
 				A923127E3405766CD7055759A2197C3F /* ADMobGenSDKWM-WMAdSDK */,
-				1CDC6A2F9A92FF0751F5AE9C60FC9F81 /* Pods-ADMobGenSDK_Example */,
+				0DB82AFF819E47C9CFA40DBE3ECA826A /* Pods-ADMobGenSDK_Example */,
 				75C9DF23A38AEF56F934D5CEFF50B417 /* Pods-ADMobGenSDK_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		053F6B7355FD3C282A76532D8F7F9D32 /* Resources */ = {
+		61F34301F598037B5F6F283F4C7625C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FE2A2EAB3DDCAECC22FDC8BEEE440DB /* 40x40.png in Resources */,
+				C870B9C04176C6905D0A3B22446040A0 /* pic_logo@1x.png in Resources */,
+				5E76D0305E163AA474EF0E12FB024635 /* pic_logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,22 +769,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96A3AD129C24F388EBC13F7CBDF3D215 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		68AEF3B65C04E415E9380E30090679E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2024235D5EAE6BF0AE8A5475F0FF894 /* Pods-ADMobGenSDK_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8693AC2CBAD3499B5965CF135702204F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				92A55AF320F03B2B0E26ABF882DE389A /* Pods-ADMobGenSDK_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95B90C044008FAAAF13B80CA53076A9B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAAC2E9ED8112467764264A47163AB33 /* Pods-ADMobGenSDK_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,24 +802,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FC33533BA865A2B0FDAE02D69E019F5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		15E13D08F6D4AE91AFE279E25F8F1D68 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-ADMobGenSDK_Example";
-			target = 1CDC6A2F9A92FF0751F5AE9C60FC9F81 /* Pods-ADMobGenSDK_Example */;
-			targetProxy = 022A67DCDF4F5D02B096BDC868E69B94 /* PBXContainerItemProxy */;
-		};
-		F1E6C0124034E4BFEC5A59F4D188424C /* PBXTargetDependency */ = {
+		0812E19D022AFAE46853ABEFA0A7BD2B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ADMobGenSDKWM-WMAdSDK";
 			target = A923127E3405766CD7055759A2197C3F /* ADMobGenSDKWM-WMAdSDK */;
-			targetProxy = 08A22965978BEEAB47D98225D3E70F3E /* PBXContainerItemProxy */;
+			targetProxy = 07B889CA2E9542149C484252E1782FC0 /* PBXContainerItemProxy */;
+		};
+		11D092EE647388BC1871472E48E3EAB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ADMobGenMCAd-MCAdBundles";
+			target = 753F2507BA7666B4768009731992F0D3 /* ADMobGenMCAd-MCAdBundles */;
+			targetProxy = 34066FD4A43AD3709551E8C3D3BE614D /* PBXContainerItemProxy */;
+		};
+		15E13D08F6D4AE91AFE279E25F8F1D68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ADMobGenSDK_Example";
+			target = 0DB82AFF819E47C9CFA40DBE3ECA826A /* Pods-ADMobGenSDK_Example */;
+			targetProxy = 022A67DCDF4F5D02B096BDC868E69B94 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		01713D7F7F3153835FAC9B55BA0875F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D8816FB47E2B78858FE427727BE6352 /* Pods-ADMobGenSDK_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ADMobGenSDK_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		7ED51EE2FEFF2594112DD2997B78C9BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -818,6 +937,55 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		9792DA6F2E734D3D6429C0362001891D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39CB6275C9D52856AAD057EBEFC3CD4D /* Pods-ADMobGenSDK_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ADMobGenSDK_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B39CF55A5B6A4D93C8448C2F9A5E5299 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ADMobGenMCAd";
+				INFOPLIST_FILE = "Target Support Files/ADMobGenMCAd/ResourceBundle-MCAdBundles-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = MCAdBundles;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -919,70 +1087,18 @@
 			};
 			name = Debug;
 		};
-		DEA819F8E657552D3A7E0B43167B0E89 /* Release */ = {
+		D6FD9F95005D2BEBD430C36D6DDD6C0E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39CB6275C9D52856AAD057EBEFC3CD4D /* Pods-ADMobGenSDK_Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ADMobGenSDK_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ADMobGenMCAd";
+				INFOPLIST_FILE = "Target Support Files/ADMobGenMCAd/ResourceBundle-MCAdBundles-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = MCAdBundles;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E1F82574B212438FF29BCC0C532EAD1D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D8816FB47E2B78858FE427727BE6352 /* Pods-ADMobGenSDK_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ADMobGenSDK_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -1055,11 +1171,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		814FB18E9FABA883005C0D7353C866EA /* Build configuration list for PBXNativeTarget "Pods-ADMobGenSDK_Example" */ = {
+		AE551E4B6D6A9CCC86FDDBFB05C99DD2 /* Build configuration list for PBXNativeTarget "ADMobGenMCAd-MCAdBundles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1F82574B212438FF29BCC0C532EAD1D /* Debug */,
-				DEA819F8E657552D3A7E0B43167B0E89 /* Release */,
+				D6FD9F95005D2BEBD430C36D6DDD6C0E /* Debug */,
+				B39CF55A5B6A4D93C8448C2F9A5E5299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1069,6 +1185,15 @@
 			buildConfigurations = (
 				7ED51EE2FEFF2594112DD2997B78C9BB /* Debug */,
 				E33D0A25941681BEEF8CD5282E639C3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBEE9973F45F9D9C629620DAB40CE7F3 /* Build configuration list for PBXNativeTarget "Pods-ADMobGenSDK_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01713D7F7F3153835FAC9B55BA0875F6 /* Debug */,
+				9792DA6F2E734D3D6429C0362001891D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

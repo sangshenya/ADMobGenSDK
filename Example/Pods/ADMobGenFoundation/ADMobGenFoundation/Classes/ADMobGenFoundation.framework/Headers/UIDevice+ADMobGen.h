@@ -21,6 +21,9 @@
 // 网络类型 (e.g. "4G"), 获取失败返回nil
 + (NSString *)admg_networkType;
 
+// idfa广告标识符,获取失败返回nil
++ (NSString *)admg_idfa;
+
 @property (nonatomic, readonly) BOOL admg_isSimulator;
 
 @end

@@ -48,7 +48,7 @@
 - (void)onRefreshClicked:(id)sender {
     if (!_expressAd) {
         // 1 信息流请求对象的初始化, 并声明为全局变量，其中size为期望大小，渲染成功后真实大小可以在广告视图contentSize获取（tip：当你需要高度更高的信息流视图时，因为比例是固定的，可以增加期望大小size的宽度，达到增加视图高度）
-        ADMobGenNativeExpressAd *expressAd = [[ADMobGenNativeExpressAd alloc] initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-40, 10)];
+        ADMobGenNativeExpressAd *expressAd = [[ADMobGenNativeExpressAd alloc] initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 10)];
         expressAd.delegate = self;
         // 2 设置信息流广告需要显示的控制器, 保证和信息流展示的控制器是同一个
         expressAd.controller = self;
@@ -91,7 +91,7 @@
     
     ADMobGenNativeExpressAdView *adView = [self.items objectAtIndex:indexPath.row];
     adView.backgroundColor = [UIColor redColor];
-    adView.frame = CGRectMake(20, 10, [UIScreen mainScreen].bounds.size.width-40, adView.contentSize.height);
+    adView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, adView.contentSize.height);
     adView.tag = 999;
     
     [cell.contentView addSubview:adView];
@@ -102,7 +102,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     ADMobGenNativeExpressAdView *adView = [self.items objectAtIndex:indexPath.row];
     //注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法
-    return adView.contentSize.height + 20;
+    return adView.contentSize.height;
 }
 
 #pragma mark - ADMobGenNativeExpressAdDelegate

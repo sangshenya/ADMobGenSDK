@@ -10,10 +10,22 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
-    ADMobGenNativeAdTypeNormal = 0,//图文，默认为图文，目前仅支持图片尺寸为1280×720
-    ADMobGenNativeAdTypePic,//纯图片
-    ADMobGenNativeAdTypeRightPic,//右图
+    ADMobGenNativeAdTypeNormal = 0,//上图下文，默认为图文，图片尺寸为16：9
+    ADMobGenNativeAdTypePic,//纯图片16：9
+    ADMobGenNativeAdTypeRightPic,//右图左文3：2
+    ADMobGenNativeAdTypeLeftPic,//左图右文3：2
+    ADMobGenNativeAdTypeCenterPic,//上文下图16：9
+    ADMobGenNativeAdTypeVerticalPic,//竖版纯图3：2
 };
+
+typedef NS_ENUM(NSUInteger, ADMobGenNativeAdPlatform) {
+    ADMobGenNativeAdPlatformGDT = 0,//广点通
+    ADMobGenNativeAdPlatformWM,//头条
+    ADMobGenNativeAdPlatformBaidu,//百度
+    ADMobGenNativeAdPlatformADMob,//ADMob
+    ADMobGenNativeAdPlatformNone,//之前版本
+};
+
 
 @protocol ADMobGenNativeExpressAdCallBack;
 
@@ -55,6 +67,11 @@ typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
 @property (nonatomic, readonly, assign) ADMobGenNativeAdType nativeAdType;
 
 /**
+ 广告平台类型
+ */
+@property (nonatomic, readonly, assign) ADMobGenNativeAdPlatform platformType;
+
+/**
  
  */
 @property (nonatomic, readonly, assign) BOOL trunType;
@@ -83,6 +100,16 @@ typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
                     displayType:(BOOL)displayType
                        trunType:(BOOL)trunType
                    nativeAdType:(ADMobGenNativeAdType)nativeAdType
+                 viewController:(UIViewController *)viewController
+                       callback:(id<ADMobGenNativeExpressAdCallBack>)callback DEPRECATED_MSG_ATTRIBUTE("Donot has platformType");
+
++ (instancetype)configWithAppId:(NSString *)appId
+                          posId:(NSString *)posId
+                     expectSize:(CGSize)expectSize
+                    displayType:(BOOL)displayType
+                       trunType:(BOOL)trunType
+                   nativeAdType:(ADMobGenNativeAdType)nativeAdType
+                   platformType:(ADMobGenNativeAdPlatform)platformType
                  viewController:(UIViewController *)viewController
                        callback:(id<ADMobGenNativeExpressAdCallBack>)callback;
 

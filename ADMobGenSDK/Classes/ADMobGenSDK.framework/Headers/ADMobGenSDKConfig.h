@@ -43,4 +43,9 @@ typedef NS_ENUM(NSInteger, ADMobGenLogLevel) {
  */
 + (void)setLogLevel:(ADMobGenLogLevel)logLevel;
 
+/**
+ SDK Version
+ */
++ (NSString *)getSDKVersion;
+
 @end

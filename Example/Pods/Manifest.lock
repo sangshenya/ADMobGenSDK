@@ -1,18 +1,18 @@
 PODS:
-  - ADMobGenAdapter (1.0.8):
+  - ADMobGenAdapter (1.1.4):
     - ADMobGenFoundation
-  - ADMobGenFoundation (0.3.7)
-  - ADMobGenGDT (0.6.1):
+  - ADMobGenFoundation (0.3.8)
+  - ADMobGenGDT (0.6.2):
     - ADMobGenAdapter
-  - ADMobGenMCAd (0.3.6):
+  - ADMobGenMCAd (0.3.7):
     - ADMobGenAdapter
     - ADMobGenMCAdSDK
   - ADMobGenMCAdSDK (0.2.9)
-  - ADMobGenNetwork (0.3.0)
-  - ADMobGenSDK (1.2.8):
+  - ADMobGenNetwork (0.3.2)
+  - ADMobGenSDK (1.2.9):
     - ADMobGenAdapter
     - ADMobGenNetwork
-  - ADMobGenSDKWM (0.7.3):
+  - ADMobGenSDKWM (0.7.4):
     - ADMobGenAdapter
     - ADMobGenWMSDK
   - ADMobGenWMSDK (0.2.1)
@@ -39,14 +39,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ADMobGenAdapter: 7d17ba70828b4501c18db96084c825b9f341237d
-  ADMobGenFoundation: 5bcf4e4282c0c493e90712b4329f5ce5e893d1ff
-  ADMobGenGDT: feecaa830b771643c53c60f201cca5e67e34a3a1
-  ADMobGenMCAd: a159ba47ad0fcfde332281ed98956a3d8211d65c
+  ADMobGenAdapter: 9507528409d8e2dbc15d13901accb8f92335e71c
+  ADMobGenFoundation: e2973a3ee18b7a940d3da713d6c3f6dbeaf07593
+  ADMobGenGDT: 845410e79b4980907208f0aea0feee876f05c8cc
+  ADMobGenMCAd: b1587341493ef54e7932ff7acd5427a2a2ce67ae
   ADMobGenMCAdSDK: ed2920942f8b625751c189dfc52a98940ab78537
-  ADMobGenNetwork: d24cef79ffc805751ec9e7de074895ec0534c937
-  ADMobGenSDK: 37bfd04c4b429a8bf589f5506a70faf863dc9b07
-  ADMobGenSDKWM: b27c5172c10713cf39e2782ee0f4d64e97699e20
+  ADMobGenNetwork: 7361e7bb513d30c07be7ce55c243cf870e593366
+  ADMobGenSDK: ee60ea88821a9e40e963896aac1cce6f12db6d3b
+  ADMobGenSDKWM: 160622655ebb165348f7f97e7d3b2b84af88c61f
   ADMobGenWMSDK: 8de6870014016aa9aef72e2169a41c77696fde1a
 
 PODFILE CHECKSUM: 23c1606b5c8f083c27fb158abb313cd0d1b23733

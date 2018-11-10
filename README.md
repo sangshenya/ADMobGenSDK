@@ -30,6 +30,9 @@ pod 'ADMobGenSDK'
 
 操作系统： iOS 8.0 及以上版本
 
+* `Demo地址`[[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK)
+
+
 <br>
 
 ## 2.1 采用cocoapods进行SDK的导入

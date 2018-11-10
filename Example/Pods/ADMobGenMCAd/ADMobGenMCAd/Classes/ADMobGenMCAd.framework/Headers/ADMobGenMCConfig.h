@@ -2,7 +2,7 @@
 //  ADMobGenMCConfig.h
 //  ADMobGenMCAd
 //
-//  Created by 陈坤 on 2018/10/30.
+//  Created by 陈坤 on 2018/11/10.
 //
 
 #import <Foundation/Foundation.h>
@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  SDK Version
  */
 + (NSString *)getSDKVersion;
+
 
 @end
 

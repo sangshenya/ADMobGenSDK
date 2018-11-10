@@ -54,8 +54,8 @@
         expressAd.controller = self;
         
         _expressAd = expressAd;
-        //设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,不同的信息流样式使用不同的实例对象
-        [_expressAd setNativeAdType:ADMobGenNativeAdTypeRightPic];//信息流样式纯图片
+        //设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,一共支持六种样式的信息流,不同的信息流样式使用不同的实例对象,需要除normal以外其他的信息流样式可以联系ADMobs媒介或运营小姐姐
+        [_expressAd setNativeAdType:ADMobGenNativeAdTypeNormal];//信息流样式纯图片
     }
     // 拉取信息流模板广告
     [_expressAd load:2];
@@ -126,7 +126,6 @@
     //加入到数据源中，注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法
     [self.items addObject:nativeExpressAdView];
     [self.tableView reloadData];
-    
 }
 
 - (void)admg_nativeExpressAdViewRenderFail:(ADMobGenNativeExpressAdView *)nativeExpressAdView {

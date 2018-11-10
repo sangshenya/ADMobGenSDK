@@ -36,6 +36,8 @@ pod 'ADMobGenSDK'
 
 SDK为了支持插件化的广告平台，采用了cocoapods进行广告集成，只需要pod对应平台，就可以集成该平台广告，无须进行其他配置
 
+`注意：如果不导入ADMob(艾狄墨博)平台会导致崩溃`
+
 * [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK) 广告调用framework，必须导入
 ```ruby
 pod 'ADMobGenSDK'
@@ -101,7 +103,7 @@ pod 'ADMobGenAddamSDK'
     
     * 艾狄墨博平台
     
-        `同时导入`[ADMobGenMCAd.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAd) 和 [ADMobGenMCAdSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAdSDK)
+        `同时导入`[ADMobGenMCAd.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAd) 和 [ADMobGenMCAdSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAdSDK)以及资源文件[MCAdBundles.bundle](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAd/tree/master/ADMobGenMCAd/Assets)
     
     * 广点通平台
     
@@ -109,7 +111,7 @@ pod 'ADMobGenAddamSDK'
         
     * 头条平台
         
-        `同时导入` [ADMobGenWMSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenWMSDK),  [ADMobGenSDKWM.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDKWM) 
+        `同时导入` [ADMobGenWMSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenWMSDK),  [ADMobGenSDKWM.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDKWM) 以及资源文件[WMAdSDK.bundle](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenWMSDK/tree/master/ADMobGenWMSDK/Assets)
 
 <br>
 
@@ -214,6 +216,13 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelError];
 ```
 
+获取ADMobGenSDK版本号
+```objective-c
+//获取SDK版本号
+NSString *sdkVersion = [ADMobGenSDKConfig getSDKVersion];
+```
+
+
 <br>
 
 ## 4.2 开屏广告 - ADMobGenSplashAd
@@ -317,7 +326,7 @@ if (!_expressAd) {
     expressAd.delegate = self;
     // 2 设置信息流广告需要显示的控制器, 保证和信息流展示的控制器是同一个
     expressAd.controller = self;
-    // 3 设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,不同的信息流样式使用不同的实例对象
+    // 3 设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,一共支持六种样式的信息流,不同的信息流样式使用不同的实例对象,需要除normal以外其他的信息流样式可以联系ADMobs媒介或运营小姐姐
     [_expressAd setNativeAdType:ADMobGenNativeAdTypePic];//信息流样式纯图片
 
     _expressAd = expressAd;
@@ -356,10 +365,11 @@ if (!_expressAd) {
 }
 ```
 
-* 信息流拉取成功后, 获得的 `ADMobGenNativeExpressAdView` 视图需要调用 `[adview render]` 方法, 否则无法进行广告的点击上报和展现上报
+* 信息流拉取成功后, 获得的 `ADMobGenNativeExpressAdView` 视图需要调用 `[adview render]` 方法, 否则无法进行广告的点击上报和展现上报。在渲染成功的回调中再调用`render`方法，会再次调起渲染成功回调，造成死循环。
 * 可在 `admg_nativeExpressAdViewRenderSuccess:` 回调中进行列表数据源的刷新
 * 如果同时使用到 `ADMobGenNativeAdTypeNormal` `ADMobGenNativeAdTypePic`两种信息流类型,是在同样的代理方法中返回`ADMobGenNativeExpressAdView`视图，可调用 `[nativeExpressAdView getNativeAdType]`来判断该视图是哪种类型
 * `ADMobGenNativeExpressAd` 对象初始化传入的 size, 宽度会根据传入的size固定模板宽度, 高度会自适应, 调用方可以通过 `adview.contentSize` 获取当前信息流模板视图的详细尺寸，如不使用`adview.contentSize`会出现无法点击的问题。
+
 
 <br>
 

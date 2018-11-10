@@ -21,6 +21,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //测试Debug包需要，一般情况下不开启,需要时会另行通知
+    //[ADMobGenSDKConfig setDebugMode:@(YES)];
+    //日志等级输出
     [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelDebug];
     [ADMobGenSDKConfig initWithAppId:@"2938412" completionBlock:^(NSError *error) {
         if (error) {
@@ -28,9 +31,16 @@
         }
     }];
     
-    NSLog(@"wmsdk:%@",WMAdSDKManager.SDKVersion);
+    /*
+     一定要导入ADMob平台，否则会导致崩溃
+     */
     
+    //打开GPS定位
     [ADMobGenSDKConfig setGpsOn];
+    
+    //获取SDK版本号
+    NSString *sdkVersion = [ADMobGenSDKConfig getSDKVersion];
+    NSLog(@"ADMobGenSDKVersion:%@",sdkVersion);
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

@@ -23,6 +23,8 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		94E1CA612E55C2F4392C8319 /* Pods_ADMobGenSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B5E388C5F89772CAFE3DE1 /* Pods_ADMobGenSDK_Example.framework */; };
+		BF10A090219BEE9000FFA72E /* 750x1334.png in Resources */ = {isa = PBXBuildFile; fileRef = BF10A08F219BEE9000FFA72E /* 750x1334.png */; };
+		BF10A092219BF3B100FFA72E /* ADMob_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF10A091219BF3B100FFA72E /* ADMob_Logo.png */; };
 		D719ADB2C1FF58EDDA365AEA /* Pods_ADMobGenSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27004214C4B913B57E481617 /* Pods_ADMobGenSDK_Tests.framework */; };
 		E881F60921100B810031A5AC /* ADMobGenExpressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */; };
 		E881F60A21100B810031A5AC /* ADMobGenExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E881F60721100B810031A5AC /* ADMobGenExpressViewController.m */; };
@@ -67,6 +69,8 @@
 		822E6AA782D49C9743BBCE09 /* ADMobGenSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ADMobGenSDK.podspec; path = ../ADMobGenSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1A7698A33DFD48C9E74A692 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BF10A08F219BEE9000FFA72E /* 750x1334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 750x1334.png; sourceTree = "<group>"; };
+		BF10A091219BF3B100FFA72E /* ADMob_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADMob_Logo.png; sourceTree = "<group>"; };
 		C85A8E1E444DB647438B9771 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D35D1C410FAFED0905750CF0 /* Pods-ADMobGenSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADMobGenSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADMobGenSDK_Tests/Pods-ADMobGenSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADMobGenExpressViewController.xib; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 		6003F593195388D20070C39A /* Example for ADMobGenSDK */ = {
 			isa = PBXGroup;
 			children = (
+				BF10A091219BF3B100FFA72E /* ADMob_Logo.png */,
+				BF10A08F219BEE9000FFA72E /* 750x1334.png */,
 				6003F59C195388D20070C39A /* ADMobGenAppDelegate.h */,
 				6003F59D195388D20070C39A /* ADMobGenAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -291,10 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E881F60C211014C00031A5AC /* YDAdBrowserController.xib in Resources */,
+				BF10A092219BF3B100FFA72E /* ADMob_Logo.png in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				E881F60921100B810031A5AC /* ADMobGenExpressViewController.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				BF10A090219BEE9000FFA72E /* 750x1334.png in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +538,7 @@
 			baseConfigurationReference = E97B0784D58FB16987241439 /* Pods-ADMobGenSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = XV36ECQQZA;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -575,6 +584,7 @@
 			baseConfigurationReference = 277158CCCB3F1F67C43A43A9 /* Pods-ADMobGenSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = XV36ECQQZA;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

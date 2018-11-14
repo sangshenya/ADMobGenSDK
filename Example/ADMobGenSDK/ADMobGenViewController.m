@@ -11,6 +11,7 @@
 #import <ADMobGenSDK/ADMobGenBannerView.h>
 #import "ADMobGenExpressViewController.h"
 #import <ADMobGenSDK/ADMobGenSDKConfig.h>
+#import <ADMobGenFoundation/UIColor+ADMobGen.h>
 #import <WebKit/WebKit.h>
 
 //// 机型UI适配宏
@@ -66,7 +67,7 @@
     _splashAd = [[ADMobGenSplashAd alloc] init];
     
     // 2 设置默认启动图(一般设置启动图的平铺颜色为背景颜色，使得视觉效果更加平滑)
-    _splashAd.backgroundColor = [UIColor yellowColor];
+    _splashAd.backgroundColor = [UIColor getColorWithImage:[UIImage imageNamed:@"750×1334"] withNewSize:[UIScreen mainScreen].bounds.size];
     
     _splashAd.delegate = self;
     
@@ -78,13 +79,16 @@
         bottomViewHeight = [UIScreen mainScreen].bounds.size.height - [UIScreen mainScreen].bounds.size.width * (960 / 640.0);
     }
     
-    UIView *view = [[UIView alloc] init];
-    view.backgroundColor = [UIColor purpleColor];
-    view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, bottomViewHeight);
+    UIView *bottomView = [[UIView alloc] init];
+    bottomView.backgroundColor = [UIColor whiteColor];
+    bottomView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, bottomViewHeight);
+    UIImageView *logoImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ADMob_Logo.png"]];
+    logoImageView.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-135)/2, (bottomViewHeight-46)/2, 135, 46);
+    [bottomView addSubview:logoImageView];
     
     // 4 展示
     UIWindow *window = [UIApplication sharedApplication].delegate.window;
-    [_splashAd loadAndShowInWindow:window withBottomView:view];
+    [_splashAd loadAndShowInWindow:window withBottomView:bottomView];
 }
 
 #pragma mark - Banner

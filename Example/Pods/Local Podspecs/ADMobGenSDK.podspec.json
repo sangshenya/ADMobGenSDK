@@ -1,6 +1,6 @@
 {
   "name": "ADMobGenSDK",
-  "version": "1.3.4",
+  "version": "1.3.6",
   "summary": "A short description of ADMobGenSDK.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK.git",
-    "tag": "1.3.4"
+    "tag": "1.3.6"
   },
   "platforms": {
     "ios": "8.0"

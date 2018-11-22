@@ -92,10 +92,12 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenBaiDuSDK/ADMobGenBaiDuSDK.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenMCAd/MCAdBundles.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenSDKWM/WMAdSDK.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenBaiDuSDK/ADMobGenBaiDuSDK.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenMCAd/MCAdBundles.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenSDKWM/WMAdSDK.bundle"
 fi

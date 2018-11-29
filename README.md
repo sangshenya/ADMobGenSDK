@@ -30,7 +30,7 @@ pod 'ADMobGenSDK'
 
 操作系统： iOS 8.0 及以上版本
 
-* `Demo地址`[[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK)
+* `ADMobGenSDK Demo地址`[[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK)
 
 
 <br>
@@ -235,9 +235,7 @@ NSString *sdkVersion = [ADMobGenSDKConfig getSDKVersion];
 _splashAd = [[ADMobGenSplashAd alloc] init];
 
 // 2 设置默认启动图(一般设置启动图的平铺颜色为背景颜色，使得视觉效果更加平滑)
-_splashAd.backgroundColor = [UIColor yellowColor];
-//    UIImage *backgroundImage = [self imageResize:[UIImage imageNamed:@"750×1334"] andResizeTo:[UIScreen mainScreen].bounds.size];
-//    _splashAd.backgroundColor = [UIColor colorWithPatternImage:backgroundImage];
+_splashAd.backgroundColor = [UIColor getColorWithImage:[UIImage imageNamed:@"750×1334"] withNewSize:[UIScreen mainScreen].bounds.size];
 
 _splashAd.delegate = self;
 
@@ -250,26 +248,31 @@ if (kIPhoneX) {
 }
 
 UIView *bottomView = [[UIView alloc] init];
-bottomView.backgroundColor = [UIColor purpleColor];
+bottomView.backgroundColor = [UIColor whiteColor];
 bottomView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, bottomViewHeight);
+// 4 设置logo，根据自己的实际情况来设置
+UIImageView *logoImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ADMob_Logo.png"]];
+logoImageView.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-135)/2, (bottomViewHeight-46)/2, 135, 46);
+[bottomView addSubview:logoImageView];
 
-// 4 展示
+// 5 展示
 UIWindow *window = [UIApplication sharedApplication].delegate.window;
 [_splashAd loadAndShowInWindow:window withBottomView:bottomView];
 
-// 5 代理回调
+// 6 代理回调
 #pragma mark - ADMobGenSplashAdDelegate
+// 开屏展现回调
 - (void)admg_splashAdSuccessToPresentScreen:(ADMobGenSplashAd *)splashAd{
 
 }
-//加载失败调用该方法
+// 加载失败调用该方法
 - (void)admg_splashAd:(ADMobGenSplashAd *)splash failToPresentScreen:(NSError *)error{
     _splashAd = nil;
     if (error) {
     //NSLog(@"");ADMobGenLogLevelError自动打印错误信息，也可打印error查看
     }
 }
-//加载成功，开屏被关闭调用该方法
+// 加载成功，开屏被关闭调用该方法
 - (void)admg_splashAdClosed:(ADMobGenSplashAd *)splashAd{
     _splashAd = nil;
 }
@@ -290,15 +293,17 @@ if (_bannerView) {
     _bannerView = nil;
 }
 
-// 1 初始化banner视图
-_bannerView = [[ADMobGenBannerView alloc] init];
+// 1 初始化banner视图，bannerSize为banner的宽高比，以视图的宽度为准，当需要使用除默认尺寸以外的请与我们的商务联系
+_bannerView = [[ADMobGenBannerView alloc] initWithFrame:CGRectZero withBannerSize:ADMobGenBannerAdSize600_150];
 _bannerView.delegate = self;
 _bannerView.backgroundColor = [UIColor redColor];
 
-// 2 添加到父视图上
-CGFloat height = [UIScreen mainScreen].bounds.size.width * (5 / 32.0);
+// 2 添加到父视图上，ADMobGenBannerView的比例请尽量与bannerSize保持一致
+//    CGFloat height = [UIScreen mainScreen].bounds.size.width * (5 / 32.0);
+//    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+CGFloat height = ([UIScreen mainScreen].bounds.size.width)/4;
 CGFloat width = [UIScreen mainScreen].bounds.size.width;
-_bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - height, width, height);
+_bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - height, width, height);
 [self.view addSubview:_bannerView];
 
 // 3 加载并显示广告 注意: 请确保banner视图显示在屏幕内的时候,调用load方法
@@ -306,10 +311,11 @@ _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - he
 
 // 4 代理回调
 #pragma mark - ADMobGenBannerViewDelegate
+// 加载成功
 - (void)admg_bannerViewDidReceived:(ADMobGenBannerView *)bannerView{
     NSLog(@"load banner success");
 }
-
+// 加载失败
 - (void)admg_bannerViewFailToReceived:(ADMobGenBannerView *)bannerView error:(NSError *)error{
     if (error) {
         //请求失败时，将banner视图的高度置为0，就不会出现空白区域
@@ -340,6 +346,7 @@ if (!_expressAd) {
 
 // 5 代理回调
 #pragma mark - ADMobGenNativeExpressAdDelegate
+// 加载成功
 - (void)admg_nativeExpressAdSucessToLoad:(ADMobGenNativeExpressAd *)nativeExpressAd views:(NSArray<__kindof ADMobGenNativeExpressAdView *> *)views {
     //临时存储ADMobGenNativeExpressAdView
     [self.tempViewitems addObjectsFromArray:views];
@@ -348,11 +355,11 @@ if (!_expressAd) {
         [views[index] render];
     }
 }
-
+// 加载失败回调
 - (void)admg_nativeExpressAdFailToLoad:(ADMobGenNativeExpressAd *)nativeExpressAd error:(NSError *)error {
 
 }
-
+// 渲染成功回调
 - (void)admg_nativeExpressAdViewRenderSuccess:(ADMobGenNativeExpressAdView *)nativeExpressAdView {
     //从临时数组中去除
     [self.tempViewitems removeObject:nativeExpressAdView];
@@ -361,7 +368,7 @@ if (!_expressAd) {
     [self.tableView reloadData];
 
 }
-
+// 渲染失败
 - (void)admg_nativeExpressAdViewRenderFail:(ADMobGenNativeExpressAdView *)nativeExpressAdView {
     //从临时数组中去除
     [self.tempViewitems removeObject:nativeExpressAdView];

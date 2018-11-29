@@ -103,7 +103,9 @@
     _bannerView.delegate = self;
     _bannerView.backgroundColor = [UIColor redColor];
     
-    // 2 添加到父视图上
+    // 2 添加到父视图上，ADMobGenBannerView的比例请尽量与bannerSize保持一致
+//    CGFloat height = [UIScreen mainScreen].bounds.size.width * (5 / 32.0);
+//    CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = ([UIScreen mainScreen].bounds.size.width)/4;
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - height, width, height);

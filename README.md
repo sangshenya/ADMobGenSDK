@@ -383,9 +383,16 @@ if (!_expressAd) {
 
 <br>
 
+## Version
+
+| 文档版本| 修订日期| 修订说明|
+| --- | --- | --- |
+| v1.3.5 | 2018-12-3 | 文档新增demo地址 未导入ADMob平台崩溃提示 Banner广告多尺寸
+
 ## Author
 
 liji@ecook.cn,sangshen@ecook.cn
+
 
 ## License
 

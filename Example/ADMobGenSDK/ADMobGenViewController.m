@@ -133,6 +133,10 @@
     }
 }
 
+- (void)admg_splashAdClicked:(ADMobGenSplashAd *)splashAd{
+//    _splashAd = nil;
+}
+
 - (void)admg_splashAdClosed:(ADMobGenSplashAd *)splashAd{
     _splashAd = nil;
 }

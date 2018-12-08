@@ -26,7 +26,7 @@
     //[ADMobGenSDKConfig setDebugMode:@(YES)];
     //日志等级输出
     [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelDebug];
-    [ADMobGenSDKConfig initWithAppId:@"2097312" completionBlock:^(NSError *error) {
+    [ADMobGenSDKConfig initWithAppId:@"2938412" completionBlock:^(NSError *error) {
         if (error) {
             // SDK启动失败
         }
@@ -118,7 +118,7 @@
 - (void)admg_splashAdSuccessToPresentScreen:(ADMobGenSplashAd *)splashAd{
     
 }
-//千万不要在点击回调中将开屏广告对象置空，否则广点通下载类落地页无法关闭
+//千万不要在点击回调中将开屏广告对象置空，否则广点通下载类落地页无法关闭，头条广告会停留在屏幕上无法关闭
 - (void)admg_splashAdClicked:(ADMobGenSplashAd *)splashAd{
     
 //    _splashAd = nil;

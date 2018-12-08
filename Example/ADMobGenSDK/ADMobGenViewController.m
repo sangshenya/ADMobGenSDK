@@ -132,7 +132,7 @@
         //NSLog(@"");ADMobGenLogLevelError自动打印错误信息，也可打印error查看
     }
 }
-
+//千万不要在点击回调中将开屏广告对象置空，否则广点通下载类落地页无法关闭，头条广告会停留在屏幕上无法关闭
 - (void)admg_splashAdClicked:(ADMobGenSplashAd *)splashAd{
 //    _splashAd = nil;
 }

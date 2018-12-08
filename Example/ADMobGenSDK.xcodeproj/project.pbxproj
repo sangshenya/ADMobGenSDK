@@ -574,7 +574,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "www.ly-sky.com.YBGMobileCampus";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.smallrecipeapp.beauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -620,7 +620,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "www.ly-sky.com.YBGMobileCampus";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.smallrecipeapp.beauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

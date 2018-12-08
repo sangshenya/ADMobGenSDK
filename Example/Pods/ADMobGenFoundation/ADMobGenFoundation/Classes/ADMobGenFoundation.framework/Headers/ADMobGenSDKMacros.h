@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define kADMobGenFoundationSDKVersion @"0.3.8"
+#define kADMobGenFoundationSDKVersion @"0.4.0"
 
 // 字符串是否为空
 #define kADMGStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || ![str isKindOfClass:[NSString class]] || [str length] < 1 ? YES : NO)
@@ -45,6 +45,21 @@ static inline CGSize ADMobGenScreenSize(void) {
     return size;
 }
 
+static inline CGFloat ADMobGenScreenScale(void) {
+    static CGFloat scale;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        scale = [UIScreen mainScreen].scale;
+    });
+    return scale;
+}
+
+
+// main screen's scale (portrait)
+#ifndef kADMGScreenScale
+#define kADMGScreenScale ADMobGenScreenScale();
+#endif
+
 // main screen's size (portrait)
 #ifndef kADMGScreenSize
 #define kADMGScreenSize ADMobGenScreenSize();
@@ -60,10 +75,18 @@ static inline CGSize ADMobGenScreenSize(void) {
 #define kADMGScreenHeight ADMobGenScreenSize().height
 #endif
 
-#define kADMGIPhoneX (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && (kADMGScreenWidth == 375.0 && kADMGScreenHeight == 812.0))
-#define kADMGStatusBarHeight (kADMGIPhoneX ? 44 : 20)
+//机型适配
+#define kADMGIPhoneX (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && kADMGScreenWidth == 375.0 && kADMGScreenHeight == 812.0)
+#define kADMGIPhoneXS (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && kADMGScreenWidth == 375.0 && kADMGScreenHeight == 812.0)
+#define kADMGIphoneXR (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && kADMGScreenWidth == 375.0 && kADMGScreenHeight == 812.0 && ADMobGenScreenScale() == 2)
+
+#define kADMGIphoneXS_MAX (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && kADMGScreenWidth == 414.0 && kADMGScreenHeight == 896.0 && ADMobGenScreenScale() == 3)
+
+#define kADMGCurveScreen (kADMGIPhoneX || kADMGIPhoneXS || kADMGIphoneXR || kADMGIphoneXS_MAX) // 刘海屏幕
+
+#define kADMGStatusBarHeight (kADMGCurveScreen ? 44 : 20)
 #define kADMGNavBarHeight 44
 #define kADMGTopBarHeight (kADMGStatusBarHeight + kADMGNavBarHeight)
-#define kADMGTabBarHeight (kADMGIPhoneX ? 83 : 49)
+#define kADMGTabBarHeight (kADMGCurveScreen ? 83 : 49)
 
 #endif /* ADMobGenSDKMacros_h */

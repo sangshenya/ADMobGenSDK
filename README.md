@@ -147,7 +147,7 @@ pod 'ADMobGenAddamSDK'
 
 1. `如果采用cocoapods方式导入SDK, 可跳过该步骤`
 手动方式导入,添加如下依赖库:
-```objective-c
+```obj-c
 AdSupport.framework 
 CoreLocation.framework 
 QuartzCore.framework 
@@ -181,7 +181,7 @@ libsqlite3.dylib
 3. 在项目的 app target 中，查看 Build Settings 中的 Build options - Enable Bitcode 选项， 设置为NO。
 
 4. info.plist 添加支持 Http访问字段
-```objective-c
+```obj-c
 <key>NSAppTransportSecurity</key>
 <dict>
     <key>NSAllowsArbitraryLoads</key>
@@ -190,7 +190,7 @@ libsqlite3.dylib
 ```
 
 4. Info.plist 添加定位权限字段
-```objective-c
+```obj-c
 NSLocationWhenInUseUsageDescription
 NSLocationAlwaysAndWhenInUseUsageDeion
 ```
@@ -200,7 +200,7 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 ## 4.1 集合SDK的初始化
 
 `申请的appid和你的包名相对应，根据双方商务协调，去确定需要拉取的广告平台`
-```objective-c
+```obj-c
 [ADMobGenSDKConfig initWithAppId:@"appid" completionBlock:^(NSError *error) {
     if (error) {
         // SDK启动失败
@@ -209,27 +209,35 @@ NSLocationAlwaysAndWhenInUseUsageDeion
 ```
 
 开启定位权限, 更加精准的投放广告
-```objective-c
+```obj-c
 [ADMobGenSDKConfig setGpsOn];
 ```
 
 用户日志输出等级
-```objective-c
+```obj-c
 //默认为ADMobGenLogLevelNone
 [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelError];
 ```
 
 获取ADMobGenSDK版本号
-```objective-c
+```obj-c
 //获取SDK版本号
 NSString *sdkVersion = [ADMobGenSDKConfig getSDKVersion];
+```
+
+测试Debug包需要，一般情况下不开启,需要时会另行通知
+```obj-c
+//广告SDK Debug模式
+[ADMobGenSDKConfig setDebugMode:@(YES)];
 ```
 
 
 <br>
 
 ## 4.2 开屏广告 - ADMobGenSplashAd
-```objective-c
+
+开屏广告请求示例：
+```obj-c
 //注意：1、当你在控制器中加载开屏时，请勿在viewWillAppear中加载开屏，该方法会调用多次，使得展示多次开屏广告。2、在viewDidLoad中加载开屏广告的时候，如果该控制器没有用导航栏承载，会出现无法展示广告，却走了加载成功的回调方法。3、当你在rootViewController中有去模态弹出其他的控制器（包含UIAlertController）的话，可能会出现广告加载不出的情况（广点通广告无法加载）。
 // 1 初始化
 _splashAd = [[ADMobGenSplashAd alloc] init];
@@ -277,17 +285,32 @@ UIWindow *window = [UIApplication sharedApplication].delegate.window;
     _splashAd = nil;
 }
 ```
+开屏广告注意事项：
+
 * 推荐在 `AppDelegate`的 `didFinishLaunchingWithOptions`方法的 `return YES`之前调用开屏。
 * 销毁开屏对象请在开屏加载失败和开屏关闭的回调中置空，切忌在点击回调中置空，可能会造成从落地页返回App的时候出现广告视图依旧存在的情况，因为开屏的生命周期是请求-展示-/落地页(点击)-/关闭。
 * 当使用控制器承载开屏广告时，有以下三个需要注意的事项：
 * 1、请勿在`viewWillAppear`中调用开屏广告，否则会出现开屏方法多次被调用。
 * 2、当前控制器需要导航栏控制器承载，否则会出现广告请求成功却不展示的情况。
-* 3、当你在rootViewController中有去模态弹出其他的控制器的话，可能会出现广告加载不出的情况（广点通广告无法加载）
+* 3、当你在rootViewController中有去模态弹出其他的控制器的话，可能会出现广告加载不出的情况（广点通广告无法加载）。
+* 4、切勿在点击回调中将开屏实例对象置空，否则广点通下载类广告落地页无法关闭，头条广告悬停在屏幕无法消失。
 
 <br>
 
 ## 4.3 banner广告 - ADMobGenBannerView
-```objective-c
+
+横幅广告支持多尺寸，如下：
+```obj-c
+typedef NS_ENUM(NSUInteger, ADMobGenBannerAdSize) {
+    ADMobGenBannerAdSizeNormal = 0,//640:100
+    ADMobGenBannerAdSize600_150 = 1,//600:150
+    ADMobGenBannerAdSize690_388 = 2,//690:388
+    ADMobGenBannerAdSize600_400 = 3,//600:400
+    ADMobGenBannerAdSize600_260 = 4,//600:260
+};
+```
+横幅广告请求示例：
+```obj-c
 if (_bannerView) {
     [_bannerView removeFromSuperview];
     _bannerView = nil;
@@ -328,7 +351,22 @@ _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - hei
 <br>
 
 ## 4.4 信息流模板广告 - ADMobGenNativeExpressAd
-```objective-c
+
+信息流模板广告返回的是广告视图，可以支持多个样式。各个样式描述如下：
+```obj-c
+//同类型的高度一致，以真实返回视图的高度为准，如有其他需求请联系我方商务
+typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
+    ADMobGenNativeAdTypeNormal = 0,//上图下文，默认为图文，图片比例为16：9
+    ADMobGenNativeAdTypePic,//纯图片，图片比例16：9
+    ADMobGenNativeAdTypeRightPic,//右图左文，图片比例3：2
+    ADMobGenNativeAdTypeLeftPic,//左图右文，图片比例3：2
+    ADMobGenNativeAdTypeCenterPic,//上文下图，图片比例16：9
+    ADMobGenNativeAdTypeVerticalPic,//竖版纯图，图片比例3：2
+};
+```
+
+信息流模板广告请求示例：
+```obj-c
 if (!_expressAd) {
     // 1 信息流请求对象的初始化, 并声明为全局变量
     ADMobGenNativeExpressAd *expressAd = [[ADMobGenNativeExpressAd alloc] initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 100)];
@@ -375,6 +413,7 @@ if (!_expressAd) {
 }
 ```
 
+信息流模版广告注意事项：
 * 信息流拉取成功后, 获得的 `ADMobGenNativeExpressAdView` 视图需要调用 `[adview render]` 方法, 否则无法进行广告的点击上报和展现上报。在渲染成功的回调中再调用`render`方法，会再次调起渲染成功回调，造成死循环。
 * 可在 `admg_nativeExpressAdViewRenderSuccess:` 回调中进行列表数据源的刷新
 * 如果同时使用到 `ADMobGenNativeAdTypeNormal` `ADMobGenNativeAdTypePic`两种信息流类型,是在同样的代理方法中返回`ADMobGenNativeExpressAdView`视图，可调用 `[nativeExpressAdView getNativeAdType]`来判断该视图是哪种类型
@@ -383,11 +422,46 @@ if (!_expressAd) {
 
 <br>
 
+
+## 问题排查
+
+用户日志输出等级设置之后会在控制台打印各类信息，或者在广告请求的错误回调中也会带有各个类型的错误，错误代码说明如下：
+
+| 错误代码 | 错误说明 |
+| --- | --- |
+| 1001 | SDK初始化失败 |
+| 1002 | appId为空 |
+| 1003 | 包名和appId不对应 |
+| 1004 | 请求配置为空 |
+| -9995 | 请求超时 |
+| -9996 | 获取广告失败 |
+| -9997 | 未获取到加载广告的平台 ：第一次启动未获取到配置信息或者运营未配置广告 |
+| -9999 | 横屏不加载开屏广告 |
+
+如碰到其他非常见问题，请查阅下表或者反馈问题至ADMob方技术人员
+
+* Q：开屏广告有时候出现落地页无法关闭，或者落地页关闭之后广告视图不消失？
+`请检查是否在开屏广告的点击回调中将开屏广告的实例对象置空。开屏广告的实例对象置空会导致开屏广告的生命周期中断，开屏广告正常的生命周期为‘请求-展现-点击-落地页-关闭’，请在开屏广告的关闭回调中置空它。`
+
+* Q：请求开屏广告时在控制台出现请求失败的错误信息却没有执行错误回调
+`开屏广告目前设置超时时间为3s，请检查是否开屏广告的代理对象已经被置空了，导致没有执行错误回调`
+
+* Q：请求信息流模版广告时，点击之后落地页无法关闭
+`请检查是否是信息流广告的实例对象的控制器设置问题，保证和信息流展示的控制器是同一个`
+
+* Q：请求信息流模版广告时，广告无法点击
+`请检查是否调用信息流模版视图的contentSize方法`
+
+* Q：请求信息流模版广告时，出现信息流显示不全或者文字会重复
+`请检查是否调用信息流模版视图的render方法`
+
+
 ## Version
 
 | 文档版本| 修订日期| 修订说明|
 | --- | --- | --- |
-| v1.3.5 | 2018-12-3 | 文档新增demo地址 未导入ADMob平台崩溃提示 Banner广告多尺寸
+| v1.3.5 | 2018-12-3 | 文档新增demo地址 未导入ADMob平台崩溃提示 Banner广告多尺寸 |
+| v1.3.6 | 2018-12-8 | 文档新增SDK问题整理 Banner广告多尺寸列表 信息流模版广告多样式列表 |
 
 ## Author
 

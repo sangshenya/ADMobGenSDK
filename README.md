@@ -30,8 +30,7 @@ pod 'ADMobGenSDK'
 
 操作系统： iOS 8.0 及以上版本
 
-* `ADMobGenSDK Demo地址`[[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK)
-
+* `Demo地址`[[ADMobGenSDK Demo]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK)
 
 <br>
 
@@ -95,7 +94,7 @@ pod 'ADMobGenAddamSDK'
 
 * 必要SDK
     * 广告调用所需framework
-    
+
         [ADMobGenSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK)
 
         [ADMobGenAdapter.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenAdapter)
@@ -103,17 +102,17 @@ pod 'ADMobGenAddamSDK'
         [ADMobGenFoundation.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenFoundation)
 
         [ADMobGenNetwork.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenNetwork)
-    
+
     * 艾狄墨博平台
-    
+
         `同时导入`[ADMobGenMCAd.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAd) 和 [ADMobGenMCAdSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAdSDK)以及资源文件[MCAdBundles.bundle](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMCAd/tree/master/ADMobGenMCAd/Assets)
-    
+
     * 广点通平台
-    
+
         [ADMobGenGDT.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGDT)
-        
+
     * 头条平台
-        
+
         `同时导入` [ADMobGenWMSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenWMSDK),  [ADMobGenSDKWM.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDKWM) 以及资源文件[WMAdSDK.bundle](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenWMSDK/tree/master/ADMobGenWMSDK/Assets)
 
 <br>
@@ -133,14 +132,15 @@ pod 'ADMobGenAddamSDK'
         `同时导入`[ADMobGenBaiDu.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDu),  [ADMobGenBaiDuSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDuSDK) 以及资源文件 [baidumobadsdk.bundle](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDuSDK/tree/master/ADMobGenBaiDuSDK/Assets)
         
     * Mobvsita平台
-        
+      
         `同时导入` [ADMobGenMTGSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMTGSDK),  [ADMobGenMTG.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMTG) 
        
     * 哒萌平台
-       
+      
         [ADMobGenAddamSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenAddamSDK)
         
     
+
 <br>
 
 ## 3.1 工程环境配置
@@ -238,7 +238,7 @@ NSString *sdkVersion = [ADMobGenSDKConfig getSDKVersion];
 
 开屏广告请求示例：
 ```obj-c
-//注意：1、当你在控制器中加载开屏时，请勿在viewWillAppear中加载开屏，该方法会调用多次，使得展示多次开屏广告。2、在viewDidLoad中加载开屏广告的时候，如果该控制器没有用导航栏承载，会出现无法展示广告，却走了加载成功的回调方法。3、当你在rootViewController中有去模态弹出其他的控制器（包含UIAlertController）的话，可能会出现广告加载不出的情况（广点通广告无法加载）。
+//注意：1、当你在控制器中加载开屏时，请勿在viewWillAppear中加载开屏，该方法会调用多次，使得展示多次开屏广告。2、在viewDidLoad中加载开屏广告的时候，如果该控制器没有用导航栏承载，会出现无法展示广告，却走了加载成功的回调方法。3、当你在rootViewController中有做模态弹出其他的控制器（包含UIAlertController）的操作时，可能会出现广告加载不出的情况（广点通广告无法加载）。
 // 1 初始化
 _splashAd = [[ADMobGenSplashAd alloc] init];
 
@@ -292,7 +292,7 @@ UIWindow *window = [UIApplication sharedApplication].delegate.window;
 * 当使用控制器承载开屏广告时，有以下三个需要注意的事项：
 * 1、请勿在`viewWillAppear`中调用开屏广告，否则会出现开屏方法多次被调用。
 * 2、当前控制器需要导航栏控制器承载，否则会出现广告请求成功却不展示的情况。
-* 3、当你在rootViewController中有去模态弹出其他的控制器的话，可能会出现广告加载不出的情况（广点通广告无法加载）。
+* 3、当你在rootViewController中有做模态弹出其他的控制器的操作时，可能会出现广告加载不出的情况（广点通广告无法加载）。
 * 4、切勿在点击回调中将开屏实例对象置空，否则广点通下载类广告落地页无法关闭，头条广告悬停在屏幕无法消失。
 
 <br>
@@ -374,7 +374,7 @@ if (!_expressAd) {
     // 2 设置信息流广告需要显示的控制器, 保证和信息流展示的控制器是同一个
     expressAd.controller = self;
     // 3 设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,一共支持六种样式的信息流,不同的信息流样式使用不同的实例对象,需要除normal以外其他的信息流样式可以联系ADMobs媒介或运营小姐姐
-    [_expressAd setNativeAdType:ADMobGenNativeAdTypePic];//信息流样式纯图片
+    [expressAd setNativeAdType:ADMobGenNativeAdTypePic];//信息流样式纯图片
 
     _expressAd = expressAd;
 }
@@ -441,19 +441,25 @@ if (!_expressAd) {
 如碰到其他非常见问题，请查阅下表或者反馈问题至ADMob方技术人员
 
 * Q：开屏广告有时候出现落地页无法关闭，或者落地页关闭之后广告视图不消失？
-`请检查是否在开屏广告的点击回调中将开屏广告的实例对象置空。开屏广告的实例对象置空会导致开屏广告的生命周期中断，开屏广告正常的生命周期为‘请求-展现-点击-落地页-关闭’，请在开屏广告的关闭回调中置空它。`
+
+  `请检查是否在开屏广告的点击回调中将开屏广告的实例对象置空。开屏广告的实例对象置空会导致开屏广告的生命周期中断，开屏广告正常的生命周期为‘请求-展现-点击-落地页-关闭’，请在开屏广告的关闭回调中置空它。`
 
 * Q：请求开屏广告时在控制台出现请求失败的错误信息却没有执行错误回调
-`开屏广告目前设置超时时间为3s，请检查是否开屏广告的代理对象已经被置空了，导致没有执行错误回调`
+
+  `开屏广告目前设置超时时间为3s，请检查是否开屏广告的代理对象已经被置空了，导致没有执行错误回调`
 
 * Q：请求信息流模版广告时，点击之后落地页无法关闭
-`请检查是否是信息流广告的实例对象的控制器设置问题，保证和信息流展示的控制器是同一个`
+
+  `请检查是否是信息流广告的实例对象的控制器设置问题，保证和信息流展示的控制器是同一个`
 
 * Q：请求信息流模版广告时，广告无法点击
-`请检查是否调用信息流模版视图的contentSize方法`
+
+  `请检查是否调用信息流模版视图的contentSize方法`
 
 * Q：请求信息流模版广告时，出现信息流显示不全或者文字会重复
-`请检查是否调用信息流模版视图的render方法`
+
+  `请检查是否调用信息流模版视图的render方法`
+
 
 
 ## Version

@@ -107,7 +107,7 @@
 //    CGFloat height = [UIScreen mainScreen].bounds.size.width * (5 / 32.0);
 //    CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = ([UIScreen mainScreen].bounds.size.width)/4;
-    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width-50;
     _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - height, width, height);
     [self.view addSubview:_bannerView];
     

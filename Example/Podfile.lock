@@ -11,9 +11,9 @@ PODS:
   - ADMobGenMCAd (0.3.8):
     - ADMobGenAdapter
     - ADMobGenMCAdSDK
-  - ADMobGenMCAdSDK (0.3.3)
+  - ADMobGenMCAdSDK (0.3.4)
   - ADMobGenNetwork (0.3.2)
-  - ADMobGenSDK (1.4.1):
+  - ADMobGenSDK (1.4.2):
     - ADMobGenAdapter
     - ADMobGenNetwork
   - ADMobGenSDKWM (0.7.5):
@@ -52,9 +52,9 @@ SPEC CHECKSUMS:
   ADMobGenFoundation: 1778d376ad8513a7236a57d025985ba815f03d16
   ADMobGenGDT: 845410e79b4980907208f0aea0feee876f05c8cc
   ADMobGenMCAd: 786a26af1839a5392bde737d040edc690b0bd41e
-  ADMobGenMCAdSDK: 78cddac2c85cae6996abe30237b390e355643fee
+  ADMobGenMCAdSDK: da8c0dcfe666c7aa599d345a749f055ab3de4697
   ADMobGenNetwork: 7361e7bb513d30c07be7ce55c243cf870e593366
-  ADMobGenSDK: 7cb1344f4d5e910e333dd1dfed5c8590e754947a
+  ADMobGenSDK: 539554d25e12cca1eddb8ab12e86f54cae613bd4
   ADMobGenSDKWM: 2b23ce0ef7ce94f30d347c0622e54147ee8c3248
   ADMobGenWMSDK: c589494a797e60a86f00a5ae75c6a5351b321bc1
 

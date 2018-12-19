@@ -42,13 +42,13 @@
     //获取SDK版本号
     NSString *sdkVersion = [ADMobGenSDKConfig getSDKVersion];
     NSLog(@"ADMobGenSDKVersion:%@",sdkVersion);
-    /*
-     SEL select = NSSelectorFromString(@"getAllSDKVersion");
-     if ([ADMobGenSDKConfig respondsToSelector:select]) {
-     NSDictionary *dict = [ADMobGenSDKConfig performSelector:select];
-     NSLog(@"ADMobGenSDKConfig:%@",dict);
-     }
-     */
+    
+//     SEL select = NSSelectorFromString(@"getAllSDKVersion");
+//     if ([ADMobGenSDKConfig respondsToSelector:select]) {
+//     NSDictionary *dict = [ADMobGenSDKConfig performSelector:select];
+//     NSLog(@"ADMobGenSDKConfig:%@",dict);
+//     }
+    
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

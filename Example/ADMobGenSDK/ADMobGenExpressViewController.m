@@ -55,7 +55,7 @@
         
         _expressAd = expressAd;
         //设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,一共支持六种样式的信息流,不同的信息流样式使用不同的实例对象,需要除normal以外其他的信息流样式可以联系ADMobs媒介或运营小姐姐
-        [_expressAd setNativeAdType:ADMobGenNativeAdTypeNormal];//信息流样式纯图片
+        [_expressAd setNativeAdType:ADMobGenNativeAdTypePic];//信息流样式纯图片
     }
     // 拉取信息流模板广告
     [_expressAd load:2];

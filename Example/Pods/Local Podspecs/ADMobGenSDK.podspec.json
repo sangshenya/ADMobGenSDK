@@ -1,9 +1,9 @@
 {
   "name": "ADMobGenSDK",
-  "version": "1.4.2",
+  "version": "1.4.2.1",
   "summary": "A short description of ADMobGenSDK.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK",
+  "homepage": "https://github.com/AdmobileHZ/ADMobGenSDK",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "1594717129@qq.com": "1594717129@qq.com"
   },
   "source": {
-    "git": "http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK.git",
-    "tag": "1.4.2"
+    "git": "https://github.com/AdmobileHZ/ADMobGenSDK.git",
+    "tag": "1.4.2.1"
   },
   "platforms": {
     "ios": "8.0"

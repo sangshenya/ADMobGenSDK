@@ -363,6 +363,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenBaiDu/baidumobadsdk.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenBaiDuSDK/ADMobGenBaiDuSDK.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenMCAd/MCAdBundles.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenSDKWM/BUAdSDK.bundle",
@@ -371,6 +372,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/baidumobadsdk.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ADMobGenBaiDuSDK.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MCAdBundles.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BUAdSDK.bundle",

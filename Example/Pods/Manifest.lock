@@ -1,7 +1,7 @@
 PODS:
   - ADMobGenAdapter (1.1.5):
     - ADMobGenFoundation
-  - ADMobGenBaiDu (0.6.7):
+  - ADMobGenBaiDu (0.6.8):
     - ADMobGenAdapter
     - ADMobGenBaiDuSDK
   - ADMobGenBaiDuSDK (0.5.0)
@@ -47,7 +47,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ADMobGenAdapter: d536373772cc44fd5dc926899f157b54c7820dda
-  ADMobGenBaiDu: 6308c677bf378afc9be12888e496108128ef7728
+  ADMobGenBaiDu: 2a688a57036a4ef21e5b750174d7f5e3f3a9314b
   ADMobGenBaiDuSDK: e1db93fed9b441ce56e279460fc34f0c4d0b14a5
   ADMobGenFoundation: 1778d376ad8513a7236a57d025985ba815f03d16
   ADMobGenGDT: 845410e79b4980907208f0aea0feee876f05c8cc

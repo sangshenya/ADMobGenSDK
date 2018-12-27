@@ -1,20 +1,14 @@
-# ADMobGenSDK
+# ADMobGenSDK iOS接入文档
 
-[![CI Status](https://img.shields.io/travis/1594717129@qq.com/ADMobGenSDK.svg?style=flat)](https://travis-ci.org/1594717129@qq.com/ADMobGenSDK)
-[![Version](https://img.shields.io/cocoapods/v/ADMobGenSDK.svg?style=flat)](https://cocoapods.org/pods/ADMobGenSDK)
-[![License](https://img.shields.io/cocoapods/l/ADMobGenSDK.svg?style=flat)](https://cocoapods.org/pods/ADMobGenSDK)
-[![Platform](https://img.shields.io/cocoapods/p/ADMobGenSDK.svg?style=flat)](https://cocoapods.org/pods/ADMobGenSDK)
+## 修订历史
 
-## Example
+| 文档版本| 修订日期| 修订说明|
+| --- | --- | --- |
+| v1.3.5 | 2018-12-3 | 文档新增demo地址 未导入ADMob平台崩溃提示 Banner广告多尺寸 |
+| v1.3.6 | 2018-12-8 | 文档新增SDK问题整理 Banner广告多尺寸列表 信息流模版广告多样式列表 |
+| v1.4.2 | 2018-12-27 | demo地址更新 广点通、头条SDK更新适配 信息流模板广告的接入更新 新增信息流模板各样式的参考高度 |
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-ADMobGenSDK is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## 导入ADMobGenSDK
 
 ```ruby
 pod 'ADMobGenSDK'
@@ -378,8 +372,20 @@ typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
 };
 ```
 
+信息流模板广告返回的是广告视图，各样式的尺寸高度如下（以实际情况为准）：
+```obj-c
+/*
+*各信息流高度参考，期望大小的宽度以当前设备的屏幕宽度为标准（特殊情况以实际为准）
+*上图下文和上文下图(图片比例16:9):324(plus),302(8)
+*左图右文和右图左文:87(固定)
+*纯图(图片比例16:9):233(plus),211(8)
+*竖版纯图(图片比例2:3):621(plus),562(8)
+*/
+```
+
 信息流模板广告请求示例：
 ```obj-c
+
 if (!_expressAd) {
     // 1 信息流请求对象的初始化, 并声明为全局变量
     ADMobGenNativeExpressAd *expressAd = [[ADMobGenNativeExpressAd alloc] initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 100)];
@@ -399,12 +405,13 @@ if (!_expressAd) {
 #pragma mark - ADMobGenNativeExpressAdDelegate
 // 加载成功
 - (void)admg_nativeExpressAdSucessToLoad:(ADMobGenNativeExpressAd *)nativeExpressAd views:(NSArray<__kindof ADMobGenNativeExpressAdView *> *)views {
-    //临时存储ADMobGenNativeExpressAdView
-    [self.tempViewitems addObjectsFromArray:views];
+    //加入到数据源中，注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法（请在此时添加到数据源中，否则可能出现白屏或者视频无法播放的情况）
+    [self.items addObjectsFromArray:views];
     //成功回调中，直接返回views中的视图ADMobGenNativeExpressAdView，使用ADMobGenNativeExpressAdView之前需要调用它的render方法进行渲染。
     for (int index = 0; index < views.count; index ++) {
         [views[index] render];
     }
+    [self.tableView reloadData];
 }
 // 加载失败回调
 - (void)admg_nativeExpressAdFailToLoad:(ADMobGenNativeExpressAd *)nativeExpressAd error:(NSError *)error {
@@ -412,10 +419,7 @@ if (!_expressAd) {
 }
 // 渲染成功回调
 - (void)admg_nativeExpressAdViewRenderSuccess:(ADMobGenNativeExpressAdView *)nativeExpressAdView {
-    //从临时数组中去除
-    [self.tempViewitems removeObject:nativeExpressAdView];
-    //加入到数据源中，注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法
-    [self.items addObject:nativeExpressAdView];
+    //刷新，此时webView加载可返回正确的高度
     [self.tableView reloadData];
 
 }
@@ -428,7 +432,6 @@ if (!_expressAd) {
 
 信息流模版广告注意事项：
 * 信息流拉取成功后, 获得的 `ADMobGenNativeExpressAdView` 视图需要调用 `[adview render]` 方法, 否则无法进行广告的点击上报和展现上报。在渲染成功的回调中再调用`render`方法，会再次调起渲染成功回调，造成死循环。
-* 可在 `admg_nativeExpressAdViewRenderSuccess:` 回调中进行列表数据源的刷新
 * 如果同时使用到 `ADMobGenNativeAdTypeNormal` `ADMobGenNativeAdTypePic`两种信息流类型,是在同样的代理方法中返回`ADMobGenNativeExpressAdView`视图，可调用 `[nativeExpressAdView getNativeAdType]`来判断该视图是哪种类型
 * `ADMobGenNativeExpressAd` 对象初始化传入的 size, 宽度会根据传入的size固定模板宽度, 高度会自适应, 调用方可以通过 `adview.contentSize` 获取当前信息流模板视图的详细尺寸，如不使用`adview.contentSize`会出现无法点击的问题。
 
@@ -474,19 +477,6 @@ if (!_expressAd) {
   `请检查是否调用信息流模版视图的render方法`
 
 
-
-## Version
-
-| 文档版本| 修订日期| 修订说明|
-| --- | --- | --- |
-| v1.3.5 | 2018-12-3 | 文档新增demo地址 未导入ADMob平台崩溃提示 Banner广告多尺寸 |
-| v1.3.6 | 2018-12-8 | 文档新增SDK问题整理 Banner广告多尺寸列表 信息流模版广告多样式列表 |
-
-## Author
+## 作者
 
 liji@ecook.cn,sangshen@ecook.cn
-
-
-## License
-
-ADMobGenSDK is available under the MIT license. See the [LICENSE](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK/blob/master/LICENSE) file for more info.

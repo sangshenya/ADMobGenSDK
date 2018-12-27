@@ -44,6 +44,13 @@
 - (void)onCancelClicked:(id)sender {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
+/*
+ *各信息流高度参考，期望大小的宽度以当前设备的屏幕宽度为标准（特殊情况以实际为准）
+ *上图下文和上文下图(图片比例16:9):324(plus),302(8)
+ *左图右文和右图左文:87(固定)
+ *纯图(图片比例16:9):233(plus),211(8)
+ *竖版纯图(图片比例2:3):621(plus),562(8)
+ */
 
 - (void)onRefreshClicked:(id)sender {
     if (!_expressAd) {
@@ -102,14 +109,15 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     ADMobGenNativeExpressAdView *adView = [self.items objectAtIndex:indexPath.row];
     //注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法
+    NSLog(@"adView.contentSize.height %f",adView.contentSize.height);
     return adView.contentSize.height;
 }
 
 #pragma mark - ADMobGenNativeExpressAdDelegate
 
 - (void)admg_nativeExpressAdSucessToLoad:(ADMobGenNativeExpressAd *)nativeExpressAd views:(NSArray<__kindof ADMobGenNativeExpressAdView *> *)views {
-    //临时存储ADMobGenNativeExpressAdView
-    [self.tempViewitems addObjectsFromArray:views];
+    //加入到数据源中，注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法（请在此时添加到数据源中，否则可能出现白屏或者视频无法播放的情况）
+    [self.items addObjectsFromArray:views];
     //成功回调中，直接返回views中的视图ADMobGenNativeExpressAdView，使用ADMobGenNativeExpressAdView之前需要调用它的render方法进行渲染。
     for (int index = 0; index < views.count; index ++) {
         [views[index] render];
@@ -121,10 +129,7 @@
 }
 
 - (void)admg_nativeExpressAdViewRenderSuccess:(ADMobGenNativeExpressAdView *)nativeExpressAdView {
-    //从临时数组中去除
-    [self.tempViewitems removeObject:nativeExpressAdView];
-    //加入到数据源中，注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法
-    [self.items addObject:nativeExpressAdView];
+    //渲染成功，webView此时返回正确的高度
     [self.tableView reloadData];
 }
 

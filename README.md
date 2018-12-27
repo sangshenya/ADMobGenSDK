@@ -20,7 +20,7 @@ it, simply add the following line to your Podfile:
 pod 'ADMobGenSDK'
 ```
 
-各个SDK最新的版本号
+ 常用SDK最新的版本号
 ```ruby
 ADMobGenFoundation (0.4.0)
 ADMobGenAdapter (1.1.5)
@@ -28,7 +28,7 @@ ADMobGenGDT (0.6.2)
 ADMobGenMCAd (0.3.8)
 ADMobGenMCAdSDK (0.3.4)
 ADMobGenNetwork (0.3.2)
-ADMobGenSDK (1.4.2)
+ADMobGenSDK (1.4.2及以上)
 ADMobGenSDKWM (0.7.5)
 ADMobGenWMSDK (0.2.2)
 ```

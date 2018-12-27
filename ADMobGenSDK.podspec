@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'ADMobGenSDK'
-    s.version          = '1.4.2.4'
+    s.version          = '1.4.2.5'
     s.summary          = 'A short description of ADMobGenSDK.'
     
     # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
     TODO: Add long description of the pod here.
     DESC
     
-    s.homepage         = 'https://github.com/AdmobileHZ/ADMobGenSDK'
+    s.homepage         = 'https://github.com/sangshenya/ADMobGenSDK'
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { '1594717129@qq.com' => '1594717129@qq.com' }
-    s.source           = { :git => 'https://github.com/AdmobileHZ/ADMobGenSDK.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/sangshenya/ADMobGenSDK.git', :tag => s.version.to_s }
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
     
     s.ios.deployment_target = '8.0'

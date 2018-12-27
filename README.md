@@ -1,4 +1,4 @@
-# ADMobGenSDK iOS接入文档
+# ADMobGenSDK iOS接入文档 v1.4.2
 
 ## 修订历史
 

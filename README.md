@@ -30,7 +30,7 @@ pod 'ADMobGenSDK'
 
 操作系统： iOS 8.0 及以上版本
 
-* `Demo地址`[[ADMobGenSDK Demo]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK)
+* `Demo地址`[[ADMobGenSDK Demo]](https://github.com/sangshenya/ADMobGenSDK)
 
 <br>
 
@@ -40,7 +40,7 @@ SDK为了支持插件化的广告平台，采用了cocoapods进行广告集成�
 
 `注意：如果不导入ADMob(艾狄墨博)平台会导致崩溃`
 
-* [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK) 广告调用framework，必须导入
+* [[Link]](https://github.com/sangshenya/ADMobGenSDK) 广告调用framework，必须导入
 ```ruby
 pod 'ADMobGenSDK'
 ```
@@ -95,7 +95,7 @@ pod 'ADMobGenAddamSDK'
 * 必要SDK
     * 广告调用所需framework
 
-        [ADMobGenSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDK)
+        [ADMobGenSDK.framework](https://github.com/sangshenya/ADMobGenSDK)
 
         [ADMobGenAdapter.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenAdapter)
 

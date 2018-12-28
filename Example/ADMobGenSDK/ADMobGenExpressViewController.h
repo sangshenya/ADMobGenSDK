@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ADMobGenAdapter/ADMobGenNativeConfig.h>
 
 @interface ADMobGenExpressViewController : UIViewController
+
+@property (nonatomic, assign) ADMobGenNativeAdType nativeAdType;
 
 @end

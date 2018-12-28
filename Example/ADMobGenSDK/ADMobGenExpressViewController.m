@@ -9,6 +9,7 @@
 #import "ADMobGenExpressViewController.h"
 #import <ADMobGenSDK/ADMobGenNativeExpressAd.h>
 #import <ADMobGenAdapter/ADMobGenNativeExpressAdView.h>
+#import <MJRefresh/MJRefresh.h>
 
 @interface ADMobGenExpressViewController () <UITableViewDelegate, UITableViewDataSource, ADMobGenNativeExpressAdDelegate> {
     ADMobGenNativeExpressAd *_expressAd;
@@ -16,8 +17,8 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray<ADMobGenNativeExpressAdView *> *tempViewitems;
-@property (nonatomic, strong) NSMutableArray<ADMobGenNativeExpressAdView *> *items;
+
+@property (nonatomic, strong) NSMutableArray *items;
 
 @end
 
@@ -39,6 +40,20 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self loadListDataWithTop:YES];
+    }];
+    self.tableView.mj_header = header;
+
+    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self loadListDataWithTop:NO];
+    }];
+    footer.onlyRefreshPerDrag = YES;
+    footer.refreshingTitleHidden = YES;
+    self.tableView.mj_footer = footer;
+    
+    [self loadListDataWithTop:YES];
 }
 
 - (void)onCancelClicked:(id)sender {
@@ -46,7 +61,7 @@
 }
 /*
  *各信息流高度参考，期望大小的宽度以当前设备的屏幕宽度为标准（特殊情况以实际为准）
- *上图下文和上文下图(图片比例16:9):324(plus),302(8)
+ *上图下文和上文下图(图片比例16:9):324(plus),309(8)
  *左图右文和右图左文:87(固定)
  *纯图(图片比例16:9):233(plus),211(8)
  *竖版纯图(图片比例2:3):621(plus),562(8)
@@ -62,23 +77,10 @@
         
         _expressAd = expressAd;
         //设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,一共支持六种样式的信息流,不同的信息流样式使用不同的实例对象,需要除normal以外其他的信息流样式可以联系ADMobs媒介或运营小姐姐
-        [_expressAd setNativeAdType:ADMobGenNativeAdTypeVerticalPic];//信息流样式纯图片
+        [_expressAd setNativeAdType:self.nativeAdType];//信息流样式纯图片
     }
     // 拉取信息流模板广告
-    [_expressAd load:2];
-    //默认图文信息流
-//    [self loadNormalNativeAd];
-}
-
-#pragma mark - 默认图文信息流
-- (void)loadNormalNativeAd{
-    if (!_normalExpressAd) {
-        _normalExpressAd = [[ADMobGenNativeExpressAd alloc]initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 10)];
-        _normalExpressAd.delegate = self;
-        _normalExpressAd.controller = self;
-        [_normalExpressAd setNativeAdType:ADMobGenNativeAdTypeRightPic];
-    }
-    [_normalExpressAd load:2];
+    [_expressAd load:1];
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDateSource
@@ -96,32 +98,47 @@
         [subView removeFromSuperview];
     }
     
-    ADMobGenNativeExpressAdView *adView = [self.items objectAtIndex:indexPath.row];
-    adView.backgroundColor = [UIColor redColor];
-    adView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, adView.contentSize.height);
-    adView.tag = 999;
+    NSString *title = [NSString stringWithFormat:@"ADMobGenNativeExpressAd Test %ld",indexPath.row];
+    cell.textLabel.text = title;
     
-    [cell.contentView addSubview:adView];
+    id obj = [self.items objectAtIndex:indexPath.row];
+    if ([obj isKindOfClass:[ADMobGenNativeExpressAdView class]]) {
+        ADMobGenNativeExpressAdView *adView = (ADMobGenNativeExpressAdView *)obj;
+        adView.backgroundColor = [UIColor redColor];
+        adView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, adView.contentSize.height);
+        adView.tag = 999;
+        
+        [cell.contentView addSubview:adView];
+    }
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ADMobGenNativeExpressAdView *adView = [self.items objectAtIndex:indexPath.row];
     //注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法
-    NSLog(@"adView.contentSize.height %f",adView.contentSize.height);
-    return adView.contentSize.height;
+    id obj = [self.items objectAtIndex:indexPath.row];
+    if ([obj isKindOfClass:[ADMobGenNativeExpressAdView class]]) {
+        ADMobGenNativeExpressAdView *adView = (ADMobGenNativeExpressAdView *)obj;
+        return adView.contentSize.height;
+        
+    }
+    return 100;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 350;
 }
 
 #pragma mark - ADMobGenNativeExpressAdDelegate
 
 - (void)admg_nativeExpressAdSucessToLoad:(ADMobGenNativeExpressAd *)nativeExpressAd views:(NSArray<__kindof ADMobGenNativeExpressAdView *> *)views {
-    //加入到数据源中，注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法（请在此时添加到数据源中，否则可能出现白屏或者视频无法播放的情况）
+    //加入到数据源中，注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法（请在此时添加到数据源中并且Reload，否则可能出现白屏或者视频无法播放的情况）
     [self.items addObjectsFromArray:views];
     //成功回调中，直接返回views中的视图ADMobGenNativeExpressAdView，使用ADMobGenNativeExpressAdView之前需要调用它的render方法进行渲染。
     for (int index = 0; index < views.count; index ++) {
         [views[index] render];
     }
+    [self.tableView reloadData];
 }
 
 - (void)admg_nativeExpressAdFailToLoad:(ADMobGenNativeExpressAd *)nativeExpressAd error:(NSError *)error {
@@ -134,23 +151,30 @@
 }
 
 - (void)admg_nativeExpressAdViewRenderFail:(ADMobGenNativeExpressAdView *)nativeExpressAdView {
-    //从临时数组中去除
-    [self.tempViewitems removeObject:nativeExpressAdView];
+    
 }
 
 #pragma mark - lazy
-- (NSMutableArray<ADMobGenNativeExpressAdView *> *)tempViewitems {
-    if (!_tempViewitems) {
-        _tempViewitems = [[NSMutableArray alloc] init];
-    }
-    return _tempViewitems;
-}
 
 - (NSMutableArray *)items {
     if (!_items) {
         _items = [[NSMutableArray alloc] init];
     }
     return _items;
+}
+
+- (void)loadListDataWithTop:(BOOL)isTop{
+    if (isTop) {
+        [self.tableView.mj_header endRefreshing];
+        [self.items removeAllObjects];
+    } else {
+        [self.tableView.mj_footer endRefreshing];
+    }
+    for (int i = 0; i < 5; i++) {
+        UIView *view = [[UIView alloc]init];
+        [self.items addObject:view];
+    }
+    [self onRefreshClicked:nil];
 }
 
 @end

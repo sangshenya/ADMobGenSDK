@@ -13,13 +13,14 @@ PODS:
     - ADMobGenMCAdSDK
   - ADMobGenMCAdSDK (0.3.4)
   - ADMobGenNetwork (0.3.2)
-  - ADMobGenSDK (1.4.2.1):
+  - ADMobGenSDK (1.4.2.6):
     - ADMobGenAdapter
     - ADMobGenNetwork
   - ADMobGenSDKWM (0.7.5):
     - ADMobGenAdapter
     - ADMobGenWMSDK
   - ADMobGenWMSDK (0.2.2)
+  - MJRefresh (3.1.15.7)
 
 DEPENDENCIES:
   - ADMobGenBaiDu
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - ADMobGenMCAd
   - ADMobGenSDK (from `../`)
   - ADMobGenSDKWM
+  - MJRefresh (~> 3.1.12)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -40,6 +42,7 @@ SPEC REPOS:
     - ADMobGenNetwork
     - ADMobGenSDKWM
     - ADMobGenWMSDK
+    - MJRefresh
 
 EXTERNAL SOURCES:
   ADMobGenSDK:
@@ -54,10 +57,11 @@ SPEC CHECKSUMS:
   ADMobGenMCAd: 786a26af1839a5392bde737d040edc690b0bd41e
   ADMobGenMCAdSDK: da8c0dcfe666c7aa599d345a749f055ab3de4697
   ADMobGenNetwork: 7361e7bb513d30c07be7ce55c243cf870e593366
-  ADMobGenSDK: 8852b7c6f3b4770f345bf1758fbcbc480e1e26cb
+  ADMobGenSDK: a00303eb0495c84743cbe1360f78db7ffb0f6b58
   ADMobGenSDKWM: 2b23ce0ef7ce94f30d347c0622e54147ee8c3248
   ADMobGenWMSDK: c589494a797e60a86f00a5ae75c6a5351b321bc1
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
 
-PODFILE CHECKSUM: 1511d4504dfdaccd9c514ee20670855792886ccd
+PODFILE CHECKSUM: 9839c8e50d46749efb92fb2a2f2a7663755a2836
 
 COCOAPODS: 1.5.3

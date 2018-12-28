@@ -2,26 +2,22 @@
 //  ADMobGenViewController.m
 //  ADMobGenSDK
 //
-//  Created by 1594717129@qq.com on 07/19/2018.
+//  Created by 1594717129@qq.com on 07/13/2018.
 //  Copyright (c) 2018 1594717129@qq.com. All rights reserved.
 //
 
 #import "ADMobGenViewController.h"
-#import <ADMobGenSDK/ADMobGenSplashAd.h>
-#import <ADMobGenSDK/ADMobGenBannerView.h>
 #import "ADMobGenExpressViewController.h"
-#import <ADMobGenSDK/ADMobGenSDKConfig.h>
+#import "ADMobGenSplashAdViewController.h"
+#import "ADMobGenBannerViewController.h"
 #import <ADMobGenFoundation/UIColor+ADMobGen.h>
-#import <WebKit/WebKit.h>
+#import <ADMobGenFoundation/UIFont+ADMobGen.h>
 
-//// 机型UI适配宏
-//#define kIPhoneX (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && ([UIScreen mainScreen].bounds.size.width == 375.0 && [UIScreen mainScreen].bounds.size.height == 812.0))
+@interface ADMobGenViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@interface ADMobGenViewController () <ADMobGenBannerViewDelegate,ADMobGenSplashAdDelegate,WKNavigationDelegate, WKScriptMessageHandler> {
-    ADMobGenSplashAd *_splashAd;
-    ADMobGenBannerView *_bannerView;
-}
-@property (nonatomic, strong) WKWebView *nativeAdWebView;
+@property (nonatomic, strong) UITableView *mainTableView;
+
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end
 
@@ -32,126 +28,154 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.title = @"ADMobGenSDK Demo";
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *btn = [UIButton new];
-    btn.backgroundColor = [UIColor redColor];
-    btn.frame = CGRectMake(0, 64, 100, 100);
-    [btn setTitle:@"开屏" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.view addSubview:btn];
-    [btn addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
+    self.dataArray = @[@[@"开屏广告",@"banner"],@[@"原生模版上图下文",@"原生模版下图上文",@"原生模版左图右文",@"原生模版右图左文",@"原生模版纯图",@"原生模版竖图"]];
     
-    UIButton *btn2 = [UIButton new];
-    btn2.backgroundColor = [UIColor redColor];
-    btn2.frame = CGRectMake(0, 120+64, 100, 100);
-    [btn2 setTitle:@"banner" forState:UIControlStateNormal];
-    [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.view addSubview:btn2];
-    [btn2 addTarget:self action:@selector(test2) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.mainTableView];
     
-    UIButton *btn3 = [UIButton new];
-    btn3.backgroundColor = [UIColor redColor];
-    btn3.frame = CGRectMake(0, 240+64, 100, 100);
-    [btn3 setTitle:@"原生模板" forState:UIControlStateNormal];
-    [btn3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.view  addSubview:btn3];
-    [btn3 addTarget:self action:@selector(test3) forControlEvents:UIControlEventTouchUpInside];
-
+    [self.mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
 }
 
+#pragma mark - UITableViewDelegate,UITableViewDataSource
 
-- (void)test {
-    //注意：当你在控制器中加载开屏时，请勿在viewWillAppear中加载开屏，该方法会调用多次，使得展示多次开屏广告，在viewDidLoad中加载开屏广告的时候，如果该控制器没有用导航栏承载，会出现无法展示广告，却走了加载成功的回调方法
-    // 1 初始化
-    _splashAd = [[ADMobGenSplashAd alloc] init];
-    
-    // 2 设置默认启动图(一般设置启动图的平铺颜色为背景颜色，使得视觉效果更加平滑)
-    _splashAd.backgroundColor = [UIColor getColorWithImage:[UIImage imageNamed:@"750×1334"] withNewSize:[UIScreen mainScreen].bounds.size];
-    
-    _splashAd.delegate = self;
-    
-    // 3 设置底部logo视图, 高度不能超过屏幕的25%, 除iPhoneX以外建议: 开屏的广告图片默认640 / 960比例，如果是iPhoneX注意bottomViewHeight不能超过屏幕的25%
-    CGFloat bottomViewHeight;
-    if (kIPhoneX) {
-        bottomViewHeight = [UIScreen mainScreen].bounds.size.height * 0.25;
-    } else {
-        bottomViewHeight = [UIScreen mainScreen].bounds.size.height - [UIScreen mainScreen].bounds.size.width * (960 / 640.0);
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.dataArray.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [[self.dataArray objectAtIndex:section] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    NSArray *array = [self.dataArray objectAtIndex:indexPath.section];
+    UIView *view = [cell.contentView viewWithTag:999];
+    if (view) {
+        [view removeFromSuperview];
     }
+    UILabel *labTitle = [[UILabel alloc]init];
+    labTitle.font = [UIFont PingFangMediumFont:18];
+    labTitle.textColor = [UIColor colorWithHexString:@"#535353"];
+    labTitle.tag = 999;
+    labTitle.text = [array objectAtIndex:indexPath.row];
+    [cell.contentView addSubview:labTitle];
+    labTitle.frame = CGRectMake(19, 15, [UIScreen mainScreen].bounds.size.width - 38, 30);
     
-    UIView *bottomView = [[UIView alloc] init];
-    bottomView.backgroundColor = [UIColor whiteColor];
-    bottomView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, bottomViewHeight);
-    UIImageView *logoImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ADMob_Logo.png"]];
-    logoImageView.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-135)/2, (bottomViewHeight-46)/2, 135, 46);
-    [bottomView addSubview:logoImageView];
     
-    // 4 展示
-    UIWindow *window = [UIApplication sharedApplication].delegate.window;
-    [_splashAd loadAndShowInWindow:window withBottomView:bottomView];
+    return cell;
 }
 
-#pragma mark - Banner
-
-- (void)test2 {
-    if (_bannerView) {
-        [_bannerView removeFromSuperview];
-        _bannerView = nil;
-    }
-    // 1 初始化banner视图，bannerSize为banner的宽高比，以视图的宽度为准，当需要使用除默认尺寸以外的请与我们的商务联系
-    _bannerView = [[ADMobGenBannerView alloc] initWithFrame:CGRectZero withBannerSize:ADMobGenBannerAdSize600_150];
-    _bannerView.delegate = self;
-    _bannerView.backgroundColor = [UIColor redColor];
-    
-    // 2 添加到父视图上，ADMobGenBannerView的比例请尽量与bannerSize保持一致
-//    CGFloat height = [UIScreen mainScreen].bounds.size.width * (5 / 32.0);
-//    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    CGFloat height = ([UIScreen mainScreen].bounds.size.width)/4;
-    CGFloat width = [UIScreen mainScreen].bounds.size.width-50;
-    _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - height, width, height);
-    [self.view addSubview:_bannerView];
-    
-    // 3 加载并显示广告 注意: 广点通banner广告请确保banner视图显示在屏幕内的时候,调用load方法（tip：在tableView中使用banner时，可以在willDisplay的代理方法中）
-    [_bannerView loadWithError:nil];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
 }
 
-- (void)test3 {
-    ADMobGenExpressViewController *vc = [[ADMobGenExpressViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];;
-    [self.navigationController presentViewController:nav animated:YES completion:nil];
-}
-
-#pragma mark - ADMobGenSplashAdDelegate
-- (void)admg_splashAdSuccessToPresentScreen:(ADMobGenSplashAd *)splashAd{
-    
-}
-
-- (void)admg_splashAd:(ADMobGenSplashAd *)splash failToPresentScreen:(NSError *)error{
-    _splashAd = nil;
-    if (error) {
-        //NSLog(@"");ADMobGenLogLevelError自动打印错误信息，也可打印error查看
-    }
-}
-//千万不要在点击回调中将开屏广告对象置空，否则广点通下载类落地页无法关闭，头条广告会停留在屏幕上无法关闭
-- (void)admg_splashAdClicked:(ADMobGenSplashAd *)splashAd{
-//    _splashAd = nil;
-}
-
-- (void)admg_splashAdClosed:(ADMobGenSplashAd *)splashAd{
-    _splashAd = nil;
-}
-
-#pragma mark - ADMobGenBannerViewDelegate
-- (void)admg_bannerViewDidReceived:(ADMobGenBannerView *)bannerView{
-    NSLog(@"load banner success");
-}
-
-- (void)admg_bannerViewFailToReceived:(ADMobGenBannerView *)bannerView error:(NSError *)error{
-    if (error) {
-        //请求失败时，将banner视图的高度置为0，就不会出现空白区域
-        CGRect rect = _bannerView.frame;
-        _bannerView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 0);
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 0:
+            {
+                [self loadSplash];
+            }
+                break;
+            case 1:
+            {
+                [self loadBanner];
+            }
+                break;
+                
+            default:
+                break;
+        }
+    } else {//@[@"原生模版上图下文",@"原生模版下图上文",@"原生模版左图右文",@"原生模版右图左文",@"原生模版纯图",@"原生模版竖图",@"原生模版视频（样式同上图下文）",@"原生模版视频（样式同纯图）",@"原生模版视频（样式同下图上文）"]
+        switch (indexPath.row) {
+            case 0:
+            {
+                [self loadNativeExpress:ADMobGenNativeAdTypeNormal];
+            }
+                break;
+            case 1:
+            {
+                [self loadNativeExpress:ADMobGenNativeAdTypeCenterPic];
+            }
+                break;
+            case 2:
+            {
+                [self loadNativeExpress:ADMobGenNativeAdTypeLeftPic];
+            }
+                break;
+            case 3:
+            {
+                [self loadNativeExpress:ADMobGenNativeAdTypeRightPic];
+            }
+                break;
+            case 4:
+            {
+                [self loadNativeExpress:ADMobGenNativeAdTypePic];
+            }
+                break;
+            case 5:
+            {
+                [self loadNativeExpress:ADMobGenNativeAdTypeVerticalPic];
+            }
+                break;
+                
+            default:
+                break;
+        }
     }
 }
+
+- (UITableView *)mainTableView{
+    if (!_mainTableView) {
+        _mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) style:UITableViewStylePlain];
+        _mainTableView.delegate = self;
+        _mainTableView.dataSource = self;
+        _mainTableView.backgroundColor = [UIColor whiteColor];
+        
+        
+    }
+    return _mainTableView;
+}
+
+
+
+
+
+#pragma mark -
+- (void) loadSplash {
+    ADMobGenSplashAdViewController *vc = [ADMobGenSplashAdViewController new];
+    //    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    //    [self presentViewController:nav animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void) loadBanner {
+    ADMobGenBannerViewController *vc = [ADMobGenBannerViewController new];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
+
+- (void) loadNativeExpress:(ADMobGenNativeAdType)adType {
+    ADMobGenExpressViewController *vc = [ADMobGenExpressViewController new];
+    vc.nativeAdType = adType;
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
+
+
+
+
+
+
+
+
+
 
 @end

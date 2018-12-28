@@ -25,6 +25,8 @@
 		94E1CA612E55C2F4392C8319 /* Pods_ADMobGenSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B5E388C5F89772CAFE3DE1 /* Pods_ADMobGenSDK_Example.framework */; };
 		BF10A090219BEE9000FFA72E /* 750x1334.png in Resources */ = {isa = PBXBuildFile; fileRef = BF10A08F219BEE9000FFA72E /* 750x1334.png */; };
 		BF10A092219BF3B100FFA72E /* ADMob_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF10A091219BF3B100FFA72E /* ADMob_Logo.png */; };
+		BF88CB4C21D5F60C00B2001D /* ADMobGenBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88CB4821D5F60C00B2001D /* ADMobGenBannerViewController.m */; };
+		BF88CB4D21D5F60C00B2001D /* ADMobGenSplashAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88CB4921D5F60C00B2001D /* ADMobGenSplashAdViewController.m */; };
 		D719ADB2C1FF58EDDA365AEA /* Pods_ADMobGenSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27004214C4B913B57E481617 /* Pods_ADMobGenSDK_Tests.framework */; };
 		E881F60921100B810031A5AC /* ADMobGenExpressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */; };
 		E881F60A21100B810031A5AC /* ADMobGenExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E881F60721100B810031A5AC /* ADMobGenExpressViewController.m */; };
@@ -71,6 +73,10 @@
 		A1A7698A33DFD48C9E74A692 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BF10A08F219BEE9000FFA72E /* 750x1334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 750x1334.png; sourceTree = "<group>"; };
 		BF10A091219BF3B100FFA72E /* ADMob_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADMob_Logo.png; sourceTree = "<group>"; };
+		BF88CB4821D5F60C00B2001D /* ADMobGenBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenBannerViewController.m; sourceTree = "<group>"; };
+		BF88CB4921D5F60C00B2001D /* ADMobGenSplashAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenSplashAdViewController.m; sourceTree = "<group>"; };
+		BF88CB4A21D5F60C00B2001D /* ADMobGenBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenBannerViewController.h; sourceTree = "<group>"; };
+		BF88CB4B21D5F60C00B2001D /* ADMobGenSplashAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenSplashAdViewController.h; sourceTree = "<group>"; };
 		C85A8E1E444DB647438B9771 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D35D1C410FAFED0905750CF0 /* Pods-ADMobGenSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADMobGenSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADMobGenSDK_Tests/Pods-ADMobGenSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADMobGenExpressViewController.xib; sourceTree = "<group>"; };
@@ -161,6 +167,10 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* ADMobGenViewController.h */,
 				6003F5A6195388D20070C39A /* ADMobGenViewController.m */,
+				BF88CB4A21D5F60C00B2001D /* ADMobGenBannerViewController.h */,
+				BF88CB4821D5F60C00B2001D /* ADMobGenBannerViewController.m */,
+				BF88CB4B21D5F60C00B2001D /* ADMobGenSplashAdViewController.h */,
+				BF88CB4921D5F60C00B2001D /* ADMobGenSplashAdViewController.m */,
 				E881F60821100B810031A5AC /* ADMobGenExpressViewController.h */,
 				E881F60721100B810031A5AC /* ADMobGenExpressViewController.m */,
 				E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */,
@@ -225,6 +235,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				8B8C1A132A50F429CC2D79BC /* [CP] Copy Pods Resources */,
+				0045726565D811D3F8D1CE87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -318,6 +329,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0045726565D811D3F8D1CE87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7133E507537D3B559C93E4AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +423,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E881F60A21100B810031A5AC /* ADMobGenExpressViewController.m in Sources */,
+				BF88CB4C21D5F60C00B2001D /* ADMobGenBannerViewController.m in Sources */,
+				BF88CB4D21D5F60C00B2001D /* ADMobGenSplashAdViewController.m in Sources */,
 				6003F59E195388D20070C39A /* ADMobGenAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* ADMobGenViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

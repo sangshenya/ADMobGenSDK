@@ -18,7 +18,7 @@ pod 'ADMobGenSDK'
 ```ruby
 ADMobGenFoundation (0.4.0)
 ADMobGenAdapter (1.1.5)
-ADMobGenGDT (0.6.2)
+ADMobGenGDT (0.6.2及以上)
 ADMobGenMCAd (0.3.8)
 ADMobGenMCAdSDK (0.3.4)
 ADMobGenNetwork (0.3.2)

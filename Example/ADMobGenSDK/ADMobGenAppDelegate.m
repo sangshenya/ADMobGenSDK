@@ -70,7 +70,10 @@
     _splashAd = [[ADMobGenSplashAd alloc] init];
     
     // 2 设置默认启动图(一般设置启动图的平铺颜色为背景颜色，使得视觉效果更加平滑)
-    _splashAd.backgroundColor = [UIColor getColorWithImage:[UIImage imageNamed:@"750×1334"] withNewSize:[UIScreen mainScreen].bounds.size];
+    UIImage *image = [UIImage imageNamed:@"750x1334.png"];
+    NSLog(@"hhhhhhh%@",image);
+    UIColor *color = [UIColor getColorWithImage:image withNewSize:[UIScreen mainScreen].bounds.size];
+    _splashAd.backgroundColor = color;
     
     _splashAd.delegate = self;
     

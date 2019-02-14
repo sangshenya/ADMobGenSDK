@@ -9,7 +9,7 @@
 #ifndef ADMobNetworkErrorDefine_h
 #define ADMobNetworkErrorDefine_h
 
-#define kADMobGenNetworkSDKVersion @"0.3.2"
+#define kADMobGenNetworkSDKVersion @"0.3.4"
 
 typedef enum : NSInteger {
     ADM_NETWORK_REQUEST_SERIALIZETION_ERROR = 1001, // 请求对象解析失败

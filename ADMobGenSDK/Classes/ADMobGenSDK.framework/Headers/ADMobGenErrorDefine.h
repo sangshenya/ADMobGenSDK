@@ -18,6 +18,10 @@ typedef enum : NSInteger {
     ADMG_SDK_LOAD_FAIL = -9996,//获取广告失败
     ADMG_SDK_PRATFORM_EMPTY = -9997,//未获取到加载广告的平台，可能一下原因 1、第一次启动未获取到配置信息；2、运营未配置广告
     ADMG_SDK_LANDSCAPE_NOTLOADSPLASH = -9999,//横屏不加载开屏广告
+    //视频相关错误
+    ADMG_SDK_VIDEO_LOADFAIL = 5001,//初始化失败
+    
+    
     
 } ADMobGenErrorCode;
 

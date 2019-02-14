@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ADMobGenBaiDu-baidumobadsdk.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ADMobGenBaiDuSDK-ADMobGenBaiDuSDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>ADMobGenMCAd-MCAdBundles.xcscheme</key>
 		<dict>
 			<key>isShown</key>

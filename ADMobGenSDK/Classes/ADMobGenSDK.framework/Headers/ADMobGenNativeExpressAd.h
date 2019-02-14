@@ -93,4 +93,11 @@
  */
 - (void)admg_nativeExpressAdViewClicked:(ADMobGenNativeExpressAdView *)nativeExpressAdView;
 
+/**
+ 视频广告模板播放状态更换
+ 
+ @param nativeExpressAdView 广告模板
+ */
+- (void)admg_nativeExpressVideoAdView:(ADMobGenNativeExpressAdView *)nativeExpressAdView stateDidChanged:(ADMobGenPlayerState)playerState;
+
 @end

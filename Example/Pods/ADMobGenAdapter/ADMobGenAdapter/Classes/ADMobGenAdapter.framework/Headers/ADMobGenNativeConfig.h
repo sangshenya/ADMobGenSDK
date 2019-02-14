@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, ADMobGenPlayerState) {
+    ADMobGenPlayerStateInitial = 0,//初始化状态
+    ADMobGenPlayerStateBuffering = 1,//缓冲中
+    ADMobGenPlayerStatePlaying = 2,//播放中
+    ADMobGenPlayerStatePaused = 3,//播放暂停
+    ADMobGenPlayerStateStopped = 4,//播放停止
+    ADMobGenPlayerStateError = 5,//播放出错
+};
+
 typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
     ADMobGenNativeAdTypeNormal = 0,//上图下文，默认为图文，图片尺寸为16：9
     ADMobGenNativeAdTypePic,//纯图片16：9
@@ -16,6 +25,10 @@ typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
     ADMobGenNativeAdTypeLeftPic,//左图右文3：2
     ADMobGenNativeAdTypeCenterPic,//上文下图16：9
     ADMobGenNativeAdTypeVerticalPic,//竖版纯图3：2
+    ADMobGenNativeAdTypeVideoNormal,// 视频广告默认类型
+    ADMobGenNativeAdTypeVideoPic,// 视频广告无文字纯图
+    ADMobGenNativeAdTypeVideoCenterPic,// 视频广告上文下图
+    
 };
 
 typedef NS_ENUM(NSUInteger, ADMobGenNativeAdPlatform) {

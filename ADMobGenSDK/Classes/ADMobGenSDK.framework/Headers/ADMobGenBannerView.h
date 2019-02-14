@@ -39,14 +39,14 @@
 
 /**
  广告获取成功
-
+ 
  @param bannerView banner实例
  */
 - (void)admg_bannerViewDidReceived:(ADMobGenBannerView *)bannerView;
 
 /**
  广告拉取失败
-
+ 
  @param bannerView banner实例
  @param error 错误描述
  */
@@ -54,7 +54,7 @@
 
 /**
  广告点击
-
+ 
  @param bannerView 广告实例
  */
 - (void)admg_bannerViewClicked:(ADMobGenBannerView *)bannerView;

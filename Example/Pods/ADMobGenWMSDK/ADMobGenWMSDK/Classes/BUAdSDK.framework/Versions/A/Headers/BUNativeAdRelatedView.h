@@ -27,6 +27,10 @@
  logoImageView 网盟广告标识，需要主动添加到 View
  */
 @property (nonatomic, strong, readonly, nullable) UIImageView *logoImageView;
+/**
+ logoADImageView 网盟广告+广告字样标识，需要主动添加到 View
+ */
+@property (nonatomic, strong, readonly, nullable) UIImageView *logoADImageView;
 
 /**
  BUPlayer View 需要主动添加到 View

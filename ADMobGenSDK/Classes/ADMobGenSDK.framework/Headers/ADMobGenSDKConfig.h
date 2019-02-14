@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, ADMobGenLogLevel) {
 
 /**
  注册SDK
-
+ 
  @param appId 给定的唯一appid
  @param completion 启动完成回调
  */

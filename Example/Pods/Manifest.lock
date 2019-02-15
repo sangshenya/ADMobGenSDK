@@ -1,7 +1,7 @@
 PODS:
   - ADMobGenAdapter (1.2.0):
     - ADMobGenFoundation
-  - ADMobGenFoundation (0.4.0)
+  - ADMobGenFoundation (0.4.1)
   - ADMobGenGDT (4.8.4):
     - ADMobGenAdapter
   - ADMobGenMCAd (0.3.8):
@@ -43,7 +43,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ADMobGenAdapter: 8ebfb97ab5f61462ebb1b421474c4537a06a9adc
-  ADMobGenFoundation: 1778d376ad8513a7236a57d025985ba815f03d16
+  ADMobGenFoundation: d7e4b5db8cddb7dbf910ed5403296940dcb87062
   ADMobGenGDT: 965a1cbf1da30015536d29dcb91fc60199bfb491
   ADMobGenMCAd: 786a26af1839a5392bde737d040edc690b0bd41e
   ADMobGenMCAdSDK: da8c0dcfe666c7aa599d345a749f055ab3de4697

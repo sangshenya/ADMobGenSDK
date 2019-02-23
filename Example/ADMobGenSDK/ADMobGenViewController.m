@@ -10,6 +10,7 @@
 #import "ADMobGenExpressViewController.h"
 #import "ADMobGenSplashAdViewController.h"
 #import "ADMobGenBannerViewController.h"
+#import "ADMobGenRewardvodViewController.h"
 #import <ADMobGenFoundation/UIColor+ADMobGen.h>
 #import <ADMobGenFoundation/UIFont+ADMobGen.h>
 
@@ -32,7 +33,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.dataArray = @[@[@"开屏广告",@"banner"],@[@"原生模版上图下文",@"原生模版下图上文",@"原生模版左图右文",@"原生模版右图左文",@"原生模版纯图",@"原生模版竖图"]];
+    self.dataArray = @[@[@"开屏广告",@"banner",@"激励视频"],@[@"原生模版上图下文",@"原生模版下图上文",@"原生模版左图右文",@"原生模版右图左文",@"原生模版纯图",@"原生模版竖图"]];
     
     [self.view addSubview:self.mainTableView];
     
@@ -85,6 +86,11 @@
             case 1:
             {
                 [self loadBanner];
+            }
+                break;
+            case 2:
+            {
+                [self loadRewardvod];
             }
                 break;
                 
@@ -168,6 +174,11 @@
     [self presentViewController:nav animated:YES completion:nil];
 }
 
+- (void) loadRewardvod {
+    ADMobGenRewardvodViewController *vc = [ADMobGenRewardvodViewController new];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+}
 
 
 

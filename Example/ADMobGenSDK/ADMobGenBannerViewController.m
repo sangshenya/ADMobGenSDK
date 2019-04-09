@@ -60,8 +60,8 @@
     _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - height, width, height);
     [self.view addSubview:_bannerView];
     
-    // 3 隐藏关闭按钮
-//    [_bannerView closeButtonHidden:YES];
+    // 3 隐藏关闭按钮，默认显示关闭按钮
+    [_bannerView closeButtonHidden:YES];
     
     // 4 加载并显示广告 注意: 请确保banner视图显示在屏幕内的时候,调用load方法
     //    [_bannerView loadWithError:nil];

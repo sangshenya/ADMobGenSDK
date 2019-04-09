@@ -9,7 +9,7 @@ target 'ADMobGenSDK_Example' do
     
   end
   
-  pod 'ADMobGenMCAd'
+#  pod 'ADMobGenMCAd'
 
   pod 'ADMobGenGDT'
   

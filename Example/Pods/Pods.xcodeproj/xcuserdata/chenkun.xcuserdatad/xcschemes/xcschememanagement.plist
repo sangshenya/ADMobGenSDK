@@ -34,21 +34,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ADMobGenMCAd-MCAdBundles.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ADMobGenMCAd.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ADMobGenMCAdSDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>ADMobGenNetwork.xcscheme</key>
 		<dict>
 			<key>isShown</key>

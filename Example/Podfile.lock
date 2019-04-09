@@ -9,10 +9,6 @@ PODS:
   - ADMobGenGDT (4.8.7.1):
     - ADMobGenAdapter
   - ADMobGenLocationManager (0.1.1)
-  - ADMobGenMCAd (0.3.8):
-    - ADMobGenAdapter
-    - ADMobGenMCAdSDK
-  - ADMobGenMCAdSDK (0.3.4)
   - ADMobGenNetwork (0.3.4)
   - ADMobGenSDK (1.5.2):
     - ADMobGenAdapter
@@ -30,7 +26,6 @@ PODS:
 
 DEPENDENCIES:
   - ADMobGenGDT
-  - ADMobGenMCAd
   - ADMobGenSDK (from `../`)
   - ADMobGenSDKWM
   - ADMobileAd
@@ -43,8 +38,6 @@ SPEC REPOS:
     - ADMobGenFoundation
     - ADMobGenGDT
     - ADMobGenLocationManager
-    - ADMobGenMCAd
-    - ADMobGenMCAdSDK
     - ADMobGenNetwork
     - ADMobGenSDKWM
     - ADMobGenWMSDK
@@ -61,8 +54,6 @@ SPEC CHECKSUMS:
   ADMobGenFoundation: e632d7fa1cb60baf96e68330243d253f03f1715b
   ADMobGenGDT: 7a4cefa51086e67d26c2b5929144f22369be1d70
   ADMobGenLocationManager: f2b0396d8c1c26e9490725150e3def622f74ccae
-  ADMobGenMCAd: 786a26af1839a5392bde737d040edc690b0bd41e
-  ADMobGenMCAdSDK: da8c0dcfe666c7aa599d345a749f055ab3de4697
   ADMobGenNetwork: 6cf16f095a75b4f2422d526c56904b22e4b144b1
   ADMobGenSDK: d1badf39c5a947e8fb9258e284128a91f0706828
   ADMobGenSDKWM: 24855755e4ddee01ff1dd604496cd2c8f0490aee
@@ -70,6 +61,6 @@ SPEC CHECKSUMS:
   ADMobileAd: 501dd888bd526cff2f8995e61f644e613519bf11
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
 
-PODFILE CHECKSUM: 7c9db615c9ff6478f3ae25f8cddfdf1b428cb8d8
+PODFILE CHECKSUM: 595f9c418975f7d1ce66dca51bbe69e07779c445
 
 COCOAPODS: 1.7.0.beta.2

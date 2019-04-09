@@ -56,11 +56,14 @@
     
     // 2 添加到父视图上
     CGFloat height = [UIScreen mainScreen].bounds.size.width/4;
-    CGFloat width = [UIScreen mainScreen].bounds.size.width-20;
-    _bannerView.frame = CGRectMake(10, [UIScreen mainScreen].bounds.size.height  - height, width, height);
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - height, width, height);
     [self.view addSubview:_bannerView];
     
-    // 3 加载并显示广告 注意: 请确保banner视图显示在屏幕内的时候,调用load方法
+    // 3 隐藏关闭按钮
+    [_bannerView closeButtonHidden:YES];
+    
+    // 4 加载并显示广告 注意: 请确保banner视图显示在屏幕内的时候,调用load方法
     //    [_bannerView loadWithError:nil];
     [_bannerView loadWithError:nil];
 }
@@ -92,6 +95,15 @@
  @param bannerView 广告实例
  */
 - (void)admg_bannerViewClicked:(ADMobGenBannerView *)bannerView{
+    
+}
+
+/**
+ 广告关闭
+ 
+ @param bannerView 广告实例
+ */
+- (void)admg_bannerViewClose:(ADMobGenBannerView *)bannerView{
     
 }
 

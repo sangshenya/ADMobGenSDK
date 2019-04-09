@@ -12,6 +12,8 @@ target 'ADMobGenSDK_Example' do
   pod 'ADMobGenMCAd'
 
   pod 'ADMobGenGDT'
+  
+  pod 'ADMobileAd'
 
 #  pod 'ADMobGenMTG'
 
@@ -25,4 +27,8 @@ target 'ADMobGenSDK_Example' do
 
   pod 'MJRefresh', '~> 3.1.12'
 
+end
+
+pre_install do |installer|
+  Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
 end

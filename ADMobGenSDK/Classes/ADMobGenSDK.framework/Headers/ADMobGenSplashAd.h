@@ -32,6 +32,15 @@
  */
 - (void)loadAndShowInWindow:(UIWindow *)window withBottomView:(UIView *)bottomView;
 
+/**
+ 加载并展示到window中
+ 
+ @param window window
+ @param bottomView 底部logo视图, 高度不能超过屏幕的25%, 建议: 开屏的广告图片默认640 / 960比例, 可以用 screenHeight - screenWidth * (960 / 640.0) 得出bottomview的高度（iPhone X不适用）
+ @param splashIndex 广告位序号，默认为0
+ */
+- (void)loadAndShowInWindow:(UIWindow *)window withBottomView:(UIView *)bottomView withSplashIndex:(NSInteger)splashIndex;
+
 @end
 
 @protocol ADMobGenSplashAdDelegate <NSObject>

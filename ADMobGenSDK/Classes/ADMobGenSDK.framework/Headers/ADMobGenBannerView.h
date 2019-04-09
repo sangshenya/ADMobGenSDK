@@ -24,7 +24,14 @@
  初始化bannerView
  @param size 期望的banner广告尺寸比例，默认为640:100
  */
-- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize;
+
+/*
+ 初始化bannerView
+ @param size 期望的banner广告尺寸比例，默认为640:100
+ @param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+ */
+- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex NS_DESIGNATED_INITIALIZER;
 
 
 /**
@@ -32,6 +39,13 @@
  @warning 请确保banner视图显示在屏幕内的时候,调用load方法
  */
 - (void)loadWithError:(NSError *__autoreleasing *)error;
+
+/**
+ banner广告关闭按钮是否隐藏
+ 
+ @param isHidden 默认为NO，不隐藏
+ */
+- (void)closeButtonHidden:(BOOL)isHidden;
 
 @end
 
@@ -58,5 +72,12 @@
  @param bannerView 广告实例
  */
 - (void)admg_bannerViewClicked:(ADMobGenBannerView *)bannerView;
+
+/**
+ 广告关闭
+ 
+ @param bannerView 广告实例
+ */
+- (void)admg_bannerViewClose:(ADMobGenBannerView *)bannerView;
 
 @end

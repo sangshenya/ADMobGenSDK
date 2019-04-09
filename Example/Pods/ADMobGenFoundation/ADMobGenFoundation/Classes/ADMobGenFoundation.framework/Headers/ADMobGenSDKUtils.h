@@ -15,4 +15,14 @@
  */
 + (BOOL)hasAgent;
 
+/**
+ md5 加密
+ */
++ (NSString *)md5:(NSString *)string;
+
+/**
+ 是否含有中文
+ */
++ (BOOL)containsChinese:(NSString *)string;
+
 @end

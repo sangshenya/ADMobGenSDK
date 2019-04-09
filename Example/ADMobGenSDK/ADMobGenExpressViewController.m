@@ -14,11 +14,14 @@
 @interface ADMobGenExpressViewController () <UITableViewDelegate, UITableViewDataSource, ADMobGenNativeExpressAdDelegate> {
     ADMobGenNativeExpressAd *_expressAd;
     ADMobGenNativeExpressAd *_normalExpressAd;
+    BOOL _footRefresh;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *items;
+
+@property (nonatomic, strong) NSMutableArray *adItems;
 
 @end
 
@@ -41,19 +44,16 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [self loadListDataWithTop:YES];
-    }];
-    self.tableView.mj_header = header;
-
+    __weak typeof(self) weakSelf = self;
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        [self loadListDataWithTop:NO];
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf loadListData];
     }];
     footer.onlyRefreshPerDrag = YES;
     footer.refreshingTitleHidden = YES;
     self.tableView.mj_footer = footer;
     
-    [self loadListDataWithTop:YES];
+    [self loadListData];
 }
 
 - (void)onCancelClicked:(id)sender {
@@ -133,12 +133,11 @@
 
 - (void)admg_nativeExpressAdSucessToLoad:(ADMobGenNativeExpressAd *)nativeExpressAd views:(NSArray<__kindof ADMobGenNativeExpressAdView *> *)views {
     //加入到数据源中，注意：要使ADMobGenNativeExpressAdView响应点击事件还需要调用它的contentSize方法（请在此时添加到数据源中并且Reload，否则可能出现白屏或者视频无法播放的情况）
-    [self.items addObjectsFromArray:views];
+    [self.adItems addObjectsFromArray:views];
     //成功回调中，直接返回views中的视图ADMobGenNativeExpressAdView，使用ADMobGenNativeExpressAdView之前需要调用它的render方法进行渲染。
     for (int index = 0; index < views.count; index ++) {
         [views[index] render];
     }
-    [self.tableView reloadData];
 }
 
 - (void)admg_nativeExpressAdFailToLoad:(ADMobGenNativeExpressAd *)nativeExpressAd error:(NSError *)error {
@@ -147,6 +146,10 @@
 
 - (void)admg_nativeExpressAdViewRenderSuccess:(ADMobGenNativeExpressAdView *)nativeExpressAdView {
     //渲染成功，webView此时返回正确的高度
+    [self.items addObject:nativeExpressAdView];
+    [self.adItems removeObject:nativeExpressAdView];
+    [self.tableView.mj_footer endRefreshing];
+    _footRefresh = NO;
     [self.tableView reloadData];
 }
 
@@ -163,13 +166,18 @@
     return _items;
 }
 
-- (void)loadListDataWithTop:(BOOL)isTop{
-    if (isTop) {
-        [self.tableView.mj_header endRefreshing];
-        [self.items removeAllObjects];
-    } else {
-        [self.tableView.mj_footer endRefreshing];
+- (NSMutableArray *)adItems{
+    if (!_adItems) {
+        _adItems = [NSMutableArray array];
     }
+    return _adItems;
+}
+
+- (void)loadListData{
+    if (_footRefresh) {
+        return;
+    }
+    _footRefresh = YES;
     for (int i = 0; i < 5; i++) {
         UIView *view = [[UIView alloc]init];
         [self.items addObject:view];

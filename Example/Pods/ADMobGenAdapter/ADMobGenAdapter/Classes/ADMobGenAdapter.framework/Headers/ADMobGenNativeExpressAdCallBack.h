@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ADMobGenNativeConfig.h"
+#import "ADMobGenNativeTool.h"
 
 @class ADMobGenNativeExpressAdView;
 
@@ -23,6 +23,8 @@
 - (void)nativeExpressAdViewExposureCallBack:(id)sourceAd view:(ADMobGenNativeExpressAdView *)nativeExpressAdView exposureTracked:(BOOL)exposureTracked;
 
 - (void)nativeExpressAdViewClickedCallBack:(id)sourceAd view:(ADMobGenNativeExpressAdView *)nativeExpressAdView clickedTracked:(BOOL)clickTracked;
+
+- (void)nativeExpressAdViewCloseCallBack:(id)sourceAd view:(ADMobGenNativeExpressAdView *)nativeExpressAdView;
 //
 - (void)nativeExpressVideoAdView:(ADMobGenNativeExpressAdView *)nativeExpressAdView didLoadFailWithError:(NSError *_Nullable)error;
 

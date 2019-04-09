@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <ADMobGenAdapter/ADMobGenNativeConfig.h>
+#import <ADMobGenAdapter/ADMobGenNativeTool.h>
 
 @class ADMobGenNativeExpressAdView;
 @protocol ADMobGenNativeExpressAdDelegate;
@@ -30,11 +31,28 @@
 - (id)init NS_UNAVAILABLE;
 
 /**
- 指定的构造方法
+ 信息流模板广告构造方法
 
  @param size 期望的广告大小,高度自适应
  */
-- (id)initWithSize:(CGSize)size NS_DESIGNATED_INITIALIZER;
+- (id)initWithSize:(CGSize)size;
+
+/**
+ 信息流模板广告构造方法
+ 
+ @param size 期望的广告大小,高度自适应
+ @param nativeAdType 信息流广告类型
+ @param flowIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+ */
+
+- (id)initWithSize:(CGSize)size withNativeAdType:(ADMobGenNativeAdType)nativeAdType withFlowIndex:(NSInteger)flowIndex NS_DESIGNATED_INITIALIZER;
+
+/**
+ 信息流模板广告关闭按钮是否隐藏
+ 
+ @param isHidden 默认为NO，不隐藏
+ */
+- (void)closeButtonHidden:(BOOL)isHidden;
 
 /**
  加载广告
@@ -92,6 +110,13 @@
  @param nativeExpressAdView 广告模板
  */
 - (void)admg_nativeExpressAdViewClicked:(ADMobGenNativeExpressAdView *)nativeExpressAdView;
+
+/**
+ 广告模板被关闭
+ 
+ @param nativeExpressAdView 广告模板
+ */
+- (void)admg_nativeExpressAdViewClose:(ADMobGenNativeExpressAdView *)nativeExpressAdView;
 
 /**
  视频广告模板播放状态更换

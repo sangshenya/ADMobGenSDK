@@ -71,6 +71,7 @@
     if (!_expressAd) {
         // 1 信息流请求对象的初始化, 并声明为全局变量，其中size为期望大小，渲染成功后真实大小可以在广告视图contentSize获取（tip：当你需要高度更高的信息流视图时，因为比例是固定的，可以增加期望大小size的宽度，达到增加视图高度）
         ADMobGenNativeExpressAd *expressAd = [[ADMobGenNativeExpressAd alloc] initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 10)];
+        //[[ADMobGenNativeExpressAd alloc]initWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 10) withNativeAdType:self.nativeAdType withFlowIndex:0];
         expressAd.delegate = self;
         // 2 设置信息流广告需要显示的控制器, 保证和信息流展示的控制器是同一个
         expressAd.controller = self;

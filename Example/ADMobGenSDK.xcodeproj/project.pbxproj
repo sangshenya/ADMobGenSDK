@@ -397,13 +397,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenAdapter/ADMobGenBundles.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenSDKWM/BUAdSDK.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobileAd/ADMobileAdBundles.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ADMobGenBundles.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BUAdSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ADMobileAdBundles.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

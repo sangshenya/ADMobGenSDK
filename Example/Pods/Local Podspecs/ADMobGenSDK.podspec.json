@@ -19,7 +19,6 @@
     "ios": "8.0"
   },
   "vendored_frameworks": "ADMobGenSDK/Classes/*.framework",
-  "vendored_libraries": "ADMobGenSDK/Classes/*.a",
   "dependencies": {
     "ADMobGenAdapter": [
 

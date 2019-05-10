@@ -18,6 +18,12 @@
  */
 @property (nonatomic, weak) id<ADMobGenBannerViewDelegate> delegate;
 
+/*
+ viewController ForPresentingModalView
+ 详解：[必选]开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
+ */
+@property (nonatomic, weak) UIViewController *controller;
+
 - (id)new NS_UNAVAILABLE;
 - (id)init NS_UNAVAILABLE;
 /*
@@ -32,6 +38,14 @@
  @param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
  */
 - (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex NS_DESIGNATED_INITIALIZER;
+
+/*
+ 初始化bannerView
+ @param size 期望的banner广告尺寸比例，默认为640:100
+ @param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+ @param gdtBanner 是否为广点通2.0，默认为NO不支持广点通2.0
+ */
+- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner NS_UNAVAILABLE;
 
 
 /**

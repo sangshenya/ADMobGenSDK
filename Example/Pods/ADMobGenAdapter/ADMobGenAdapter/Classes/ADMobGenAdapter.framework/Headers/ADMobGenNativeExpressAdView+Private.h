@@ -13,7 +13,9 @@
 
 @property (nonatomic, strong, readonly) UIView<ADMobGenNativeExpressProtocol> *adView;
 
-- (instancetype)initWithAdView:(UIView<ADMobGenNativeExpressProtocol> *)adView;
+- (instancetype)initWithAdView:(UIView<ADMobGenNativeExpressProtocol> *)adView DEPRECATED_MSG_ATTRIBUTE("Donot has webViewType");
+
+- (instancetype)initWithAdView:(UIView<ADMobGenNativeExpressProtocol> *)adView webViewType:(BOOL)webViewType;
 
 - (void)setClickTracked;
 - (BOOL)getClickTracked;

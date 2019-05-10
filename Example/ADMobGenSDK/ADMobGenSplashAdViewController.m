@@ -44,7 +44,7 @@
     _splashAd.backgroundColor = [UIColor redColor];
     _splashAd.delegate = self;
     
-    // 3 设置底部logo视图, 高度不能超过屏幕的25%, 建议: 开屏的广告图片默认640 / 960比例（iPhone X是特例）
+    // 3 设置底部logo视图, 高度不能超过屏幕的25%, 建议: 开屏的广告图片默认640 / 960比例（刘海屏是特例）
     CGFloat bottomViewHeight = [UIScreen mainScreen].bounds.size.height * 0.25;
     UIView *view = [[UIView alloc] init];
     view.backgroundColor = [UIColor purpleColor];

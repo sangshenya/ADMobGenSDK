@@ -59,8 +59,8 @@
         [view removeFromSuperview];
     }
     UILabel *labTitle = [[UILabel alloc]init];
-    labTitle.font = [UIFont PingFangMediumFont:18];
-    labTitle.textColor = [UIColor colorWithHexString:@"#535353"];
+    labTitle.font = [UIFont admg_PingFangMediumFont:18];
+    labTitle.textColor = [UIColor admg_colorWithHexString:@"#535353"];
     labTitle.tag = 999;
     labTitle.text = [array objectAtIndex:indexPath.row];
     [cell.contentView addSubview:labTitle];

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedInstance;
 
 @property (nonatomic, readonly, copy) NSString *admg_imsi; ///< 运营商
-@property (nonatomic, readonly, assign) double admg_machineId; ///< machineId, iOS
+@property (nonatomic, readonly, assign) int64_t admg_machineId; ///< machineId, iOS
 @property (nonatomic, readonly, assign) int admg_machineType; ///< 机器类型, iOS
 @property (nonatomic, readonly, copy) NSString *admg_ua; ///< 浏览器的user-agent
 @property (nonatomic, readonly, copy) NSString *admg_networkType; ///< 网络类型
@@ -43,6 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, copy) NSString *admg_ssid; ///< wifi名称
 @property (nonatomic, readonly, assign) int admg_cpuType; ///< cpu类型
 @property (nonatomic, readonly, assign) int admg_cpuSubtype; ///< cpu子类型
+@property (nonatomic, readonly, copy) NSString *admg_bt;//蓝牙信息加密字符串 （与mac加密方式相同）(iOS 只能获取到设备名称，设备名称为本机的设备名称)
+@property (nonatomic, readonly, copy) NSString *admg_wordSize;//字号
 
 @end
 

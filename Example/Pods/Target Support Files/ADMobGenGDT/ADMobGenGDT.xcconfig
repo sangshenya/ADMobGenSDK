@@ -1,7 +1,8 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenGDT
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ADMobGenAdapter/ADMobGenAdapter/Classes" "${PODS_ROOT}/ADMobGenFoundation/ADMobGenFoundation/Classes" "${PODS_ROOT}/ADMobGenGDT/ADMobGenGDT/Classes"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"xml2" -l"z" -framework "AdSupport" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreMotion" -framework "CoreTelephony" -framework "EventKit" -framework "EventKitUI" -framework "MediaPlayer" -framework "MessageUI" -framework "QuartzCore" -framework "SafariServices" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -framework "WebKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"xml2" -l"z" -framework "AdSupport" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreMotion" -framework "CoreTelephony" -framework "EventKit" -framework "EventKitUI" -framework "MediaPlayer" -framework "MessageUI" -framework "QuartzCore" -framework "SafariServices" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -framework "WebKit" -weak_framework "WebKit"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}

@@ -26,8 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIView *actionView;
 
-@property (nonatomic, strong) UIButton *closeButton;
-
 @end
 
 @protocol ADMobGenNativeExpressWebViewDelegate <NSObject>

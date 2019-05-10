@@ -1,28 +1,33 @@
 PODS:
-  - ADMobGenAdapter (1.3.3):
+  - ADMobGenAdapter (1.4.0):
     - ADMobGenFoundation
-  - ADMobGenDeviceInfo (0.1.2):
+  - ADMobGenDeviceInfo (0.1.3):
     - ADMobGenFoundation
     - ADMobGenLocationManager
     - ADMobGenNetwork
-  - ADMobGenFoundation (0.5.1)
-  - ADMobGenGDT (4.8.7.2):
+  - ADMobGenFoundation (0.6.0)
+  - ADMobGenGDT (4.8.10):
     - ADMobGenAdapter
+    - ADMobGenFoundation
+    - GDTMobSDK (= 4.8.10)
   - ADMobGenLocationManager (0.1.1)
-  - ADMobGenNetwork (0.3.4)
+  - ADMobGenNetwork (0.4.0)
   - ADMobGenSDK (1.5.2.2):
     - ADMobGenAdapter
     - ADMobGenNetwork
-  - ADMobGenSDKWM (0.8.6):
+  - ADMobGenSDKWM (0.8.7):
     - ADMobGenAdapter
     - ADMobGenWMSDK
   - ADMobGenWMSDK (1.9.8.5)
-  - ADMobileAd (2.6.0):
+  - ADMobileAd (2.7.0):
     - ADMobGenAdapter
     - ADMobGenDeviceInfo
     - ADMobGenFoundation
     - ADMobGenNetwork
-  - MJRefresh (3.1.16)
+  - GDTMobSDK (4.8.10):
+    - GDTMobSDK/GDTMobSDK (= 4.8.10)
+  - GDTMobSDK/GDTMobSDK (4.8.10)
+  - MJRefresh (3.1.17)
 
 DEPENDENCIES:
   - ADMobGenGDT
@@ -42,6 +47,7 @@ SPEC REPOS:
     - ADMobGenSDKWM
     - ADMobGenWMSDK
     - ADMobileAd
+    - GDTMobSDK
     - MJRefresh
 
 EXTERNAL SOURCES:
@@ -49,17 +55,18 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ADMobGenAdapter: 4bf77243b6615decc065ef7e2c1fb6bd1b79a12e
-  ADMobGenDeviceInfo: b95b1e537f77438121bbbe05ff55b24a982caf10
-  ADMobGenFoundation: a1e2299aaf16982b3485438a84d462b69dcc4136
-  ADMobGenGDT: d808b3f0e0916105231c52c58d5b5375c0bdda45
+  ADMobGenAdapter: 30836a4edefbd6695b63d7d62d847e0fa35e2cd8
+  ADMobGenDeviceInfo: be07318f8fd92d450e60135a8223e40758bffe15
+  ADMobGenFoundation: db1b9ae67a3b3a0d26ce58bed4bf22757ab7928d
+  ADMobGenGDT: 5a45d8d35127f262f7afd1b7e155d0193da5976c
   ADMobGenLocationManager: f2b0396d8c1c26e9490725150e3def622f74ccae
-  ADMobGenNetwork: 6cf16f095a75b4f2422d526c56904b22e4b144b1
-  ADMobGenSDK: 683e0323750cdbbddc241d12dd9d739a8634543a
-  ADMobGenSDKWM: a124c2f9f6d6c823343d0ab44d2d160360f2e9f5
+  ADMobGenNetwork: 80f3dab815a51a6a3449a60e29a0bc336a23baf9
+  ADMobGenSDK: bfb50a82babb8e992dd5d2a0b0f21d4a94799570
+  ADMobGenSDKWM: 7ad6d14ef1dcc7796053fcfec99e285042fa6c47
   ADMobGenWMSDK: a1a842b13bfd1c7be8bb3d82b27f3d660665e540
-  ADMobileAd: 501dd888bd526cff2f8995e61f644e613519bf11
-  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  ADMobileAd: a37b6852839879ca3e8d65ec4615a9302012b918
+  GDTMobSDK: 8076424c26984f9e3e79bb74beab354f00d630c5
+  MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
 
 PODFILE CHECKSUM: 595f9c418975f7d1ce66dca51bbe69e07779c445
 

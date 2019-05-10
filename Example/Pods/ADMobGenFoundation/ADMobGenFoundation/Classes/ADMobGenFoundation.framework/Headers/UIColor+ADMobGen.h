@@ -22,20 +22,20 @@ typedef NS_ENUM(NSInteger, ADMGGradientType) {
  @param image   图片
  @param newSize 背景的大小
  */
-+ (UIColor *)getColorWithImage:(UIImage *)image withNewSize:(CGSize)newSize;
++ (UIColor *)admg_getColorWithImage:(UIImage *)image withNewSize:(CGSize)newSize;
 
 /**
  十六进制数转颜色
  @param hexString 十六进制数
  */
-+ (nullable UIColor *)colorWithHexString:(NSString *)hexString;
++ (nullable UIColor *)admg_colorWithHexString:(NSString *)hexString;
 
 /**
  十六进制数转颜色
  @param hexString      十六进制数
  @param alphaComponent 透明度 0~1
  */
-+ (nullable UIColor *)colorWithHexString:(NSString *)hexString alphaComponent:(CGFloat)alphaComponent;
++ (nullable UIColor *)admg_colorWithHexString:(NSString *)hexString alphaComponent:(CGFloat)alphaComponent;
 
 /**
  *  根据给定的颜色，生成渐变色的颜色
@@ -44,7 +44,7 @@ typedef NS_ENUM(NSInteger, ADMGGradientType) {
  *  @param percents       渐变颜色的占比数组
  *  @param gradientType   渐变色的类型
  */
-+ (UIColor *)getGradientWithSize:(CGSize)size gradientColors:(NSArray *)colors percentage:(NSArray *)percents gradientType:(ADMGGradientType)gradientType;
++ (UIColor *)admg_getGradientWithSize:(CGSize)size gradientColors:(NSArray *)colors percentage:(NSArray *)percents gradientType:(ADMGGradientType)gradientType;
 
 @end
 

@@ -72,12 +72,12 @@
     // 2 设置默认启动图(一般设置启动图的平铺颜色为背景颜色，使得视觉效果更加平滑)
     UIImage *image = [UIImage imageNamed:@"750x1334.png"];
     NSLog(@"hhhhhhh%@",image);
-    UIColor *color = [UIColor getColorWithImage:image withNewSize:[UIScreen mainScreen].bounds.size];
+    UIColor *color = [UIColor admg_getColorWithImage:image withNewSize:[UIScreen mainScreen].bounds.size];
     _splashAd.backgroundColor = color;
     
     _splashAd.delegate = self;
     
-    // 3 设置底部logo视图, 高度不能超过屏幕的25%, 除iPhoneX以外建议: 开屏的广告图片默认640 / 960比例，如果是iPhoneX注意bottomViewHeight不能超过屏幕的25%
+    // 3 设置底部logo视图, 高度不能超过屏幕的25%, 除刘海屏以外建议: 开屏的广告图片默认640 / 960比例，如果是刘海屏注意bottomViewHeight不能超过屏幕的25%
     CGFloat bottomViewHeight;
     if (kIPhoneX) {
         bottomViewHeight = [UIScreen mainScreen].bounds.size.height * 0.25;

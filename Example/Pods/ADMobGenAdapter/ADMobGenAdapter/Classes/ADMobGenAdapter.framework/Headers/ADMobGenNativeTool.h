@@ -26,7 +26,7 @@ typedef NS_ENUM(NSUInteger, ADMobGenNativeToolType) {
     ADMobGenNativeToolTypeVideoNormal,// 视频广告默认类型
     ADMobGenNativeToolTypeVideoPic,// 视频广告无文字纯图
     ADMobGenNativeToolTypeVideoCenterPic,// 视频广告上文下图
-    
+    ADMobGenNativeToolTypeThreePic,//三图
 };
 
 typedef NS_ENUM(NSUInteger, ADMobGenNativeToolPlatform) {
@@ -35,11 +35,19 @@ typedef NS_ENUM(NSUInteger, ADMobGenNativeToolPlatform) {
     ADMobGenNativeToolPlatformBaidu,//百度
     ADMobGenNativeToolPlatformADMob,//ADMob
     ADMobGenNativeToolPlatformNone,//之前版本
+    ADMobGenNativeToolPlatformInmobi,
+    ADMobGenNativeToolPlatformMTG,
 };
 
 @interface ADMobGenNativeTool : NSObject
 
 + (NSString *)htmlStringWithMainImageurl:(NSString *)imageurl
+                                   title:(NSString *)title
+                                subTitle:(NSString *)subTitle
+                                  adType:(ADMobGenNativeToolType)adType
+                                platform:(ADMobGenNativeToolPlatform)platform;
+
++ (NSString *)htmlStringWithMainImageurlArray:(NSArray *)imageUrlArray
                                    title:(NSString *)title
                                 subTitle:(NSString *)subTitle
                                   adType:(ADMobGenNativeToolType)adType

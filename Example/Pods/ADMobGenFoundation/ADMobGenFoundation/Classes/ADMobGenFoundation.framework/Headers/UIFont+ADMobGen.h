@@ -11,11 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIFont (ADMobGen)
 
-+ (UIFont *)PingFangRegularFont:(CGFloat)size;
++ (UIFont *)admg_PingFangRegularFont:(CGFloat)size;
 
-+ (UIFont *)PingFangLightFont:(CGFloat)size;
++ (UIFont *)admg_PingFangLightFont:(CGFloat)size;
 
-+ (UIFont *)PingFangMediumFont:(CGFloat)size;
++ (UIFont *)admg_PingFangMediumFont:(CGFloat)size;
 
 @end
 

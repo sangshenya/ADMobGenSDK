@@ -59,12 +59,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ADMobileAd-ADMobileAdBundles.xcscheme</key>
+		<key>ADMobileAd.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ADMobileAd.xcscheme</key>
+		<key>GDTMobSDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

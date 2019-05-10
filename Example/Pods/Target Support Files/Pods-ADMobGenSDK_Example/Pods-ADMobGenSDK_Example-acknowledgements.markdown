@@ -231,6 +231,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## GDTMobSDK
+
+Copyright 2017 Tencent Inc. All Rights Reserved.
+
 ## MJRefresh
 
 Copyright (c) 2013-2015 MJRefresh (https://github.com/CoderMJLee/MJRefresh)

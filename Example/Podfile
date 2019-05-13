@@ -12,7 +12,7 @@ target 'ADMobGenSDK_Example' do
 #  pod 'ADMobGenMCAd'
 
   pod 'ADMobGenGDT'
-  
+
   pod 'ADMobileAd'
 
 #  pod 'ADMobGenMTG'

@@ -48,6 +48,11 @@
 //     NSDictionary *dict = [ADMobGenSDKConfig performSelector:select];
 //     NSLog(@"ADMobGenSDKConfig:%@",dict);
 //     }
+    // 状态栏为白色
+//    [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleLightContent;
+    
+    // 状态栏为黑色
+//    [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleDefault;
     
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

@@ -22,6 +22,9 @@
 /// 包名
 @property (nonatomic, readonly) NSString *admg_appBundleId;
 
+//  app名称
+@property (nonatomic, readonly) NSString *admg_appBundleName;
+
 /// "Documents"在沙盒中文件夹路径
 @property (nonatomic, readonly) NSURL *admg_documentsURL;
 @property (nonatomic, readonly) NSString *admg_documentsPath;

@@ -10,9 +10,15 @@
 
 @interface NSObject (ADMobGen)
 
++ (BOOL)admg_swizzleInstanceMethod:(SEL)originalSel with:(SEL)newSel;
+
++ (BOOL)admg_swizzleClassMethod:(SEL)originalSel with:(SEL)newSel;
+
 - (NSDictionary *)admg_toDic;
 
 - (id)admg_PerformSelector:(SEL)action withObject:(id)object, ...NS_REQUIRES_NIL_TERMINATION;
+
+- (NSData *)admg_serializationToJsonDataWithError:(NSError **)error;
 
 @end
 

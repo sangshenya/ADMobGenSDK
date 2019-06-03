@@ -17,6 +17,8 @@ extern NSString* const GDTNativeAdDataKeyImgUrl;
 extern NSString* const GDTNativeAdDataKeyAppRating;
 extern NSString* const GDTNativeAdDataKeyAppPrice;
 extern NSString* const GDTNativeAdDataKeyImgList;
+extern NSString* const GDTNativeAdDataKeyImgWidth;
+extern NSString* const GDTNativeAdDataKeyImgHeight;
 
 @interface GDTNativeAdData : NSObject
 
@@ -31,6 +33,8 @@ extern NSString* const GDTNativeAdDataKeyImgList;
  *          5. GDTNativeAdDataKeyAppRating  应用类广告的星级
  *          6. GDTNativeAdDataKeyAppPrice   应用类广告的价格
  *          7. GDTNativeAdDataKeyImgList    三小图广告的图片集合
+ *          8. GDTNativeAdDataKeyImgWidth   素材宽度
+ *          9. GDTNativeAdDataKeyImgHeight  素材高度
  */
 @property (nonatomic, retain, readonly) NSDictionary *properties;
 /*

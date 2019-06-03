@@ -67,10 +67,46 @@
 
 - (void)admg_splashAd:(ADMobGenSplashAd *)splash failToPresentScreen:(NSError *)error{
     _splashAd = nil;
+    
+    UIViewController *vc = [self getCurrentVC];
+    Class classes = NSClassFromString(@"GDTSplashViewController");
+    if ([vc isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *tVC = (UINavigationController *)vc;
+        NSLog(@"tVC %@ %@",tVC,tVC.visibleViewController);
+        if ([tVC.visibleViewController isKindOfClass:[classes class]]) {
+            [tVC.visibleViewController dismissViewControllerAnimated:YES completion:nil];
+        }
+    }
+    
 }
 
 - (void)admg_splashAdClosed:(ADMobGenSplashAd *)splashAd{
     _splashAd = nil;
+}
+
+- (UIViewController *)getCurrentVC
+{
+    UIViewController *result = nil;
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal)
+    {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(UIWindow * tmpWin in windows)
+        {
+            if (tmpWin.windowLevel == UIWindowLevelNormal)
+            {
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+        result = nextResponder;
+    else
+        result = window.rootViewController;
+    return result;
 }
 
 @end

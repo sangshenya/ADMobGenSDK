@@ -26,6 +26,16 @@
 @property (nonatomic, copy, readonly) NSString *imageUrl;
 
 /**
+ 素材宽度
+ */
+@property (nonatomic, readonly) int imageWidth;
+
+/**
+ 素材高度
+ */
+@property (nonatomic, readonly) int imageHeight;
+
+/**
  应用类广告App 图标Url
  */
 @property (nonatomic, copy, readonly) NSString *iconUrl;

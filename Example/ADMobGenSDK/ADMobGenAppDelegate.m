@@ -11,6 +11,7 @@
 #import <ADMobGenSDK/ADMobGenSplashAd.h>
 #import "ADMobGenViewController.h"
 #import <ADMobGenFoundation/UIColor+ADMobGen.h>
+#import <GDTMobSDK/GDTSDKConfig.h>
 
 @interface ADMobGenAppDelegate ()<ADMobGenSplashAdDelegate>{
     ADMobGenSplashAd *_splashAd;
@@ -25,8 +26,11 @@
     //[ADMobGenSDKConfig setDebugMode:@(YES)];
     //日志等级输出
     [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelError];
-    [ADMobGenSDKConfig initWithAppId:@"2938412" completionBlock:^(NSError *error) {
-        
+    [ADMobGenSDKConfig initWithAppId:@"2752453" completionBlock:^(NSError *error) {
+        id obj = [ADMobGenSDKConfig performSelector:@selector(sharedConfig)];
+        id sdkInfo = [obj valueForKey:@"sdkInfo"];
+        id display = [sdkInfo valueForKey:@"display"];
+        NSLog(@"obj:%@",display);
         if (error) {
             // SDK启动失败
         }
@@ -43,11 +47,13 @@
     NSString *sdkVersion = [ADMobGenSDKConfig getSDKVersion];
     NSLog(@"ADMobGenSDKVersion:%@",sdkVersion);
     
-//     SEL select = NSSelectorFromString(@"getAllSDKVersion");
-//     if ([ADMobGenSDKConfig respondsToSelector:select]) {
-//     NSDictionary *dict = [ADMobGenSDKConfig performSelector:select];
-//     NSLog(@"ADMobGenSDKConfig:%@",dict);
-//     }
+     SEL select = NSSelectorFromString(@"getAllSDKVersion");
+     if ([ADMobGenSDKConfig respondsToSelector:select]) {
+     NSDictionary *dict = [ADMobGenSDKConfig performSelector:select];
+     NSLog(@"ADMobGenSDKConfig:%@",dict);
+     }
+    
+    NSLog(@"gdt:%@",[GDTSDKConfig sdkVersion]);
     // 状态栏为白色
 //    [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleLightContent;
     

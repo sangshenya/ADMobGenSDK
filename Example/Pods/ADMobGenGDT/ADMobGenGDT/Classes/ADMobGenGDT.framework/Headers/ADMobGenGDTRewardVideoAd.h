@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithConfig:(ADMobGenRewardvodConfig *)config;
 
+- (BOOL)rewardvodAdIsReady;
+
+- (BOOL)rewardvodAdIsValid;
+
 - (BOOL)showFromRootViewController;
 
 @end

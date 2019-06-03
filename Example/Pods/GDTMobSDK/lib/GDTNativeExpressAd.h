@@ -123,6 +123,11 @@
 @property (nonatomic, assign) BOOL videoMuted;
 
 /**
+ 请求视频的时长上限，有效值范围为[5,30]。
+ */
+@property (nonatomic) NSInteger maxVideoDuration;
+
+/**
  *  构造方法
  *  详解：appId - 媒体 ID
  *       placementId - 广告位 ID

@@ -28,6 +28,9 @@ typedef NS_ENUM(NSUInteger, ADMobGenNativeAdPlatform) {
     ADMobGenNativeAdPlatformWM,//头条
     ADMobGenNativeAdPlatformBaidu,//百度
     ADMobGenNativeAdPlatformADMob,//ADMob
+    ADMobGenNativeAdPlatformInmobi,//inmobi
+    ADMobGenNativeAdPlatformMTG,//mobvsita
+    ADMobGenNativeAdPlatformGoogle,//谷歌
     ADMobGenNativeAdPlatformNone,//之前版本
 };
 

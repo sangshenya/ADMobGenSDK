@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NSString * KADMGDateString(NSDate *date, NSString *format);
+
 @interface ADMobGenSDKUtils : NSObject
 
 /**
@@ -20,7 +22,7 @@
  */
 + (NSString *)md5:(NSString *)string;
 
-/**
+/**NSString * KADMGDateString(NSDate *date, NSString *format);
  是否含有中文
  */
 + (BOOL)containsChinese:(NSString *)string;

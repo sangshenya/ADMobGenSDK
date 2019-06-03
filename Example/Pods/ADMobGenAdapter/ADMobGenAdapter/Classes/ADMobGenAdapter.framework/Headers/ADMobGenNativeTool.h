@@ -34,9 +34,10 @@ typedef NS_ENUM(NSUInteger, ADMobGenNativeToolPlatform) {
     ADMobGenNativeToolPlatformWM,//头条
     ADMobGenNativeToolPlatformBaidu,//百度
     ADMobGenNativeToolPlatformADMob,//ADMob
+    ADMobGenNativeToolPlatformInmobi,//inmobi
+    ADMobGenNativeToolPlatformMTG,//mobvsita
+    ADMobGenNativeToolPlatformGoogle,//谷歌
     ADMobGenNativeToolPlatformNone,//之前版本
-    ADMobGenNativeToolPlatformInmobi,
-    ADMobGenNativeToolPlatformMTG,
 };
 
 @interface ADMobGenNativeTool : NSObject

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "GDTUnifiedNativeAdDataObject.h"
 #import "GDTUnifiedNativeAdView.h"
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol GDTUnifiedNativeAdDelegate <NSObject>
 
@@ -23,6 +24,11 @@
 
 @interface GDTUnifiedNativeAd : NSObject
 @property (nonatomic, weak) id<GDTUnifiedNativeAdDelegate> delegate;
+
+/**
+ 请求视频的最大时长，有效值范围为[5,30]。
+ */
+@property (nonatomic) NSInteger maxVideoDuration;
 
 /**
  构造方法
@@ -45,3 +51,4 @@
  */
 - (void)loadAdWithAdCount:(int)adCount;
 @end
+NS_ASSUME_NONNULL_END

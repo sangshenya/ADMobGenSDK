@@ -44,21 +44,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ADMobGenSDKWM-BUAdSDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ADMobGenSDKWM.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ADMobGenWMSDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>ADMobileAd.xcscheme</key>
 		<dict>
 			<key>isShown</key>

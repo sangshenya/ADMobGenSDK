@@ -37,6 +37,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loadVideoAdIndex:(NSInteger)index;
 
 /**
+ 激励视频广告是否准备好
+ */
+- (BOOL)rewardvodAdIsReady;
+
+/**
+ 激励视频广告物料是否有效
+ */
+- (BOOL)rewardvodAdIsValid;
+
+/**
  展示激励视频广告
  */
 - (void)showRewardvodAd;

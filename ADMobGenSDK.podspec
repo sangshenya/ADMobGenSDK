@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
     
     s.dependency 'ADMobGenAdapter'
     s.dependency 'ADMobGenNetwork'
+    s.dependency 'ADMobGenDeviceInfo'
     
     # s.resource_bundles = {
     #   'ADMobGenSDK' => ['ADMobGenSDK/Assets/*.png']

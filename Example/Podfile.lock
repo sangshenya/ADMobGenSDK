@@ -12,8 +12,9 @@ PODS:
     - GDTMobSDK (= 4.10.2)
   - ADMobGenLocationManager (0.1.1)
   - ADMobGenNetwork (0.5.2)
-  - ADMobGenSDK (1.5.4):
+  - ADMobGenSDK (1.5.5):
     - ADMobGenAdapter
+    - ADMobGenDeviceInfo
     - ADMobGenNetwork
   - ADMobileAd (2.7.0):
     - ADMobGenAdapter
@@ -54,7 +55,7 @@ SPEC CHECKSUMS:
   ADMobGenGDT: 97fe2e9725ad511da222a3dd67609c3249923010
   ADMobGenLocationManager: f2b0396d8c1c26e9490725150e3def622f74ccae
   ADMobGenNetwork: 5a2b334b492d311df0d8b8776fbbb41e6982805f
-  ADMobGenSDK: fc985cd1604106e8cb507b3c28985939843d0759
+  ADMobGenSDK: 7b58d06a010df6026ece4e55d0f5075fa1d91738
   ADMobileAd: a37b6852839879ca3e8d65ec4615a9302012b918
   GDTMobSDK: 6fde44a4f80c36051d5d879df8bb280034c31431
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf

@@ -27,10 +27,6 @@
     //日志等级输出
     [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelError];
     [ADMobGenSDKConfig initWithAppId:@"2752453" completionBlock:^(NSError *error) {
-        id obj = [ADMobGenSDKConfig performSelector:@selector(sharedConfig)];
-        id sdkInfo = [obj valueForKey:@"sdkInfo"];
-        id display = [sdkInfo valueForKey:@"display"];
-        NSLog(@"obj:%@",display);
         if (error) {
             // SDK启动失败
         }

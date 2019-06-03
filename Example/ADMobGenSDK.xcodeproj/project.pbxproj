@@ -31,7 +31,6 @@
 		D719ADB2C1FF58EDDA365AEA /* Pods_ADMobGenSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27004214C4B913B57E481617 /* Pods_ADMobGenSDK_Tests.framework */; };
 		E881F60921100B810031A5AC /* ADMobGenExpressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */; };
 		E881F60A21100B810031A5AC /* ADMobGenExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E881F60721100B810031A5AC /* ADMobGenExpressViewController.m */; };
-		E881F60C211014C00031A5AC /* YDAdBrowserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E881F60B211014C00031A5AC /* YDAdBrowserController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +84,6 @@
 		E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADMobGenExpressViewController.xib; sourceTree = "<group>"; };
 		E881F60721100B810031A5AC /* ADMobGenExpressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenExpressViewController.m; sourceTree = "<group>"; };
 		E881F60821100B810031A5AC /* ADMobGenExpressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenExpressViewController.h; sourceTree = "<group>"; };
-		E881F60B211014C00031A5AC /* YDAdBrowserController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YDAdBrowserController.xib; sourceTree = "<group>"; };
 		E97B0784D58FB16987241439 /* Pods-ADMobGenSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADMobGenSDK_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,7 +178,6 @@
 				E881F60721100B810031A5AC /* ADMobGenExpressViewController.m */,
 				E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				E881F60B211014C00031A5AC /* YDAdBrowserController.xib */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -312,7 +309,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E881F60C211014C00031A5AC /* YDAdBrowserController.xib in Resources */,
 				BF10A092219BF3B100FFA72E /* ADMob_Logo.png in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				E881F60921100B810031A5AC /* ADMobGenExpressViewController.xib in Resources */,

@@ -57,6 +57,16 @@
     [_rewardvodAd loadVideoAd];
 }
 
+- (void)showRewardAd{
+    if (![_rewardvodAd rewardvodAdIsValid]) {
+        NSLog(@"物料料已过期，请重新加载");
+        return;
+    }
+    if ([_rewardvodAd rewardvodAdIsReady]) { //广告已经准备好了了
+        [_rewardvodAd showRewardvodAd];
+    }
+}
+
 
 #pragma mark - ADMobGeRewardvodDelegate
 /**
@@ -66,7 +76,7 @@
  */
 - (void)admg_rewardvodAdLoadSuccessCallBack:(ADMobGenRewardvodAd *)rewardvodAd{
     //3、展示激励视频广告，可在广告数据加载成功回调中或者视频数据下载成功回调，强烈建议在本回调中展示广告，否则会出现
-    [_rewardvodAd showRewardvodAd];
+    [self showRewardAd];
     _rewardvodButton.selected = NO;
 }
 /**

@@ -26,7 +26,7 @@
     //[ADMobGenSDKConfig setDebugMode:@(YES)];
     //日志等级输出
     [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelError];
-    [ADMobGenSDKConfig initWithAppId:@"2752453" completionBlock:^(NSError *error) {
+    [ADMobGenSDKConfig initWithAppId:@"2938412" completionBlock:^(NSError *error) {
         if (error) {
             // SDK启动失败
         }

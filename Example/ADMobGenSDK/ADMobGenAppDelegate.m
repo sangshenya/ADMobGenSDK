@@ -13,6 +13,7 @@
 #import <ADMobGenFoundation/UIColor+ADMobGen.h>
 #import <GDTMobSDK/GDTSDKConfig.h>
 
+
 @interface ADMobGenAppDelegate ()<ADMobGenSplashAdDelegate>{
     ADMobGenSplashAd *_splashAd;
 }
@@ -26,7 +27,7 @@
     //[ADMobGenSDKConfig setDebugMode:@(YES)];
     //日志等级输出
     [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelError];
-    [ADMobGenSDKConfig initWithAppId:@"2938412" completionBlock:^(NSError *error) {
+    [ADMobGenSDKConfig initWithAppId:@"2395583" completionBlock:^(NSError *error) {
         if (error) {
             // SDK启动失败
         }
@@ -49,7 +50,6 @@
      NSLog(@"ADMobGenSDKConfig:%@",dict);
      }
     
-    NSLog(@"gdt:%@",[GDTSDKConfig sdkVersion]);
     // 状态栏为白色
 //    [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleLightContent;
     
@@ -89,8 +89,11 @@
     if (kIPhoneX) {
         bottomViewHeight = [UIScreen mainScreen].bounds.size.height * 0.25;
     } else {
-        bottomViewHeight = [UIScreen mainScreen].bounds.size.height - [UIScreen mainScreen].bounds.size.width * (960 / 640.0);
+        bottomViewHeight = [UIScreen mainScreen].bounds.size.height - ([UIScreen mainScreen].bounds.size.width * 960 / 640.0);
     }
+//
+    NSLog(@"%f",bottomViewHeight);
+//    bottomViewHeight = 105;
     
     UIView *bottomView = [[UIView alloc] init];
     bottomView.backgroundColor = [UIColor whiteColor];

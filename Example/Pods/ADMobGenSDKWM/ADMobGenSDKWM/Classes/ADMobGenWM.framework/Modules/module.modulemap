@@ -1,0 +1,6 @@
+framework module ADMobGenWM {
+  umbrella header "ADMobGenWM-umbrella.h"
+
+  export *
+  module * { export * }
+}

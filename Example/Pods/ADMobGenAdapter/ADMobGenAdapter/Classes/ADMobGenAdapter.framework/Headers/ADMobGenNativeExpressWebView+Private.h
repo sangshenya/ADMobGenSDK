@@ -18,11 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly) ADMobGenNativeAdData *adData;
 @property (nonatomic, assign, readonly) CGSize normalSize;
-@property (nonatomic, assign, readonly) ADMobGenNativeToolPlatform platform;
-@property (nonatomic, assign, readonly) ADMobGenNativeToolType type;
+@property (nonatomic, assign, readonly) ADMobGenNativeAdPlatform platform;
+@property (nonatomic, assign, readonly) ADMobGenNativeAdType type;
 @property (nonatomic, assign, readonly) BOOL hideCloseButton;
 
-- (instancetype)initWithAdData:(ADMobGenNativeAdData *)adData expectSize:(CGSize)expectSize adType:(ADMobGenNativeToolType)adType adPlatform:(ADMobGenNativeToolPlatform)platform hide:(BOOL)hideCloseButton;
+- (instancetype)initWithAdData:(ADMobGenNativeAdData *)adData expectSize:(CGSize)expectSize adType:(ADMobGenNativeAdType)adType adPlatform:(ADMobGenNativeAdPlatform)platform hide:(BOOL)hideCloseButton;
 
 @property (nonatomic, strong) UIView *actionView;
 

@@ -8,31 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
-    ADMobGenNativeAdTypeNormal = 0,//上图下文，默认为图文，图片尺寸为16：9
-    ADMobGenNativeAdTypePic,//纯图片16：9
-    ADMobGenNativeAdTypeRightPic,//右图左文3：2
-    ADMobGenNativeAdTypeLeftPic,//左图右文3：2
-    ADMobGenNativeAdTypeCenterPic,//上文下图16：9
-    ADMobGenNativeAdTypeVerticalPic,//竖版纯图3：2
-    ADMobGenNativeAdTypeVideoNormal,// 视频广告默认类型
-    ADMobGenNativeAdTypeVideoPic,// 视频广告无文字纯图
-    ADMobGenNativeAdTypeVideoCenterPic,// 视频广告上文下图
-    ADMobGenNativeAdTypeThreePic,//三图
-    
-};
-
-typedef NS_ENUM(NSUInteger, ADMobGenNativeAdPlatform) {
-    ADMobGenNativeAdPlatformGDT = 0,//广点通
-    ADMobGenNativeAdPlatformWM,//头条
-    ADMobGenNativeAdPlatformBaidu,//百度
-    ADMobGenNativeAdPlatformADMob,//ADMob
-    ADMobGenNativeAdPlatformInmobi,//inmobi
-    ADMobGenNativeAdPlatformMTG,//mobvsita
-    ADMobGenNativeAdPlatformGoogle,//谷歌
-    ADMobGenNativeAdPlatformNone,//之前版本
-};
+#import "ADMobGenNativeExpressCommon.h"
 
 @protocol ADMobGenNativeExpressAdCallBack;
 

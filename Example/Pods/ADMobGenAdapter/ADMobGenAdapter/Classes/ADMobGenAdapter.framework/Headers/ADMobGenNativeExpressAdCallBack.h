@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ADMobGenNativeTool.h"
+#import "ADMobGenNativeExpressCommon.h"
 
 @class ADMobGenNativeExpressAdView;
 

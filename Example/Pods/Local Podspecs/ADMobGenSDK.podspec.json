@@ -1,6 +1,6 @@
 {
   "name": "ADMobGenSDK",
-  "version": "1.5.5",
+  "version": "1.5.7",
   "summary": "A short description of ADMobGenSDK.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/sangshenya/ADMobGenSDK",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/sangshenya/ADMobGenSDK.git",
-    "tag": "1.5.5"
+    "tag": "1.5.7"
   },
   "platforms": {
     "ios": "8.0"
@@ -21,13 +21,13 @@
   "vendored_frameworks": "ADMobGenSDK/Classes/*.framework",
   "dependencies": {
     "ADMobGenAdapter": [
-
+      "1.5.5"
     ],
     "ADMobGenNetwork": [
-
+      "0.5.2"
     ],
     "ADMobGenDeviceInfo": [
-
+      "0.1.4"
     ]
   }
 }

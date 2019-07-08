@@ -392,10 +392,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenAdapter/ADMobGenBundles.bundle",
+				"${PODS_ROOT}/Bytedance-UnionAD/Bytedance-UnionAd/Frameworks/BUAdSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ADMobGenBundles.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BUAdSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -609,7 +611,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.smallrecipeapp.beauty;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ecook.ecook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -659,7 +661,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.smallrecipeapp.beauty;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ecook.ecook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

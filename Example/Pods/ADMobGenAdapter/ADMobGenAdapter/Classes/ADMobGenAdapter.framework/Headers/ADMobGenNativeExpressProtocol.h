@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ADMobGenNativeTool.h"
+#import "ADMobGenNativeExpressCommon.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,10 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (CGSize)expectSize;
 
 // 类型
-- (ADMobGenNativeToolType)adType;
+- (ADMobGenNativeAdType)adType;
 
 // 平台类型
-- (ADMobGenNativeToolPlatform)adPlatform;
+- (ADMobGenNativeAdPlatform)adPlatform;
 
 @end
 

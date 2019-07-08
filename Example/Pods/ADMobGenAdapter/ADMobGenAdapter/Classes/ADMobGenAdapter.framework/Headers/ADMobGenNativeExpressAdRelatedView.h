@@ -2,16 +2,14 @@
 //  ADMobGenNativeExpressAdRelatedView.h
 //  ADMobGenAdapter
 //
-//  Created by 陈坤 on 2019/3/20.
+//  Created by 陈坤 on 2019/6/21.
 //
 
 #import <Foundation/Foundation.h>
-#import "ADMobGenNativeTool.h"
+#import "ADMobGenNativeExpressCommon.h"
 
-//左右间隙
-#define kLeftSpace 16
-//上下间隙
 #define kTopSpace 10
+
 //文字之间的间隙
 #define kAdOrTestSpace 8
 
@@ -35,17 +33,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ADMobGenNativeExpressAdRelatedView : NSObject
 
-- (instancetype)initWithAdDes:(NSString *)adDes adTitle:(NSString *)adTitle adType:(ADMobGenNativeToolType)adType normalSize:(CGSize)normalSize;
+- (instancetype)initWithAdDes:(NSString *)adDes adTitle:(NSString *)adTitle adType:(ADMobGenNativeAdType)adType normalSize:(CGSize)normalSize;
 
 @property (nonatomic, strong) UILabel *labTitle;
 @property (nonatomic, strong) UILabel *labDes;
 @property (nonatomic, strong) UILabel *labAd;
 @property (nonatomic, strong) UIButton *closeButton;
-@property (nonatomic, strong) UIImage *closeImage;
-// 目前支持inmob、mobvsita、admobile、wm的logo获取
-+ (UIImage *)getLogoWithAdLabel:(BOOL)hasAdLabel platform:(ADMobGenNativeToolPlatform)platform;
 
 - (void)setCloseAction:(void (^)(void))closeAction;
+
+// 目前支持inmob、mobvsita、admobile、wm的logo获取
++ (UIImage *)getLogoWithAdLabel:(BOOL)hasAdLabel platform:(ADMobGenNativeAdPlatform)platform;
+
+- (CGRect)getImageViewFrame;
+
+- (CGSize)getContentSize;
 
 @end
 

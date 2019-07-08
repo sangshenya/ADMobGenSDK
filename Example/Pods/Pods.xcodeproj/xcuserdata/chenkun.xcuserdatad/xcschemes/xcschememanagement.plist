@@ -44,7 +44,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ADMobGenSDKWM.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ADMobileAd.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Bytedance-UnionAD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

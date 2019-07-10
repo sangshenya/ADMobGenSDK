@@ -81,7 +81,7 @@
         [_expressAd setNativeAdType:self.nativeAdType];//信息流样式纯图片
         
         // 4  隐藏信息流关闭按钮
-        [_expressAd closeButtonHidden:YES];
+        [_expressAd closeButtonHidden:NO];
     }
     // 5 拉取信息流模板广告
     [_expressAd load:1];

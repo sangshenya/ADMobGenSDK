@@ -12,6 +12,7 @@
 #import "ADMobGenViewController.h"
 #import <ADMobGenFoundation/UIColor+ADMobGen.h>
 #import <GDTMobSDK/GDTSDKConfig.h>
+#import <ADMobileAdSDK/ADMobileAdSDK.h>
 
 
 @interface ADMobGenAppDelegate ()<ADMobGenSplashAdDelegate>{
@@ -50,11 +51,14 @@
      NSLog(@"ADMobGenSDKConfig:%@",dict);
      }
     
+    // [ADMobileAdSDK sharedInstance].barItemTintColor = [UIColor blackColor];
+    // [ADMobileAdSDK sharedInstance].barTintColor = [UIColor whiteColor];
+    
     // 状态栏为白色
-//    [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleLightContent;
+    // [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleLightContent;
     
     // 状态栏为黑色
-//    [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleDefault;
+    // [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleDefault;
     
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

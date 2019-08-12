@@ -485,6 +485,8 @@ _splashAd = nil;
 
 ***横幅广告推荐放置在页面固定位置***
 
+<font color=#ff0000>如果已经有广点通和头条的banner广告位id，需要确认广点通的banner广告位id是否为banner2.0，头条的banner广告id是否为模版样式</font>
+
 横幅广告目前只支持640：100尺寸：
 
 ```obj-c
@@ -520,14 +522,14 @@ ADMobGenBannerAdSize600_260 = 4,//600:260(禁用)
 /*
 初始化bannerView
 @param size 期望的banner广告尺寸比例，默认为640:100
-@param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+@param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传入不同的序号
 */
 - (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex;
 
 /*
 初始化bannerView
 @param size 期望的banner广告尺寸比例，默认为640:100
-@param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+@param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传入不同的序号
 @param gdtBanner 是否为广点通2.0，默认为NO不支持广点通2.0
 */
 - (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner;
@@ -535,7 +537,7 @@ ADMobGenBannerAdSize600_260 = 4,//600:260(禁用)
 /*
 初始化bannerView
 @param size 期望的banner广告尺寸比例，默认为640:100
-@param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+@param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传入不同的序号
 @param gdtBanner 是否为广点通2.0，默认为NO不支持广点通2.0
 @param rootViewController
 */
@@ -700,7 +702,7 @@ viewControllerForPresentingModalView
 
 @param size 期望的广告大小,高度自适应
 @param nativeAdType 信息流广告类型
-@param flowIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+@param flowIndex 广告位序号，默认为0，不同的页面使用，可以传入不同的序号
 */
 
 - (id)initWithSize:(CGSize)size withNativeAdType:(ADMobGenNativeAdType)nativeAdType withFlowIndex:(NSInteger)flowIndex NS_DESIGNATED_INITIALIZER;
@@ -857,7 +859,7 @@ for (int index = 0; index < views.count; index ++) {
 
 <div STYLE="page-break-after: always;"></div>
 
-## 4.4 激励视频广告 - ADMobGenRewardvodAd
+## 4.5 激励视频广告 - ADMobGenRewardvodAd
 
 激励视频广告是一种全新的广告形式，用户可选择观看视频广告以换取有价物，例如虚拟货币、应用内物品和独家内容等等；这类广告的长度为 15-30 秒，不可跳过，且广告的结束画面会显示结束页面，引导用户进行后续动作。
 
@@ -885,7 +887,7 @@ viewControllerForPresentingModalView
 /**
 加载激励视频广告
 
-@param index 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+@param index 广告位序号，默认为0，不同的页面使用，可以传入不同的序号
 */
 - (void)loadVideoAdIndex:(NSInteger)index;
 
@@ -1013,7 +1015,7 @@ if ([_rewardvodAd rewardvodAdIsReady]) {
 
 <div STYLE="page-break-after: always;"></div>
 
-## 4.5 Draw沉浸式视频广告 - ADMobGenDrawvodAdManager
+## 4.6 Draw沉浸式视频广告 - ADMobGenDrawvodAdManager
 
 Draw沉浸式视频广告即全屏视频播放下的信息流视频广告，是在全屏feed流场景下的原生广告（目前仅支持头条）
 
@@ -1037,7 +1039,7 @@ Draw沉浸式视频广告即全屏视频播放下的信息流视频广告，是�
 /**
 加载广告
 @param count 拉取几条广告,建议区间 1~5, 超过可能无法拉取到
-@param drawvodIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+@param drawvodIndex 广告位序号，默认为0，不同的页面使用，可以传入不同的序号
 @note draw视频广告目前只支持头条
 */
 - (void)load:(int)count withDrawvodIndex:(NSInteger)drawvodIndex isCustomStyle:(BOOL)isCustomStyle;
@@ -1158,9 +1160,9 @@ drawvodAd.drawvodView.frame = [UIScreen mainScreen].bounds;
 
 `请检查是否调用信息流模版视图的contentSize方法`
 
-- Q：请求信息流模版广告时，出现信息流显示不全或者文字会重复
+- Q：请求信息流模版广告或者banner广告时，出现信息流和banner显示不全或者文字会重复
 
-`请检查是否调用信息流模版视图的render方法`
+`请检查是否调用信息流模版视图的render方法，已经调用的话可以参照demo中的WKWebView分类`
 
 - Q：pod导入有部分不是最新的库怎么办？
 

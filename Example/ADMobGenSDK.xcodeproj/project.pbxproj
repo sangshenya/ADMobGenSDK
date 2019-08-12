@@ -28,6 +28,7 @@
 		BF88CB4C21D5F60C00B2001D /* ADMobGenBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88CB4821D5F60C00B2001D /* ADMobGenBannerViewController.m */; };
 		BF88CB4D21D5F60C00B2001D /* ADMobGenSplashAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88CB4921D5F60C00B2001D /* ADMobGenSplashAdViewController.m */; };
 		BFB09C712221AC5200ECF738 /* ADMobGenRewardvodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB09C6F2221AC5200ECF738 /* ADMobGenRewardvodViewController.m */; };
+		BFBA97762301778200D37F6F /* WKWebView+ADMobGen.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBA97752301778200D37F6F /* WKWebView+ADMobGen.m */; };
 		D719ADB2C1FF58EDDA365AEA /* Pods_ADMobGenSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27004214C4B913B57E481617 /* Pods_ADMobGenSDK_Tests.framework */; };
 		E881F60921100B810031A5AC /* ADMobGenExpressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */; };
 		E881F60A21100B810031A5AC /* ADMobGenExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E881F60721100B810031A5AC /* ADMobGenExpressViewController.m */; };
@@ -79,6 +80,8 @@
 		BF88CB4B21D5F60C00B2001D /* ADMobGenSplashAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenSplashAdViewController.h; sourceTree = "<group>"; };
 		BFB09C6F2221AC5200ECF738 /* ADMobGenRewardvodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenRewardvodViewController.m; sourceTree = "<group>"; };
 		BFB09C702221AC5200ECF738 /* ADMobGenRewardvodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenRewardvodViewController.h; sourceTree = "<group>"; };
+		BFBA97742301778200D37F6F /* WKWebView+ADMobGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebView+ADMobGen.h"; sourceTree = "<group>"; };
+		BFBA97752301778200D37F6F /* WKWebView+ADMobGen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+ADMobGen.m"; sourceTree = "<group>"; };
 		C85A8E1E444DB647438B9771 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D35D1C410FAFED0905750CF0 /* Pods-ADMobGenSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADMobGenSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADMobGenSDK_Tests/Pods-ADMobGenSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADMobGenExpressViewController.xib; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				BFBA97742301778200D37F6F /* WKWebView+ADMobGen.h */,
+				BFBA97752301778200D37F6F /* WKWebView+ADMobGen.m */,
 			);
 			name = "Example for ADMobGenSDK";
 			path = ADMobGenSDK;
@@ -413,6 +418,7 @@
 			files = (
 				E881F60A21100B810031A5AC /* ADMobGenExpressViewController.m in Sources */,
 				BF88CB4C21D5F60C00B2001D /* ADMobGenBannerViewController.m in Sources */,
+				BFBA97762301778200D37F6F /* WKWebView+ADMobGen.m in Sources */,
 				BF88CB4D21D5F60C00B2001D /* ADMobGenSplashAdViewController.m in Sources */,
 				BFB09C712221AC5200ECF738 /* ADMobGenRewardvodViewController.m in Sources */,
 				6003F59E195388D20070C39A /* ADMobGenAppDelegate.m in Sources */,
@@ -611,7 +617,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.smallrecipeapp.beauty;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.xbqg.reader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -661,7 +667,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.smallrecipeapp.beauty;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.xbqg.reader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

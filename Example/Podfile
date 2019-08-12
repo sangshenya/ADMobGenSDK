@@ -12,8 +12,9 @@ target 'ADMobGenSDK_Example' do
 #  pod 'ADMobGenMCAd'
 
   pod 'ADMobGenGDT','4.10.5'
-
   pod 'ADMobileAd','2.9.2'
+  pod 'ADMobGenSDK', '1.5.8'
+  pod 'ADMobGenMTG', '5.5.2'
 
 #  pod 'ADMobGenMTG'
 
@@ -23,7 +24,7 @@ target 'ADMobGenSDK_Example' do
 
 #  pod 'ADMobGenBaiDu'
 
-  pod 'ADMobGenSDKWM','2.1.0.2'
+  
 
   pod 'MJRefresh', '~> 3.1.12'
 

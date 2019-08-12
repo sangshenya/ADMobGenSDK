@@ -18,6 +18,7 @@
 @property (nonatomic, readonly, copy) NSString *posId;
 @property (nonatomic, readonly, assign) BOOL displayType;
 @property (nonatomic, readonly, assign) BOOL trunType;
+@property (nonatomic, readonly, assign) BOOL rewardType;
 @property (nonatomic, readonly, weak) UIViewController *viewController;
 @property (nonatomic, readonly, weak) id<ADMobGenSplashAdCallBack> callback;
 
@@ -28,7 +29,7 @@
                                 posId:(NSString *)posId
                           displayType:(BOOL)displayType
                        viewController:(UIViewController *)viewController
-                             callBack:(id<ADMobGenSplashAdCallBack>)callBack DEPRECATED_MSG_ATTRIBUTE("Donot has displayType");
+                             callBack:(id<ADMobGenSplashAdCallBack>)callBack DEPRECATED_MSG_ATTRIBUTE("Donot has rewardType");
 
 + (instancetype)configWithContentView:(UIView *)contentView
                            bottomView:(UIView *)bottomView
@@ -37,6 +38,7 @@
                                 posId:(NSString *)posId
                           displayType:(BOOL)displayType
                              trunType:(BOOL)trunType
+                           rewardType:(BOOL)rewardType
                        viewController:(UIViewController *)viewController
                              callBack:(id<ADMobGenSplashAdCallBack>)callBack;
 

@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, ADMobGenNativeAdType) {
     ADMobGenNativeAdTypeVideoPic,// 视频广告无文字纯图
     ADMobGenNativeAdTypeVideoCenterPic,// 视频广告上文下图
     ADMobGenNativeAdTypeThreePic,//三图
+//    ADMobGenNativeAdTypeDoublePic,//双图双文
     
 };
 

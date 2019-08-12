@@ -29,6 +29,13 @@
 #define kAdLogoScale 0.4
 #define kLogoScale 0.72
 
+// icon
+#define kIconWidth 32
+
+// 查看详情
+#define kBottomWidth 66
+#define kBottomHeight 27
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ADMobGenNativeExpressAdRelatedView : NSObject
@@ -38,7 +45,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel *labTitle;
 @property (nonatomic, strong) UILabel *labDes;
 @property (nonatomic, strong) UILabel *labAd;
+// 双图双文中的icon图
+@property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) UIButton *closeButton;
+// 双图双文中的查看详情
+@property (nonatomic, strong) UILabel *bottomLabel;
 
 - (void)setCloseAction:(void (^)(void))closeAction;
 

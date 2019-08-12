@@ -60,6 +60,11 @@
 @property (nonatomic, readonly, assign) BOOL trunType;
 
 /**
+ 
+ */
+@property (nonatomic, readonly, assign) BOOL rewardType;
+
+/**
  隐藏关闭按钮
  */
 @property (nonatomic, readonly, assign) BOOL hiddenCloseButton;
@@ -106,6 +111,18 @@
                      expectSize:(CGSize)expectSize
                     displayType:(BOOL)displayType
                        trunType:(BOOL)trunType
+              hiddenCloseButton:(BOOL)hiddenCloseButton
+                   nativeAdType:(ADMobGenNativeAdType)nativeAdType
+                   platformType:(ADMobGenNativeAdPlatform)platformType
+                 viewController:(UIViewController *)viewController
+                       callback:(id<ADMobGenNativeExpressAdCallBack>)callback DEPRECATED_MSG_ATTRIBUTE("Donot has rewardType");
+
++ (instancetype)configWithAppId:(NSString *)appId
+                          posId:(NSString *)posId
+                     expectSize:(CGSize)expectSize
+                    displayType:(BOOL)displayType
+                       trunType:(BOOL)trunType
+                     rewardType:(BOOL)rewardType
               hiddenCloseButton:(BOOL)hiddenCloseButton
                    nativeAdType:(ADMobGenNativeAdType)nativeAdType
                    platformType:(ADMobGenNativeAdPlatform)platformType

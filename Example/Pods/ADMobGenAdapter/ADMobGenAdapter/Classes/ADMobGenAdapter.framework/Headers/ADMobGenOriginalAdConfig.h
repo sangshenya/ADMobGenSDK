@@ -33,9 +33,20 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly, assign) BOOL trunType;
 
+/**
+ 
+ */
+@property (nonatomic, readonly, assign) BOOL rewardType;
+
 + (instancetype)configWithAppId:(NSString *)appId
                           posId:(NSString *)posId
                        trunType:(BOOL)trunType
+                       callback:(id<ADMobGenOriginalCallBack>)callback DEPRECATED_MSG_ATTRIBUTE("Donot has rewardType");
+
++ (instancetype)configWithAppId:(NSString *)appId
+                          posId:(NSString *)posId
+                       trunType:(BOOL)trunType
+                     rewardType:(BOOL)rewardType
                        callback:(id<ADMobGenOriginalCallBack>)callback;
 
 @end

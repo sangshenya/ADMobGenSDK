@@ -77,6 +77,7 @@
  */
 - (void)splashAdLifeTime:(NSUInteger)time;
 
+
 @end
 
 @interface GDTSplashAd : NSObject

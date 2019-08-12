@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol GDTRewardedVideoAdDelegate;
 
@@ -35,6 +36,14 @@
  @return 是否展示成功
  */
 - (BOOL)showAdFromRootViewController:(UIViewController *)rootViewController;
+
+
+/**
+ 返回广告的eCPM，单位：分
+ 
+ @return 成功返回一个大于等于0的值，-1表示无权限或后台出现异常
+ */
+- (NSInteger)eCPM;
 
 @end
 

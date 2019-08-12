@@ -1,40 +1,40 @@
 PODS:
-  - ADMobGenAdapter (1.5.5):
+  - ADMobGenAdapter (1.6.0):
     - ADMobGenFoundation (= 0.7.2)
-  - ADMobGenDeviceInfo (0.1.4):
+  - ADMobGenDeviceInfo (0.2.0):
     - ADMobGenFoundation
     - ADMobGenLocationManager
     - ADMobGenNetwork
   - ADMobGenFoundation (0.7.2)
-  - ADMobGenGDT (4.10.3.1):
-    - ADMobGenAdapter (= 1.5.5)
+  - ADMobGenGDT (4.10.5):
+    - ADMobGenAdapter (= 1.6.0)
     - ADMobGenFoundation (= 0.7.2)
-    - GDTMobSDK (= 4.10.3)
+    - GDTMobSDK (= 4.10.5)
   - ADMobGenLocationManager (0.1.1)
   - ADMobGenNetwork (0.5.2)
-  - ADMobGenSDK (1.5.7):
-    - ADMobGenAdapter (= 1.5.5)
-    - ADMobGenDeviceInfo (= 0.1.4)
+  - ADMobGenSDK (1.5.8):
+    - ADMobGenAdapter (= 1.6.0)
+    - ADMobGenDeviceInfo (= 0.2.0)
     - ADMobGenNetwork (= 0.5.2)
-  - ADMobGenSDKWM (2.1.0.1):
-    - ADMobGenAdapter (= 1.5.5)
-    - Bytedance-UnionAD (= 2.1.0.1)
-  - ADMobileAd (2.9.1):
-    - ADMobGenAdapter (= 1.5.5)
-    - ADMobGenDeviceInfo (= 0.1.4)
+  - ADMobGenSDKWM (2.1.0.2):
+    - ADMobGenAdapter (= 1.6.0)
+    - Bytedance-UnionAD (= 2.1.0.2)
+  - ADMobileAd (2.9.2):
+    - ADMobGenAdapter (= 1.6.0)
+    - ADMobGenDeviceInfo (= 0.2.0)
     - ADMobGenFoundation (= 0.7.2)
     - ADMobGenNetwork (= 0.5.2)
-  - Bytedance-UnionAD (2.1.0.1)
-  - GDTMobSDK (4.10.3):
-    - GDTMobSDK/GDTMobSDK (= 4.10.3)
-  - GDTMobSDK/GDTMobSDK (4.10.3)
+  - Bytedance-UnionAD (2.1.0.2)
+  - GDTMobSDK (4.10.5):
+    - GDTMobSDK/GDTMobSDK (= 4.10.5)
+  - GDTMobSDK/GDTMobSDK (4.10.5)
   - MJRefresh (3.1.17)
 
 DEPENDENCIES:
-  - ADMobGenGDT
+  - ADMobGenGDT (= 4.10.5)
   - ADMobGenSDK (from `../`)
-  - ADMobGenSDKWM
-  - ADMobileAd
+  - ADMobGenSDKWM (= 2.1.0.2)
+  - ADMobileAd (= 2.9.2)
   - MJRefresh (~> 3.1.12)
 
 SPEC REPOS:
@@ -56,19 +56,19 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ADMobGenAdapter: 284c955e621a6e782634f706fa58c5d8462172fb
-  ADMobGenDeviceInfo: e3e8413d6a404dbf1f8b4f10461104b17f37f1ee
+  ADMobGenAdapter: 1e75dee9c4eccec8fb74d491ae21f8f6de4a687f
+  ADMobGenDeviceInfo: a22261d610d19d66a1cc04eec32611fc4a05ff16
   ADMobGenFoundation: de6e4f7b09df256a347878d0f0e0438c1feac94e
-  ADMobGenGDT: 0d0225161418527df8d1733e9597f35d6df670e8
+  ADMobGenGDT: 1ec188013b9119a13169b12129faac48dcf7465e
   ADMobGenLocationManager: f2b0396d8c1c26e9490725150e3def622f74ccae
   ADMobGenNetwork: 5a2b334b492d311df0d8b8776fbbb41e6982805f
-  ADMobGenSDK: 21d5232c02bc5c103313a7e6ed718f9c31c81103
-  ADMobGenSDKWM: d458030eb0c71073e845fe3e525d53a0f908df55
-  ADMobileAd: 0c0dc4b1d66e64655652a5c80fe886f751069881
-  Bytedance-UnionAD: e208406482e941f69c88670223918896c89eee41
-  GDTMobSDK: ec295ef60a69e50f4d45c2fe5435b7469ab53252
+  ADMobGenSDK: c6e3d9306441c0d6cb2f8394bdc2904cf2036556
+  ADMobGenSDKWM: 9ceb60298a0b065c27d99ceca3e433e51992229c
+  ADMobileAd: e5f58532a8f9daa3e287de7915402b4197cafb37
+  Bytedance-UnionAD: 6954b8c00b0a2d66b534a196160f0dd43f30187b
+  GDTMobSDK: 815b36af278faafd38639b78eaa633d4cd211ddd
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
 
-PODFILE CHECKSUM: 2f9f850f41561f08d6101c3fd86fa12ce31cdf27
+PODFILE CHECKSUM: b53be71a18d6d67562d22e456bde430e558747b1
 
 COCOAPODS: 1.7.2

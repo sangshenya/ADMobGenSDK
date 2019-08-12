@@ -24,6 +24,7 @@ typedef NS_ENUM(NSUInteger, ADMobGenBannerAdSize) {
 @property (nonatomic, readonly, assign) CGSize expectSize;
 @property (nonatomic, readonly, assign) BOOL displayType;
 @property (nonatomic, readonly, assign) BOOL trunType;
+@property (nonatomic, readonly, assign) BOOL rewardType;
 @property (nonatomic, readonly, assign) ADMobGenBannerAdSize bannerSize DEPRECATED_MSG_ATTRIBUTE("use expectSize");
 @property (nonatomic, readonly, weak) UIViewController *viewController;
 @property (nonatomic, readonly, weak) id<ADMobGenBannerAdCallBack> callback;
@@ -57,6 +58,16 @@ typedef NS_ENUM(NSUInteger, ADMobGenBannerAdSize) {
                           posId:(NSString *)posId
                     displayType:(BOOL)displayType
                        trunType:(BOOL)trunType
+                     expectSize:(CGSize)expectSize
+                     unifiedGDT:(BOOL)unifiedGDT
+                 viewController:(UIViewController *)viewController
+                       callback:(id<ADMobGenBannerAdCallBack>)callback DEPRECATED_MSG_ATTRIBUTE("Donot has rewardType");
+
++ (instancetype)configWithappId:(NSString *)appId
+                          posId:(NSString *)posId
+                    displayType:(BOOL)displayType
+                       trunType:(BOOL)trunType
+                     rewardType:(BOOL)rewardType
                      expectSize:(CGSize)expectSize
                      unifiedGDT:(BOOL)unifiedGDT
                  viewController:(UIViewController *)viewController

@@ -112,6 +112,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  详解：[必选]发起展示广告请求, 必须传入用于显示插播广告的UIViewController
  */
 - (void)presentAdFromRootViewController:(UIViewController *)rootViewController;
+
+/**
+ 返回广告的eCPM，单位：分
+
+ @return 成功返回一个大于等于0的值，-1表示无权限或后台出现异常
+ */
+- (NSInteger)eCPM;
+
 @end
 
 NS_ASSUME_NONNULL_END

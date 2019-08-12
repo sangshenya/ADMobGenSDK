@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'ADMobGenSDK'
-    s.version          = '1.5.7'
+    s.version          = '1.5.8'
     s.summary          = 'A short description of ADMobGenSDK.'
     
     # This description is used to generate tags and improve search results.
@@ -32,9 +32,9 @@ Pod::Spec.new do |s|
     
     s.vendored_frameworks = 'ADMobGenSDK/Classes/*.framework'
     
-    s.dependency 'ADMobGenAdapter','1.5.5'
+    s.dependency 'ADMobGenAdapter','1.6.0'
     s.dependency 'ADMobGenNetwork','0.5.2'
-    s.dependency 'ADMobGenDeviceInfo','0.1.4'
+    s.dependency 'ADMobGenDeviceInfo','0.2.0'
     
     # s.resource_bundles = {
     #   'ADMobGenSDK' => ['ADMobGenSDK/Assets/*.png']

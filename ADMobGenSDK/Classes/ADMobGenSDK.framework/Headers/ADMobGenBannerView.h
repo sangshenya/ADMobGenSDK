@@ -26,18 +26,18 @@
  初始化bannerView
  @param size 期望的banner广告尺寸比例，默认为640:100
  */
-- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize;
+- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize DEPRECATED_MSG_ATTRIBUTE("bannerSize is overdue");
 
 /*
  初始化bannerView
- @param size 期望的banner广告尺寸比例，默认为640:100
+ @param size 期望的banner广告尺寸比例，默认为640:100，bannerSize is overdue
  @param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
  */
 - (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex;
 
 /*
  初始化bannerView
- @param size 期望的banner广告尺寸比例，默认为640:100
+ @param size 期望的banner广告尺寸比例，默认为640:100，bannerSize is overdue
  @param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
  @param gdtBanner 是否为广点通2.0，默认为NO不支持广点通2.0
  */
@@ -45,12 +45,20 @@
 
 /*
  初始化bannerView
- @param size 期望的banner广告尺寸比例，默认为640:100
+ @param size 期望的banner广告尺寸比例，默认为640:100，bannerSize is overdue
  @param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
  @param gdtBanner 是否为广点通2.0，默认为NO不支持广点通2.0
- @param rootViewController
+ @param rootViewController banner被展示的控制器
  */
-- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner withViewController:(UIViewController *)rootViewController NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner withViewController:(UIViewController *)rootViewController;
+
+/*
+ 初始化bannerView
+ @param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+ @param gdtBanner 是否为广点通2.0，默认为NO不支持广点通2.0
+ @param rootViewController banner被展示的控制器
+ */
+- (instancetype)initWithFrame:(CGRect)frame withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner withViewController:(UIViewController *)rootViewController NS_DESIGNATED_INITIALIZER;
 
 
 /**

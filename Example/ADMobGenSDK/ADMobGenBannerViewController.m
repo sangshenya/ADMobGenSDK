@@ -49,14 +49,15 @@
         _bannerView = nil;
     }
     
+    CGFloat height = [UIScreen mainScreen].bounds.size.width * 5/32;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    
     // 1 初始化banner视图
-    _bannerView = [[ADMobGenBannerView alloc] initWithFrame:CGRectZero withBannerSize:ADMobGenBannerAdSize600_150 withBannerIndex:0 withGdtBanner:YES withViewController:self];
+    _bannerView = [[ADMobGenBannerView alloc] initWithFrame:CGRectMake(0, 0, width, height) withBannerSize:ADMobGenBannerAdSizeNormal withBannerIndex:3 withGdtBanner:YES withViewController:self];
     _bannerView.delegate = self;
     _bannerView.backgroundColor = [UIColor redColor];
     
     // 2 添加到父视图上
-    CGFloat height = [UIScreen mainScreen].bounds.size.width * 5/32;
-    CGFloat width = [UIScreen mainScreen].bounds.size.width;
     _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - height, width, height);
     [self.view addSubview:_bannerView];
     
@@ -64,7 +65,6 @@
     [_bannerView closeButtonHidden:YES];
     
     // 4 加载并显示广告 注意: 请确保banner视图显示在屏幕内的时候,调用load方法
-    //    [_bannerView loadWithError:nil];
     [_bannerView loadWithError:nil];
 }
 

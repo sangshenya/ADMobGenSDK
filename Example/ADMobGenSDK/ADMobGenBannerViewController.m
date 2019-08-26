@@ -53,12 +53,12 @@
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     
     // 1 初始化banner视图
-    _bannerView = [[ADMobGenBannerView alloc] initWithFrame:CGRectMake(0, 0, width, height) withBannerSize:ADMobGenBannerAdSizeNormal withBannerIndex:0 withGdtBanner:YES withViewController:self];
+    _bannerView = [[ADMobGenBannerView alloc] initWithFrame:CGRectMake(0, 0, width, height) withBannerSize:ADMobGenBannerAdSizeNormal withBannerIndex:1 withGdtBanner:YES withViewController:self];
     _bannerView.delegate = self;
     _bannerView.backgroundColor = [UIColor redColor];
     
     // 2 添加到父视图上
-    _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - height, width, height);
+    _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height  - height - 100, width, height);
     [self.view addSubview:_bannerView];
     
     // 3 隐藏关闭按钮，默认显示关闭按钮

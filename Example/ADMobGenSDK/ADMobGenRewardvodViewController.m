@@ -76,8 +76,11 @@
  */
 - (void)admg_rewardvodAdLoadSuccessCallBack:(ADMobGenRewardvodAd *)rewardvodAd{
     //3、展示激励视频广告，可在广告数据加载成功回调中或者视频数据下载成功回调，强烈建议在本回调中展示广告，否则会出现
-    [self showRewardAd];
-    _rewardvodButton.selected = NO;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self showRewardAd];
+        _rewardvodButton.selected = NO;
+    });
+    
 }
 /**
  视频数据下载成功回调，已经下载过的视频会直接回调

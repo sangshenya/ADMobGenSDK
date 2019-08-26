@@ -10,6 +10,9 @@
 #import <ADMobGenSDK/ADMobGenNativeExpressAd.h>
 #import <ADMobGenAdapter/ADMobGenNativeExpressAdView.h>
 #import <MJRefresh/MJRefresh.h>
+#import <MTGSDK/MTGSDK.h>
+#import <GDTNativeExpressAdView.h>
+#import <WebKit/WebKit.h>
 
 @interface ADMobGenExpressViewController () <UITableViewDelegate, UITableViewDataSource, ADMobGenNativeExpressAdDelegate> {
     ADMobGenNativeExpressAd *_expressAd;
@@ -81,7 +84,7 @@
         [_expressAd setNativeAdType:self.nativeAdType];//信息流样式纯图片
         
         // 4  隐藏信息流关闭按钮
-        [_expressAd closeButtonHidden:NO];
+        [_expressAd closeButtonHidden:YES];
     }
     // 5 拉取信息流模板广告
     [_expressAd load:1];
@@ -126,7 +129,7 @@
         return adView.contentSize.height;
         
     }
-    return 100;
+    return 150;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -149,12 +152,48 @@
 }
 
 - (void)admg_nativeExpressAdViewRenderSuccess:(ADMobGenNativeExpressAdView *)nativeExpressAdView {
+//    for (UIView *view in nativeExpressAdView.subviews) {
+//        for (UIView *subView in view.subviews) {
+//            for (WKWebView *ssView in subView.subviews) {
+//                if (![ssView isKindOfClass:[WKWebView class]]) continue;
+//                if (@available(iOS 11.0, *)) {
+//                    ssView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//                } else {
+//                    // Fallback on earlier versions
+//                }
+//            }
+//        }
+//    }
+//    if (nativeExpressAdView) {
+//        UIView *adView = [nativeExpressAdView valueForKey:@"_adView"];
+//        Class kclass = NSClassFromString(@"ADMobMTGNativeExpressAdView");
+//        if ([adView isKindOfClass:[kclass class]]) {
+//            id mtgObj = [_expressAd valueForKey:@"_sourceAd"];
+//            if ([mtgObj isKindOfClass:[NSClassFromString(@"ADMobGenMTGNativeAd") class]]) {
+//                id mtgManager = [mtgObj valueForKey:@"_nativeAdManager"];
+//                if ([mtgManager isKindOfClass:[MTGNativeAdManager class]]) {
+//                    MTGNativeAdManager *manager = (MTGNativeAdManager *)mtgManager;
+//                    manager.viewController = self;
+//                }
+//            }
+//        } else if ([adView isKindOfClass:[NSClassFromString(@"GDTNativeExpressAdView") class]]) {
+//            UIView *gdtAdView = [adView valueForKey:@"_gdtView"];
+//            if ([gdtAdView isKindOfClass:[GDTNativeExpressAdView class]]) {
+//                GDTNativeExpressAdView *gdtView = (GDTNativeExpressAdView *)gdtAdView;
+//                gdtView.controller = self;
+//            }
+//        }
+//    }
     //渲染成功，webView此时返回正确的高度
     [self.items addObject:nativeExpressAdView];
     [self.adItems removeObject:nativeExpressAdView];
     [self.tableView.mj_footer endRefreshing];
     _footRefresh = NO;
     [self.tableView reloadData];
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self.tableView reloadData];
+//    });
 }
 
 - (void)admg_nativeExpressAdViewRenderFail:(ADMobGenNativeExpressAdView *)nativeExpressAdView {

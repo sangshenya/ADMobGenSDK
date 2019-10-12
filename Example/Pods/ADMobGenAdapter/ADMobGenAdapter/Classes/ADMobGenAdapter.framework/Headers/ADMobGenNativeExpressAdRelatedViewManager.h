@@ -128,8 +128,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setDescColor:(ADMobGenHtmlColor *)descColor descFont:(NSInteger)descFont descEdge:(UIEdgeInsets)descEdge adType:(ADMobGenNativeAdType)adType defult:(BOOL)isDefult;
 
-- (void)setAdDes:(NSString *)adDes adTitle:(NSString *)adTitle normalSize:(CGSize)normalSize adType:(ADMobGenNativeAdType)adType;
-
 - (ADMobGenNativeExpressAdRelated *)getRelatedViewWithAdType:(ADMobGenNativeAdType)adType;
 
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "ADMobGenNativeExpressCommon.h"
+#import "ADMobGenAdapterCommon.h"
 
 @protocol ADMobGenNativeExpressAdCallBack;
 
@@ -52,7 +53,7 @@
 /**
  广告平台类型
  */
-@property (nonatomic, readonly, assign) ADMobGenNativeAdPlatform platformType;
+@property (nonatomic, readonly, assign) ADMobGenAdPlatform platformType;
 
 /**
  
@@ -102,7 +103,7 @@
                     displayType:(BOOL)displayType
                        trunType:(BOOL)trunType
                    nativeAdType:(ADMobGenNativeAdType)nativeAdType
-                   platformType:(ADMobGenNativeAdPlatform)platformType
+                   platformType:(ADMobGenAdPlatform)platformType
                  viewController:(UIViewController *)viewController
                        callback:(id<ADMobGenNativeExpressAdCallBack>)callback DEPRECATED_MSG_ATTRIBUTE("Donot has hiddenCloseButton");
 
@@ -113,7 +114,7 @@
                        trunType:(BOOL)trunType
               hiddenCloseButton:(BOOL)hiddenCloseButton
                    nativeAdType:(ADMobGenNativeAdType)nativeAdType
-                   platformType:(ADMobGenNativeAdPlatform)platformType
+                   platformType:(ADMobGenAdPlatform)platformType
                  viewController:(UIViewController *)viewController
                        callback:(id<ADMobGenNativeExpressAdCallBack>)callback DEPRECATED_MSG_ATTRIBUTE("Donot has rewardType");
 
@@ -125,7 +126,7 @@
                      rewardType:(BOOL)rewardType
               hiddenCloseButton:(BOOL)hiddenCloseButton
                    nativeAdType:(ADMobGenNativeAdType)nativeAdType
-                   platformType:(ADMobGenNativeAdPlatform)platformType
+                   platformType:(ADMobGenAdPlatform)platformType
                  viewController:(UIViewController *)viewController
                        callback:(id<ADMobGenNativeExpressAdCallBack>)callback;
 

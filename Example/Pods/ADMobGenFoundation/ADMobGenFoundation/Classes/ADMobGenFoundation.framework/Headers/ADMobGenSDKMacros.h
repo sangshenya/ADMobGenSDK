@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define kADMobGenFoundationSDKVersion @"0.7.2"
+#define kADMobGenFoundationSDKVersion @"0.8.0"
 
 // 字符串是否为空
 #define kADMGStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || ![str isKindOfClass:[NSString class]] || [str length] < 1 ? YES : NO)
@@ -83,6 +83,9 @@ static inline CGFloat ADMobGenScreenScale(void) {
 #define kADMGIphoneXS_MAX (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && kADMGScreenWidth == 414.0 && kADMGScreenHeight == 896.0 && ADMobGenScreenScale() == 3)
 
 #define kADMGCurveScreen (CGSizeEqualToSize(CGSizeMake(375.f, 812.f), [UIScreen mainScreen].bounds.size) || CGSizeEqualToSize(CGSizeMake(812.f, 375.f), [UIScreen mainScreen].bounds.size)  || CGSizeEqualToSize(CGSizeMake(414.f, 896.f), [UIScreen mainScreen].bounds.size) || CGSizeEqualToSize(CGSizeMake(896.f, 414.f), [UIScreen mainScreen].bounds.size)) // 刘海屏幕
+
+// iphone 4及4s 屏幕尺寸为3：2
+#define KADMGSmallScreen (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && kADMGScreenWidth == 320.0 && kADMGScreenHeight == 480.0)
 
 #define kADMGStatusBarHeight (kADMGCurveScreen ? 44 : 20)
 #define kADMGNavBarHeight 44

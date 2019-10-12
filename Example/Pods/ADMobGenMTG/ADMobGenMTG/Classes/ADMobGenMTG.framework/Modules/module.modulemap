@@ -1,6 +1,0 @@
-framework module ADMobGenMTG {
-  umbrella header "ADMobGenMTG-umbrella.h"
-
-  export *
-  module * { export * }
-}

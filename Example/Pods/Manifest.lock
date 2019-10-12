@@ -1,49 +1,21 @@
 PODS:
-  - ADMobGenAdapter (1.6.0):
-    - ADMobGenFoundation (= 0.7.2)
-  - ADMobGenDeviceInfo (0.2.0):
+  - ADMobGenAdapter (1.6.3):
+    - ADMobGenFoundation (= 0.8.0)
+  - ADMobGenDeviceInfo (1.5.2):
     - ADMobGenFoundation
     - ADMobGenLocationManager
     - ADMobGenNetwork
-  - ADMobGenFoundation (0.7.2)
-  - ADMobGenGDT (4.10.5):
-    - ADMobGenAdapter (= 1.6.0)
-    - ADMobGenFoundation (= 0.7.2)
-    - GDTMobSDK (= 4.10.5)
+  - ADMobGenFoundation (0.8.0)
   - ADMobGenLocationManager (0.1.1)
-  - ADMobGenMTG (5.5.2):
-    - ADMobGenAdapter (= 1.6.0)
-    - ADMobGenFoundation (= 0.7.2)
-    - MintegralAdSDK/NativeAd (= 5.5.2)
-    - MintegralAdSDK/RewardVideoAd (= 5.5.2)
   - ADMobGenNetwork (0.5.2)
   - ADMobGenSDK (1.5.8):
-    - ADMobGenAdapter (= 1.6.0)
-    - ADMobGenDeviceInfo (= 0.2.0)
+    - ADMobGenAdapter (= 1.6.3)
+    - ADMobGenDeviceInfo (= 1.5.2)
     - ADMobGenNetwork (= 0.5.2)
-  - ADMobGenSDKWM (2.1.0.2):
-    - ADMobGenAdapter (= 1.6.0)
-    - Bytedance-UnionAD (= 2.1.0.2)
-  - ADMobileAd (2.9.2):
-    - ADMobGenAdapter (= 1.6.0)
-    - ADMobGenDeviceInfo (= 0.2.0)
-    - ADMobGenFoundation (= 0.7.2)
-    - ADMobGenNetwork (= 0.5.2)
-  - Bytedance-UnionAD (2.1.0.2)
-  - GDTMobSDK (4.10.5):
-    - GDTMobSDK/GDTMobSDK (= 4.10.5)
-  - GDTMobSDK/GDTMobSDK (4.10.5)
-  - MintegralAdSDK/NativeAd (5.5.2)
-  - MintegralAdSDK/RewardVideoAd (5.5.2):
-    - MintegralAdSDK/NativeAd
   - MJRefresh (3.1.17)
 
 DEPENDENCIES:
-  - ADMobGenGDT (= 4.10.5)
-  - ADMobGenMTG (= 5.5.2)
   - ADMobGenSDK (from `../`)
-  - ADMobGenSDKWM
-  - ADMobileAd (= 2.9.2)
   - MJRefresh (~> 3.1.12)
 
 SPEC REPOS:
@@ -51,15 +23,8 @@ SPEC REPOS:
     - ADMobGenAdapter
     - ADMobGenDeviceInfo
     - ADMobGenFoundation
-    - ADMobGenGDT
     - ADMobGenLocationManager
-    - ADMobGenMTG
     - ADMobGenNetwork
-    - ADMobGenSDKWM
-    - ADMobileAd
-    - Bytedance-UnionAD
-    - GDTMobSDK
-    - MintegralAdSDK
     - MJRefresh
 
 EXTERNAL SOURCES:
@@ -67,21 +32,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ADMobGenAdapter: 1e75dee9c4eccec8fb74d491ae21f8f6de4a687f
-  ADMobGenDeviceInfo: a22261d610d19d66a1cc04eec32611fc4a05ff16
-  ADMobGenFoundation: de6e4f7b09df256a347878d0f0e0438c1feac94e
-  ADMobGenGDT: 1ec188013b9119a13169b12129faac48dcf7465e
+  ADMobGenAdapter: 223aa1d66f9706eaeb4953fc1323df237841c8b2
+  ADMobGenDeviceInfo: 7f0adb3dd3bb4b06e3e86fe9f4afabdce95dff0b
+  ADMobGenFoundation: 292a3310f806644c042f45c726f876888689aef4
   ADMobGenLocationManager: f2b0396d8c1c26e9490725150e3def622f74ccae
-  ADMobGenMTG: 3176d053f3233166be1d9d70095b0b67352bda2f
   ADMobGenNetwork: 5a2b334b492d311df0d8b8776fbbb41e6982805f
-  ADMobGenSDK: c6e3d9306441c0d6cb2f8394bdc2904cf2036556
-  ADMobGenSDKWM: 9ceb60298a0b065c27d99ceca3e433e51992229c
-  ADMobileAd: e5f58532a8f9daa3e287de7915402b4197cafb37
-  Bytedance-UnionAD: 6954b8c00b0a2d66b534a196160f0dd43f30187b
-  GDTMobSDK: 815b36af278faafd38639b78eaa633d4cd211ddd
-  MintegralAdSDK: 0c294bd7079a0d3addde9698276ae747e8f343db
+  ADMobGenSDK: 951224fdbc6d8d312aba3ccfc80438be239adea3
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
 
-PODFILE CHECKSUM: bf182615447541b754a6ed6de520c5e4a91f418a
+PODFILE CHECKSUM: 635c1d293aad4aa3c467478d722a4b8ba4aea67c
 
 COCOAPODS: 1.7.2

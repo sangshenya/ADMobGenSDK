@@ -31,6 +31,11 @@
  */
 @property (nonatomic, readonly, strong) UIView *bottomView;
 
+/**
+ 不使用自带跳过视图？
+ */
+@property (nonatomic, readonly, assign) BOOL hiddenSkipView;
+
 #pragma mark - Action
 
 /**

@@ -21,13 +21,13 @@
   "vendored_frameworks": "ADMobGenSDK/Classes/*.framework",
   "dependencies": {
     "ADMobGenAdapter": [
-      "1.6.0"
+      "1.6.3"
     ],
     "ADMobGenNetwork": [
       "0.5.2"
     ],
     "ADMobGenDeviceInfo": [
-      "0.2.0"
+      "1.5.2"
     ]
   }
 }

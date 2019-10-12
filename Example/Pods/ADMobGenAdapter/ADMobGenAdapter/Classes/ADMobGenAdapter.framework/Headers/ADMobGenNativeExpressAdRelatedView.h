@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ADMobGenNativeExpressCommon.h"
+#import "ADMobGenAdapterCommon.h"
 
 #define kTopSpace 10
 
@@ -34,7 +35,7 @@
 
 // 查看详情
 #define kBottomWidth 66
-#define kBottomHeight 27
+#define kBottomHeight 28
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -54,7 +55,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setCloseAction:(void (^)(void))closeAction;
 
 // 目前支持inmob、mobvsita、admobile、wm的logo获取
-+ (UIImage *)getLogoWithAdLabel:(BOOL)hasAdLabel platform:(ADMobGenNativeAdPlatform)platform;
++ (UIImage *)getLogoWithAdLabel:(BOOL)hasAdLabel platform:(ADMobGenAdPlatform)platform;
+
+/**
+ 获取图片
+ */
++ (UIImage *)getImageWithImageName:(NSString *)imageName;
 
 - (CGRect)getImageViewFrame;
 

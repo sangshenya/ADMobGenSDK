@@ -51,6 +51,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)sendCustomEventsWithEventModel:(ADMobGenTKEventModel *)eventModel withUpLoadURL:(NSString *)upLoadURL;
+/**
+ 上传用户信息，以提高广告的填充和精准度
+ 手机号key:pho
+ */
+- (void)setUserInfo:(NSDictionary *)dict;
 
 @end
 

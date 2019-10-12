@@ -24,17 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ADMobGenGDT.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>ADMobGenLocationManager.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ADMobGenMTG.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -49,32 +39,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ADMobGenSDKWM.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ADMobileAd.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Bytedance-UnionAD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>GDTMobSDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MJRefresh.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MintegralAdSDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

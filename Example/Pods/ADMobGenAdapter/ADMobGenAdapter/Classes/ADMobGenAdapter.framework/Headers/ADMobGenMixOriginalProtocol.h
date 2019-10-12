@@ -1,8 +1,8 @@
 //
-//  ADMobGenNativeProtocol.h
+//  ADMobGenMixOriginalProtocol.h
 //  ADMobGenAdapter
 //
-//  Created by 陈坤 on 2019/1/4.
+//  Created by 陶冶明 on 2019/9/23.
 //
 
 #import <Foundation/Foundation.h>
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ADMobGenOriginalProtocol <NSObject>
+@protocol ADMobGenMixOriginalProtocol <NSObject>
 
 - (NSString *)title;
 

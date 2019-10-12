@@ -32,9 +32,9 @@ Pod::Spec.new do |s|
     
     s.vendored_frameworks = 'ADMobGenSDK/Classes/*.framework'
     
-    s.dependency 'ADMobGenAdapter','1.6.0'
+    s.dependency 'ADMobGenAdapter','1.6.3'
     s.dependency 'ADMobGenNetwork','0.5.2'
-    s.dependency 'ADMobGenDeviceInfo','0.2.0'
+    s.dependency 'ADMobGenDeviceInfo','1.5.2'
     
     # s.resource_bundles = {
     #   'ADMobGenSDK' => ['ADMobGenSDK/Assets/*.png']

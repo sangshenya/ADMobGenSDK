@@ -1,17 +1,17 @@
 //
-//  ADMobGenNativeAdConfig.h
+//  ADMobGenMixOriginalAdConfig.h
 //  ADMobGenAdapter
 //
-//  Created by 陈坤 on 2019/1/4.
+//  Created by 陶冶明 on 2019/9/23.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ADMobGenOriginalCallBack;
+@protocol ADMobGenMixOriginalCallBack;
 
-@interface ADMobGenOriginalAdConfig : NSObject
+@interface ADMobGenMixOriginalAdConfig : NSObject
 
 /**
  平台的应用id
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  广告生命周期回调
  */
-@property (nonatomic, readonly, weak) id<ADMobGenOriginalCallBack> callback;
+@property (nonatomic, readonly, weak) id<ADMobGenMixOriginalCallBack> callback;
 
 /**
  
@@ -46,13 +46,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)configWithAppId:(NSString *)appId
                           posId:(NSString *)posId
                        trunType:(BOOL)trunType
-                       callback:(id<ADMobGenOriginalCallBack>)callback DEPRECATED_MSG_ATTRIBUTE("Donot has rewardType");
+                       callback:(id<ADMobGenMixOriginalCallBack>)callback DEPRECATED_MSG_ATTRIBUTE("Donot has rewardType");
 
 + (instancetype)configWithAppId:(NSString *)appId
                           posId:(NSString *)posId
                        trunType:(BOOL)trunType
                      rewardType:(BOOL)rewardType
-                       callback:(id<ADMobGenOriginalCallBack>)callback;
+                       callback:(id<ADMobGenMixOriginalCallBack>)callback;
 
 @end
 

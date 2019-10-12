@@ -1,18 +1,18 @@
 //
-//  ADMobGenNativeAd.h
+//  ADMobGenMixOriginalAd.h
 //  ADMobGenAdapter
 //
-//  Created by 陈坤 on 2019/1/4.
+//  Created by 陶冶明 on 2019/9/23.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ADMobGenOriginalProtocol;
-@protocol ADMobGenOriginalAdDelegate;
+@protocol ADMobGenMixOriginalProtocol;
+@protocol ADMobGenMixOriginalAdDelegate;
 
-@interface ADMobGenOriginalAd : NSObject
+@interface ADMobGenMixOriginalAd : NSObject
 
 /**
  广告标题

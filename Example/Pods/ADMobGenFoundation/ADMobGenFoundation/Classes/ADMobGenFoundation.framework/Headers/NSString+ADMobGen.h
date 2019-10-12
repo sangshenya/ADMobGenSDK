@@ -54,6 +54,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (CGFloat)admg_heightForFont:(UIFont *)font width:(CGFloat)width;
 
+/**
+ 对字符串进行md5加密
+ */
+- (NSString *)admg_md5;
+
 @end
 
 NS_ASSUME_NONNULL_END

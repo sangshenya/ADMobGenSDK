@@ -6,16 +6,35 @@ PODS:
     - ADMobGenLocationManager
     - ADMobGenNetwork
   - ADMobGenFoundation (0.8.0)
+  - ADMobGenGDT (4.10.13):
+    - ADMobGenAdapter (= 1.6.3)
+    - ADMobGenFoundation (= 0.8.0)
+    - GDTMobSDK (= 4.10.13)
   - ADMobGenLocationManager (0.1.1)
   - ADMobGenNetwork (0.5.2)
-  - ADMobGenSDK (1.5.8):
+  - ADMobGenSDK (1.6.1):
     - ADMobGenAdapter (= 1.6.3)
     - ADMobGenDeviceInfo (= 1.5.2)
     - ADMobGenNetwork (= 0.5.2)
+  - ADMobGenSDKWM (2.4.6.6):
+    - ADMobGenAdapter (= 1.6.3)
+    - ADMobGenWMSDK (= 2.4.6.6)
+  - ADMobGenWMSDK (2.4.6.6)
+  - ADMobileAd (3.0.8):
+    - ADMobGenAdapter (= 1.6.3)
+    - ADMobGenDeviceInfo (= 1.5.2)
+    - ADMobGenFoundation (= 0.8.0)
+    - ADMobGenNetwork (= 0.5.2)
+  - GDTMobSDK (4.10.13):
+    - GDTMobSDK/GDTMobSDK (= 4.10.13)
+  - GDTMobSDK/GDTMobSDK (4.10.13)
   - MJRefresh (3.1.17)
 
 DEPENDENCIES:
+  - ADMobGenGDT (~> 4.10.13)
   - ADMobGenSDK (from `../`)
+  - ADMobGenSDKWM (~> 2.4.6.6)
+  - ADMobileAd (~> 3.0.8)
   - MJRefresh (~> 3.1.12)
 
 SPEC REPOS:
@@ -23,8 +42,13 @@ SPEC REPOS:
     - ADMobGenAdapter
     - ADMobGenDeviceInfo
     - ADMobGenFoundation
+    - ADMobGenGDT
     - ADMobGenLocationManager
     - ADMobGenNetwork
+    - ADMobGenSDKWM
+    - ADMobGenWMSDK
+    - ADMobileAd
+    - GDTMobSDK
     - MJRefresh
 
 EXTERNAL SOURCES:
@@ -35,11 +59,16 @@ SPEC CHECKSUMS:
   ADMobGenAdapter: 223aa1d66f9706eaeb4953fc1323df237841c8b2
   ADMobGenDeviceInfo: 7f0adb3dd3bb4b06e3e86fe9f4afabdce95dff0b
   ADMobGenFoundation: 292a3310f806644c042f45c726f876888689aef4
+  ADMobGenGDT: 55f57396f96d6daf8a34f746ff7c431aa2390a90
   ADMobGenLocationManager: f2b0396d8c1c26e9490725150e3def622f74ccae
   ADMobGenNetwork: 5a2b334b492d311df0d8b8776fbbb41e6982805f
-  ADMobGenSDK: 951224fdbc6d8d312aba3ccfc80438be239adea3
+  ADMobGenSDK: 83741e21f520666f17a05b6f3f9f7daa0bddfc37
+  ADMobGenSDKWM: 76de0480201655c2f2eb204b26c0dd4044ab756f
+  ADMobGenWMSDK: 0156f7911ea2168b9df18aacd1a6b2d319b82855
+  ADMobileAd: a9fdd303c85251599ff87bb55ca60d476a95e20b
+  GDTMobSDK: accce9c7fcca35b2574d3a3b3bde58316d27e734
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
 
-PODFILE CHECKSUM: 635c1d293aad4aa3c467478d722a4b8ba4aea67c
+PODFILE CHECKSUM: 10a2dac6d2f44cda09ce7c302a0962830405798d
 
 COCOAPODS: 1.7.2

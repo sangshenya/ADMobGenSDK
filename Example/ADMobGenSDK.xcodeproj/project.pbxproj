@@ -397,10 +397,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenAdapter/ADMobGenBundles.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ADMobGenWMSDK/BUAdSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ADMobGenBundles.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BUAdSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -589,7 +591,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ADMobGenSDK/ADMobGenSDK-Prefix.pch";
 				INFOPLIST_FILE = "ADMobGenSDK/ADMobGenSDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ADMobGenSDK",
@@ -639,7 +641,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ADMobGenSDK/ADMobGenSDK-Prefix.pch";
 				INFOPLIST_FILE = "ADMobGenSDK/ADMobGenSDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ADMobGenSDK",

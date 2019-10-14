@@ -25,6 +25,9 @@
 		94E1CA612E55C2F4392C8319 /* Pods_ADMobGenSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B5E388C5F89772CAFE3DE1 /* Pods_ADMobGenSDK_Example.framework */; };
 		BF10A090219BEE9000FFA72E /* 750x1334.png in Resources */ = {isa = PBXBuildFile; fileRef = BF10A08F219BEE9000FFA72E /* 750x1334.png */; };
 		BF10A092219BF3B100FFA72E /* ADMob_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF10A091219BF3B100FFA72E /* ADMob_Logo.png */; };
+		BF510E0923541840000CBB73 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF510E0823541840000CBB73 /* libc++.tbd */; };
+		BF510E0B2354184C000CBB73 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF510E0A2354184C000CBB73 /* libresolv.tbd */; };
+		BF510E0D23541855000CBB73 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF510E0C23541855000CBB73 /* libz.tbd */; };
 		BF88CB4C21D5F60C00B2001D /* ADMobGenBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88CB4821D5F60C00B2001D /* ADMobGenBannerViewController.m */; };
 		BF88CB4D21D5F60C00B2001D /* ADMobGenSplashAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88CB4921D5F60C00B2001D /* ADMobGenSplashAdViewController.m */; };
 		BFB09C712221AC5200ECF738 /* ADMobGenRewardvodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB09C6F2221AC5200ECF738 /* ADMobGenRewardvodViewController.m */; };
@@ -74,6 +77,9 @@
 		A1A7698A33DFD48C9E74A692 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BF10A08F219BEE9000FFA72E /* 750x1334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 750x1334.png; sourceTree = "<group>"; };
 		BF10A091219BF3B100FFA72E /* ADMob_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADMob_Logo.png; sourceTree = "<group>"; };
+		BF510E0823541840000CBB73 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		BF510E0A2354184C000CBB73 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		BF510E0C23541855000CBB73 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		BF88CB4821D5F60C00B2001D /* ADMobGenBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenBannerViewController.m; sourceTree = "<group>"; };
 		BF88CB4921D5F60C00B2001D /* ADMobGenSplashAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenSplashAdViewController.m; sourceTree = "<group>"; };
 		BF88CB4A21D5F60C00B2001D /* ADMobGenBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenBannerViewController.h; sourceTree = "<group>"; };
@@ -95,6 +101,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF510E0D23541855000CBB73 /* libz.tbd in Frameworks */,
+				BF510E0B2354184C000CBB73 /* libresolv.tbd in Frameworks */,
+				BF510E0923541840000CBB73 /* libc++.tbd in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -151,6 +160,9 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF510E0C23541855000CBB73 /* libz.tbd */,
+				BF510E0A2354184C000CBB73 /* libresolv.tbd */,
+				BF510E0823541840000CBB73 /* libc++.tbd */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -587,6 +599,7 @@
 					"\"${PODS_ROOT}/ADMobGenAdapter/ADMobGenAdapter/Classes\"",
 					"\"${PODS_ROOT}/ADMobGenFoundation/ADMobGenFoundation/Classes\"",
 					"\"${PODS_ROOT}/ADMobGenNetwork/ADMobGenNetwork/Classes\"",
+					"$(PROJECT_DIR)/ADMobGenSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ADMobGenSDK/ADMobGenSDK-Prefix.pch";
@@ -637,6 +650,7 @@
 					"\"${PODS_ROOT}/ADMobGenAdapter/ADMobGenAdapter/Classes\"",
 					"\"${PODS_ROOT}/ADMobGenFoundation/ADMobGenFoundation/Classes\"",
 					"\"${PODS_ROOT}/ADMobGenNetwork/ADMobGenNetwork/Classes\"",
+					"$(PROJECT_DIR)/ADMobGenSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ADMobGenSDK/ADMobGenSDK-Prefix.pch";

@@ -10,7 +10,7 @@
 #import <ADMobGenSDK/ADMobGenNativeExpressAd.h>
 #import <ADMobGenAdapter/ADMobGenNativeExpressAdView.h>
 #import <MJRefresh/MJRefresh.h>
-#import <MTGSDK/MTGSDK.h>
+//#import <MTGSDK/MTGSDK.h>
 #import <GDTNativeExpressAdView.h>
 #import <WebKit/WebKit.h>
 

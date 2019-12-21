@@ -11,6 +11,7 @@
 #import "ADMobGenSplashAdViewController.h"
 #import "ADMobGenBannerViewController.h"
 #import "ADMobGenRewardvodViewController.h"
+#import <ADMobGenSDK/ADMobGenSDKConfig.h>
 #import <ADMobGenFoundation/UIColor+ADMobGen.h>
 #import <ADMobGenFoundation/UIFont+ADMobGen.h>
 
@@ -29,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.title = @"ADMobGenSDK Demo";
+    self.title = [NSString stringWithFormat:@"ADMobGenSDK Demo V%@",[ADMobGenSDKConfig getSDKVersion]];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -38,8 +39,6 @@
     [self.view addSubview:self.mainTableView];
     
     [self.mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    
-    
     
 }
 

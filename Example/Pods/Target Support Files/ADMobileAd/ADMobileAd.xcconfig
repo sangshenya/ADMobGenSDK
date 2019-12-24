@@ -1,7 +1,7 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/ADMobileAd
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ADMobGenAdapter/ADMobGenAdapter/Classes" "${PODS_ROOT}/ADMobGenDeviceInfo/ADMobGenDeviceInfo/Classes" "${PODS_ROOT}/ADMobGenFoundation/ADMobGenFoundation/Classes" "${PODS_ROOT}/ADMobGenLocationManager/ADMobGenLocationManager/Classes" "${PODS_ROOT}/ADMobGenNetwork/ADMobGenNetwork/Classes" "${PODS_ROOT}/ADMobileAd/ADMobileAd/Classes"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-OTHER_LDFLAGS = $(inherited) -ObjC -l"z"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"z" -framework "AVFoundation" -framework "CoreMedia" -framework "CoreServices" -framework "MobileCoreServices"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}

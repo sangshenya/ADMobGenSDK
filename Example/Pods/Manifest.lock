@@ -1,40 +1,40 @@
 PODS:
-  - ADMobGenAdapter (1.6.3):
-    - ADMobGenFoundation (= 0.8.0)
-  - ADMobGenDeviceInfo (1.5.2):
+  - ADMobGenAdapter (1.7.0):
+    - ADMobGenFoundation (= 1.0.0)
+  - ADMobGenDeviceInfo (1.5.8):
     - ADMobGenFoundation
     - ADMobGenLocationManager
     - ADMobGenNetwork
-  - ADMobGenFoundation (0.8.0)
-  - ADMobGenGDT (4.10.13):
-    - ADMobGenAdapter (= 1.6.3)
-    - ADMobGenFoundation (= 0.8.0)
-    - GDTMobSDK (= 4.10.13)
+  - ADMobGenFoundation (1.0.0)
+  - ADMobGenGDT (4.10.19):
+    - ADMobGenAdapter (= 1.7.0)
+    - ADMobGenFoundation (= 1.0.0)
+    - GDTMobSDK (= 4.10.19)
   - ADMobGenLocationManager (0.1.1)
   - ADMobGenNetwork (0.5.2)
-  - ADMobGenSDK (1.6.1):
-    - ADMobGenAdapter (= 1.6.3)
-    - ADMobGenDeviceInfo (= 1.5.2)
+  - ADMobGenSDK (1.6.3):
+    - ADMobGenAdapter (= 1.7.0)
+    - ADMobGenDeviceInfo (= 1.5.8)
     - ADMobGenNetwork (= 0.5.2)
-  - ADMobGenSDKWM (2.4.6.6):
-    - ADMobGenAdapter (= 1.6.3)
-    - ADMobGenWMSDK (= 2.4.6.6)
-  - ADMobGenWMSDK (2.4.6.6)
-  - ADMobileAd (3.0.8):
-    - ADMobGenAdapter (= 1.6.3)
-    - ADMobGenDeviceInfo (= 1.5.2)
-    - ADMobGenFoundation (= 0.8.0)
+  - ADMobGenSDKWM (2.5.1.5):
+    - ADMobGenAdapter (= 1.7.0)
+    - ADMobGenWMSDK (= 2.5.1.5)
+  - ADMobGenWMSDK (2.5.1.5)
+  - ADMobileAd (3.1.0):
+    - ADMobGenAdapter (= 1.7.0)
+    - ADMobGenDeviceInfo (= 1.5.8)
+    - ADMobGenFoundation (= 1.0.0)
     - ADMobGenNetwork (= 0.5.2)
-  - GDTMobSDK (4.10.13):
-    - GDTMobSDK/GDTMobSDK (= 4.10.13)
-  - GDTMobSDK/GDTMobSDK (4.10.13)
+  - GDTMobSDK (4.10.19):
+    - GDTMobSDK/GDTMobSDK (= 4.10.19)
+  - GDTMobSDK/GDTMobSDK (4.10.19)
   - MJRefresh (3.1.17)
 
 DEPENDENCIES:
-  - ADMobGenGDT (~> 4.10.13)
+  - ADMobGenGDT (~> 4.10.19)
   - ADMobGenSDK (from `../`)
-  - ADMobGenSDKWM (~> 2.4.6.6)
-  - ADMobileAd (~> 3.0.8)
+  - ADMobGenSDKWM (~> 2.5.1.5)
+  - ADMobileAd (~> 3.1.0)
   - MJRefresh (~> 3.1.12)
 
 SPEC REPOS:
@@ -56,19 +56,19 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ADMobGenAdapter: 223aa1d66f9706eaeb4953fc1323df237841c8b2
-  ADMobGenDeviceInfo: 7f0adb3dd3bb4b06e3e86fe9f4afabdce95dff0b
-  ADMobGenFoundation: 292a3310f806644c042f45c726f876888689aef4
-  ADMobGenGDT: 55f57396f96d6daf8a34f746ff7c431aa2390a90
+  ADMobGenAdapter: c86655110f5ad237afbe0c69bc2af940edd48c1a
+  ADMobGenDeviceInfo: 3e7901a14e48d1c16ae6ee5459456f77b3e6bb18
+  ADMobGenFoundation: 8d297e76aa9c41f2ab02d6e33accafbc25d5e1b0
+  ADMobGenGDT: 702b5fab95fa55212cec2534a5fe2d4c58556d6f
   ADMobGenLocationManager: f2b0396d8c1c26e9490725150e3def622f74ccae
   ADMobGenNetwork: 5a2b334b492d311df0d8b8776fbbb41e6982805f
-  ADMobGenSDK: 83741e21f520666f17a05b6f3f9f7daa0bddfc37
-  ADMobGenSDKWM: 76de0480201655c2f2eb204b26c0dd4044ab756f
-  ADMobGenWMSDK: b65a59294f534a503547591e474b18fd736fe6b8
-  ADMobileAd: a9fdd303c85251599ff87bb55ca60d476a95e20b
-  GDTMobSDK: accce9c7fcca35b2574d3a3b3bde58316d27e734
+  ADMobGenSDK: 14ef7ba45fd0feb66ee075f6acd732a3e5872076
+  ADMobGenSDKWM: 0b74bccec30aae8c67ec25bbf073c7461c1c44c7
+  ADMobGenWMSDK: 3c09d1004a10ddf2136bf5aceb2d6f6e571715b4
+  ADMobileAd: 2cd7cfa8278ac4f55cebbfa9df8c118c282c6454
+  GDTMobSDK: 7cadef357ef98125c5fb4e3cb9e50f3afe7801f4
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
 
-PODFILE CHECKSUM: 10a2dac6d2f44cda09ce7c302a0962830405798d
+PODFILE CHECKSUM: bed4c32d94ce1f4216b5f435ee92d14c002f8dfd
 
 COCOAPODS: 1.7.2

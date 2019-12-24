@@ -12,7 +12,6 @@
 #import "ADMobGenViewController.h"
 #import <ADMobGenFoundation/UIColor+ADMobGen.h>
 #import <GDTMobSDK/GDTSDKConfig.h>
-#import <ADMobileAdSDK/ADMobileAdSDK.h>
 #import <ADMobGenAdapter/ADMobGenNativeTool.h>
 #import <BUAdSDK/BUAdSDKManager.h>
 

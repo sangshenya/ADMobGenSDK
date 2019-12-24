@@ -85,6 +85,9 @@
         
         // 4  隐藏信息流关闭按钮
         [_expressAd closeButtonHidden:YES];
+        
+        // 5 头条19年11月28日自渲染代码位新建入口关闭，之后新增的信息流广告位都需要设置为YES，不导入头条SDK请忽略
+        [_expressAd setBuNativeExpressType:YES];
     }
     // 5 拉取信息流模板广告
     [_expressAd load:1];
@@ -105,7 +108,7 @@
         [subView removeFromSuperview];
     }
     
-    NSString *title = [NSString stringWithFormat:@"ADMobGenNativeExpressAd Test %ld",indexPath.row];
+    NSString *title = [NSString stringWithFormat:@"ADMobGenNativeExpressAd Test %d",indexPath.row];
     cell.textLabel.text = title;
     
     id obj = [self.items objectAtIndex:indexPath.row];
@@ -152,48 +155,18 @@
 }
 
 - (void)admg_nativeExpressAdViewRenderSuccess:(ADMobGenNativeExpressAdView *)nativeExpressAdView {
-//    for (UIView *view in nativeExpressAdView.subviews) {
-//        for (UIView *subView in view.subviews) {
-//            for (WKWebView *ssView in subView.subviews) {
-//                if (![ssView isKindOfClass:[WKWebView class]]) continue;
-//                if (@available(iOS 11.0, *)) {
-//                    ssView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-//                } else {
-//                    // Fallback on earlier versions
-//                }
-//            }
-//        }
-//    }
-//    if (nativeExpressAdView) {
-//        UIView *adView = [nativeExpressAdView valueForKey:@"_adView"];
-//        Class kclass = NSClassFromString(@"ADMobMTGNativeExpressAdView");
-//        if ([adView isKindOfClass:[kclass class]]) {
-//            id mtgObj = [_expressAd valueForKey:@"_sourceAd"];
-//            if ([mtgObj isKindOfClass:[NSClassFromString(@"ADMobGenMTGNativeAd") class]]) {
-//                id mtgManager = [mtgObj valueForKey:@"_nativeAdManager"];
-//                if ([mtgManager isKindOfClass:[MTGNativeAdManager class]]) {
-//                    MTGNativeAdManager *manager = (MTGNativeAdManager *)mtgManager;
-//                    manager.viewController = self;
-//                }
-//            }
-//        } else if ([adView isKindOfClass:[NSClassFromString(@"GDTNativeExpressAdView") class]]) {
-//            UIView *gdtAdView = [adView valueForKey:@"_gdtView"];
-//            if ([gdtAdView isKindOfClass:[GDTNativeExpressAdView class]]) {
-//                GDTNativeExpressAdView *gdtView = (GDTNativeExpressAdView *)gdtAdView;
-//                gdtView.controller = self;
-//            }
-//        }
-//    }
+
     //渲染成功，webView此时返回正确的高度
     [self.items addObject:nativeExpressAdView];
     [self.adItems removeObject:nativeExpressAdView];
-    [self.tableView.mj_footer endRefreshing];
-    _footRefresh = NO;
-    [self.tableView reloadData];
+    // 回调有可能出现非主线程
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView.mj_footer endRefreshing];
+        _footRefresh = NO;
+        [self.tableView reloadData];
+    });
     
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self.tableView reloadData];
-//    });
+
 }
 
 - (void)admg_nativeExpressAdViewRenderFail:(ADMobGenNativeExpressAdView *)nativeExpressAdView {

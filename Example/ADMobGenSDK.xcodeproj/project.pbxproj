@@ -28,13 +28,14 @@
 		BF510E0923541840000CBB73 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF510E0823541840000CBB73 /* libc++.tbd */; };
 		BF510E0B2354184C000CBB73 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF510E0A2354184C000CBB73 /* libresolv.tbd */; };
 		BF510E0D23541855000CBB73 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF510E0C23541855000CBB73 /* libz.tbd */; };
-		BF88CB4C21D5F60C00B2001D /* ADMobGenBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88CB4821D5F60C00B2001D /* ADMobGenBannerViewController.m */; };
-		BF88CB4D21D5F60C00B2001D /* ADMobGenSplashAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88CB4921D5F60C00B2001D /* ADMobGenSplashAdViewController.m */; };
-		BFB09C712221AC5200ECF738 /* ADMobGenRewardvodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB09C6F2221AC5200ECF738 /* ADMobGenRewardvodViewController.m */; };
+		BFA03FE223B1DE5A00FA8001 /* ADMobGenExpressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA03FDB23B1DE5A00FA8001 /* ADMobGenExpressViewController.xib */; };
+		BFA03FE323B1DE5A00FA8001 /* ADMobGenSplashAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA03FDC23B1DE5A00FA8001 /* ADMobGenSplashAdViewController.m */; };
+		BFA03FE423B1DE5A00FA8001 /* ADMobGenRewardvodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA03FDD23B1DE5A00FA8001 /* ADMobGenRewardvodViewController.m */; };
+		BFA03FE523B1DE5A00FA8001 /* ADMobGenExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA03FDE23B1DE5A00FA8001 /* ADMobGenExpressViewController.m */; };
+		BFA03FE623B1DE5A00FA8001 /* ADMobGenBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA03FDF23B1DE5A00FA8001 /* ADMobGenBannerViewController.m */; };
+		BFA03FE923B1DEAB00FA8001 /* ADMobGenInterstitialAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA03FE823B1DEAB00FA8001 /* ADMobGenInterstitialAdViewController.m */; };
 		BFBA97762301778200D37F6F /* WKWebView+ADMobGen.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBA97752301778200D37F6F /* WKWebView+ADMobGen.m */; };
 		D719ADB2C1FF58EDDA365AEA /* Pods_ADMobGenSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27004214C4B913B57E481617 /* Pods_ADMobGenSDK_Tests.framework */; };
-		E881F60921100B810031A5AC /* ADMobGenExpressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */; };
-		E881F60A21100B810031A5AC /* ADMobGenExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E881F60721100B810031A5AC /* ADMobGenExpressViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,19 +81,21 @@
 		BF510E0823541840000CBB73 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		BF510E0A2354184C000CBB73 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		BF510E0C23541855000CBB73 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		BF88CB4821D5F60C00B2001D /* ADMobGenBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenBannerViewController.m; sourceTree = "<group>"; };
-		BF88CB4921D5F60C00B2001D /* ADMobGenSplashAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenSplashAdViewController.m; sourceTree = "<group>"; };
-		BF88CB4A21D5F60C00B2001D /* ADMobGenBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenBannerViewController.h; sourceTree = "<group>"; };
-		BF88CB4B21D5F60C00B2001D /* ADMobGenSplashAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenSplashAdViewController.h; sourceTree = "<group>"; };
-		BFB09C6F2221AC5200ECF738 /* ADMobGenRewardvodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenRewardvodViewController.m; sourceTree = "<group>"; };
-		BFB09C702221AC5200ECF738 /* ADMobGenRewardvodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenRewardvodViewController.h; sourceTree = "<group>"; };
+		BFA03FD923B1DE5A00FA8001 /* ADMobGenBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenBannerViewController.h; sourceTree = "<group>"; };
+		BFA03FDA23B1DE5A00FA8001 /* ADMobGenExpressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenExpressViewController.h; sourceTree = "<group>"; };
+		BFA03FDB23B1DE5A00FA8001 /* ADMobGenExpressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADMobGenExpressViewController.xib; sourceTree = "<group>"; };
+		BFA03FDC23B1DE5A00FA8001 /* ADMobGenSplashAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenSplashAdViewController.m; sourceTree = "<group>"; };
+		BFA03FDD23B1DE5A00FA8001 /* ADMobGenRewardvodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenRewardvodViewController.m; sourceTree = "<group>"; };
+		BFA03FDE23B1DE5A00FA8001 /* ADMobGenExpressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenExpressViewController.m; sourceTree = "<group>"; };
+		BFA03FDF23B1DE5A00FA8001 /* ADMobGenBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenBannerViewController.m; sourceTree = "<group>"; };
+		BFA03FE023B1DE5A00FA8001 /* ADMobGenSplashAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenSplashAdViewController.h; sourceTree = "<group>"; };
+		BFA03FE123B1DE5A00FA8001 /* ADMobGenRewardvodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenRewardvodViewController.h; sourceTree = "<group>"; };
+		BFA03FE723B1DEAB00FA8001 /* ADMobGenInterstitialAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADMobGenInterstitialAdViewController.h; sourceTree = "<group>"; };
+		BFA03FE823B1DEAB00FA8001 /* ADMobGenInterstitialAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADMobGenInterstitialAdViewController.m; sourceTree = "<group>"; };
 		BFBA97742301778200D37F6F /* WKWebView+ADMobGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebView+ADMobGen.h"; sourceTree = "<group>"; };
 		BFBA97752301778200D37F6F /* WKWebView+ADMobGen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+ADMobGen.m"; sourceTree = "<group>"; };
 		C85A8E1E444DB647438B9771 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D35D1C410FAFED0905750CF0 /* Pods-ADMobGenSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADMobGenSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADMobGenSDK_Tests/Pods-ADMobGenSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADMobGenExpressViewController.xib; sourceTree = "<group>"; };
-		E881F60721100B810031A5AC /* ADMobGenExpressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenExpressViewController.m; sourceTree = "<group>"; };
-		E881F60821100B810031A5AC /* ADMobGenExpressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenExpressViewController.h; sourceTree = "<group>"; };
 		E97B0784D58FB16987241439 /* Pods-ADMobGenSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADMobGenSDK_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,8 +179,7 @@
 		6003F593195388D20070C39A /* Example for ADMobGenSDK */ = {
 			isa = PBXGroup;
 			children = (
-				BFB09C702221AC5200ECF738 /* ADMobGenRewardvodViewController.h */,
-				BFB09C6F2221AC5200ECF738 /* ADMobGenRewardvodViewController.m */,
+				BFA03FD823B1DE5A00FA8001 /* Example */,
 				BF10A091219BF3B100FFA72E /* ADMob_Logo.png */,
 				BF10A08F219BEE9000FFA72E /* 750x1334.png */,
 				6003F59C195388D20070C39A /* ADMobGenAppDelegate.h */,
@@ -185,13 +187,6 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* ADMobGenViewController.h */,
 				6003F5A6195388D20070C39A /* ADMobGenViewController.m */,
-				BF88CB4A21D5F60C00B2001D /* ADMobGenBannerViewController.h */,
-				BF88CB4821D5F60C00B2001D /* ADMobGenBannerViewController.m */,
-				BF88CB4B21D5F60C00B2001D /* ADMobGenSplashAdViewController.h */,
-				BF88CB4921D5F60C00B2001D /* ADMobGenSplashAdViewController.m */,
-				E881F60821100B810031A5AC /* ADMobGenExpressViewController.h */,
-				E881F60721100B810031A5AC /* ADMobGenExpressViewController.m */,
-				E881F60621100B810031A5AC /* ADMobGenExpressViewController.xib */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -240,6 +235,24 @@
 				C85A8E1E444DB647438B9771 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		BFA03FD823B1DE5A00FA8001 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				BFA03FD923B1DE5A00FA8001 /* ADMobGenBannerViewController.h */,
+				BFA03FDF23B1DE5A00FA8001 /* ADMobGenBannerViewController.m */,
+				BFA03FE023B1DE5A00FA8001 /* ADMobGenSplashAdViewController.h */,
+				BFA03FDC23B1DE5A00FA8001 /* ADMobGenSplashAdViewController.m */,
+				BFA03FDA23B1DE5A00FA8001 /* ADMobGenExpressViewController.h */,
+				BFA03FDE23B1DE5A00FA8001 /* ADMobGenExpressViewController.m */,
+				BFA03FDB23B1DE5A00FA8001 /* ADMobGenExpressViewController.xib */,
+				BFA03FE123B1DE5A00FA8001 /* ADMobGenRewardvodViewController.h */,
+				BFA03FDD23B1DE5A00FA8001 /* ADMobGenRewardvodViewController.m */,
+				BFA03FE723B1DEAB00FA8001 /* ADMobGenInterstitialAdViewController.h */,
+				BFA03FE823B1DEAB00FA8001 /* ADMobGenInterstitialAdViewController.m */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,10 +341,10 @@
 			files = (
 				BF10A092219BF3B100FFA72E /* ADMob_Logo.png in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				E881F60921100B810031A5AC /* ADMobGenExpressViewController.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				BF10A090219BEE9000FFA72E /* 750x1334.png in Resources */,
+				BFA03FE223B1DE5A00FA8001 /* ADMobGenExpressViewController.xib in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,14 +441,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E881F60A21100B810031A5AC /* ADMobGenExpressViewController.m in Sources */,
-				BF88CB4C21D5F60C00B2001D /* ADMobGenBannerViewController.m in Sources */,
+				BFA03FE423B1DE5A00FA8001 /* ADMobGenRewardvodViewController.m in Sources */,
 				BFBA97762301778200D37F6F /* WKWebView+ADMobGen.m in Sources */,
-				BF88CB4D21D5F60C00B2001D /* ADMobGenSplashAdViewController.m in Sources */,
-				BFB09C712221AC5200ECF738 /* ADMobGenRewardvodViewController.m in Sources */,
 				6003F59E195388D20070C39A /* ADMobGenAppDelegate.m in Sources */,
+				BFA03FE623B1DE5A00FA8001 /* ADMobGenBannerViewController.m in Sources */,
+				BFA03FE923B1DEAB00FA8001 /* ADMobGenInterstitialAdViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* ADMobGenViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				BFA03FE523B1DE5A00FA8001 /* ADMobGenExpressViewController.m in Sources */,
+				BFA03FE323B1DE5A00FA8001 /* ADMobGenSplashAdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

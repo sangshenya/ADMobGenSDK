@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)admg_interstitialDidClose:(ADMobGenInterstitialAd *)interstitialAd;
 
 /**
- 广告展示
+ ADMobGenInterstitialAd展示回调
  
  @param interstitialAd 广告实例
  */

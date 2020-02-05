@@ -14,6 +14,11 @@
 @class ADMobGenNativeExpressAdView;
 @protocol ADMobGenNativeExpressAdDelegate;
 
+typedef NS_ENUM(NSUInteger, ADMobGenNativeExpressAdStatus) {
+    ADMobGenNativeExpressAdStatusDefault, // 闲置状态
+    ADMobGenNativeExpressAdStatusLoading, // 加载广告中
+};
+
 @interface ADMobGenNativeExpressAd : NSObject
 
 /*
@@ -21,6 +26,12 @@
  详解：[必选]开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
  */
 @property (nonatomic, weak) UIViewController *controller;
+
+/*
+ status
+ 详解：开发者可通过状态值来判断当前广告对象是否正在加载广告，支持KVO
+*/
+@property (nonatomic, assign) ADMobGenNativeExpressAdStatus status;
 
 /**
  代理回调

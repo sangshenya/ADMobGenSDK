@@ -5,14 +5,8 @@
 //  Created by 曹飞 on 2018/7/17.
 //
 
-#import <Foundation/Foundation.h>
+#import "ADMobGenCommonLoader.h"
 
-@interface ADMobGenNativeLoader : NSObject
-
-+ (NSArray<NSString *> *)allPlatforms;
-
-+ (void)registPlatformClass:(Class)klass forSdkName:(NSString *)sdkName;
-
-+ (Class)platformClassForSdkName:(NSString *)sdkName;
+@interface ADMobGenNativeLoader : ADMobGenCommonLoader
 
 @end

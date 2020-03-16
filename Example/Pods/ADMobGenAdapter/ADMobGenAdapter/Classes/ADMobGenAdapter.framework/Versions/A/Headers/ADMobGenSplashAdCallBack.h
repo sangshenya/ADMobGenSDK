@@ -9,6 +9,8 @@
 
 @protocol ADMobGenSplashAdCallBack <NSObject>
 
+//- (void)splashAdLoadSuccessCallBack:(id)splashAd;
+
 - (void)splashAdSuccessToPresentCallBack:(id)splashAd;
 
 - (void)splashAdFailToPresentCallBack:(id)splashAd error:(NSError *)error;

@@ -7,7 +7,6 @@
 
 #ifndef ADMobGenAdapterCommon_h
 #define ADMobGenAdapterCommon_h
-#import <objc/runtime.h>
 
 typedef NS_ENUM(NSInteger, ADMobGenPlayerState) {
     ADMobGenPlayerStateInitial = 0,//初始化状态

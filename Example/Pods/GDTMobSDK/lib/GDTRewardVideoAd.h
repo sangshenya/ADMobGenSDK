@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GDTRewardVideoAd : NSObject
 
 @property (nonatomic, getter=isAdValid, readonly) BOOL adValid;
+@property (nonatomic) BOOL videoMuted;
 @property (nonatomic, assign, readonly) NSInteger expiredTimestamp;
 @property (nonatomic, weak) id <GDTRewardedVideoAdDelegate> delegate;
 @property (nonatomic, readonly) NSString *placementId;
@@ -59,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  返回广告平台名称
 
- @return 当使用 google 补余功能时，用于区分广告平台
+ @return 当使用激励视频聚合功能时，用于区分广告平台
  */
 - (NSString *)adNetworkName;
 

@@ -5,19 +5,8 @@
 //  Created by 陶冶明 on 2019/11/8.
 //
 
-#import <Foundation/Foundation.h>
-@protocol ADMobGenInterstitialProtocol;
+#import "ADMobGenCommonLoader.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface ADMobGenInterstitialLoader : NSObject
-
-+ (NSArray<NSString *> *)allPlatforms;
-
-+ (void)registPlatformClass:(Class<ADMobGenInterstitialProtocol>)klass forSdkName:(NSString *)sdkName;
-
-+ (Class<ADMobGenInterstitialProtocol>)platformClassForSdkName:(NSString *)sdkName;
+@interface ADMobGenInterstitialLoader : ADMobGenCommonLoader
 
 @end
-
-NS_ASSUME_NONNULL_END

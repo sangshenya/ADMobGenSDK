@@ -32,12 +32,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL videoMuted;
 
 /**
+ 视频详情页播放时是否静音，默认NO，
+ */
+@property (nonatomic, assign) BOOL detailPageVideoMuted;
+
+/**
  是否启动自动续播功能，当在 tableView 等场景播放器被销毁时，广告展示时继续从上次播放位置续播，默认 NO
  */
 @property (nonatomic, assign) BOOL autoResumeEnable;
 
 /**
- 广告发生点击行为时，是否展示视频详情页，默认YES，
+ 广告发生点击行为时，是否展示视频详情页
  设为 NO 时，用户点击 clickableViews 会直接打开 App Store 或者广告落地页
  */
 @property (nonatomic, assign) BOOL detailPageEnable;

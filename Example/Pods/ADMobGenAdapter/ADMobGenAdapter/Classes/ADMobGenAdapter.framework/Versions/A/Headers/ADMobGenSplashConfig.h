@@ -19,6 +19,7 @@
 @property (nonatomic, readonly, assign) BOOL displayType;
 @property (nonatomic, readonly, assign) BOOL trunType;
 @property (nonatomic, readonly, assign) BOOL rewardType;
+@property (nonatomic, readonly, assign) BOOL expressType;
 @property (nonatomic, readonly, weak) UIViewController *viewController;
 @property (nonatomic, readonly, weak) id<ADMobGenSplashAdCallBack> callback;
 
@@ -39,6 +40,18 @@
                           displayType:(BOOL)displayType
                              trunType:(BOOL)trunType
                            rewardType:(BOOL)rewardType
+                       viewController:(UIViewController *)viewController
+                             callBack:(id<ADMobGenSplashAdCallBack>)callBack DEPRECATED_MSG_ATTRIBUTE("Donot has expressType");
+
++ (instancetype)configWithContentView:(UIView *)contentView
+                           bottomView:(UIView *)bottomView
+                      backgroundColor:(UIColor *)backgroundColor
+                                appId:(NSString *)appId
+                                posId:(NSString *)posId
+                          displayType:(BOOL)displayType
+                             trunType:(BOOL)trunType
+                           rewardType:(BOOL)rewardType
+                          expressType:(BOOL)expressType
                        viewController:(UIViewController *)viewController
                              callBack:(id<ADMobGenSplashAdCallBack>)callBack;
 

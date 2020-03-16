@@ -49,7 +49,6 @@ typedef enum : NSInteger {
     ADMG_ADMOB_VIDEO_WRITE_ERROR = 11206, //admobile video写入失败
     ADMG_ADMOB_VIDEO_READ_ERROR = 11207, //admobile video读取失败
     
-    
     ADMG_WM_BANNER_OUTSCREEN = 40020, //wm banner广告初始化时在屏幕外
     
     ADMG_INMOBI_BANNER_OUTSCREEN = 50020, //inmobi banner广告初始化时在屏幕外
@@ -69,6 +68,16 @@ typedef enum : NSInteger {
     ADMG_MGTV_SPLASH_LOAD_FAIL = 80000, //MGTV splash广告获取失败
     ADMG_MGTV_BANNER_RENDER_ERROR = 80020, //MGTV banner广告渲染失败
     ADMG_MGTV_BANNER_LOAD_FAIL = 80021, //MGTV banner广告获取失败
+    
+    ADMG_BAIDU_NATIVEEXPRESS_NOAD = 90040, // 百度 native express没有推广返回
+    ADMG_BAIDU_NATIVEEXPRESS_EXCEPTION = 90041, // 百度 native express网络或其它异常
+    ADMG_BAIDU_NATIVEEXPRESS_FRAME = 90042, // 百度 native express广告尺寸或元素异常，不显示广告
+    ADMG_BAIDU_REWARDVOD_NOAD = 90060, // 百度 reward video没有推广返回
+    ADMG_BAIDU_REWARDVOD_EXCEPTION = 90061, // 百度 reward video网络或其它异常
+    ADMG_BAIDU_REWARDVOD_FRAME = 90062, // 百度 reward video广告尺寸或元素异常，不显示广告
+    ADMG_BAIDU_INTERSTITIAL_ERROR = 90140, //百度 interstitial未知错误
+    
+    ADMG_MOPUB_NATIVEEXPRESS_NOAD = 91040, //mopub native express广告为空
     
 } ADMobGenErrorCode;
 

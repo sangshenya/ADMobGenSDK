@@ -46,6 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, assign) int admg_cpuSubtype; ///< cpu子类型
 @property (nonatomic, readonly, copy) NSString *admg_bt;//蓝牙信息加密字符串 （与mac加密方式相同）(iOS 只能获取到设备名称，设备名称为本机的设备名称)
 @property (nonatomic, readonly, copy) NSString *admg_wordSize;//字号
+@property (nonatomic, readonly, copy) NSString *admg_lastPowerOnTime;//设备开机时间
 
 - (void)updateDeviceInfo;
 

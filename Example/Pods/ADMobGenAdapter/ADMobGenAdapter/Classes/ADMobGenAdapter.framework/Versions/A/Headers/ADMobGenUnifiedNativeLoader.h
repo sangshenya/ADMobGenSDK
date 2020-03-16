@@ -5,18 +5,8 @@
 //  Created by 陶冶明 on 2019/11/6.
 //
 
-#import <Foundation/Foundation.h>
+#import "ADMobGenCommonLoader.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface ADMobGenUnifiedNativeLoader : NSObject
-
-+ (NSArray<NSString *> *)allPlatforms;
-
-+ (void)registPlatformClass:(Class)klass forSdkName:(NSString *)sdkName;
-
-+ (Class)platformClassForSdkName:(NSString *)sdkName;
+@interface ADMobGenUnifiedNativeLoader : ADMobGenCommonLoader
 
 @end
-
-NS_ASSUME_NONNULL_END

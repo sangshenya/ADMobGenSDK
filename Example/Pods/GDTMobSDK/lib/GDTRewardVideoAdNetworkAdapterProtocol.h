@@ -23,7 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSInteger)expiredTimestamp;
 
-
+@optional
+@property (nonatomic) BOOL videoMuted;
 
 @end
 

@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define kADMobGenFoundationSDKVersion @"1.0.0"
+#define kADMobGenFoundationSDKVersion @"1.0.2"
 
 // 字符串是否为空
 #define kADMGStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || ![str isKindOfClass:[NSString class]] || [str length] < 1 ? YES : NO)

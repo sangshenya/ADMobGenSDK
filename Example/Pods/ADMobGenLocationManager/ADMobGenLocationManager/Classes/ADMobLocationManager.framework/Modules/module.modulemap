@@ -1,6 +1,0 @@
-framework module ADMobLocationManager {
-  umbrella header "ADMobLocationManager.h"
-
-  export *
-  module * { export * }
-}

@@ -8,16 +8,9 @@ target 'ADMobGenSDK_Example' do
 
     
   end
-  
-#  pod 'ADMobGenMCAd'
-
-  pod 'ADMobGenGDT', '4.11.3'
-  pod 'ADMobileAd', '3.1.1'
-
-  pod 'ADMobGenSDKWM', '2.7.5.2'
-
-  
-
+  pod 'ADMobGenGDT'
+  pod 'ADMobileAd'
+  pod 'ADMobGenSDKWM'
   pod 'MJRefresh', '~> 3.1.12'
 
 end

@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
     
     s.vendored_frameworks = 'ADMobGenSDK/Classes/*.framework'
     
-    s.dependency 'ADMobGenAdapter','1.7.2'
+    s.dependency 'ADMobGenAdapter','1.7.4'
     s.dependency 'ADMobGenNetwork','0.5.5'
     s.dependency 'ADMobGenDeviceInfo','1.6.5.1'
     

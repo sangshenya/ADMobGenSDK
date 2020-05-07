@@ -39,18 +39,16 @@
  初始化bannerView
  @param size 期望的banner广告尺寸比例，默认为640:100，bannerSize is overdue
  @param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
- @param gdtBanner 是否为广点通2.0，默认为NO不支持广点通2.0
  */
-- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner;
+- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex;
 
 /*
  初始化bannerView
  @param size 期望的banner广告尺寸比例，默认为640:100，bannerSize is overdue
  @param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
- @param gdtBanner 是否为广点通2.0，默认为NO不支持广点通2.0
  @param rootViewController banner被展示的控制器
  */
-- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner withViewController:(UIViewController *)rootViewController;
+- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex withViewController:(UIViewController *)rootViewController;
 
 /*
  初始化bannerView
@@ -58,7 +56,7 @@
  @param gdtBanner 是否为广点通2.0，默认为NO不支持广点通2.0
  @param rootViewController banner被展示的控制器
  */
-- (instancetype)initWithFrame:(CGRect)frame withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner withViewController:(UIViewController *)rootViewController;
+- (instancetype)initWithFrame:(CGRect)frame withBannerIndex:(NSInteger)bannerIndex withViewController:(UIViewController *)rootViewController;
 
 /*
  初始化bannerView
@@ -67,7 +65,7 @@
  @param rootViewController banner被展示的控制器
  @param refershTime banner广告刷新时间间隔，30-120s之间，其他时间无效
  */
-- (instancetype)initWithFrame:(CGRect)frame withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner withViewController:(UIViewController *)rootViewController refershTime:(NSInteger)refershTime NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame withBannerIndex:(NSInteger)bannerIndex withViewController:(UIViewController *)rootViewController refershTime:(NSInteger)refershTime NS_DESIGNATED_INITIALIZER;
 
 
 /**

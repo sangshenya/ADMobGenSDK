@@ -53,7 +53,7 @@
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     
     // 1 初始化banner视图
-    _bannerView = [[ADMobGenBannerView alloc] initWithFrame:CGRectMake(0, 0, width, height) withBannerSize:ADMobGenBannerAdSizeNormal withBannerIndex:1 withGdtBanner:YES withViewController:self];
+    _bannerView = [[ADMobGenBannerView alloc] initWithFrame:CGRectMake(0, 0, width, height) withBannerIndex:1 withViewController:self];
     _bannerView.delegate = self;
     _bannerView.backgroundColor = [UIColor redColor];
     

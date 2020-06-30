@@ -13,6 +13,9 @@
 - (void)setAdView:(UIView *)adView {
     if(_adView.superview == self)
         [_adView removeFromSuperview];
+    for (UIView *subview in self.contentView.subviews) {
+        [subview removeFromSuperview];
+    }
     _adView = adView;
     [self.contentView addSubview:_adView];
 }

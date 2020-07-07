@@ -1,6 +1,6 @@
 
 
-# ADMobGenSDK iOS接入文档 v1.5.8
+# ADMobGenSDK iOS接入文档 Nv1.6.8
 
 
 
@@ -40,10 +40,6 @@
 
 | 文档版本 | 修订日期   | 修订说明                                                     |
 | -------- | ---------- | ------------------------------------------------------------ |
-| v1.3.5   | 2018-12-3  | 文档新增demo地址、未导入ADMobile平台崩溃提示 Banner广告多尺寸 |
-| v1.3.6   | 2018-12-8  | 文档新增SDK问题整理、Banner广告多尺寸列表 信息流模版广告多样式列表 |
-| v1.4.2   | 2018-12-27 | demo地址更新 广点通、头条SDK更新适配 信息流模板广告的接入更新、新增信息流模板各样式的参考高度 |
-| v1.4.3   | 2019-1-22  | 新增激励视频广告、信息流模板广告支持视频类广告、修复webView渲染白屏问题、广点通、头条SDK更新适配 |
 | v1.5.0   | 2019-2-14  | 优化第一次启动时广告加载、优化广告状态上报、更新广点通和头条SDK、修复已知bug |
 | v1.5.1   | 2019-3-1   | 同一广告样式支持多个广告位ID、信息流广告样式优化、信息和banner广告提供广告关闭按钮、统一广告来源logo、优化广点通广告关闭回调、修复已知bug |
 | V1.5.2   | 2019-3-13  | 新增draw沉浸式视频广告、ADMobile广告SDK品牌升级、修复已知bug、新增Swift Demo |
@@ -51,52 +47,68 @@
 | V1.5.5   | 2019-5-26  | 新增支持谷歌平台、更新广点通和头条SDK、Mobvsita平台激励视频上线、激励视频优化、支持广点通banner2.0、deeplink广告优化、修复已知bug |
 | V1.5.7   | 2019-7-9   | 可⾃自定义信息流模版⼴广告的样式、更新头条SDK、修复已知bug   |
 | V1.5.8   | 2019-8-12  | 头条的banner仅支持模板banner、更新广点通、头条SDK、修复已知bug |
+| v1.6.1   | 2019-09-16 | 各平台适配iOS13、信息流模板广告新增双图双文样式、原生广告优化、移除部分多余的信息流模板广告样式、ADMobile支持激励视频广告 |
+| v1.6.2   | 2019-11-14 | 升级各平台SDK、各平台初始化时机调整、ADMobile平台广告优化，新增信息流视频广告、banner支持自定义刷新、修复已知bug |
+| v1.6.3   | 2019-12-10 | 新增插屏广告、头条SDK禁用自渲染类型：信息流更新为模板信息流广告，激励视频更新为模板激励视频广告、更新广点通、头条等平台广告SDK、不接管banner关闭按钮、不接管头条和广点通的信息流模板广告的关闭按钮、修复已知bug |
+| v1.6.5   | 2020-02-04 | Xcode低版本适配、各广告位增加展示回调、信息流模板广告增加加载状态、升级各平台SDK、修复已经bug |
+| v1.6.6   | 2020-02-20 | 开屏内部逻辑优化、定位权限分离、信息流模板广告统一不接管关闭按钮、支持头条沉浸式模板广告、最低支持iOS9.0、修复已知bug、广点通升级为4.11.5版本 |
+| v1.6.8   | 2020-05-07 | 开屏内部逻辑优化、汇量平台的开屏、bannner广告使用模版、增加全屏视频广告、升级各平台SDK、修复已知bug |
 
 <div STYLE="page-break-after: always;"></div>
 
 ## 导入ADMobGenSDK
 
-<font color=#ff0000>注：ADMobile广告SDK品牌升级，1.5.2版本之后，ADMobGenMCAd必须更换为ADMobileAd，否则会导致崩溃</font>
+<font color=#ff0000>注：1、ADMobile广告SDK品牌升级，1.5.2版本之后，ADMobGenMCAd必须更换为ADMobileAd，否则会导致崩溃；<br>2、GDT平台4.11.2版本的banner尺寸异常，需要升级到banner2.0，如有发现联系ADMobile方的媒介同学。</font>
+
+推荐使用pod命令
 
 ```ruby
+// 挑选其中需要导入的平台
 pod 'ADMobGenSDK'
+pod 'ADMobileAd'
+pod 'ADMobGenGDT'
+pod 'ADMobGenSDKWM'
+pod 'ADMobGenInmobi'
+pod 'ADMobGenMTG'
+// 导入以下其中一个
+pod 'ADMobGenLocation'// 不含有系统定位代码
+pod 'ADMobGenLocationManager'// 含有系统定位代码
 ```
 
 常用SDK最新的版本号
 
 ```ruby
 // 基础库
-ADMobGenFoundation (0.7.2)
-ADMobGenAdapter (1.6.0)
-ADMobGenNetwork (0.5.2)
-ADMobGenSDK (1.5.8)
-ADMobGenDeviceInfo (0.2.0)
-ADMobGenLocationManager (0.1.1)
+ADMobGenFoundation (1.0.2)
+ADMobGenAdapter (1.7.4)
+ADMobGenNetwork (0.5.5)
+ADMobGenSDK (1.6.8)
+ADMobGenDeviceInfo (1.6.5.1)
+ADMobGenLocationManager (0.3.0.1)
+ADMobGenLocation (0.3.0)
 // admobile平台
-ADMobileAd (2.9.2)
+ADMobileAd (3.1.4)
 // 广点通平台
-ADMobGenGDT (4.10.5)
+ADMobGenGDT (4.11.7)
 // 头条平台
-ADMobGenSDKWM (2.1.0.2)
+ADMobGenSDKWM (2.9.0.7)
 // 谷歌平台
-ADMobGenGoogle（7.47.0）
+ADMobGenGoogle（7.58.0）
 // inmobi 平台
-ADMobGenInmobi (7.3.1)
+ADMobGenInmobi (7.4.5)
 // mobvsita 平台
-ADMobGenMTG （5.5.2）
+ADMobGenMTG （6.1.2.0）
+// 百度平台
+ADMobGenBaiDu (4.67.2)
 ```
 
-<br>
-
-
+<div STYLE="page-break-after: always;"></div>
 
 ## 1.1 概述
 
 尊敬的开发者朋友，欢迎您使用艾狄墨搏集合SDK平台。通过本文档，您可以在几分钟之内轻松完成广告的集成过程。
 
-开发工具： Xcode 8 及以上版本
-
-操作系统： iOS 8.0 及以上版本
+操作系统： iOS 9.0 及以上版本
 
 运行设备：iPhone （iPad上可能部分广告正常展示，但是存在填充很低或者平台不支持等问题，建议不要在iPad上展示广告）
 
@@ -105,7 +117,7 @@ ADMobGenMTG （5.5.2）
 
 <br>
 
-<div STYLE="page-break-after: always;"></div>
+
 
 ## 2.1 采用cocoapods进行SDK的导入
 
@@ -113,54 +125,56 @@ SDK为了支持插件化的广告平台，采用了cocoapods进行广告集成�
 
 `注意：如果不导入ADMobile(艾狄墨搏)平台会导致崩溃`
 
-- [[Link]](https://github.com/sangshenya/ADMobGenSDK) 广告调用framework，必须导入
+- [[Link]](https://github.com/sangshenya/ADMobGenSDK) 广告调用framework
 
 ```ruby
 pod 'ADMobGenSDK'
 ```
 
-- [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGDT) 广点通平台，必须导入
+- [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGDT) 广点通平台
 
 ```ruby
 pod 'ADMobGenGDT'
 ```
 
-- [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobileAd) 艾狄墨搏平台，必须导入
+- [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobileAd) 艾狄墨搏平台
 
 ```ruby
 pod 'ADMobileAd'
 ```
 
-- [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDKWM) 头条平台，暂无需导入（需导入会另行通知）
+- [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDKWM) 头条平台
 
 ```ruby
 pod 'ADMobGenSDKWM'
 ```
 
-- [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDu) 百度平台，暂无需导入（需导入会另行通知）
+- [[Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenBaiDu) 百度平台
 
 ```ruby
 pod 'ADMobGenBaiDu'
 ```
 
-- [Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenInmobi) Inmobi平台，暂无需导入（需导入会另行通知）
+- [Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenInmobi) Inmobi平台
 
 ```ruby
 pod 'ADMobGenInmobi
 ```
 
-- [Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGoogle) Google平台，暂无需导入（需导入会另行通知）
+- [Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGoogle) Google平台
 
 <font color=#ff0000>注：Google平台导入之后，必须在项目中的infoplist文件中添加GADApplicationIdentifier字段，该字段的值可以从ADMobile媒介获取，不添加该字段会导致崩溃</font>
 
 ```ruby
 pod 'ADMobGenGoogle'
+
 ```
 
-- [Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMTG) Mobvsita平台，暂无需导入（需导入会另行通知）
+- [Link]](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMTG) Mobvsita平台
 
 ```ruby
 pod 'ADMobGenMTG'
+
 ```
 
 <br>
@@ -183,6 +197,8 @@ pod 'ADMobGenMTG'
 
 [ADMobLocationManager.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenLocationManager)
 
+[ADMobGenLocation.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenLocation)
+
 - 艾狄墨搏平台
 
 [ADMobileAdSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobileAd)
@@ -193,9 +209,7 @@ pod 'ADMobGenMTG'
 
 - 头条平台
 
-`同时导入` [ADMobGenWM.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenWMSDK),  [BUAdSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDKWM) 以及资源文件[BUAdSDK.bundle](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenWMSDK/tree/master/ADMobGenWMSDK/Assets)](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGDT)http://121.41.108.203/ADMobGenKit-Modules/ADMobGenWMSDK/tree/master/ADMobGenWMSDK/Assets)
-
-<br>
+`同时导入` [ADMobGenWM.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenWMSDK),  [BUAdSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenSDKWM) 以及资源文件[BUAdSDK.bundle](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenWMSDK/tree/master/ADMobGenWMSDK/Assets)
 
 - 百度平台
 
@@ -205,9 +219,7 @@ pod 'ADMobGenMTG'
 
 `同时导入` [ADMobGenMTG.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMTGSDK),  [MTGSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMTG) ，[MTGSDKReward.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenMTG) 
 
-- Google平台
-
-<font color=#ff0000>注：Google平台导入之后，必须在项目中的infoplist文件中添加GADApplicationIdentifier字段，该字段的值可以从ADMobile媒介获取，不添加该字段会导致崩溃</font>
+- Google平台  <font color=#ff0000>注：Google平台导入之后，必须在项目中的infoplist文件中添加GADApplicationIdentifier字段，该字段的值可以从ADMobile媒介获取，不添加该字段会导致崩溃</font>
 
 `同时导入` [ADMobGenGoogle.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGoogle),  [GoogleMobileAds.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGoogle/tree/master/Example/Pods) ，[GoogleUtilities.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGoogle/tree/master/Example/Pods) ，[GoogleAppMeasurement.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenGoogle/tree/master/Example/Pods) 
 
@@ -215,12 +227,7 @@ pod 'ADMobGenMTG'
 
 `同时导入` [ADMobGenInmobiSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenInmobi),  [InMobiSDK.framework](http://121.41.108.203/ADMobGenKit-Modules/ADMobGenInmobi) 
 
-<br>
-
-## 3.1 工程环境配置
-
-1. `如果采用cocoapods方式导入SDK, 可跳过该步骤`
-手动方式导入,添加如下依赖库:
+手动方式导入,需要添加如下依赖库:
 
 ```obj-c
 AdSupport.framework 
@@ -245,6 +252,9 @@ MobileCoreServices.framework(1.4.3及以后)
 CoreMedia.framework(1.4.3及以后)
 AVFoundation.framework
 libsqlite3.dylib
+Accelerate.framework
+ImageIO.framework
+
 ```
 
 以下为Mobvsita平台所需
@@ -252,22 +262,25 @@ libsqlite3.dylib
 ```
 UIKit.framework
 Foundation.framework
-Accelerate.framework
 AVFoundation.framework
+
 ```
 
 头条还需要添加依赖库：
 
 ```
 libresolv.9.tbd(1.4.3及以后)
-```
 
-2. 打开项目的 app target，查看 Build Settings 中的 Linking-Other Linker Flags 选项，确保含有 -ObjC 一值， 若没有则添加。
-3. 在项目的 app target 中，查看 Build Settings 中的 Build options - Enable Bitcode 选项， 设置为NO。 
+```
 
 <div STYLE="page-break-after: always;"></div>
 
-4. info.plist 添加支持 Http访问字段
+## 3.1 工程环境配置
+
+1. 打开项目的 app target，查看 Build Settings 中的 Linking-Other Linker Flags 选项，确保含有 -ObjC 一值， 若没有则添加。
+
+2. 在项目的 app target 中，查看 Build Settings 中的 Build options - Enable Bitcode 选项， 设置为NO。 
+3. info.plist 添加支持 Http访问字段
 
 ```obj-c
 <key>NSAppTransportSecurity</key>
@@ -275,13 +288,58 @@ libresolv.9.tbd(1.4.3及以后)
 <key>NSAllowsArbitraryLoads</key>
 <true/>
 </dict>
+
 ```
 
-5. Info.plist 添加定位权限字段
+4. Info.plist 添加定位权限字段（使用ADMobGenLocation可不设置）
 
 ```obj-c
 NSLocationWhenInUseUsageDescription
 NSLocationAlwaysAndWhenInUseUsageDeion
+
+```
+
+5. Info.plist推荐设置白名单
+
+```obj-c
+<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>dianping</string>
+		<string>imeituan</string>
+		<string>com.suning.SuningEBuy</string>
+		<string>openapp.jdmobile</string>
+		<string>vipshop</string>
+		<string>snssdk141</string>
+		<string>ctrip</string>
+		<string>suning</string>
+		<string>qunariphone</string>
+		<string>QunarAlipay</string>
+		<string>qunaraphone</string>
+		<string>yohobuy</string>
+		<string>kaola</string>
+		<string>agoda</string>
+		<string>openapp.xzdz</string>
+		<string>beibeiapp</string>
+		<string>taobao</string>
+		<string>tmall</string>
+		<string>openjd</string>
+		<string>jhs</string>
+		<string>yhd</string>
+		<string>wireless1688</string>
+		<string>GomeEShop</string>
+		<string>wbmain</string>
+		<string>xhsdiscover</string>
+		<string>douyin</string>
+		<string>pinduoduo</string>
+		<string>jdmobile</string>
+		<string>tbopen</string>
+		<string>pddopen</string>
+		<string>mogujie</string>
+		<string>koubei</string>
+		<string>eleme</string>
+		<string>youku</string>
+	</array>
+
 ```
 
 <br>
@@ -298,12 +356,14 @@ if (error) {
 // SDK启动失败
 }
 }];
+
 ```
 
 开启定位权限, 更加精准的投放广告
 
 ```obj-c
 [ADMobGenSDKConfig setGpsOn];
+
 ```
 
 用户日志输出等级
@@ -311,6 +371,7 @@ if (error) {
 ```obj-c
 //默认为ADMobGenLogLevelNone
 [ADMobGenSDKConfig setLogLevel:ADMobGenLogLevelError];
+
 ```
 
 获取ADMobGenSDK版本号
@@ -318,6 +379,7 @@ if (error) {
 ```obj-c
 //获取SDK版本号
 NSString *sdkVersion = [ADMobGenSDKConfig getSDKVersion];
+
 ```
 
 测试Debug包需要，一般情况下不开启,需要时会另行通知
@@ -325,6 +387,24 @@ NSString *sdkVersion = [ADMobGenSDKConfig getSDKVersion];
 ```obj-c
 //广告SDK Debug模式
 [ADMobGenSDKConfig setDebugMode:@(YES)];
+
+```
+
+外部广告加载成功的广告验证回调
+
+```obj-c
+ // 外部⼴广告加载成功的⼴广告验证回调
+[ADMobGenSDKConfig loadAdSuccessValidCallBackWithAdType:0];
+
+```
+
+目前头条SDK初始化完成之前请求头条广告会导致崩溃，建议在APP启动时初始化头条SDK
+
+```obj-c
+ // 头条SDK初始化
+#import <BUAdSDK/BUAdSDKManager.h>
+[BUAdSDKManager setAppID:@“”];
+
 ```
 
 <br>
@@ -369,6 +449,7 @@ NSString *sdkVersion = [ADMobGenSDKConfig getSDKVersion];
 
 @end
 
+
 ```
 
 <div STYLE="page-break-after: always;"></div>
@@ -379,35 +460,43 @@ NSString *sdkVersion = [ADMobGenSDKConfig getSDKVersion];
 @protocol ADMobGenSplashAdDelegate <NSObject>
 
 /**
-开屏展现成功
-
-@param splashAd 开屏实例
-*/
+ 开屏展现成功
+ 
+ @param splashAd 开屏实例
+ */
 - (void)admg_splashAdSuccessToPresentScreen:(ADMobGenSplashAd *)splashAd;
 
 /**
-开屏展现失败
-
-@param splash 开屏实例
-@param error 错误描述
-*/
+ 开屏展现失败
+ 
+ @param splash 开屏实例
+ @param error 错误描述
+ */
 - (void)admg_splashAd:(ADMobGenSplashAd *)splash failToPresentScreen:(NSError *)error;
 
 /**
-开屏广告点击
-
-@param splashAd 开屏实例
-*/
+ 开屏广告点击
+ 
+ @param splashAd 开屏实例
+ */
 - (void)admg_splashAdClicked:(ADMobGenSplashAd *)splashAd;
 
 /**
-开屏被关闭
-
-@param splashAd 开屏实例
-*/
+ 开屏被关闭
+ 
+ @param splashAd 开屏实例
+ */
 - (void)admg_splashAdClosed:(ADMobGenSplashAd *)splashAd;
 
+/**
+ 开屏展示
+ 
+ @param splashAd 广告实例
+ */
+- (void)admg_splashAdExposure:(ADMobGenSplashAd *)splashAd;
+
 @end
+
 
 ```
 
@@ -465,6 +554,7 @@ if (error) {
 - (void)admg_splashAdClosed:(ADMobGenSplashAd *)splashAd{
 _splashAd = nil;
 }
+
 ```
 
 开屏广告注意事项：
@@ -485,7 +575,7 @@ _splashAd = nil;
 
 ***横幅广告推荐放置在页面固定位置***
 
-<font color=#ff0000>如果已经有广点通和头条的banner广告位id，需要确认广点通的banner广告位id是否为banner2.0，头条的banner广告id是否为模版样式</font>
+<font color=#ff0000>1、如果已经有广点通和头条的banner广告位id，需要确认广点通的banner广告位id是否为banner2.0，头条的banner广告id是否为模版样式；<br>2、banner的关闭按钮不接管，意味着closeButtonHidden方法不生效；<br>3、banner增加自定义刷新时间，时间30s-120s之间；<br>4、GDT平台4.11.2版本的banner尺寸异常，需要升级到banner2.0，如有发现联系ADMobile方的媒介同学。</font>
 
 横幅广告目前只支持640：100尺寸：
 
@@ -497,6 +587,7 @@ ADMobGenBannerAdSize690_388 = 2,//690:388(禁用)
 ADMobGenBannerAdSize600_400 = 3,//600:400(禁用)
 ADMobGenBannerAdSize600_260 = 4,//600:260(禁用)
 };
+
 ```
 
 横幅广告 - ADMobGenBannerView：
@@ -541,8 +632,16 @@ ADMobGenBannerAdSize600_260 = 4,//600:260(禁用)
 @param gdtBanner 是否为广点通2.0，默认为NO不支持广点通2.0
 @param rootViewController
 */
-- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner withViewController:(UIViewController *)rootViewController NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame withBannerSize:(ADMobGenBannerAdSize)bannerSize withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner withViewController:(UIViewController *)rootViewController;
 
+/*
+ 初始化bannerView
+ @param bannerIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+ @param gdtBanner 是否为广点通2.0，默认为NO不支持广点通2.0
+ @param rootViewController banner被展示的控制器
+ @param refershTime banner广告刷新时间间隔，30-120s之间，其他时间无效
+ */
+- (instancetype)initWithFrame:(CGRect)frame withBannerIndex:(NSInteger)bannerIndex withGdtBanner:(BOOL)gdtBanner withViewController:(UIViewController *)rootViewController refershTime:(NSInteger)refershTime NS_DESIGNATED_INITIALIZER;
 
 /**
 加载并显示广告
@@ -555,9 +654,10 @@ banner广告关闭按钮是否隐藏
 
 @param isHidden 默认为NO，不隐藏
 */
-- (void)closeButtonHidden:(BOOL)isHidden;
+- (void)closeButtonHidden:(BOOL)isHidden NS_UNAVAILABLE;
 
 @end
+
 ```
 
 横幅广告 - ADMobGenBannerViewDelegate
@@ -566,35 +666,43 @@ banner广告关闭按钮是否隐藏
 @protocol ADMobGenBannerViewDelegate <NSObject>
 
 /**
-广告获取成功
-
-@param bannerView banner实例
-*/
+ 广告获取成功
+ 
+ @param bannerView banner实例
+ */
 - (void)admg_bannerViewDidReceived:(ADMobGenBannerView *)bannerView;
 
 /**
-广告拉取失败
-
-@param bannerView banner实例
-@param error 错误描述
-*/
+ 广告拉取失败
+ 
+ @param bannerView banner实例
+ @param error 错误描述
+ */
 - (void)admg_bannerViewFailToReceived:(ADMobGenBannerView *)bannerView error:(NSError *)error;
 
 /**
-广告点击
-
-@param bannerView 广告实例
-*/
+ 广告点击
+ 
+ @param bannerView 广告实例
+ */
 - (void)admg_bannerViewClicked:(ADMobGenBannerView *)bannerView;
 
 /**
-广告关闭
-
-@param bannerView 广告实例
-*/
+ 广告关闭
+ 
+ @param bannerView 广告实例
+ */
 - (void)admg_bannerViewClose:(ADMobGenBannerView *)bannerView;
 
+/**
+ 广告展示
+ 
+ @param bannerView 广告实例
+ */
+- (void)admg_bannerViewExposure:(ADMobGenBannerView *)bannerView;
+
 @end
+
 ```
 
 横幅广告请求示例：
@@ -607,16 +715,13 @@ if (_bannerView) {
 _bannerView = nil;
 }
 
-// 1 初始化banner视图，bannerSize为banner的宽高比，以视图的宽度为准，当需要使用除默认尺寸以外的请与我们的商务联系
-_bannerView = [[ADMobGenBannerView alloc] initWithFrame:CGRectZero withBannerSize:ADMobGenBannerAdSizeNormal];
-//_bannerView = [[ADMobGenBannerView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width * 50 / 320) withBannerSize:ADMobGenBannerAdSizeNormal withBannerIndex:1 withGdtBanner:YES withViewController:self];
+// 1 初始化banner视图，bannerSize为banner的宽高比，以视图的宽度为准，当需要使用除默认尺寸以外的请与我们的商务联系,注意：请求广点通的banner2.0以及头条的模板banner时，需要传入准确的宽高
+_bannerView = [[ADMobGenBannerView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width * 5 / 32) withBannerIndex:0 withGdtBanner:YES withViewController:self refershTime:35];
 _bannerView.delegate = self;
 _bannerView.backgroundColor = [UIColor redColor];
 
 // 2 添加到父视图上，ADMobGenBannerView的比例请尽量与bannerSize保持一致
-//    CGFloat height = [UIScreen mainScreen].bounds.size.width * (5 / 32.0);
-//    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-CGFloat height = ([UIScreen mainScreen].bounds.size.width)/4;
+CGFloat height = [UIScreen mainScreen].bounds.size.width * (5 / 32.0);
 CGFloat width = [UIScreen mainScreen].bounds.size.width;
 _bannerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - height, width, height);
 [self.view addSubview:_bannerView];
@@ -643,6 +748,7 @@ _bannerView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 0)
 - (void)admg_bannerViewClose:(ADMobGenBannerView *)bannerView{
 
 }
+
 ```
 
 <br>
@@ -652,6 +758,8 @@ _bannerView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 0)
 ## 4.4 信息流模板广告 - ADMobGenNativeExpressAd
 
 信息流模板广告是一种自动化展现的原生广告，返回的是广告视图，可以支持多个样式（广告视图生命周期和模板广告实例对象绑定）。各个样式描述如下（如有需要可联系ADMobile媒介小姐姐）：
+
+<font color=#ff0000>1、头条和广点通的关闭不接管，意味着closeButtonHidden方法对头条广点通不生效，需要在各自后台新建广告位时去设置，并且头条模板广告样式设置有限。<br>2、头条19年11月28日自渲染代码位新建入口关闭，之后新增的信息流广告位都需要设置buNativeExpressType为YES，不导入头条SDK请忽略</font>
 
 ```obj-c
 //同类型的高度一致，以真实返回视图的高度为准，如有其他需求请联系我方商务
@@ -663,72 +771,90 @@ ADMobGenNativeAdTypeLeftPic,//左图右文，图片比例3：2
 ADMobGenNativeAdTypeCenterPic,//上文下图，图片比例16：9
 ADMobGenNativeAdTypeVerticalPic,//竖版纯图，图片比例3：2
 // 以上的广告支持图文和视频混合，默认静音，4G下不会自动播放。以下的广告类型是纯视频流，填充率会降低，并且头条的视频流，是无法关闭声音的，广点通的视频流默认静音，4G下不会自动播放。
-ADMobGenNativeAdTypeVideoNormal,// 视频广告默认类型，图片比例为16：9
-ADMobGenNativeAdTypeVideoPic,// 视频广告无文字纯图，图片比例16：9
-ADMobGenNativeAdTypeVideoCenterPic,// 视频广告上文下图，图片比例16：9
 ADMobGenNativeAdTypeThreePic,//三小图，inmobi、Mobvsita不支持
+ADMobGenNativeAdTypeDoublePic,//双图双文
 };
+
 
 ```
 
 信息流模板广告 - ADMobGenNativeExpressAd：
 
 ```obj-c
+typedef NS_ENUM(NSUInteger, ADMobGenNativeExpressAdStatus) {
+    ADMobGenNativeExpressAdStatusDefault, // 闲置状态
+    ADMobGenNativeExpressAdStatusLoading, // 加载广告中
+};
+
 @interface ADMobGenNativeExpressAd : NSObject
 
 /*
-viewControllerForPresentingModalView
-详解：[必选]开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
-*/
+ viewControllerForPresentingModalView
+ 详解：[必选]开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
+ */
 @property (nonatomic, weak) UIViewController *controller;
 
-/**
-代理回调
+/*
+ status
+ 详解：开发者可通过状态值来判断当前广告对象是否正在加载广告，支持KVO
 */
+@property (nonatomic, assign) ADMobGenNativeExpressAdStatus status;
+
+/**
+ 代理回调
+ */
 @property (nonatomic, weak) id<ADMobGenNativeExpressAdDelegate> delegate;
 
 - (id)new NS_UNAVAILABLE;
 - (id)init NS_UNAVAILABLE;
 
 /**
-信息流模板广告构造方法
+ 信息流模板广告构造方法
 
-@param size 期望的广告大小,高度自适应
-*/
+ @param size 期望的广告大小,高度自适应
+ */
 - (id)initWithSize:(CGSize)size;
 
 /**
-信息流模板广告构造方法
-
-@param size 期望的广告大小,高度自适应
-@param nativeAdType 信息流广告类型
-@param flowIndex 广告位序号，默认为0，不同的页面使用，可以传入不同的序号
-*/
+ 信息流模板广告构造方法
+ 
+ @param size 期望的广告大小,高度自适应
+ @param nativeAdType 信息流广告类型
+ @param flowIndex 广告位序号，默认为0，不同的页面使用，可以传如不同的序号
+ */
 
 - (id)initWithSize:(CGSize)size withNativeAdType:(ADMobGenNativeAdType)nativeAdType withFlowIndex:(NSInteger)flowIndex NS_DESIGNATED_INITIALIZER;
 
 /**
-信息流模板广告关闭按钮是否隐藏
-
-@param isHidden 默认为NO，不隐藏
-*/
+ 信息流模板广告关闭按钮是否隐藏
+ 
+ @param isHidden 默认为NO，不隐藏
+ */
 - (void)closeButtonHidden:(BOOL)isHidden;
 
 /**
-加载广告
+ 加载广告
 
-@param count 拉取几条广告,建议区间 1~5, 超过可能无法拉取到
-*/
+ @param count 拉取几条广告,建议区间 1~5, 超过可能无法拉取到
+ */
 - (void)load:(int)count;
 
 /**
-设置原生广告类型
-
-@param nativeAdType 广告渲染的样式，默认为图文
-*/
+ 设置原生广告类型
+ 
+ @param nativeAdType 广告渲染的样式，默认为图文
+ */
 - (void)setNativeAdType:(ADMobGenNativeAdType)nativeAdType;
 
+/**
+ 头条的新版信息流模板广告
+ 
+ @param buNativeExpressType 头条19年11月28日自渲染代码位新建入口关闭，之后新增的信息流广告位都需要设置为YES，不导入头条SDK请忽略
+ */
+- (void)setBuNativeExpressType:(BOOL)buNativeExpressType;
+
 @end
+
 
 ```
 
@@ -789,7 +915,16 @@ viewControllerForPresentingModalView
 */
 - (void)admg_nativeExpressVideoAdView:(ADMobGenNativeExpressAdView *)nativeExpressAdView stateDidChanged:(ADMobGenPlayerState)playerState;
 
+/**
+ 广告模板被展示
+ 
+ @param nativeExpressAd 广告实例
+ @param nativeExpressAdView 广告模板
+ */
+- (void)admg_nativeExpressAdViewExposure:(ADMobGenNativeExpressAd *)nativeExpressAd nativeExpressAdView:(ADMobGenNativeExpressAdView *)nativeExpressAdView;
+
 @end
+
 
 ```
 
@@ -807,7 +942,7 @@ expressAd.delegate = self;
 expressAd.controller = self;
 // 3 设置信息流广告类型，默认为图文ADMobGenNativeAdTypeNormal,一共支持六种样式的信息流,不同的信息流样式使用不同的实例对象,需要除normal以外其他的信息流样式可以联系ADMobile媒介或运营小姐姐
 [expressAd setNativeAdType:ADMobGenNativeAdTypePic];//信息流样式纯图片
-// 4 隐藏信息流关闭按钮
+// 4 隐藏信息流关闭按钮，头条和广点通的关闭按钮需要在其后台进行设置开关
 [expressAd closeButtonHidden:YES];
 
 _expressAd = expressAd;
@@ -847,6 +982,7 @@ for (int index = 0; index < views.count; index ++) {
 - (void)admg_nativeExpressAdViewClose:(ADMobGenNativeExpressAdView *)nativeExpressAdView{
 
 }
+
 ```
 
 信息流模版广告注意事项：
@@ -854,6 +990,7 @@ for (int index = 0; index < views.count; index ++) {
 - 信息流拉取成功后, 获得的 `ADMobGenNativeExpressAdView` 视图需要调用 `[adview render]` 方法, 否则无法进行广告的点击上报和展现上报。在渲染成功的回调中再调用`render`方法，会再次调起渲染成功回调，造成死循环。
 - 如果同时使用到 `ADMobGenNativeAdTypeNormal` `ADMobGenNativeAdTypePic`两种信息流类型,是在同样的代理方法中返回`ADMobGenNativeExpressAdView`视图，可调用 `[nativeExpressAdView getNativeAdType]`来判断该视图是哪种类型
 - `ADMobGenNativeExpressAd` 对象初始化传入的 size, 宽度会根据传入的size固定模板宽度, 高度会自适应, 调用方可以通过 `adview.contentSize` 获取当前信息流模板视图的详细尺寸，如不使用`adview.contentSize`会出现无法点击的问题。
+- 新增信息流模板广告加载状态，强烈建议在广告加载完成之后处于闲置状态再进行下一次load。
 
 <br>
 
@@ -862,6 +999,8 @@ for (int index = 0; index < views.count; index ++) {
 ## 4.5 激励视频广告 - ADMobGenRewardvodAd
 
 激励视频广告是一种全新的广告形式，用户可选择观看视频广告以换取有价物，例如虚拟货币、应用内物品和独家内容等等；这类广告的长度为 15-30 秒，不可跳过，且广告的结束画面会显示结束页面，引导用户进行后续动作。
+
+<font color=#ff0000>1、头条19年11月28日自渲染代码位新建入口关闭，之后新增的激励视频广告位都需要设置buRewardvodType为YES，不导入头条SDK请忽略</font>
 
 激励视频广告 - ADMobGenRewardvodAd：
 
@@ -906,7 +1045,15 @@ viewControllerForPresentingModalView
 */
 - (void)showRewardvodAd;
 
+/**
+ 头条的激励视频模板广告
+ 
+ @param buRewardvodType 头条19年11月28日自渲染代码位新建入口关闭，之后新增的激励视频广告位都需要设置为YES，不导入头条SDK请忽略
+ */
+- (void)setBuRewardvodType:(BOOL)buRewardvodType;
+
 @end
+
 
 ```
 
@@ -975,6 +1122,7 @@ viewControllerForPresentingModalView
 
 @end
 
+
 ```
 
 激励视频广告 - ADMobGenRewardvodAd请求示例：
@@ -1009,122 +1157,454 @@ if ([_rewardvodAd rewardvodAdIsReady]) {
 }
 }
 
+
 ```
-
-
 
 <div STYLE="page-break-after: always;"></div>
 
-## 4.6 Draw沉浸式视频广告 - ADMobGenDrawvodAdManager
+## 4.6 插屏广告 - ADMobGenInterstitialAd
 
-Draw沉浸式视频广告即全屏视频播放下的信息流视频广告，是在全屏feed流场景下的原生广告（目前仅支持头条）
+插屏广告是移动广告的一种常见形式，在应用开流程中弹出，当应用展示插页式广告时，用户可以选择点按广告，访问其目标网址，也可以将其关闭，返回应用。
 
-沉浸式视频广告 - ADMobGenDrawvodAdManager：
+插屏广告 - ADMobGenInterstitialAd：
 
 ```obj-c
-@interface ADMobGenDrawvodAdManager : NSObject
+@interface ADMobGenInterstitialAd : NSObject
 
 /**
-代理回调
+ 代理回调
 */
-@property (nonatomic, weak) id<ADMobGenDrawvodAdManagerDelegate> delegate;
+@property (nonatomic, weak) id<ADMobGenInterstitialAdDelegate> delegate;
+
+- (id)new NS_UNAVAILABLE;
+- (id)init NS_UNAVAILABLE;
+
+/*
+ 初始化ADMobGenInterstitialAd
+ @param viewController 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
+ @param index 请求的广告位序号
+*/
+- (instancetype)initWithViewController:(nullable UIViewController *)viewController index:(NSInteger)index;
+
+/*
+ 初始化ADMobGenInterstitialAd
+ @param viewController 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
+ @param index 请求的广告位序号
+ @param adSize 期望尺寸
+ @param ratio 设置广告的大小，广告比例(只影响穿山甲广告) 默认为1:1，size 300x300
+*/
+- (instancetype)initWithViewController:(nullable UIViewController *)viewController index:(NSInteger)index adSize:(CGSize)adSize aspectRatio:(ADMobGenInterstitialAdAspectRatio)ratio NS_DESIGNATED_INITIALIZER;
 
 /**
-加载广告
-@param count 拉取几条广告,建议区间 1~5, 超过可能无法拉取到
-@note draw视频广告目前只支持头条
+ 加载广告
 */
-- (void)load:(int)count isCustomStyle:(BOOL)isCustomStyle;
+- (void)load;
 
 /**
-加载广告
-@param count 拉取几条广告,建议区间 1~5, 超过可能无法拉取到
-@param drawvodIndex 广告位序号，默认为0，不同的页面使用，可以传入不同的序号
-@note draw视频广告目前只支持头条
+ 展示广告
 */
-- (void)load:(int)count withDrawvodIndex:(NSInteger)drawvodIndex isCustomStyle:(BOOL)isCustomStyle;
+- (void)show;
+
+@end
+
+
+```
+
+插屏广告代理回调 - ADMobGenInterstitialAdDelegate
+
+```obj-c
+@protocol ADMobGenInterstitialAdDelegate <NSObject>
+
+/**
+ ADMobGenInterstitialAd请求成功回调
+ 
+ @param interstitialAd 插屏广告实例对象
+*/
+- (void)admg_interstitialSuccedToLoad:(ADMobGenInterstitialAd *)interstitialAd;
+
+/**
+ ADMobGenInterstitialAd请求失败回调
+
+ @param interstitialAd 插屏广告实例对象
+ @param error 失败原因
+*/
+- (void)admg_interstitialFailedToLoad:(ADMobGenInterstitialAd *)interstitialAd error:(NSError *_Nullable)error;
+
+/**
+ ADMobGenInterstitialAd展示在屏幕内回调
+
+ @param interstitialAd 插屏广告实例对象
+*/
+- (void)admg_interstitialDidPresent:(ADMobGenInterstitialAd *)interstitialAd;
+
+/**
+ ADMobGenInterstitialAd点击回调
+
+ @param interstitialAd 插屏广告实例对象
+*/
+- (void)admg_interstitialDidClick:(ADMobGenInterstitialAd *)interstitialAd;
+
+/**
+ ADMobGenInterstitialAd关闭回调
+
+ @param interstitialAd 插屏广告实例对象
+*/
+- (void)admg_interstitialDidClose:(ADMobGenInterstitialAd *)interstitialAd;
+
+/**
+ ADMobGenInterstitialAd展示回调
+ 
+ @param interstitialAd 广告实例
+ */
+- (void)admg_interstitialExposure:(ADMobGenInterstitialAd *)interstitialAd;
 
 @end
 
 ```
 
-Draw沉浸式视频广告代理回调 - ADMobGenDrawvodAdManagerDelegate
+插屏广告 - ADMobGenInterstitialAd请求示例：
 
 ```obj-c
-@protocol ADMobGenDrawvodAdManagerDelegate <NSObject>
+#import <ADMobGenSDK/ADMobGenInterstitialAd.h>
+
+// 1、插屏广告广告初始化
+    self.interstitialAd = [[ADMobGenInterstitialAd alloc]initWithViewController:self index:0 adSize:CGSizeMake(kADMGScreenWidth, kADMGScreenHeight) aspectRatio:ADMobGenInterstitialAdAspectRatioDefault];
+    self.interstitialAd.delegate = self;
+    
+// 2、加载插屏广告
+[self.interstitialAd load];
+
+//3、推荐在admg_interstitialSuccedToLoad回调中，展示插屏广告
+/**
+ ADMobGenInterstitialAd请求成功回调
+ 
+ @param interstitialAd 插屏广告实例对象
+*/
+- (void)admg_interstitialSuccedToLoad:(ADMobGenInterstitialAd *)interstitialAd{
+    // 展示插屏广告
+    [self.interstitialAd show];
+}
+
+
+```
+
+<div STYLE="page-break-after: always;"></div>
+
+##4.7 全屏视频广告 - ADMobGenFullscreenVideoAd
+
+全屏视频广告是移动广告的一种常见形式，在应用开流程中弹出，当应用展示视频式广告时，用户可以选择点按广告，访问其目标网址，也可以将其关闭，返回应用。
+
+插屏广告 - ADMobGenFullscreenVideoAd：
+
+```objective-c
+@interface ADMobGenFullscreenVideoAd : NSObject
 
 /**
-DrawvodAd请求成功
-
-@param drawvodAdManager 广告实例
-@param drawvodAdArray ADMobGenDrawvodAd集合
+ 代理回调
 */
-- (void)admg_drawvodAdSuccessToLoad:(ADMobGenDrawvodAdManager *)drawvodAdManager drawvodAdArray:(NSArray<ADMobGenDrawvodAd *> *)drawvodAdArray;
-/**
-DrawvodAd请求失败
+@property (nonatomic, weak) id<ADMobGenFullscreenVideoAdDelegate> delegate;
 
-@param drawvodAdManager 广告实例
-@param error 请求错误描述
+- (id)new NS_UNAVAILABLE;
+- (id)init NS_UNAVAILABLE;
+
+/*
+ 初始化ADMobGenFullscreenVideoAd
+ @param viewController 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
+ @param index 请求的广告位序号
 */
-- (void)admg_drawvodAdFailToLoad:(ADMobGenDrawvodAdManager *)drawvodAdManager error:(NSError *)error;
-
-/**
-DrawvodAd播放状态改变
-
-@param drawvodAd drawvodAd
-@param playerState 播放状态
-*/
-- (void)admg_drawvodAd:(ADMobGenDrawvodAd *)drawvodAd stateDidChanged:(ADMobGenDrawPlayerState)playerState;
+- (instancetype)initWithViewController:(UIViewController *)viewController index:(NSInteger)index;
 
 /**
-DrawvodAd播放失败
-
-@param drawvodAd drawvodAd
-@param error 播放失败错误信息
+ 加载广告
 */
-- (void)admg_drawvodAd:(ADMobGenDrawvodAd *)drawvodAd didLoadFailWithError:(NSError *)error;
+- (void)load;
 
 /**
-DrawvodAd播放完成
-
-@param drawvodAd drawvodAd
+ 展示广告
 */
-- (void)admg_drawvodAdPlayerDidPlayFinish:(ADMobGenDrawvodAd *)drawvodAd;
-
-/**
-DrawvodAd被点击
-
-@param drawvodAd drawvodAd
-*/
-- (void)admg_drawvodAdDidClick:(ADMobGenDrawvodAd *)drawvodAd;
+- (void)show;
 
 @end
 
 ```
 
-Draw沉浸式视频广告 - ADMobGenDrawvodAdManager请求示例：
+全屏视频广告代理回调 - ADMobGenFullscreenVideoAdDelegate
 
-```obj-c
-#import <ADMobGenSDK/ADMobGenDrawvodAdManager.h>
+```objective-c
+@protocol ADMobGenFullscreenVideoAdDelegate <NSObject>
 
-// 1、Draw沉浸式视频广告实例对象
-self.drawvodManager = [[ADMobGenDrawvodAdManager alloc]init];
-self.drawvodManager.delegate = self;
+/**
+ ADMobGenFullscreenVideoAd请求成功回调
+ 
+ @param fullscreenVideoAd 全屏视频广告实例对象
+*/
+- (void)admg_fullscreenVideoSuccedToLoad:(ADMobGenFullscreenVideoAd *)fullscreenVideoAd;
 
-// 2、加载Draw沉浸式视频广告
-[self.drawvodManager load:3 isCustomStyle:NO];
-//[self.drawvodManager load:3 withDrawvodIndex:0 isCustomStyle:NO];
+/**
+ ADMobGenFullscreenVideoAd视频加载成功回调
+ 
+ @param fullscreenVideoAd 全屏视频广告实例对象
+*/
+- (void)admg_fullscreenSuccessToLoadVideo:(ADMobGenFullscreenVideoAd *)fullscreenVideoAd;
 
-//3、展示Draw沉浸式视频广告，在广告数据加载成功回调中获取ADMobGenDrawvodAd，展示ADMobGenDrawvodAd中的drawvodView
-- (void)admg_drawvodAdSuccessToLoad:(ADMobGenDrawvodAdManager *)drawvodAdManager drawvodAdArray:(NSArray<ADMobGenDrawvodAd *> *)drawvodAdArray{
-ADMobGenDrawvodAd *drawvodAd = drawvodAdArray.firstObject;
-[self.view addSubview:drawvodAd.drawvodView];
-drawvodAd.drawvodView.frame = [UIScreen mainScreen].bounds;
+/**
+ ADMobGenFullscreenVideoAd请求失败回调
+
+ @param fullscreenVideoAd 全屏视频广告实例对象
+ @param error 失败原因
+*/
+- (void)admg_fullscreenVideoFailedToLoad:(ADMobGenFullscreenVideoAd *)fullscreenVideoAd error:(NSError *_Nullable)error;
+
+/**
+ ADMobGenFullscreenVideoAd展示在屏幕内回调
+
+ @param fullscreenVideoAd 全屏视频广告实例对象
+*/
+- (void)admg_fullscreenVideoDidPresent:(ADMobGenFullscreenVideoAd *)fullscreenVideoAd;
+
+/**
+ ADMobGenFullscreenVideoAd展示失败回调
+
+ @param fullscreenVideoAd 全屏视频广告实例对象
+ @param error 失败原因
+*/
+- (void)admg_fullscreenVideoFailToPresent:(ADMobGenFullscreenVideoAd *)fullscreenVideoAd error:(NSError *)error;
+
+/**
+ ADMobGenFullscreenVideoAd点击回调
+
+ @param fullscreenVideoAd 全屏视频广告实例对象
+*/
+- (void)admg_fullscreenVideoDidClick:(ADMobGenFullscreenVideoAd *)fullscreenVideoAd;
+
+/**
+ ADMobGenFullscreenVideoAd关闭回调
+
+ @param fullscreenVideoAd 全屏视频广告实例对象
+*/
+- (void)admg_fullscreenVideoDidClose:(ADMobGenFullscreenVideoAd *)fullscreenVideoAd;
+
+/**
+ ADMobGenFullscreenVideoAd展示回调
+ 
+ @param fullscreenVideoAd 广告实例
+ */
+- (void)admg_fullscreenVideoExposure:(ADMobGenFullscreenVideoAd *)fullscreenVideoAd;
+
+/**
+ADMobGenFullscreenVideoAd播放完成回调
+
+ @param fullscreenVideoAd 广告实例
+ @param error 失败原因（如果为nil，则是单纯的播放完成）
+*/
+- (void)admg_fullscreenVideoPlayComplete:(ADMobGenFullscreenVideoAd *)fullscreenVideoAd didFailed:(NSError *_Nullable)error;
+
+@end
+
+```
+
+全屏视频广告 - ADMobGenFullscreenVideoAd请求示例：
+
+```objective-c
+#import <ADMobGenSDK/ADMobGenFullscreenVideoAd.h>
+
+// 1、全屏视频广告初始化
+_fullScreenVideoAd = [[ADMobGenFullscreenVideoAd alloc] initWithViewController:self index:0];
+_fullScreenVideoAd.delegate = self;
+// 2、加载全屏视频广告
+[_fullScreenVideoAd load];
+
+//3、推荐在admg_fullscreenVideoSuccedToLoad和admg_fullscreenSuccessToLoadVideo回调中，展示插屏广告
+/**
+ ADMobGenFullscreenVideoAd请求成功回调
+ 
+ @param fullscreenVideoAd 全屏视频广告实例对象
+*/
+- (void)admg_fullscreenVideoSuccedToLoad:(ADMobGenFullscreenVideoAd *)fullscreenVideoAd {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [fullscreenVideoAd show];
+    });
+}
+
+/**
+ ADMobGenFullscreenVideoAd视频加载成功回调
+ 
+ @param fullscreenVideoAd 全屏视频广告实例对象
+*/
+- (void)admg_fullscreenSuccessToLoadVideo:(ADMobGenFullscreenVideoAd *)fullscreenVideoAd {
+    [fullscreenVideoAd show];
 }
 
 ```
 
-##  
+<div STYLE="page-break-after: always;"></div> 
+
+## 4.8 原生自渲染广告 - ADMobGenUnifiedNativeAd
+
+自渲染是对原有类型的优化和升级，使用自渲染的API，您可以为您的应用打造定制式体验。
+
+<font color=#ff0000>点击事件的响应需要调用unifiedNativeAdView类中ADMobUnifiedNativeAdViewProtocol协议中的admg_regist方法</font>
+
+原生自渲染广告 - ADMobGenUnifiedNativeAd：
+
+```objective-c
+#import <ADMobGenSDK/ADMobGenUnifiedNativeAd.h>
+
+@interface ADMobGenUnifiedNativeAd : NSObject
+
+- (id)new NS_UNAVAILABLE;
+- (id)init NS_UNAVAILABLE;
+
+/**
+ ADMobGenUnifiedNativeAd初始化接口
+
+ @param viewController 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
+ @param index 广告位序号，默认为0
+*/
+- (instancetype)initWithViewController:(nullable UIViewController *)viewController index:(NSInteger)index NS_DESIGNATED_INITIALIZER;
+
+/**
+ 加载广告
+
+ @param count 拉取几条广告,建议区间 1~4, 超过可能无法拉取到
+*/
+- (void)load:(int)count;
+
+/**
+ 代理回调
+*/
+@property (nonatomic, weak) id<ADMobGenUnifiedNativeAdDelegate> delegate;
+
+@end
+
+```
+
+原生自渲染广告代理回调 - ADMobGenUnifiedNativeAdDelegate
+
+```objective-c
+@protocol ADMobGenUnifiedNativeAdDelegate <NSObject>
+
+/**
+ ADMobGenUnifiedNativeAd请求成功
+ 
+ @param unifiedNativeAd 自渲染广告实例对象
+ @param nativeAdViewAry 自渲染广告视图数组
+ */
+- (void)admg_unifiedNativeSuccessToLoad:(ADMobGenUnifiedNativeAd *)unifiedNativeAd viewArray:(NSArray<UIView<ADMobUnifiedNativeAdViewProtocol>*> *)nativeAdViewAry;
+
+/**
+ ADMobGenUnifiedNativeAd请求失败
+ 
+ @param unifiedNativeAd 自渲染广告实例对象
+ @param error 失败原因
+ */
+- (void)admg_unifiedNativeFailToLoad:(ADMobGenUnifiedNativeAd *)unifiedNativeAd error:(NSError *)error;
+
+/**
+ ADMobGenUnifiedNativeAd被点击
+ 
+ @param unifiedNativeAdView 被点击的原生广告
+ */
+- (void)admg_unifiedNativeClicked:(ADMobGenUnifiedNativeAd *)unifiedNativeAd view:(UIView<ADMobUnifiedNativeAdViewProtocol>*)unifiedNativeAdView;
+
+/**
+ ADMobGenUnifiedNativeAd展示
+ 
+ @param unifiedNativeAd 广告实例
+ @param unifiedNativeAdView 广告模板
+ */
+- (void)admg_unifiedNativeExposure:(ADMobGenUnifiedNativeAd *)unifiedNativeAd view:(UIView<ADMobUnifiedNativeAdViewProtocol>*)unifiedNativeAdView;
+
+@end
+
+```
+
+原生自渲染广告 - ADMobGenUnifiedNativeAd请求示例：
+
+```objective-c
+//  1、初始化信息流自渲染广告
+_unifiedNativeAd = [[ADMobGenUnifiedNativeAd alloc] initWithViewController:self index:0];
+_unifiedNativeAd.delegate = self;
+//  2、加载信息流自渲染广告
+[self.unifiedNativeAd load:1];
+......
+//  3、信息流自渲染广告加载成功
+#pragma mark - ADMobGenUnifiedNativeAdDelegate
+- (void)admg_unifiedNativeSuccessToLoad:(ADMobGenUnifiedNativeAd *)unifiedNativeAd viewArray:(NSArray<UIView<ADMobUnifiedNativeAdViewProtocol> *> *)nativeAdViewAry {
+    for (UIView<ADMobUnifiedNativeAdViewProtocol>* nativeAdView in nativeAdViewAry) {
+        // 4、信息流自渲染广告视图由开发者渲染
+        nativeAdView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width / 16.0 * 9 + 50 + 50);
+        
+        UIImageView *iconImageView = [UIImageView new];
+        [nativeAdView addSubview:iconImageView];
+        iconImageView.frame = CGRectMake(12, 3, 44, 44);
+        NSString *iconUrlStr = nativeAdView.admg_dataObject.iconImageUrl;
+        
+        if(iconUrlStr) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+                UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:iconUrlStr]]];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    iconImageView.image = image;
+                });
+            });
+        }
+        if(nativeAdView.admg_dataObject.iconImage)
+            iconImageView.image = nativeAdView.admg_dataObject.iconImage;
+        iconImageView.clipsToBounds = YES;
+        iconImageView.layer.cornerRadius = 22;
+        iconImageView.contentMode = UIViewContentModeScaleAspectFill;
+        
+        UILabel *titlabel = [UILabel new];
+        [nativeAdView addSubview:titlabel];
+        titlabel.frame = CGRectMake(12 + 44 + 12, 0, 300, 50);
+        titlabel.text = nativeAdView.admg_dataObject.title;
+        
+        UIImageView *imageView = [UIImageView new];
+        [nativeAdView addSubview:imageView];
+        imageView.frame = CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.width / 16.0 * 9);
+        NSString *urlStr = nativeAdView.admg_dataObject.imageUrl;
+        
+        if(urlStr.length > 0) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+                UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:urlStr]]];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    imageView.image = image;
+                });
+            });
+        }
+        
+        UIView *mediaView = [nativeAdView admg_mediaViewForWidth:imageView.frame.size.width];
+        [nativeAdView addSubview:mediaView];
+        mediaView.frame = imageView.frame;
+        mediaView.hidden = !nativeAdView.admg_dataObject.shouldShowMediaView;
+        
+        UIImage *logoImage = [nativeAdView logoImageWithText:YES];
+        UIImageView *logoImageView = [UIImageView new];
+        [nativeAdView addSubview:logoImageView];
+        logoImageView.frame = CGRectMake(0, self.view.frame.size.width / 16.0 * 9 + 50, self.view.frame.size.width, 50);
+        logoImageView.contentMode = UIViewContentModeBottomRight;
+        logoImageView.image = logoImage;
+        
+        UILabel *descLabel = [UILabel new];
+        descLabel.text = nativeAdView.admg_dataObject.desc;
+        [nativeAdView addSubview:descLabel];
+        descLabel.frame = CGRectMake(12, self.view.frame.size.width / 16.0 * 9 + 50, self.view.frame.size.width, 50);
+        // 重要
+        [nativeAdView admg_regist];
+        
+        [self.items addObject:nativeAdView];
+    }
+    [self.tableView reloadData];
+}
+......
+// 5、信息流自渲染广告内存管理，取消注册
+for (UIView<ADMobUnifiedNativeAdViewProtocol> *item in _items) {
+		[item admg_unregist];
+}
+
+```
+
+<div STYLE="page-break-after: always;"></div> 
 
 ## 问题排查
 
@@ -1136,7 +1616,7 @@ drawvodAd.drawvodView.frame = [UIScreen mainScreen].bounds;
 | 1002     | appId为空                                                    |
 | 1003     | 包名和appId不对应                                            |
 | 1004     | 请求配置为空                                                 |
-| -9995    | 请求超时（请检查网络或者是广告无填充，一直如此请询问ADMobile媒介是否配置广告） |
+| -9995    | 请求超时（请检查网络或者是广告无填充，假设一直如此请询问ADMobile媒介是否配置广告） |
 | -9996    | 获取广告失败（可能是网络或者填充不够，属于正常情况）         |
 | -9997    | 未获取到加载广告的平台 （第一次启动未获取到配置信息或者运营未配置广告） |
 | -9998    | 未获取到需要展示的广告位ID（请询问ADMobile媒介是否配置广告位id，和序号也有关系） |
@@ -1159,6 +1639,10 @@ drawvodAd.drawvodView.frame = [UIScreen mainScreen].bounds;
 - Q：请求信息流模版广告时，广告无法点击
 
 `请检查是否调用信息流模版视图的contentSize方法`
+
+- Q：请求原生自渲染广告时，广告无法点击
+
+`请检查是否调用unifiedNativeAdView类中ADMobUnifiedNativeAdViewProtocol协议中的admg_regist方法`
 
 - Q：请求信息流模版广告或者banner广告时，出现信息流和banner显示不全或者文字会重复
 

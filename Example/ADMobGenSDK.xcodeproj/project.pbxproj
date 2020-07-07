@@ -35,6 +35,8 @@
 		BFA03FE623B1DE5A00FA8001 /* ADMobGenBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA03FDF23B1DE5A00FA8001 /* ADMobGenBannerViewController.m */; };
 		BFA03FE923B1DEAB00FA8001 /* ADMobGenInterstitialAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA03FE823B1DEAB00FA8001 /* ADMobGenInterstitialAdViewController.m */; };
 		BFBA97762301778200D37F6F /* WKWebView+ADMobGen.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBA97752301778200D37F6F /* WKWebView+ADMobGen.m */; };
+		BFCB31622468E55700F69CC5 /* ADMobGenUnifiedNativeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCB315E2468E55600F69CC5 /* ADMobGenUnifiedNativeTableViewCell.m */; };
+		BFCB31632468E55700F69CC5 /* ADMobGenUnifiedNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCB315F2468E55600F69CC5 /* ADMobGenUnifiedNativeViewController.m */; };
 		D719ADB2C1FF58EDDA365AEA /* Pods_ADMobGenSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27004214C4B913B57E481617 /* Pods_ADMobGenSDK_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +96,10 @@
 		BFA03FE823B1DEAB00FA8001 /* ADMobGenInterstitialAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADMobGenInterstitialAdViewController.m; sourceTree = "<group>"; };
 		BFBA97742301778200D37F6F /* WKWebView+ADMobGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebView+ADMobGen.h"; sourceTree = "<group>"; };
 		BFBA97752301778200D37F6F /* WKWebView+ADMobGen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+ADMobGen.m"; sourceTree = "<group>"; };
+		BFCB315E2468E55600F69CC5 /* ADMobGenUnifiedNativeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenUnifiedNativeTableViewCell.m; sourceTree = "<group>"; };
+		BFCB315F2468E55600F69CC5 /* ADMobGenUnifiedNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMobGenUnifiedNativeViewController.m; sourceTree = "<group>"; };
+		BFCB31602468E55600F69CC5 /* ADMobGenUnifiedNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenUnifiedNativeViewController.h; sourceTree = "<group>"; };
+		BFCB31612468E55600F69CC5 /* ADMobGenUnifiedNativeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMobGenUnifiedNativeTableViewCell.h; sourceTree = "<group>"; };
 		C85A8E1E444DB647438B9771 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D35D1C410FAFED0905750CF0 /* Pods-ADMobGenSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADMobGenSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADMobGenSDK_Tests/Pods-ADMobGenSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E97B0784D58FB16987241439 /* Pods-ADMobGenSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADMobGenSDK_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADMobGenSDK_Example/Pods-ADMobGenSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +246,10 @@
 		BFA03FD823B1DE5A00FA8001 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				BFCB31612468E55600F69CC5 /* ADMobGenUnifiedNativeTableViewCell.h */,
+				BFCB315E2468E55600F69CC5 /* ADMobGenUnifiedNativeTableViewCell.m */,
+				BFCB31602468E55600F69CC5 /* ADMobGenUnifiedNativeViewController.h */,
+				BFCB315F2468E55600F69CC5 /* ADMobGenUnifiedNativeViewController.m */,
 				BFA03FD923B1DE5A00FA8001 /* ADMobGenBannerViewController.h */,
 				BFA03FDF23B1DE5A00FA8001 /* ADMobGenBannerViewController.m */,
 				BFA03FE023B1DE5A00FA8001 /* ADMobGenSplashAdViewController.h */,
@@ -443,6 +453,8 @@
 			files = (
 				BFA03FE423B1DE5A00FA8001 /* ADMobGenRewardvodViewController.m in Sources */,
 				BFBA97762301778200D37F6F /* WKWebView+ADMobGen.m in Sources */,
+				BFCB31632468E55700F69CC5 /* ADMobGenUnifiedNativeViewController.m in Sources */,
+				BFCB31622468E55700F69CC5 /* ADMobGenUnifiedNativeTableViewCell.m in Sources */,
 				6003F59E195388D20070C39A /* ADMobGenAppDelegate.m in Sources */,
 				BFA03FE623B1DE5A00FA8001 /* ADMobGenBannerViewController.m in Sources */,
 				BFA03FE923B1DEAB00FA8001 /* ADMobGenInterstitialAdViewController.m in Sources */,

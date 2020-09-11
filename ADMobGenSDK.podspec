@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'ADMobGenSDK'
-    s.version          = '1.7.0.1'
+    s.version          = '1.7.1'
     s.summary          = 'A short description of ADMobGenSDK.'
     
     # This description is used to generate tags and improve search results.
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
     
     s.vendored_frameworks = 'ADMobGenSDK/Classes/*.framework'
     
-    s.dependency 'ADMobGenAdapter','1.7.5'
+    s.dependency 'ADMobGenAdapter','1.7.6'
     s.dependency 'ADMobGenNetwork','0.5.5'
     s.dependency 'ADMobGenDeviceInfo','1.8.0'
     

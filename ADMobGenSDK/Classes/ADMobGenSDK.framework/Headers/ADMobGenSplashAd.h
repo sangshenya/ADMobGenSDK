@@ -25,6 +25,12 @@
 @property (nonatomic, copy) UIColor *backgroundColor;
 
 /**
+ 广告点击之后的跳转所需viewController
+ 只对部分渠道有效
+ */
+@property (nonatomic, weak, nullable) UIViewController *rootViewController;
+
+/**
  加载并展示到window中
  
  @param window window
